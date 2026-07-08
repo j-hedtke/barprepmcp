@@ -1,0 +1,481 @@
+{
+  "subject": "contracts",
+  "questions": [
+    {
+      "id": "contracts-001",
+      "subject": "contracts",
+      "subtopic": "formation",
+      "rule": "Mutual assent — offer requirements (advertisements)",
+      "priority": "H",
+      "difficulty": 1,
+      "stem": "A garden supply store ran a newspaper advertisement that read, \"Spring sale this Saturday only. Premium cedar planters, forty dollars each.\" A customer read the ad, drove across town Saturday morning, and arrived with cash in hand. The store manager told him the planters were now priced at ninety dollars each because demand had been heavy. The customer insisted he was entitled to buy a planter for forty dollars, pointing to the advertisement. The store refused to sell at that price, and the customer sued for breach of contract. The advertisement said nothing about quantity available and did not promise to sell to any particular person or group. Is the customer likely to prevail?",
+      "choices": [
+        "Yes, because the advertisement stated a definite price and date, so the customer's arrival formed a contract.",
+        "Yes, because the customer accepted by performance when he traveled to the store in reliance on the ad.",
+        "No, because the advertisement was merely an invitation to deal, not an offer made to an identified offeree.",
+        "No, because an enforceable offer to sell goods must be made in a signed writing."
+      ],
+      "correctIndex": 2,
+      "explanation": "An offer requires a present intent to contract, definite and reasonably certain terms, and communication to an identified offeree. Ordinary advertisements are treated as invitations to negotiate because they state no quantity and are not directed at any particular person; the customer's attempt to buy was itself the offer, which the store was free to refuse. Choice A is wrong because price and date alone do not supply the definiteness or identified offeree an offer requires. Choice B is wrong because traveling to the store is at most preparation, not acceptance of any offer. Choice D is wrong because offers need not be written; the Statute of Frauds concerns enforcement of formed contracts, not the validity of offers."
+    },
+    {
+      "id": "contracts-002",
+      "subject": "contracts",
+      "subtopic": "formation",
+      "rule": "UCC merchant's firm offer",
+      "priority": "H",
+      "difficulty": 2,
+      "stem": "A dealer in commercial kitchen equipment sent a restaurant owner a signed letter offering to sell a particular convection oven for four thousand dollars, adding, \"This offer will remain open for sixty days.\" The restaurant owner paid nothing to keep the offer open. Three weeks later, the dealer telephoned the owner and said, \"I'm pulling that offer; the oven is off the market.\" One week after the call, and well within the sixty days, the owner hand-delivered a signed written acceptance and tendered the price. The dealer refused to sell, insisting the offer had been revoked. The owner sued for breach of contract. What is the likely result?",
+      "choices": [
+        "A contract was formed, because the dealer's signed written offer was irrevocable for the stated period even without consideration.",
+        "No contract was formed, because an offer unsupported by consideration may be revoked at any time before acceptance.",
+        "No contract was formed, because the revocation was effective when the owner received the telephone call.",
+        "A contract was formed only if the owner can show he relied on the offer to his detriment."
+      ],
+      "correctIndex": 0,
+      "explanation": "Under UCC Article 2, a merchant who makes an offer to buy or sell goods in a signed writing that gives assurance the offer will be held open creates a firm offer, irrevocable for the time stated up to three months, with no consideration required. The dealer is a merchant, the offer was signed and in writing, and sixty days is within the limit, so the attempted revocation was ineffective and the timely acceptance formed a contract. Choices B and C state the common law rule that offers are freely revocable absent an option, which the firm offer rule displaces. Choice D is wrong because detrimental reliance is an alternative basis for irrevocability, not a requirement when the firm offer rule applies."
+    },
+    {
+      "id": "contracts-003",
+      "subject": "contracts",
+      "subtopic": "formation",
+      "rule": "Mailbox rule — acceptance dispatched before rejection",
+      "priority": "H",
+      "difficulty": 3,
+      "stem": "A collector mailed a letter to a woman offering to buy her antique writing desk for two thousand dollars, inviting a reply by mail. On Monday, the woman mailed a properly addressed, stamped letter accepting the offer. On Tuesday morning, having second thoughts, she telephoned the collector and said, \"Disregard any letter from me; I've decided not to sell.\" The collector said only, \"That's disappointing,\" and took no action in reliance on the call. On Wednesday, the woman's acceptance letter arrived. The collector then demanded the desk at the agreed price, and the woman refused to deliver it. The collector sued for breach of contract. Which of the following is the most accurate statement?",
+      "choices": [
+        "No contract was formed, because the telephone rejection reached the collector before the mailed acceptance arrived.",
+        "A contract was formed when the woman dispatched her acceptance on Monday.",
+        "No contract was formed, because an offeree who sends both an acceptance and a rejection is deemed to have rejected.",
+        "A contract was formed, but only on Wednesday when the collector received the acceptance letter."
+      ],
+      "correctIndex": 1,
+      "explanation": "Under the mailbox rule, an acceptance is effective on dispatch, while rejections and revocations are effective on receipt. When an offeree dispatches an acceptance before sending a rejection, the contract is formed at the moment of dispatch, and the later rejection can matter only if the offeror relies on it, which would estop the offeree from enforcing. Here the collector did not rely on the Tuesday call, so the Monday contract stands. Choice A is wrong because the contract already existed before the call; receipt timing is irrelevant once acceptance is dispatched. Choice C inverts the rule, which applies only when the rejection is sent first. Choice D is wrong because acceptance was effective on dispatch, not receipt."
+    },
+    {
+      "id": "contracts-004",
+      "subject": "contracts",
+      "subtopic": "formation",
+      "rule": "Consideration — past consideration insufficient",
+      "priority": "H",
+      "difficulty": 2,
+      "stem": "While a homeowner spent the summer abroad, his neighbor voluntarily mowed the homeowner's lawn every week, intending it simply as a friendly favor and expecting nothing in return. When the homeowner returned and saw the well-kept yard, he was touched and told the neighbor, \"That was so kind. I promise I'll pay you five hundred dollars for all that mowing.\" He even repeated the promise in a signed note. Months passed and the homeowner never paid. The neighbor sued to enforce the promise. Assume the jurisdiction follows the majority rule on consideration. Is the homeowner's promise enforceable?",
+      "choices": [
+        "Yes, because the promise was made in a signed writing.",
+        "Yes, because the homeowner received a material benefit from the mowing.",
+        "Yes, because the neighbor's labor was a legal detriment that supports the promise.",
+        "No, because the neighbor's services were not bargained for in exchange for the promise."
+      ],
+      "correctIndex": 3,
+      "explanation": "Consideration requires a bargained-for exchange: the promise must induce the detriment and the detriment must induce the promise. Services already completed before a promise is made cannot have been bargained for, so past consideration is no consideration, and the promise is an unenforceable gift promise. Choice A is wrong because a writing does not substitute for consideration except in narrow situations, such as a written promise to pay a debt barred by limitations. Choice B invokes the material benefit rule, but that exception is not applied where the benefit was conferred as a gift, as the favor was here. Choice C is wrong because the detriment must be incurred in exchange for the promise, and this labor preceded it."
+    },
+    {
+      "id": "contracts-005",
+      "subject": "contracts",
+      "subtopic": "formation",
+      "rule": "Implied-in-fact contract",
+      "priority": "M",
+      "difficulty": 2,
+      "stem": "A homeowner hired a pool-cleaning service for the summer at eighty dollars per weekly visit, with the arrangement ending on the first of September. During the contract, the cleaner always billed monthly and the homeowner always paid. After the end date, the cleaner continued to arrive each week and clean the pool. The homeowner watched from his porch on each visit, knew the cleaner charged for this work, and said nothing. After five additional weekly visits, the cleaner sent a bill for four hundred dollars. The homeowner refused to pay, arguing that the written summer arrangement had expired and he had never agreed to anything more. The cleaner sued for the four hundred dollars. What is the cleaner's best theory of recovery, and will it succeed?",
+      "choices": [
+        "An implied-in-fact contract arose from the parties' conduct, so the cleaner recovers the four hundred dollars.",
+        "No contract arose, because silence can never operate as an acceptance.",
+        "No contract arose, because an agreement for services must be evidenced by a writing.",
+        "The cleaner may recover only in quasi-contract, because the parties never manifested mutual assent."
+      ],
+      "correctIndex": 0,
+      "explanation": "A contract implied in fact is formed by conduct when the conduct is intentional and each party has reason to know the other will understand it as an agreement; it is treated like an express contract. The cleaner deliberately kept performing, and the homeowner knowingly watched and accepted weekly services he knew were billed at an established rate, so his conduct manifested assent. Choice B is wrong because, although silence is generally not acceptance, it can be where the parties' conduct and prior dealings give it that meaning. Choice C is wrong because ordinary service contracts of this duration are outside the Statute of Frauds. Choice D is wrong because mutual assent was shown through conduct, making an actual contract, not merely a restitution claim."
+    },
+    {
+      "id": "contracts-006",
+      "subject": "contracts",
+      "subtopic": "formation",
+      "rule": "Promissory estoppel",
+      "priority": "H",
+      "difficulty": 2,
+      "stem": "The president of a company called a sixty-three-year-old bookkeeper, who had worked there for thirty years, into his office and said, \"You've earned a rest. If you choose to retire, the company will pay you fifteen hundred dollars a month for the rest of your life.\" The bookkeeper was not asked to do anything in exchange and was free to keep working. Relying on the promise, she retired the next month, gave up her salary, and at her age could not find comparable employment. The company made the monthly payments for two years, then a new president stopped them, asserting that the promise was a mere gift. The bookkeeper sued. What is her strongest argument for enforcing the promise?",
+      "choices": [
+        "The promise is unenforceable because she gave no consideration for it.",
+        "The promise is enforceable under promissory estoppel, because she reasonably and foreseeably relied on it to her detriment.",
+        "The promise is enforceable because each monthly payment the company made was itself consideration.",
+        "The promise is unenforceable because a promise of lifetime payments cannot be performed within one year."
+      ],
+      "correctIndex": 1,
+      "explanation": "Promissory estoppel substitutes for consideration when a promisee reasonably and foreseeably relies on a promise to her detriment, the promisor should have expected such a change of position, and enforcement is needed to avoid injustice. Retiring and surrendering a salary in reliance on a pension promise is the classic application, so the bookkeeper can enforce the promise even though her retirement was not bargained for. Choice A correctly notes the absence of consideration but ignores the reliance substitute, so it is not her strongest argument and is wrong as a conclusion. Choice C is wrong because performance of a gratuitous promise does not retroactively create a bargain. Choice D is wrong because a lifetime promise can be fully performed within a year if the promisee dies, so it falls outside the Statute of Frauds."
+    },
+    {
+      "id": "contracts-007",
+      "subject": "contracts",
+      "subtopic": "formation",
+      "rule": "Unilateral contract — acceptance only by complete performance",
+      "priority": "L",
+      "difficulty": 2,
+      "stem": "An uncle told his nephew, \"If you complete next month's city marathon, I will pay you five thousand dollars. I'm not interested in promises, only in seeing you cross that finish line.\" The nephew said nothing but spent the next four weeks training. On race day he started the marathon. When the nephew reached mile eighteen, the uncle, watching from the sidewalk, shouted, \"I revoke my offer!\" The nephew kept going and completed the race. The uncle refused to pay, arguing that he had revoked before any contract existed and that the nephew never promised him anything. The nephew sued for the five thousand dollars. What result?",
+      "choices": [
+        "The uncle wins, because his revocation was effective before the nephew completed performance.",
+        "The nephew wins, because a contract was formed when he began training for the race.",
+        "The nephew wins, because once he began the race the offer became irrevocable, and his completion formed the contract.",
+        "The uncle wins, because the nephew never gave a return promise to run the marathon."
+      ],
+      "correctIndex": 2,
+      "explanation": "An offer for a unilateral contract invites acceptance only by complete performance, but once the offeree actually begins performing, the offer becomes temporarily irrevocable for a reasonable time to allow completion. Starting the marathon was the start of the requested performance, so the mile-eighteen revocation was ineffective, and the nephew's finish completed acceptance and formed the contract. Choice A is wrong because the power to revoke was suspended once performance began. Choice B is wrong because training was mere preparation, which neither accepts the offer nor makes it irrevocable. Choice D is wrong because a unilateral offer does not seek a return promise at all; performance is the only acceptance the offeror invited, and the nephew supplied it."
+    },
+    {
+      "id": "contracts-008",
+      "subject": "contracts",
+      "subtopic": "defenses-to-enforceability",
+      "rule": "Mutual mistake",
+      "priority": "M",
+      "difficulty": 3,
+      "stem": "A rancher agreed to sell a six-year-old mare to a horse trader for eight hundred dollars. Before the sale, the rancher's veterinarian had examined the mare and reported that she was infertile, and both parties negotiated the price on the shared understanding that she was useful only as a riding horse. Neither party agreed to take the chance that the diagnosis was wrong. A week after delivery, the trader's own veterinarian discovered the mare was pregnant; as a proven broodmare she was worth roughly forty thousand dollars. The rancher promptly sought to rescind the sale and tendered back the purchase price. The trader refused, insisting that a deal is a deal. Will the rancher likely succeed in rescinding?",
+      "choices": [
+        "No, because the parties' mistake affected only the value of the mare.",
+        "No, because as the owner, the rancher bore the risk of any mistake about his own animal.",
+        "Yes, but only if the trader actually knew the mare was pregnant when he bought her.",
+        "Yes, because both parties were mistaken about a basic assumption of fact that was material, and the rancher did not bear the risk."
+      ],
+      "correctIndex": 3,
+      "explanation": "A contract is voidable for mutual mistake when both parties are mistaken about a basic assumption of fact, the mistake is material, and the party seeking relief did not bear the risk of the mistake. The mare's fertility goes to her essential character, not merely her price, and the facts establish that neither party assumed the risk of a wrong diagnosis, so rescission is available. Choice A is wrong because the mistake concerned the animal's fundamental nature; the value difference is the consequence of that factual mistake, not the mistake itself. Choice B is wrong because ownership alone does not allocate the risk where both parties relied on the same diagnosis. Choice C describes unilateral mistake doctrine; the trader's knowledge is unnecessary when the mistake is mutual."
+    },
+    {
+      "id": "contracts-009",
+      "subject": "contracts",
+      "subtopic": "defenses-to-enforceability",
+      "rule": "Statute of frauds — UCC merchant's confirmatory memorandum",
+      "priority": "H",
+      "difficulty": 2,
+      "stem": "A flooring distributor telephoned a lumber mill, and the two companies orally agreed that the mill would sell the distributor thirty thousand dollars' worth of oak planks, with quantity, price, and a delivery date all settled on the call. The next day, the distributor mailed the mill a confirmation on company letterhead, signed by its purchasing manager, accurately reciting the quantity and terms of the deal. The mill received the confirmation but never responded. Five weeks later, lumber prices spiked and the mill refused to deliver, asserting that the agreement was unenforceable because the mill never signed anything. The distributor sued for breach. Both businesses regularly deal in lumber products. Is the agreement enforceable against the mill?",
+      "choices": [
+        "Yes, because between merchants a signed confirmation satisfies the writing requirement against the recipient who fails to object within ten days.",
+        "No, because the Statute of Frauds requires a writing signed by the party against whom enforcement is sought.",
+        "No, because an oral contract for goods priced at five hundred dollars or more is void.",
+        "Yes, but only as to any planks the mill had already delivered before it refused to perform."
+      ],
+      "correctIndex": 0,
+      "explanation": "A sale of goods for five hundred dollars or more must ordinarily be evidenced by a writing signed by the party to be charged. The UCC's merchant confirmation exception, however, binds a merchant who receives a signed written confirmation of an oral deal from another merchant and fails to object within ten days. Both companies deal in goods of the kind, the confirmation was signed and accurate, and the mill stayed silent for five weeks, so the writing requirement is satisfied against the mill. Choice B states the general rule but ignores this exception, which is precisely where the UCC departs from it. Choice C is wrong because such contracts are unenforceable, not void, and here the defense fails anyway. Choice D describes the part-performance exception, which is unnecessary given the confirmation."
+    },
+    {
+      "id": "contracts-010",
+      "subject": "contracts",
+      "subtopic": "defenses-to-enforceability",
+      "rule": "Statute of frauds — one-year provision",
+      "priority": "H",
+      "difficulty": 1,
+      "stem": "In early June, the owner of a marketing firm met with a candidate and they orally agreed that the candidate would serve as office manager \"for a term of two years beginning July first,\" at a stated annual salary. Nothing was ever put in writing. The manager started on July first, performed well, and was abruptly fired in October without cause. She sued the firm for breach of the two-year agreement, seeking the salary remaining on the term. The firm raised the Statute of Frauds as its defense. The jurisdiction applies the traditional rules. How should the court rule on the firm's defense?",
+      "choices": [
+        "For the manager, because her three months of work was part performance taking the agreement out of the statute.",
+        "For the firm, because an agreement that cannot possibly be fully performed within one year of its making must be in writing.",
+        "For the manager, because employment agreements are not among the categories covered by the Statute of Frauds.",
+        "For the firm, because every contract of employment must be evidenced by a signed writing."
+      ],
+      "correctIndex": 1,
+      "explanation": "The Statute of Frauds requires a writing for any contract that cannot be completed within one year of its making, measured by whether full performance within a year is impossible under the contract's own terms. A fixed two-year employment term made in June cannot be fully performed within a year, so the oral agreement is unenforceable. Choice A is wrong because, under the one-year provision, only full performance removes the bar; partial performance of a services contract does not. Choice C is wrong because the one-year provision applies to any contract, including employment, when its term makes completion within a year impossible. Choice D is far too broad, since at-will or one-year employment arrangements need no writing."
+    },
+    {
+      "id": "contracts-011",
+      "subject": "contracts",
+      "subtopic": "content-and-meaning",
+      "rule": "Parol evidence rule — exception for defenses against formation",
+      "priority": "H",
+      "difficulty": 3,
+      "stem": "A buyer signed a detailed written contract to purchase a small restaurant, including its kitchen equipment. The writing contained a merger clause stating that the document was the complete and exclusive statement of the parties' agreement. After closing, the buyer discovered that the ventilation system had failed a safety inspection months earlier. The buyer sued to rescind, offering testimony that during negotiations, before signing, the seller told him the kitchen equipment had recently passed all inspections, a statement the seller knew was false and that induced the buyer to sign. The seller objected that the merger clause and the parol evidence rule bar any testimony about pre-signing statements. How should the court rule on the admissibility of the buyer's testimony?",
+      "choices": [
+        "Inadmissible, because the merger clause establishes a fully integrated writing that cannot be supplemented.",
+        "Inadmissible, because the alleged statement was made before the writing was signed.",
+        "Admissible, because the parol evidence rule does not bar evidence offered to establish a defense against formation, such as fraud.",
+        "Admissible, but only if the court first finds the written contract ambiguous."
+      ],
+      "correctIndex": 2,
+      "explanation": "The parol evidence rule excludes evidence of prior or contemporaneous agreements offered to contradict or supplement a fully integrated writing, but it does not apply when the evidence is offered to show the contract is voidable or invalid, such as for fraudulent misrepresentation. The buyer is not trying to add a term; he is attacking the validity of the agreement itself, so the testimony comes in despite the merger clause. Choice A is wrong because even a full integration does not immunize a contract from formation defenses. Choice B is wrong because the timing trigger matters only when the evidence is used to vary terms. Choice D is wrong because ambiguity is a separate exception for interpreting vague terms, not a prerequisite for proving fraud."
+    },
+    {
+      "id": "contracts-012",
+      "subject": "contracts",
+      "subtopic": "content-and-meaning",
+      "rule": "UCC omitted terms — open price gap filler",
+      "priority": "M",
+      "difficulty": 2,
+      "stem": "A bakery and a flour supplier signed a brief written agreement in which the supplier promised to deliver five hundred bags of a specified bread flour to the bakery on the first of March. The writing identified the parties, the product, the quantity, and the delivery date, but the parties never discussed price, intending to sort it out later. In February, flour prices rose sharply. The supplier then refused to deliver, asserting that no contract had ever been formed because an agreement without a price is fatally indefinite. The bakery sued to enforce the deal. How should the court rule?",
+      "choices": [
+        "For the supplier, because price is an essential term and its absence makes the agreement too indefinite to enforce.",
+        "For the supplier, because the parties made a mere agreement to agree, which is unenforceable.",
+        "For the bakery, but only at the lowest market price that prevailed during the life of the agreement.",
+        "For the bakery, because the contract is enforceable with the price set at a reasonable price at the time for delivery."
+      ],
+      "correctIndex": 3,
+      "explanation": "Under UCC Article 2, the only essential term is quantity; if the parties intended a contract, the court supplies missing terms through gap fillers, and an open price term becomes a reasonable price at the time for delivery. The writing showed a clear intent to deal and fixed the quantity, so the contract is enforceable at a reasonable March price. Choice A states the common law indefiniteness approach, under which missing core terms can defeat formation, but the UCC displaces that rule for goods. Choice B is wrong because leaving price open with intent to be bound is exactly what the Code permits, unlike a true agreement to agree on the whole bargain. Choice C invents a buyer-favorable measure; the statutory fill is a reasonable price, not the lowest one."
+    },
+    {
+      "id": "contracts-013",
+      "subject": "contracts",
+      "subtopic": "content-and-meaning",
+      "rule": "Express warranty (UCC Art. 2) — cannot be disclaimed",
+      "priority": "H",
+      "difficulty": 2,
+      "stem": "A used-equipment dealer showed a farmer a combine harvester and told him, \"The engine in this machine was completely rebuilt two hundred hours ago,\" and added, \"It's the finest combine on the market today.\" The farmer, relying on the engine statement, signed the dealer's standard sales contract, which stated in conspicuous type that the combine was sold \"as is\" and that all warranties, express or implied, were disclaimed. In fact, the engine had never been rebuilt, and it failed during the first harvest. The farmer sued the dealer. The dealer points to the disclaimer and notes that he never used the word \"warranty.\" What is the farmer's strongest claim, and will it succeed?",
+      "choices": [
+        "Breach of an express warranty, because the rebuilt-engine statement was an affirmation of fact that became part of the basis of the bargain and could not be disclaimed.",
+        "No claim, because the conspicuous as-is clause effectively disclaimed every warranty connected with the sale.",
+        "No claim, because a seller creates a warranty only by using words such as warranty or guarantee.",
+        "Breach of the implied warranty of merchantability, because the combine was not fit for its ordinary purpose."
+      ],
+      "correctIndex": 0,
+      "explanation": "Under UCC Article 2, a seller creates an express warranty by making an affirmation of fact or promise relating to the goods that becomes part of the basis of the bargain, and an express warranty cannot be disclaimed by the seller. The rebuilt-engine statement is a specific factual assertion the farmer relied on, so its falsity is a breach regardless of the as-is clause. Choice B is wrong because as-is language disclaims only implied warranties, not express ones. Choice C is wrong because no magic words or intent to warrant are required; only opinion or puffery, like \"finest combine on the market,\" fails to create a warranty. Choice D fails because the conspicuous as-is disclaimer was effective against implied warranties, leaving the express warranty as the viable theory."
+    },
+    {
+      "id": "contracts-014",
+      "subject": "contracts",
+      "subtopic": "content-and-meaning",
+      "rule": "UCC risk of loss — shipment contract",
+      "priority": "M",
+      "difficulty": 2,
+      "stem": "A tile manufacturer in Ohio contracted to sell one thousand boxes of ceramic tile to a builder in Georgia. The signed contract stated that the goods were to be shipped \"F.O.B. seller's warehouse, Columbus, Ohio,\" and said nothing else about who bore the risk during transit. The manufacturer packed conforming tile, delivered the boxes to a reputable independent trucking company, and obtained a proper bill of lading, notifying the builder of the shipment. Midway through the trip, the truck was involved in a highway accident through no fault of either party, and the entire load was destroyed. The builder refused to pay, and the manufacturer sued for the price. Neither party was at fault, and neither had insured the goods. Who bears the loss?",
+      "choices": [
+        "The manufacturer, because it selected the trucking company that carried the goods.",
+        "The builder, because risk of loss passed when the conforming goods were duly delivered to the carrier.",
+        "The manufacturer, because a seller retains the risk of loss until the buyer physically receives the goods.",
+        "Neither party, because the carrier's exclusive responsibility for the goods extinguishes both parties' risk."
+      ],
+      "correctIndex": 1,
+      "explanation": "When a contract for goods requires shipment by carrier and the term is F.O.B. the seller's location, it is a shipment contract: the seller completes its delivery obligation, and risk of loss passes to the buyer, when conforming goods are duly delivered to the carrier with proper arrangements and notice. The manufacturer did exactly that, so the builder bears the in-transit loss and owes the price. Choice A is wrong because choosing a suitable carrier is part of the seller's duty, not a basis for retaining risk. Choice C states the rule for a non-carrier delivery by a merchant seller, or a destination contract, neither of which applies. Choice D is wrong because any claim against the carrier is separate; as between the parties, the risk must rest somewhere, and here it rests on the buyer."
+    },
+    {
+      "id": "contracts-015",
+      "subject": "contracts",
+      "subtopic": "performance-breach-discharge",
+      "rule": "Material breach vs. minor breach — substantial performance",
+      "priority": "H",
+      "difficulty": 2,
+      "stem": "A builder contracted to renovate a homeowner's kitchen for sixty thousand dollars, payable in installments with fifteen thousand dollars due on completion. The specifications called for a particular brand of copper plumbing pipe. The builder, acting in good faith, installed a different brand of copper pipe of identical grade, quality, and price, because his supplier was out of the specified brand. The renovation was otherwise flawless and was finished on schedule. Replacing the pipe now would require tearing out the finished walls. When the homeowner learned of the substitution, she refused to pay the final fifteen thousand dollars and demanded the specified brand be installed. The builder sued for the balance. What is the builder likely to recover?",
+      "choices": [
+        "Nothing, because a contractor who deviates from the specifications in any respect cannot recover on the contract.",
+        "Nothing, because the homeowner's duty to pay was discharged by the builder's failure to deliver exactly what was promised.",
+        "The fifteen thousand dollar balance, less any small difference in value attributable to the substituted pipe.",
+        "Only the reasonable value of his services, measured off the contract in quantum meruit."
+      ],
+      "correctIndex": 2,
+      "explanation": "At common law, only a material breach excuses the other party's performance. A party who renders substantial performance commits at most a minor breach, and the non-breaching party must still perform, retaining only a claim for damages. A good-faith substitution of an equivalent pipe in an otherwise perfect renovation is the textbook minor deviation, especially where correction would require economically wasteful demolition, so the builder recovers the balance minus any diminution in value, likely nominal. Choice A imports a perfect tender standard, which governs sales of goods, not services. Choice B is wrong because a minor breach does not discharge the duty to pay. Choice D is wrong because a substantially performing party may sue on the contract itself and is not limited to restitution."
+    },
+    {
+      "id": "contracts-016",
+      "subject": "contracts",
+      "subtopic": "performance-breach-discharge",
+      "rule": "UCC perfect tender rule",
+      "priority": "M",
+      "difficulty": 3,
+      "stem": "An office-furniture seller contracted to deliver fifty model X desk chairs to a law firm by March first, in a single delivery, time being important to the firm's office opening. The parties had never done business before. On March first, the seller delivered fifty chairs, but two of them were a comparable model Y of equal price and quality, because of a warehouse picking error. The firm inspected the shipment that day and rejected all fifty chairs, notifying the seller of the nonconformity. The seller sued, arguing that delivering forty-eight conforming chairs plus two equivalent substitutes was substantial performance and that rejection of the entire shipment was wrongful. How should the court rule?",
+      "choices": [
+        "For the seller, because a buyer must accept a tender that substantially conforms to the contract.",
+        "For the seller, because the firm was obligated to accept the forty-eight conforming chairs and reject only the two others.",
+        "For the seller, because a good-faith seller always has a right to cure after a rejection.",
+        "For the firm, because the tender failed to conform to the contract in some respect, entitling the buyer to reject the whole."
+      ],
+      "correctIndex": 3,
+      "explanation": "Under the UCC perfect tender rule, a seller must deliver goods that conform exactly to the contract; if the tender fails in any respect, the buyer may reject all of the goods, accept all, or accept any commercial units and reject the rest. Even a small nonconformity, like two substituted chairs, supports rejection of the entire shipment. Choice A applies the common law substantial performance doctrine, which the UCC displaces for sales of goods. Choice B is wrong because partial acceptance is the buyer's option, never its obligation. Choice C is wrong because cure is available only when the time for performance has not expired or the seller reasonably believed the substitute would be acceptable; here delivery occurred on the deadline and the parties had no prior dealings suggesting substitutes were fine."
+    },
+    {
+      "id": "contracts-017",
+      "subject": "contracts",
+      "subtopic": "performance-breach-discharge",
+      "rule": "Anticipatory repudiation",
+      "priority": "H",
+      "difficulty": 1,
+      "stem": "A contractor and a farmer signed a contract in the spring under which the contractor would build a barn on the farmer's land, with construction to begin on September first and payment due in stages. On July first, the farmer sent the contractor a signed letter stating, \"I have decided not to go forward with the barn under any circumstances. Do not come in September. I will not pay you.\" The contractor wrote back urging the farmer to reconsider, received no reply, and filed a breach of contract suit on July tenth. The farmer moved to dismiss, arguing that he could not possibly be in breach because his performance was not due until September. How should the court rule on the motion?",
+      "choices": [
+        "Deny it, because the farmer's unequivocal refusal to perform was an anticipatory repudiation that allowed an immediate suit.",
+        "Grant it, because no breach can occur before the time set for performance arrives.",
+        "Grant it, because the contractor's only option after a repudiation is to urge the repudiating party to perform.",
+        "Grant it, because the farmer remained free to retract his repudiation at any time before September first."
+      ],
+      "correctIndex": 0,
+      "explanation": "Anticipatory repudiation occurs when a party unequivocally communicates, before performance is due, that he is unable or unwilling to perform. The non-breaching party may then treat the contract as breached and sue immediately, treat it as discharged, await the performance date, or urge performance. The farmer's letter was a definite refusal, so the July suit is proper. Choice B states the rule the doctrine of anticipatory repudiation exists to override. Choice C is wrong because urging performance is merely one option among several, not the exclusive remedy. Choice D is wrong because the power to retract a repudiation ends once the other party cancels, materially changes position, or indicates the repudiation is considered final, and filing suit did exactly that."
+    },
+    {
+      "id": "contracts-018",
+      "subject": "contracts",
+      "subtopic": "performance-breach-discharge",
+      "rule": "Impossibility — destruction of subject matter",
+      "priority": "M",
+      "difficulty": 1,
+      "stem": "The owner of a historic downtown theater contracted with a restoration specialist to restore the hand-painted murals inside the theater's lobby over the coming winter, for a fee payable on completion. Two weeks before the work was to begin, lightning struck the building and the resulting fire burned the theater to the ground, destroying the murals entirely. Neither party was at fault, and neither had anticipated the event or addressed it in the contract. The owner, who had turned down a competing restorer at a lower price, sued the specialist for damages for failing to perform. The specialist argues that her performance is excused. What is the specialist's best defense, and will it succeed?",
+      "choices": [
+        "She remains liable, because a contractor bears all risks not expressly shifted by a force majeure clause.",
+        "She is discharged, because the unanticipated destruction of the subject matter made performance objectively impossible.",
+        "She remains liable, because impossibility excuses performance only when a necessary person dies or becomes incapacitated.",
+        "She is discharged only if the contract contained a clause permitting cancellation."
+      ],
+      "correctIndex": 1,
+      "explanation": "Performance is discharged by impossibility when, after formation and without fault, performance becomes objectively impossible, including through unanticipated destruction of the contract's subject matter. The murals the specialist promised to restore no longer exist, so no one could render the promised performance and both parties' duties are discharged. Choice A is wrong because impossibility is a default doctrine; no express force majeure clause is needed to allocate the risk of an unforeseen destruction. Choice C is wrong because death or incapacity of an essential person is just one recognized category of impossibility, alongside destruction and supervening illegality. Choice D is wrong because discharge arises by operation of law, not from any cancellation clause in the agreement."
+    },
+    {
+      "id": "contracts-019",
+      "subject": "contracts",
+      "subtopic": "performance-breach-discharge",
+      "rule": "Insecurity and demand for adequate assurances",
+      "priority": "H",
+      "difficulty": 3,
+      "stem": "In January, a corporation hired a catering company to provide complete food service for the corporation's June anniversary gala, with payment due after the event. In April, the corporation learned from reliable industry sources that the caterer had abruptly cancelled three similar events that spring and had laid off most of its kitchen staff. The corporation promptly sent the caterer a written demand for assurance that it would perform in June. The caterer never responded. After six weeks of silence, the corporation hired a replacement caterer and notified the original caterer that their contract was over. The original caterer, which never expressly refused to perform, sued the corporation for breach. Who should prevail?",
+      "choices": [
+        "The caterer, because reports of financial trouble and layoffs can never justify treating a contract as repudiated.",
+        "The caterer, because it never unequivocally stated that it was unwilling or unable to perform.",
+        "The corporation, because the caterer's failure to provide assurances within a reasonable time after a justified written demand operated as a repudiation.",
+        "The corporation, because the caterer's layoffs were themselves an anticipatory repudiation of the contract."
+      ],
+      "correctIndex": 2,
+      "explanation": "When a party has reasonable grounds for insecurity about the other side's performance, it may make a written demand for adequate assurances, suspend its own performance in the meantime, and treat the contract as repudiated if no assurance arrives within a reasonable time. Credible reports of cancelled events and mass layoffs supplied reasonable grounds, the demand was written, and six weeks of silence justified treating the contract as repudiated and covering with a substitute. Choice A is wrong because objectively reliable indications of inability are exactly what the doctrine addresses. Choice B is wrong because the failure to respond to a proper demand substitutes for an express refusal. Choice D is wrong because ambiguous conduct like layoffs is not the required unequivocal repudiation; it merely triggered the right to demand assurances."
+    },
+    {
+      "id": "contracts-020",
+      "subject": "contracts",
+      "subtopic": "performance-breach-discharge",
+      "rule": "Conditions — excuse by hindrance or failure of good-faith effort",
+      "priority": "M",
+      "difficulty": 2,
+      "stem": "A buyer signed a contract to purchase a seller's house for four hundred thousand dollars, with the agreement expressly \"contingent on the buyer obtaining a mortgage loan of at least three hundred thousand dollars at an interest rate not exceeding seven percent within forty-five days.\" A week after signing, the buyer found a different house he liked better. He never applied to a single lender. When the forty-five days expired, he notified the seller that the deal was off because the financing condition had failed. Market evidence showed qualifying loans were readily available to buyers with his finances. The seller resold the house for substantially less and sued the buyer for the difference. What is the likely result?",
+      "choices": [
+        "The buyer wins, because the condition precedent to his duty to pay never occurred.",
+        "The buyer wins, because financing contingencies are construed strictly in favor of the party they protect.",
+        "The seller wins, because a financing contingency renders the buyer's promise illusory, leaving the seller's obligations enforceable alone.",
+        "The seller wins, because the buyer's failure to make a good-faith effort to obtain financing excused the condition."
+      ],
+      "correctIndex": 3,
+      "explanation": "A condition is excused when the party it protects wrongfully prevents its occurrence or fails to make a good-faith effort to bring it about. A financing contingency carries an implied duty to seek the loan diligently; by applying to no lender at all when qualifying loans were available, the buyer caused the condition's failure, so the condition is excused and his duty to buy became absolute, making his refusal a breach. Choice A would be right only if the condition had failed despite good-faith efforts. Choice B is wrong because even a protected party must cooperate in good faith. Choice C is wrong because a financing condition does not make the promise illusory; the implied obligation of good-faith effort supplies the commitment."
+    },
+    {
+      "id": "contracts-021",
+      "subject": "contracts",
+      "subtopic": "performance-breach-discharge",
+      "rule": "UCC revocation of acceptance",
+      "priority": "H",
+      "difficulty": 3,
+      "stem": "A bakery purchased a commercial dough mixer from an equipment seller for twelve thousand dollars. On delivery, the bakery's staff inspected the machine, ran it successfully, and paid in full. Six weeks later, the mixer began grinding to a halt mid-batch. A technician opened the gearbox and found a hairline casting crack that had been present at delivery but could not have been discovered without complete disassembly. The crack makes the mixer unreliable for daily production and has sharply reduced its usefulness. The bakery immediately notified the seller in writing, described the defect, and demanded its money back. The mixer is otherwise in the same condition as when delivered. The seller responded that the bakery accepted the goods and is limited to damages. May the bakery get its money back?",
+      "choices": [
+        "Yes, because the latent defect substantially impairs the mixer's value and the bakery revoked its acceptance within a reasonable time after discovery.",
+        "No, because once a buyer accepts goods, the acceptance is final and the buyer's only remedy is damages for breach of warranty.",
+        "No, because the bakery had a reasonable opportunity to inspect the mixer before paying for it.",
+        "Yes, because under the perfect tender rule a buyer may reject goods that fail to conform in any respect."
+      ],
+      "correctIndex": 0,
+      "explanation": "Under UCC Article 2, a buyer who has accepted goods may nevertheless revoke acceptance when the nonconformity substantially impairs the goods' value and the defect was difficult to discover at acceptance, provided revocation occurs within a reasonable time after the buyer discovers or should have discovered it, the seller is notified, and the goods have not substantially changed. Every element is met: the crack was latent, it substantially impairs value, notice was immediate, and the mixer is unchanged, so the bakery may cancel and recover the price. Choice B is wrong because revocation of acceptance is precisely the exception to the finality of acceptance. Choice C is wrong because the defect was undiscoverable by reasonable inspection. Choice D confuses rejection, which ends once goods are accepted, with revocation."
+    },
+    {
+      "id": "contracts-022",
+      "subject": "contracts",
+      "subtopic": "remedies",
+      "rule": "Mitigation of damages",
+      "priority": "H",
+      "difficulty": 2,
+      "stem": "An engineer signed a two-year employment contract with a design firm at ten thousand dollars per month. After six months, the firm wrongfully terminated her without cause. One week later, a competing firm in the same city offered her a substantially similar engineering position at the same monthly salary, with comparable duties and conditions. She declined the offer, explaining that she preferred to take a long sabbatical and travel. She then sued her former employer for the remaining eighteen months of salary, a total of one hundred eighty thousand dollars. The former employer concedes the wrongful termination but disputes the amount owed. What should the engineer recover?",
+      "choices": [
+        "The full one hundred eighty thousand dollars, because the employer's breach was the actual cause of her lost salary.",
+        "Her lost salary reduced by the amounts she would have earned in the comparable position she declined.",
+        "Nothing, because turning down comparable work operates as a complete waiver of her claim.",
+        "The full one hundred eighty thousand dollars, because a wrongfully discharged employee is never required to work for anyone else."
+      ],
+      "correctIndex": 1,
+      "explanation": "Expectation damages must be unavoidable: the injured party must take reasonable steps to mitigate, and the award is reduced by losses that reasonable efforts would have prevented. A wrongfully discharged employee need not take different or inferior work, but declining a substantially similar position at equal pay in the same city means the avoidable salary is deducted from recovery. Choice A is wrong because causation alone is insufficient; damages must also be unavoidable. Choice C overstates the consequence, since failure to mitigate reduces damages rather than extinguishing the claim, and some loss, such as the gap week, may remain. Choice D is wrong because while no one can compel her to work, the law nonetheless excludes losses she reasonably could have avoided by accepting comparable employment."
+    },
+    {
+      "id": "contracts-023",
+      "subject": "contracts",
+      "subtopic": "remedies",
+      "rule": "Consequential damages — foreseeability of special circumstances",
+      "priority": "H",
+      "difficulty": 3,
+      "stem": "A printing company's only press stopped working because its drive shaft cracked. The company hired a courier service to transport the broken shaft to a distant manufacturer so a replacement could be machined, paying for guaranteed two-day delivery. The printing company's manager said nothing about the press being the company's only one or about the plant standing idle, and nothing about the shipment indicated that a factory's operations depended on it. The courier negligently misrouted the shaft, and delivery took nine days instead of two. The printing company lost twenty thousand dollars in profits during the extra week of shutdown and sued the courier for those lost profits. Is the printing company likely to recover the twenty thousand dollars?",
+      "choices": [
+        "Yes, because the courier's delay was the actual cause of every day the plant stood idle.",
+        "Yes, because lost profits are a natural and ordinary consequence of any late delivery.",
+        "No, because the courier neither knew nor had reason to know at contracting that delay would shut down the plant.",
+        "No, because consequential damages are never recoverable for a carrier's late delivery."
+      ],
+      "correctIndex": 2,
+      "explanation": "Consequential damages flow indirectly from a breach, such as lost profits, and are recoverable only if they were reasonably foreseeable at the time of contracting, arise from special circumstances the breaching party knew or had reason to know of, and are reasonably certain. The courier was never told the press was the company's only one or that the plant was idle, so the shutdown losses were not within its contemplation when it took the job. Choice A is wrong because actual causation alone does not make indirect losses recoverable; foreseeability at formation is also required. Choice B is wrong because lost profits of this kind follow only from undisclosed special circumstances, not from delay in the ordinary course. Choice D is wrong because carriers can owe consequential damages when the special needs are disclosed."
+    },
+    {
+      "id": "contracts-024",
+      "subject": "contracts",
+      "subtopic": "remedies",
+      "rule": "Liquidated damages",
+      "priority": "M",
+      "difficulty": 2,
+      "stem": "A city contracted with a paving company to rebuild a heavily used downtown street, with completion required by October first. Because the cost of prolonged detours, rerouted bus lines, and lost parking revenue would be nearly impossible to calculate, the contract provided that the paving company would pay the city one thousand dollars for each day completion was late, a figure the parties negotiated as a genuine forecast of the city's likely daily losses. The company finished thirty days late, and the city withheld thirty thousand dollars. The company sued to recover the withheld amount, arguing the clause is an unenforceable penalty, and the city's actual losses remain difficult to measure even now. How should the court rule on the clause?",
+      "choices": [
+        "The clause is unenforceable, because per-day damages provisions are inherently punitive.",
+        "The clause is unenforceable unless the city proves its actual damages equaled thirty thousand dollars.",
+        "The clause is enforceable, and the city may also recover any actual damages it can prove on top of the thirty thousand dollars.",
+        "The clause is enforceable, because damages were difficult to estimate when the contract was made and the daily amount was a reasonable forecast."
+      ],
+      "correctIndex": 3,
+      "explanation": "A liquidated damages clause is enforced when the damages were difficult to estimate at the time of contracting and the stipulated amount is a reasonable forecast of the anticipated harm. Disruption from delayed public road work is a classic hard-to-measure injury, and a negotiated per-day figure tied to expected daily losses is reasonable, so the city keeps the thirty thousand dollars. Choice A is wrong because per-day formulas are a common and accepted way to liquidate delay damages. Choice B is wrong because the point of a valid clause is to replace proof of actual damages; the city need not prove its losses. Choice C is wrong because when the clause is valid, the liquidated amount is the exclusive recovery for the covered breach, not a floor to which actual damages may be added."
+    },
+    {
+      "id": "contracts-025",
+      "subject": "contracts",
+      "subtopic": "remedies",
+      "rule": "Restitution damages — recovery despite unenforceable contract",
+      "priority": "H",
+      "difficulty": 2,
+      "stem": "A homeowner and a handyman orally agreed that the handyman would convert the homeowner's basement into a finished apartment over a period of eighteen months for forty thousand dollars, payable on completion. The handyman worked steadily for five months, furnishing labor and materials that increased the value of the home by twelve thousand dollars. The homeowner then ordered him off the property and refused to pay anything. When the handyman sued, the homeowner successfully established that the agreement was unenforceable under the Statute of Frauds because, by its terms, it could not be performed within one year. The handyman maintains that he is still entitled to some recovery. What, if anything, may the handyman recover?",
+      "choices": [
+        "The reasonable value of the benefit his work conferred on the homeowner, in restitution.",
+        "The full forty thousand dollar contract price, because the homeowner committed a total breach.",
+        "Nothing, because no remedy is available where the underlying contract is unenforceable.",
+        "His out-of-pocket expenditures, but only if he proves the homeowner acted in bad faith."
+      ],
+      "correctIndex": 0,
+      "explanation": "Restitution prevents unjust enrichment and is available when one party confers a measurable benefit on another, even where no enforceable contract exists. Although the Statute of Frauds bars enforcement of the oral agreement, the homeowner received twelve thousand dollars in improvements, and allowing him to keep them without paying would unjustly enrich him; the handyman therefore recovers the value of the benefit conferred. Choice B is wrong because expectation damages require an enforceable contract, and the statute bars suit on the agreement itself. Choice C is wrong because unenforceability of the contract does not defeat a quasi-contractual claim, which arises by law rather than from the agreement. Choice D is wrong because restitution is measured by the benefit to the defendant and does not depend on proof of bad faith."
+    },
+    {
+      "id": "contracts-026",
+      "subject": "contracts",
+      "subtopic": "third-party-rights",
+      "rule": "Intended vs. incidental third-party beneficiary",
+      "priority": "M",
+      "difficulty": 2,
+      "stem": "A city contracted with a private developer to construct a public marina on the waterfront, expecting the project to draw visitors to the area. The owner of a café across the street from the planned marina read about the contract in the newspaper, anticipated a surge of customers, and spent ninety thousand dollars expanding her seating and kitchen. A year later, before construction began, the city and the developer mutually agreed to cancel the project for budget reasons. The café owner sued the developer for breach of the construction contract, pointing to her expansion expenses and the profits she expected the marina to generate. Nothing in the contract mentioned neighboring businesses or any intent to benefit them. Will the café owner's suit succeed?",
+      "choices": [
+        "Yes, because she detrimentally relied on the contract, which vested her rights before the cancellation.",
+        "No, because she was at most an incidental beneficiary, who acquires no enforceable rights under the contract.",
+        "Yes, because contracts for public projects are intended to benefit the local businesses surrounding them.",
+        "No, but only because her rights had not yet vested when the parties cancelled the project."
+      ],
+      "correctIndex": 1,
+      "explanation": "Only an intended third-party beneficiary, one whom the contracting parties meant their performance to benefit, may sue on a contract; a person who merely stands to gain from its performance is an incidental beneficiary with no legal rights. Nothing in the marina contract identified the café or showed any purpose to benefit neighboring merchants, so the owner is incidental and her claim fails regardless of her expenditures. Choice A is wrong because vesting by reliance is available only to intended beneficiaries in the first place. Choice C is far too broad, since the diffuse benefits of public projects do not make every nearby business an intended beneficiary. Choice D fails for the same reason as A: there were never any rights capable of vesting."
+    },
+    {
+      "id": "contracts-027",
+      "subject": "contracts",
+      "subtopic": "third-party-rights",
+      "rule": "Delegation — delegating party remains liable absent novation",
+      "priority": "H",
+      "difficulty": 2,
+      "stem": "A landscaping company signed a one-year contract with the owner of an office park to mow, trim, and maintain the grounds each week for a monthly fee. The contract said nothing about delegation, and the work called for no special artistic skill or personal judgment. Midway through the year, the landscaping company delegated its remaining duties to a smaller maintenance firm with a solid reputation, and the owner continued paying the landscaping company while the new firm did the work for two months. The new firm then badly over-fertilized the lawns, killing large sections of grass. The owner sued the landscaping company, which argued that its delegation transferred the duties and ended its responsibility. Is the landscaping company liable?",
+      "choices": [
+        "No, because a valid delegation transfers the contractual duties to the party who assumes them.",
+        "No, because the owner's acceptance of the new firm's performance for two months created a novation.",
+        "Yes, because a delegating party remains liable for performance unless the obligee agrees to a novation.",
+        "Yes, because routine maintenance duties of this kind may never be delegated to another party."
+      ],
+      "correctIndex": 2,
+      "explanation": "Contract duties are generally delegable unless the contract forbids it, the duties involve personal skill or discretion, or delegation would materially change the obligee's expectancy. This routine grounds work was therefore properly delegated, but delegation does not release the delegating party: it remains liable for any nonperformance unless the obligee agrees to a novation substituting the new party and discharging the old one. The owner never made such an agreement, so the landscaping company answers for the dead lawns. Choice A is wrong because delegation adds an obligor; it does not discharge the original one. Choice B is wrong because merely accepting and paying for the substitute's performance is not the consent to discharge that a novation requires. Choice D is backwards, since impersonal routine services are the clearest case of delegable duties."
+    },
+    {
+      "id": "contracts-028",
+      "subject": "contracts",
+      "subtopic": "third-party-rights",
+      "rule": "Assignment of rights — right to payment assignable; assignee may sue obligor",
+      "priority": "M",
+      "difficulty": 3,
+      "stem": "A contractor completed a twenty-five-thousand-dollar remodeling project for a homeowner under a written contract that made payment due sixty days after completion and said nothing about assignment. To secure a business loan, the contractor assigned its right to the payment to a bank in exchange for value, signing a written assignment. The bank promptly sent the homeowner written notice of the assignment, instructing her to pay the bank when the sixty days expired. When payment came due, the homeowner refused to pay the bank, asserting that she never made any contract with the bank and never consented to the assignment, and that the contractor cannot transfer her obligation to a stranger. The bank sued the homeowner for the twenty-five thousand dollars. The remodeling work was completed without defects. What result?",
+      "choices": [
+        "The bank loses, because it lacks privity of contract with the homeowner.",
+        "The bank loses, because an assignment is ineffective without the obligor's consent.",
+        "The bank loses, because the remodeling contract did not expressly authorize assignment.",
+        "The bank wins, because the right to payment was validly assigned and the assignee may enforce it against the obligor."
+      ],
+      "correctIndex": 3,
+      "explanation": "Contract rights are freely assignable when the assignor manifests intent to transfer and the assignment does not materially alter the obligor's duty, increase her burden or risk, or fall under a legal or contractual prohibition. Paying a bank instead of a contractor changes nothing material about the homeowner's obligation, and after notice of the assignment the obligor must pay the assignee, who may sue directly for nonpayment. Choice A is wrong because an assignee steps into the assignor's shoes and needs no independent privity. Choice B is wrong because the obligor's consent is not required for an effective assignment of a payment right. Choice C inverts the default rule: silence in the contract permits assignment; only an express prohibition could restrict it, and even then it typically gives damages rather than invalidating the transfer."
+    }
+  ]
+}

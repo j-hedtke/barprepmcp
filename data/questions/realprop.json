@@ -1,0 +1,481 @@
+{
+  "subject": "realprop",
+  "questions": [
+    {
+      "id": "realprop-001",
+      "subject": "realprop",
+      "subtopic": "ownership",
+      "rule": "Fee simple determinable and possibility of reverter",
+      "priority": "H",
+      "difficulty": 1,
+      "stem": "A landowner executed and delivered a deed conveying her ten-acre parcel to the county library board, so long as the land is used for public library purposes. The library board built a branch library on the parcel and operated it for twenty years. Last year, facing budget cuts, the board permanently closed the library and leased the building to a coffee shop operator, who began running a cafe there. The landowner is still alive, but she has taken no legal action of any kind concerning the parcel since the library closed. The coffee shop operator has asked a lawyer who currently owns the parcel. What is the lawyer's best answer?",
+      "choices": [
+        "The library board, because the landowner has not yet exercised her right of re-entry.",
+        "The library board, because the conditional language created only a covenant enforceable by an injunction against non-library uses.",
+        "The landowner, because her possibility of reverter took effect automatically when the library use ceased.",
+        "The county, because conditions restricting how land may be used are void as unreasonable restraints on alienation."
+      ],
+      "correctIndex": 2,
+      "explanation": "Durational language such as 'so long as' creates a fee simple determinable, which reserves a possibility of reverter in the grantor. When the stated condition occurs, the grantee's estate terminates automatically and title revests in the grantor without any action on her part. Here, converting the property to a cafe ended the public library use, so ownership returned to the landowner immediately. The first choice describes a fee simple subject to a condition subsequent, which requires conditional words like 'but if' and requires the grantor to affirmatively re-enter. The second choice mischaracterizes express defeasance language as a mere covenant. The last choice is wrong because defeasible fees are valid; they are not treated as restraints on alienation."
+    },
+    {
+      "id": "realprop-002",
+      "subject": "realprop",
+      "subtopic": "ownership",
+      "rule": "Contingent remainder",
+      "priority": "H",
+      "difficulty": 2,
+      "stem": "A retired teacher executed a valid deed conveying her vineyard to her brother for life, and then to those of her brother's children who reach the age of twenty-five. At the time of the conveyance, the brother was alive and had one child, a ten-year-old daughter. The brother is in good health and may have more children. The daughter's guardian has asked an attorney to describe what interest, if any, the daughter received in the vineyard at the moment the deed took effect. Which of the following best describes the daughter's interest immediately after the conveyance?",
+      "choices": [
+        "A contingent remainder, because her interest is subject to a condition precedent that she reach twenty-five.",
+        "A vested remainder subject to open, because she is an ascertained member of the class of the brother's children.",
+        "A vested remainder subject to complete divestment if she dies before twenty-five.",
+        "A springing executory interest, because her interest may take effect after a gap in possession."
+      ],
+      "correctIndex": 0,
+      "explanation": "A remainder is contingent if it is given to an unascertained person or is conditioned on an event that has not yet occurred. Reaching age twenty-five is a condition precedent, and no child of the brother has satisfied it, so the daughter holds a contingent remainder. A vested remainder requires an identifiable taker with no conditions precedent; the daughter is identifiable, but the age requirement remains unmet, so her interest cannot be vested, which eliminates both the vested-remainder-subject-to-open and the vested-subject-to-divestment answers. The interest is also not an executory interest: it follows naturally upon the expiration of the preceding life estate rather than cutting short another estate or springing out of the grantor at a later time."
+    },
+    {
+      "id": "realprop-003",
+      "subject": "realprop",
+      "subtopic": "ownership",
+      "rule": "Joint tenancy severance — mortgage in a lien theory state",
+      "priority": "H",
+      "difficulty": 2,
+      "stem": "Two sisters owned a beach cottage as joint tenants with the right of survivorship. The older sister, without telling the younger sister, borrowed fifty thousand dollars from a bank and signed a mortgage on her one-half interest in the cottage to secure the loan. The jurisdiction follows the lien theory of mortgages. Two years later, the older sister died with the loan still unpaid. The bank now seeks to foreclose its mortgage against an undivided one-half interest in the cottage. The younger sister objects, claiming she owns the entire cottage free of the mortgage. How should the court rule?",
+      "choices": [
+        "For the bank, because the mortgage severed the joint tenancy and converted it into a tenancy in common.",
+        "For the younger sister, because in a lien theory state the mortgage did not sever the joint tenancy, and the lien was extinguished when the older sister's interest ended at her death.",
+        "For the bank, because a joint tenant's creditors always retain the right to reach the debtor's share after death.",
+        "For the younger sister as to half the cottage only, with the older sister's estate holding the other half subject to the mortgage."
+      ],
+      "correctIndex": 1,
+      "explanation": "In a lien theory jurisdiction, a mortgage given by one joint tenant creates only a lien on that tenant's interest and does not sever the joint tenancy; severance would occur only in a title theory state, where the mortgage is treated as a transfer of title. Because the joint tenancy survived, the older sister's interest evaporated at her death, and the survivor took the whole property by operation of law. The bank's lien attached only to the deceased sister's interest, so it was extinguished along with that interest. The first choice states the title theory result. The third choice ignores survivorship. The last choice wrongly assumes the deceased's interest passed to her estate, which never happens in an unsevered joint tenancy."
+    },
+    {
+      "id": "realprop-004",
+      "subject": "realprop",
+      "subtopic": "ownership",
+      "rule": "Co-tenant's entitlement to rent and reimbursement for repairs",
+      "priority": "M",
+      "difficulty": 2,
+      "stem": "A brother and sister inherited their mother's house as tenants in common, each owning an undivided one-half interest. The brother moved into the house alone. The sister lived in another city and never asked to move in, and the brother never prevented her from using the property. Last year, the brother paid eight thousand dollars to replace the badly leaking roof, a repair necessary to keep the house habitable. The sister has now sued the brother, demanding one-half of the fair rental value of the house for the period of his sole occupancy. The brother has counterclaimed for one-half of the cost of the roof repair. How should the court resolve the claims?",
+      "choices": [
+        "The sister recovers half the rental value, and she must also contribute half the repair cost.",
+        "The sister recovers half the rental value, but she owes nothing toward the repair.",
+        "The sister recovers nothing, and she owes nothing toward the repair.",
+        "The sister recovers nothing for rent, but she must contribute half the cost of the necessary repair."
+      ],
+      "correctIndex": 3,
+      "explanation": "A co-tenant in sole possession does not owe rent to an out-of-possession co-tenant unless the parties agreed otherwise or the occupying tenant wrongfully ousted the other. Because the brother never excluded the sister and no agreement existed, she has no claim to rental value. By contrast, a co-tenant who pays for necessary repairs is entitled to contribution from the other co-tenants in proportion to their shares, at least where there has been no wrongful ouster. The roof replacement was necessary, so the sister owes half of its cost. The choices awarding the sister rent fail because there was no ouster, and the choice denying repair contribution ignores the rule allowing reimbursement for necessary repairs, which differs from the rule denying reimbursement for mere improvements."
+    },
+    {
+      "id": "realprop-005",
+      "subject": "realprop",
+      "subtopic": "ownership",
+      "rule": "Constructive eviction — tenant must vacate",
+      "priority": "H",
+      "difficulty": 2,
+      "stem": "A florist leased a commercial storefront for three years. During the first winter, the building's furnace failed repeatedly, leaving the shop so cold that customers would not linger and several flower shipments froze. The florist sent the landlord written notice of the problem after each failure, but the landlord never made repairs despite having months to do so. The florist remained in the storefront for the rest of the winter and continued operating the shop, but stopped paying rent, asserting that the landlord's conduct amounted to a constructive eviction that excused the rent obligation. The landlord sued for the unpaid rent. Who should prevail?",
+      "choices": [
+        "The florist, because the landlord breached the covenant of quiet enjoyment by failing to fix a condition that substantially impaired use of the premises.",
+        "The landlord, because the florist never vacated the premises and therefore cannot claim constructive eviction.",
+        "The landlord, because a commercial tenant's duty to pay rent is always independent of any landlord obligation.",
+        "The florist, because the implied warranty of habitability permitted the florist to withhold rent until the furnace was repaired."
+      ],
+      "correctIndex": 1,
+      "explanation": "Constructive eviction requires that the landlord breach a duty, that the breach substantially deprive the tenant of use and enjoyment, that the tenant give notice, that the landlord fail to cure within a reasonable time, and that the tenant actually vacate the premises. The florist satisfied every element except the last: a tenant who stays in possession cannot claim to have been evicted, so the rent obligation continues. The first choice ignores the vacating requirement. The choice about habitability fails because that implied warranty applies to residential leases, not a commercial storefront, in most jurisdictions. The remaining choice overstates the law, since the constructive eviction doctrine itself is an exception to the traditional independence of lease covenants."
+    },
+    {
+      "id": "realprop-006",
+      "subject": "realprop",
+      "subtopic": "ownership",
+      "rule": "Assignment of a lease — assignor remains liable",
+      "priority": "H",
+      "difficulty": 2,
+      "stem": "A tenant signed a five-year lease for office space, promising in the lease to pay monthly rent. After two years, the tenant assigned the entire remaining three years of the lease to an accountant, who moved in. The landlord knew of the assignment and accepted rent checks directly from the accountant for a full year without objection. The landlord never signed any agreement releasing the original tenant. The accountant then abandoned the office and stopped paying rent. The landlord sued the original tenant for the unpaid rent. Who should prevail?",
+      "choices": [
+        "The landlord, because the original tenant remains liable on the lease covenant to pay rent despite the assignment.",
+        "The original tenant, because the landlord's acceptance of rent from the accountant released the tenant from liability.",
+        "The original tenant, because an assignment of the full remaining term transfers all lease liability to the assignee.",
+        "The landlord, but only if the lease contained a clause prohibiting assignment without consent."
+      ],
+      "correctIndex": 0,
+      "explanation": "When a tenant assigns all of the remaining lease term, the assignee comes into privity of estate with the landlord and is liable for rent, but the original tenant remains in privity of contract and stays secondarily liable on the lease covenants unless the landlord grants a release or the parties execute a novation. Merely accepting rent from the assignee waives any objection to the assignment itself, but it does not discharge the assignor; only an express release or novation does that. The choice saying assignment transfers all liability confuses privity of estate with privity of contract. The final choice is irrelevant, because the original tenant's continuing contractual liability does not depend on whether the lease restricted assignment."
+    },
+    {
+      "id": "realprop-007",
+      "subject": "realprop",
+      "subtopic": "rights-in-real-property",
+      "rule": "Easement implied from prior existing use",
+      "priority": "H",
+      "difficulty": 2,
+      "stem": "A farmer owned two adjoining lots, a front lot bordering the public highway and a rear lot containing a farmhouse. For fifteen years the farmer reached the farmhouse by driving along a visible gravel lane that crossed the front lot from the highway. The farmer then sold the rear lot to a buyer; the deed said nothing about any right to use the lane. A rough dirt track also connects the rear lot to a county road, but it is twice as long and washes out in heavy rain. The buyer kept using the gravel lane until the farmer sold the front lot to a developer, who erected a fence across the lane. The buyer sued to keep using the lane. What is the buyer's strongest theory?",
+      "choices": [
+        "The claim fails, because any easement over the lane had to be in a writing signed by the farmer.",
+        "An easement by necessity, because the lane is the only practical way to reach the rear lot.",
+        "An easement implied from prior use, because the farmer's use of the lane was continuous, apparent, and reasonably necessary when the lots were divided.",
+        "A license, which the developer is estopped from revoking because the buyer relied on it."
+      ],
+      "correctIndex": 2,
+      "explanation": "An easement is implied from a prior existing use when a single tract is divided by a common owner, the use existed before the division, the use was continuous and apparent, and the use is reasonably necessary to the enjoyment of the parcel conveyed. The visible gravel lane used for fifteen years before severance fits each element, and the inferior dirt track shows the lane is reasonably necessary even though not absolutely essential. Implied easements are an exception to the Statute of Frauds, so the absence of a writing is not fatal. Strict necessity fails because an alternative route exists, which defeats an easement by necessity. The license theory is weak because nothing suggests the developer ever gave permission or that the buyer invested in reliance on one."
+    },
+    {
+      "id": "realprop-008",
+      "subject": "realprop",
+      "subtopic": "rights-in-real-property",
+      "rule": "Termination of easement by merger",
+      "priority": "H",
+      "difficulty": 2,
+      "stem": "The owner of a hillside lot held a recorded easement allowing her to drive across her downhill neighbor's lot to reach a public road. Five years ago, she purchased the downhill lot from the neighbor, taking title to both lots in her own name. She continued driving across the downhill lot just as before. Last year, she sold the downhill lot to an investor with a deed that made no mention of any easement, and the recorded easement document remained in the public records. The investor has now blocked the driveway, and the hillside owner sues to enforce her original recorded easement. How should the court rule?",
+      "choices": [
+        "For the hillside owner, because the easement automatically revived when the two lots were separated again.",
+        "For the hillside owner, because the easement was recorded and never formally released.",
+        "For the hillside owner, because the investor had constructive notice of the recorded easement.",
+        "For the investor, because the easement was extinguished by merger when the hillside owner acquired both lots, and separation did not revive it."
+      ],
+      "correctIndex": 3,
+      "explanation": "An easement is extinguished by merger when the same person acquires ownership of both the dominant and servient estates, because a landowner cannot hold an easement over her own land. Once extinguished, the easement does not spring back to life if the parcels are later separated; the owner would need to create a new easement by an express grant or reservation in the deed dividing the parcels, which she failed to do here. The recording of the old easement is irrelevant, since recording preserves notice of an interest but cannot preserve an interest that no longer exists. For the same reason, the investor's constructive notice of a defunct document creates no enforceable burden, and there is no rule of automatic revival upon separation."
+    },
+    {
+      "id": "realprop-009",
+      "subject": "realprop",
+      "subtopic": "rights-in-real-property",
+      "rule": "Easement by prescription — permission defeats hostility",
+      "priority": "H",
+      "difficulty": 1,
+      "stem": "For twelve years, a jogger living beside a wooded lot has used a footpath across the lot every morning as a shortcut to a public park. The path is plainly visible, and the jogger has never tried to hide her use. The statutory period for prescriptive rights in the jurisdiction is ten years. During the third year of the jogger's use, the lot's owner mailed her a friendly note saying he had seen her on the path and that she was welcome to keep using it whenever she liked. The owner recently sold the lot, and the new owner fenced off the path. The jogger sues, claiming a prescriptive easement. Who should prevail?",
+      "choices": [
+        "The new owner, because the prior owner's note made the jogger's use permissive, defeating the hostility requirement.",
+        "The jogger, because her use was open, visible, and continuous for longer than the statutory period.",
+        "The jogger, because the prior owner never revoked the permission before selling the lot.",
+        "The new owner, because the jogger never paid property taxes on the portion of the lot containing the path."
+      ],
+      "correctIndex": 0,
+      "explanation": "A prescriptive easement requires use that is open and notorious, continuous for the statutory period, and hostile, meaning without the owner's permission. When the owner granted express permission in year three, the use became permissive from that point forward, so the hostility element could never be satisfied and the prescriptive clock stopped running. Permission, once given, continues until revoked, and nothing here revoked it; the jogger therefore had at most two years of hostile use. The answer relying on open and continuous use overlooks that all elements, including hostility, must coexist for the full period. Continued unrevoked permission helps the owner, not the jogger, since permissive use never ripens into a prescriptive right. Payment of taxes is not an element of prescriptive easements in most jurisdictions."
+    },
+    {
+      "id": "realprop-010",
+      "subject": "realprop",
+      "subtopic": "rights-in-real-property",
+      "rule": "Real covenant — burden running with the land",
+      "priority": "M",
+      "difficulty": 3,
+      "stem": "A developer divided land into ten lots served by a private road. Each original deed from the developer contained a covenant stating that the lot owner and all successors and assigns would pay one-tenth of the annual cost of maintaining the road, and every deed was promptly recorded. One original buyer later sold her lot to a dentist. The dentist's own deed never mentioned the covenant, and the dentist never read the recorded documents. When the road needed repaving, the dentist refused to pay his one-tenth share. A neighboring lot owner who paid the repaving bill sued the dentist for money damages equal to his share. Is the dentist liable?",
+      "choices": [
+        "No, because the covenant was not repeated in the dentist's own deed.",
+        "Yes, because the covenant satisfies the requirements for the burden to run at law and the recorded deeds gave the dentist constructive notice.",
+        "No, because a covenant to pay money does not touch and concern the land.",
+        "Yes, but the neighbor's only available remedy is an injunction compelling future payments, not damages."
+      ],
+      "correctIndex": 1,
+      "explanation": "The burden of a real covenant runs to a successor when there is a writing satisfying the Statute of Frauds, intent that it bind successors, touch and concern, horizontal privity between the original parties, vertical privity with the successor, and notice. The recorded developer deeds supply the writing, the successors-and-assigns language shows intent, the developer-purchaser conveyance creates horizontal privity, the dentist took the original buyer's entire estate, and recording gave constructive notice even though the dentist never looked. A covenant to share road maintenance costs touches and concerns the land because it affects the value and usefulness of every lot. The covenant need not appear in the dentist's own deed to bind him. Because this is enforcement at law as a real covenant, money damages are the proper remedy, not merely an injunction."
+    },
+    {
+      "id": "realprop-011",
+      "subject": "realprop",
+      "subtopic": "rights-in-real-property",
+      "rule": "Trade fixture exception",
+      "priority": "L",
+      "difficulty": 2,
+      "stem": "A restaurateur leased a building for five years to operate a pizzeria. Shortly after taking possession, she installed two commercial pizza ovens and a walk-in refrigerator, each bolted to the floor and connected to the building's utilities, all purchased with her own money for the restaurant business. The lease said nothing about equipment or fixtures. Two days before the lease expired, the restaurateur unbolted and removed the ovens and the refrigerator, patched the small bolt holes in the floor, and capped the utility connections, leaving no significant damage. The landlord sued, claiming the equipment had become part of the building and demanding its return or its value. Who should prevail?",
+      "choices": [
+        "The landlord, because items affixed to a building become part of the real property.",
+        "The landlord, because bolting the equipment to the floor showed an objective intent to make a permanent installation.",
+        "The restaurateur, because equipment installed for a tenant's business may be removed before the lease ends if removal causes no substantial damage.",
+        "The restaurateur, because items a tenant pays for always remain the tenant's personal property."
+      ],
+      "correctIndex": 2,
+      "explanation": "Although personal property affixed to leased premises ordinarily becomes a fixture belonging to the land, the trade fixture exception lets a tenant remove items attached for the tenant's trade or business, provided removal occurs before the end of the lease term and does not cause substantial damage to the premises. The ovens and refrigerator were business equipment, the restaurateur removed them while the lease was still running, and she repaired the minor bolt holes, so the exception squarely applies. The first two choices state the general fixture analysis without accounting for the exception. The last choice goes too far in the other direction: a tenant who pays for an item can still lose it as a fixture, particularly by leaving it in place after the lease term ends."
+    },
+    {
+      "id": "realprop-012",
+      "subject": "realprop",
+      "subtopic": "rights-in-real-property",
+      "rule": "Easement appurtenant passes with the dominant estate",
+      "priority": "H",
+      "difficulty": 2,
+      "stem": "The owner of a lakefront lot signed and recorded a written grant giving the owner of the adjoining inland lot the right to cross a marked path on the lakefront lot to reach the lake, stating that the right was for the benefit of the inland lot and its owners. For years the inland owner used the path without incident. The inland owner then sold her lot to a kayaker; the deed to the kayaker described the lot but did not mention the path. When the kayaker began using the path, the lakefront owner blocked it, insisting that the crossing right had been personal to the previous inland owner and ended with the sale. The kayaker sues to use the path. How should the court rule?",
+      "choices": [
+        "For the lakefront owner, because easements are personal rights that expire when the original holder transfers the land.",
+        "For the lakefront owner, because the kayaker's deed did not expressly re-grant the easement.",
+        "For the kayaker, but only if the lakefront owner consents to the substitution of a new user.",
+        "For the kayaker, because an easement appurtenant passes automatically with a transfer of the dominant estate."
+      ],
+      "correctIndex": 3,
+      "explanation": "An easement appurtenant benefits the holder's land rather than the holder personally, and it passes automatically to anyone who succeeds to the dominant estate, at least where the servient owner had notice; here the grant was recorded and expressly tied to the inland lot. Because the writing stated the right was for the benefit of the inland lot and its owners, it is appurtenant, not in gross. An appurtenant easement need not be mentioned in the deed transferring the dominant parcel; it follows the land by operation of law. The first choice describes an easement in gross, which generally does not pass to successors. The consent answer has no legal basis, since the servient owner cannot veto a transfer of the dominant estate."
+    },
+    {
+      "id": "realprop-013",
+      "subject": "realprop",
+      "subtopic": "real-estate-contracts",
+      "rule": "Implied warranty of marketable title — encumbrances",
+      "priority": "M",
+      "difficulty": 2,
+      "stem": "A homeowner contracted to sell his house to a nurse for four hundred thousand dollars, with closing set for sixty days later. The written contract identified the parties and the property, stated the price, and was signed by both, but it said nothing one way or the other about the quality of title. Three weeks before closing, the nurse's title search revealed a recorded easement allowing a neighbor to maintain a sewer line beneath the backyard. The sewer line is buried and invisible, and the contract never mentioned it. The nurse promptly notified the homeowner that she was refusing to close because of the easement. The homeowner sued for breach. Who should prevail?",
+      "choices": [
+        "The nurse, because the undisclosed recorded easement is an encumbrance that renders title unmarketable.",
+        "The homeowner, because an underground easement that does not interfere with possession is not a title defect.",
+        "The homeowner, because the contract contained no express promise about the condition of title.",
+        "The nurse, but only if she proves the easement measurably reduces the market value of the house."
+      ],
+      "correctIndex": 0,
+      "explanation": "Every land sale contract carries an implied duty that the seller deliver marketable title at closing, meaning title reasonably free of clouds and not subject to adverse claims. Encumbrances such as easements, mortgages, and restrictive covenants that the contract does not except will render title unmarketable, entitling the buyer to withdraw without penalty before closing. The recorded sewer easement was never excepted, so the nurse could refuse to close. The choice requiring an express title promise fails because the warranty of marketability is implied by law. The invisibility of the line does not matter, since marketability concerns the state of the title rather than physical interference. Proof of diminished market value is not required; the existence of the unexcepted encumbrance is itself the defect."
+    },
+    {
+      "id": "realprop-014",
+      "subject": "realprop",
+      "subtopic": "real-estate-contracts",
+      "rule": "Equitable conversion and risk of loss",
+      "priority": "M",
+      "difficulty": 2,
+      "stem": "A rancher signed an enforceable written contract to sell his farmhouse and surrounding acreage to a veterinarian, with closing scheduled in ninety days. The veterinarian made a substantial down payment at signing but did not take possession. Forty days later, a lightning strike caused a fire that destroyed the farmhouse. Neither party was at fault, and neither party carried insurance on the structure. The jurisdiction follows the majority approach to risk of loss in land sale transactions. The veterinarian refused to close and demanded the return of her down payment. The rancher sued to enforce the contract at the full price. Who should prevail?",
+      "choices": [
+        "The veterinarian, because the destruction of the farmhouse made it impossible for the rancher to convey what the contract promised.",
+        "The rancher, because under equitable conversion the veterinarian held equitable title from signing and therefore bore the risk of loss.",
+        "The veterinarian, because risk of loss stays with the seller until the buyer takes either possession or legal title.",
+        "The rancher, but only for the value of the land minus the value of the destroyed farmhouse."
+      ],
+      "correctIndex": 1,
+      "explanation": "Under the doctrine of equitable conversion, once an enforceable land sale contract is signed, the buyer is treated in equity as the owner of the property, holding equitable title, while the seller retains bare legal title in trust as security for the purchase price. In the majority of states, this means the risk of casualty loss occurring between signing and closing falls on the buyer, so the veterinarian must perform at the contract price despite the fire. The impossibility argument fails because equity already regards the buyer as owner. The choice keeping risk on the seller until possession or title passes states the minority rule, which the facts exclude. There is no automatic price abatement under the majority approach, so the partial-price answer is also wrong."
+    },
+    {
+      "id": "realprop-015",
+      "subject": "realprop",
+      "subtopic": "real-estate-contracts",
+      "rule": "Merger doctrine — contract terms merge into the deed",
+      "priority": "L",
+      "difficulty": 3,
+      "stem": "A buyer signed a contract to purchase a warehouse. The contract expressly required the seller to convey marketable title free of all encumbrances. At closing, the seller tendered a quitclaim deed. The buyer's lawyer reviewed the deed, and the buyer accepted it and paid the full price without objection. Eight months later, the buyer discovered an old recorded mortgage on the warehouse, granted by the seller years earlier and never satisfied. The buyer sued the seller for breach of the contract provision requiring title free of encumbrances. There is no evidence of fraud, mutual mistake, or drafting error. What is the most likely result?",
+      "choices": [
+        "The buyer recovers on the contract, because the written promise of unencumbered title survives the closing.",
+        "The buyer recovers on the deed, because every deed implies a covenant against encumbrances.",
+        "The buyer recovers nothing, because the contract's title promise merged into the deed, and a quitclaim deed contains no title covenants.",
+        "The buyer may rescind the entire transaction on the ground of mutual mistake about the state of the title."
+      ],
+      "correctIndex": 2,
+      "explanation": "Under the merger doctrine, once the buyer accepts delivery of the deed, the land sale contract merges into the deed and the contractual title obligations are extinguished; thereafter the buyer's remedies are limited to whatever covenants the deed itself contains. A quitclaim deed conveys only whatever interest the grantor has and includes no warranties at all, so it provides no basis for a title claim. The first choice ignores merger, which courts decline to apply mainly for problems like fraud, mutual mistake, or scrivener's error, none of which is present. The second choice is wrong because no covenants are implied into a quitclaim deed. Rescission for mutual mistake fails on these facts, since there is no evidence both parties shared a mistaken belief."
+    },
+    {
+      "id": "realprop-016",
+      "subject": "realprop",
+      "subtopic": "real-estate-contracts",
+      "rule": "Home builder's implied warranty — latent defects in new homes",
+      "priority": "H",
+      "difficulty": 2,
+      "stem": "A construction company built a new house and sold it directly to a young couple. The written sales contract contained no express warranties about the quality of construction. Eighteen months after the couple moved in, large cracks opened in the foundation and several interior walls. An engineer determined that the company had failed to properly compact the soil before pouring the foundation, a defect that could not have been discovered by any reasonable inspection at the time of sale. The couple sued the construction company for the cost of repairing the foundation. The company defended on the ground that it never made any warranty about the house. What is the couple's best theory of recovery?",
+      "choices": [
+        "None; the doctrine of caveat emptor bars recovery because the couple bought the house as they found it.",
+        "Breach of the covenant of seisin contained in the deed.",
+        "Negligent misrepresentation, but only if the company knew about the soil problem at the time of sale.",
+        "Breach of the implied warranty that a new home is built in a workmanlike manner and fit for habitation, which covers latent defects."
+      ],
+      "correctIndex": 3,
+      "explanation": "When a builder sells a newly constructed home, the law implies a warranty that the home was designed and built in a workmanlike manner and is safe and fit for human habitation; no express promise is required. The warranty protects buyers against latent defects, meaning flaws that a reasonable inspection could not have revealed at the time of sale, and the buyer may recover damages for defective construction discovered within a reasonable time. Improperly compacted soil beneath the foundation is a classic latent defect. Caveat emptor has been displaced in the new-home context by this implied warranty. The covenant of seisin concerns the grantor's ownership of title, not construction quality. A misrepresentation theory requiring the builder's knowledge is unnecessary, because the implied warranty does not depend on scienter."
+    },
+    {
+      "id": "realprop-017",
+      "subject": "realprop",
+      "subtopic": "real-estate-contracts",
+      "rule": "Time for performance — time of the essence",
+      "priority": "M",
+      "difficulty": 2,
+      "stem": "A baker contracted in writing to buy a storefront from its owner for three hundred thousand dollars, with closing set for June first. The contract contained no clause stating that time was of the essence. In late May, the baker's lender informed her that final loan approval would take one more week. The baker immediately told the owner she would be ready to close on June eighth with the full purchase price. The owner refused, declared the contract breached on June first, kept the baker's earnest money deposit, and signed a contract to sell the storefront to another buyer. On June eighth, the baker tendered the full price, which the owner rejected. The baker sued for specific performance. Who should prevail?",
+      "choices": [
+        "The baker, because when a contract does not make time of the essence, a party may perform within a reasonable time after the stated closing date.",
+        "The owner, because failure to perform on the date stated in a written contract is always a material breach.",
+        "The owner, because a seller may retain the deposit as liquidated damages whenever the buyer misses the closing date.",
+        "The baker, but only if the contract expressly authorized extensions of the closing date."
+      ],
+      "correctIndex": 0,
+      "explanation": "A stated closing date in a land sale contract is not automatically binding to the day; unless the contract makes time of the essence or one party properly insists on it, performance within a reasonable time after the scheduled date is sufficient. Because this contract had no time-is-of-the-essence clause, the baker's tender one week late, after prompt notice, was timely, and the owner's refusal was itself a breach entitling the baker to specific performance. The choice treating any missed date as material breach states the rule that applies only when time is of the essence, and the same is true of the seller's right to keep the down payment as liquidated damages. No express extension clause is needed, because the reasonable-time rule is the default supplied by law."
+    },
+    {
+      "id": "realprop-018",
+      "subject": "realprop",
+      "subtopic": "mortgages-security-devices",
+      "rule": "Foreclosure — effect on senior and junior interests",
+      "priority": "M",
+      "difficulty": 2,
+      "stem": "A homeowner borrowed from a savings bank in twenty eighteen and gave the bank a mortgage on her house, which the bank promptly recorded. In twenty twenty, she borrowed again from a finance company and gave it a second mortgage, also promptly recorded. In twenty twenty-three, a contractor who renovated her kitchen recorded a judgment lien against the house. The homeowner then defaulted on the finance company's loan, and the finance company properly foreclosed its second mortgage, joining all junior lienholders. An investor bought the house at the foreclosure sale. Which of the following best describes the state of the title the investor acquired?",
+      "choices": [
+        "The investor took the house free of the savings bank mortgage, the finance company mortgage, and the judgment lien.",
+        "The investor took the house subject to the savings bank's senior mortgage, but free of the finance company's mortgage and the junior judgment lien.",
+        "The investor took the house free of both mortgages but subject to the contractor's judgment lien.",
+        "The investor took the house subject to both mortgages, because foreclosure transfers only the homeowner's equity."
+      ],
+      "correctIndex": 1,
+      "explanation": "Foreclosure of a mortgage extinguishes the foreclosed mortgage and all interests junior to it, provided junior lienholders are joined, but it has no effect on senior interests, which remain attached to the land. The buyer at the sale therefore takes title subject to any senior mortgage. Here the savings bank's twenty eighteen mortgage was senior to the foreclosing second mortgage, so it survives and the investor takes subject to it; the finance company's lien is satisfied through the sale, and the contractor's later judgment lien, being junior, is wiped out. The choice wiping out everything overlooks the protection of senior lienholders, the choice preserving the judgment lien inverts the junior-senior rule, and the final choice misunderstands that a foreclosure sale conveys title, not merely the debtor's equity."
+    },
+    {
+      "id": "realprop-019",
+      "subject": "realprop",
+      "subtopic": "mortgages-security-devices",
+      "rule": "Taking subject to a mortgage versus assuming it",
+      "priority": "M",
+      "difficulty": 2,
+      "stem": "A homeowner who owed two hundred thousand dollars on a recorded mortgage sold her house to a graphic designer. The deed stated that the conveyance was made subject to the existing mortgage, and the designer signed no agreement of any kind promising to pay the mortgage debt. The designer made the monthly mortgage payments for two years and then stopped, and no further payments were made by anyone. The lender accelerated the loan. The house is now worth less than the outstanding debt. The lender sued the designer personally for the full unpaid balance. What is the likely result?",
+      "choices": [
+        "The designer is personally liable, because he took the property with notice of the recorded mortgage.",
+        "The designer is personally liable, because two years of voluntary payments constituted an implied assumption of the debt.",
+        "The designer is not personally liable; the lender may foreclose on the house, and only the original homeowner remains personally liable on the note.",
+        "Neither the designer nor the homeowner is liable, because the sale of the property extinguished the mortgage obligation."
+      ],
+      "correctIndex": 2,
+      "explanation": "A grantee who takes real property subject to an existing mortgage does not become personally liable on the underlying debt; personal liability requires an assumption, ordinarily an express agreement to pay the mortgage. The recorded mortgage remains a lien on the land, so the lender's remedy against the designer is foreclosure, while the original borrower stays personally liable on the note. Notice of the mortgage affects only the lien's enforceability against the land, not personal liability, so the first choice fails. Merely continuing payments does not create an implied assumption; the few states recognizing implied assumption require more, such as paying the seller only the equity while agreeing to carry the loan. The sale of mortgaged property never extinguishes the debt or the lien, defeating the last choice."
+    },
+    {
+      "id": "realprop-020",
+      "subject": "realprop",
+      "subtopic": "mortgages-security-devices",
+      "rule": "Purchase money mortgage priority",
+      "priority": "M",
+      "difficulty": 3,
+      "stem": "A creditor obtained a money judgment against a chef and properly recorded the judgment, which under state law created a lien on all real property the chef then owned or later acquired in the county. Two years later, the chef agreed to buy a small orchard from its owner for half a million dollars. The chef paid one hundred thousand dollars in cash, and the orchard owner financed the rest, taking back a note and a mortgage on the orchard to secure the unpaid purchase price. The deed and the mortgage were recorded simultaneously at closing. The chef later defaulted on everything, and the orchard was sold. The sale proceeds are insufficient to pay both the judgment creditor and the orchard seller. Who has first claim to the proceeds?",
+      "choices": [
+        "The judgment creditor, because its lien was recorded two years before the seller's mortgage.",
+        "The judgment creditor and the seller share the proceeds pro rata, because both liens attached at the same moment.",
+        "The judgment creditor, because in a race-notice jurisdiction the first recorded interest always prevails.",
+        "The orchard seller, because a purchase money mortgage takes priority over earlier liens that attach to the buyer's after-acquired property."
+      ],
+      "correctIndex": 3,
+      "explanation": "A purchase money mortgage, given to a seller or lender who advances the funds used to acquire the property and secured by that property, has priority over other claims against the purchaser, including pre-existing judgment liens that reach after-acquired property. The theory is that the buyer acquires title already encumbered by the purchase money interest, so the judgment lien attaches only to what the buyer actually received, namely the equity. The earlier recording date of the judgment cannot help the creditor, because recording-act priority contests presuppose competing interests in property the debtor owned; the special purchase money rule controls here. The pro rata answer has no support, and the race-notice answer misapplies recording statutes, which govern successive conveyances by a common grantor rather than the purchase money priority rule."
+    },
+    {
+      "id": "realprop-021",
+      "subject": "realprop",
+      "subtopic": "mortgages-security-devices",
+      "rule": "Future-advance mortgage — obligatory advances",
+      "priority": "H",
+      "difficulty": 3,
+      "stem": "A developer obtained a two million dollar construction loan from a bank to build a small office building. The recorded mortgage stated that the bank was unconditionally obligated to disburse the loan in five installments of four hundred thousand dollars each as construction milestones were reached, and that the mortgage secured the full two million dollars including all future disbursements. After the bank had disbursed the first two installments, the developer borrowed separately from a finance company, which recorded a second mortgage on the property. The bank, with actual knowledge of the finance company's recorded mortgage, disbursed the remaining three installments as required. The developer defaulted, and the property sold for less than the total debt. As between the bank and the finance company, how should the proceeds be applied?",
+      "choices": [
+        "The bank has priority for all five installments, because obligatory future advances take priority as of the original recording of the mortgage.",
+        "The bank has priority only for the two installments disbursed before the finance company recorded its mortgage.",
+        "The bank loses priority for the last three installments because it made them with actual knowledge of the intervening mortgage.",
+        "The finance company has priority for its entire loan, because the bank's full two million dollars had not yet been disbursed when the finance company recorded."
+      ],
+      "correctIndex": 0,
+      "explanation": "A future-advance mortgage secures sums the lender will pay out after the original recording, and the priority of those advances turns on whether they are obligatory or optional. When the lender is contractually bound to make the advances, every advance relates back and takes priority from the original recording date, regardless of intervening liens and regardless of the lender's knowledge of them. Because this mortgage unconditionally obligated the bank to fund all five installments, the entire two million dollars is senior to the finance company's later mortgage. The answers cutting off priority at the date of the intervening lien, or upon actual knowledge, describe the treatment of optional advances, where the lender retains discretion. The final choice has no basis, since recording the mortgage fixed priority for the whole obligated commitment."
+    },
+    {
+      "id": "realprop-022",
+      "subject": "realprop",
+      "subtopic": "mortgages-security-devices",
+      "rule": "Foreclosure proceeds and deficiency judgment",
+      "priority": "L",
+      "difficulty": 1,
+      "stem": "A dentist borrowed three hundred thousand dollars from a credit union, secured by a properly recorded mortgage on her office condominium. She later defaulted when the unpaid balance stood at two hundred sixty thousand dollars. The credit union conducted a valid foreclosure, and the condominium sold at the foreclosure sale for two hundred thousand dollars. The expenses and attorney fees associated with the sale totaled ten thousand dollars. There were no other liens on the property. The credit union has asked its lawyer to explain how the sale proceeds will be applied and what can be done about any shortfall. Which of the following statements is most accurate?",
+      "choices": [
+        "The credit union's only recourse is the sale proceeds, because foreclosure extinguishes the underlying debt.",
+        "The proceeds are applied first to the expenses of the sale and then to the mortgage debt, and the credit union may sue the dentist for a deficiency judgment for the unpaid balance.",
+        "The proceeds are applied first to the mortgage debt, and any expenses of the sale must be absorbed by the credit union.",
+        "The credit union may recover the shortfall from the purchaser who bought the condominium at the foreclosure sale."
+      ],
+      "correctIndex": 1,
+      "explanation": "Proceeds of a foreclosure sale are distributed in a set order: first to the costs and attorney fees of the sale, then to the debt owed the foreclosing lender, with any surplus going to the borrower. When the proceeds are insufficient to satisfy the debt, the lender may pursue a deficiency judgment against the borrower personally for the remaining balance. Here the ten thousand dollars of expenses comes off the top, leaving one hundred ninety thousand dollars for the debt and a seventy thousand dollar deficiency the credit union can pursue. Foreclosure extinguishes the lien and junior interests, not the borrower's personal obligation, so the first choice is wrong. The third choice inverts the distribution order, and the foreclosure-sale purchaser never becomes liable for the borrower's shortfall."
+    },
+    {
+      "id": "realprop-023",
+      "subject": "realprop",
+      "subtopic": "titles",
+      "rule": "Notice recording statute — bona fide purchaser",
+      "priority": "H",
+      "difficulty": 2,
+      "stem": "A rancher sold his pasture to a horse trainer, who paid full value and received a valid deed but did not record it. Six months later, the rancher, acting dishonestly, sold the same pasture to an orthodontist, who paid full value, had no knowledge of the earlier sale, and found nothing about it when she searched the public records. The orthodontist also did not immediately record her deed. One month after that, the horse trainer finally recorded his deed. The jurisdiction's statute provides that no conveyance of an interest in land is valid against a subsequent purchaser for value without notice of the conveyance, unless the conveyance is recorded. In a quiet title action between the horse trainer and the orthodontist, who prevails?",
+      "choices": [
+        "The horse trainer, because he received his deed first and a grantor cannot convey what he no longer owns.",
+        "The horse trainer, because he recorded his deed before the orthodontist recorded hers.",
+        "The orthodontist, because she was a bona fide purchaser without notice when she bought, and a notice statute protects her regardless of who records first.",
+        "The orthodontist, but only if she records her deed before the horse trainer files the quiet title action."
+      ],
+      "correctIndex": 2,
+      "explanation": "The quoted statute is a notice statute: it protects a subsequent purchaser who pays value and takes without actual, constructive, or inquiry notice of a prior unrecorded conveyance. Protection attaches at the moment of the second purchase, so the subsequent bona fide purchaser prevails even if she never records and even if the first grantee records afterward. The orthodontist paid value, knew nothing of the trainer's deed, and could not have found it in the records, so she qualifies and wins. The common law first-in-time rule is displaced by the recording act. The answers that turn on the order of recording describe race or race-notice statutes, not a pure notice statute, and nothing in a notice jurisdiction conditions protection on recording before suit is filed."
+    },
+    {
+      "id": "realprop-024",
+      "subject": "realprop",
+      "subtopic": "titles",
+      "rule": "Chain of title — wild deed",
+      "priority": "H",
+      "difficulty": 3,
+      "stem": "A vineyard owner conveyed her land to her cousin, who never recorded the deed. The cousin then sold the vineyard to a winemaker, and the winemaker promptly recorded the deed he received from the cousin. Two years later, the vineyard owner, whose name still appeared in the records as the owner, sold the same land to an investor. The investor paid full value, searched the grantor and grantee indexes under the vineyard owner's name, found no conveyance out of her, and knew nothing of the earlier transactions. The investor immediately recorded. The jurisdiction has a race-notice recording statute. In an action to quiet title between the winemaker and the investor, who should prevail?",
+      "choices": [
+        "The winemaker, because he recorded his deed two years before the investor recorded.",
+        "The winemaker, because recording any deed gives the entire world constructive notice of its contents.",
+        "The investor cannot prevail, because the recorded deed from the cousin to the winemaker was in the public records when the investor purchased.",
+        "The investor, because the winemaker's deed was recorded outside the chain of title, so the investor took without notice and recorded first within the chain."
+      ],
+      "correctIndex": 3,
+      "explanation": "A deed recorded outside the chain of title, often called a wild deed, gives no constructive notice, because a searcher tracing title through the grantor and grantee indexes cannot find it. The cousin never recorded the deed from the vineyard owner, so the winemaker's recorded deed hangs from a missing link and is undiscoverable by a standard search under the owner's name. Under a race-notice statute, a subsequent purchaser prevails by paying value, taking without notice, and recording first; the investor had no actual, constructive, or inquiry notice and was the first to record a deed locatable in the chain of title. The choices treating the wild deed as effective recording, or as worldwide constructive notice, misstate the rule that recording protects only when properly indexed within the chain."
+    },
+    {
+      "id": "realprop-025",
+      "subject": "realprop",
+      "subtopic": "titles",
+      "rule": "Shelter rule",
+      "priority": "H",
+      "difficulty": 2,
+      "stem": "A landowner conveyed her lakeside lot to her nephew as a wedding gift, and the nephew put the unrecorded deed in a drawer. A year later, the landowner sold the same lot to a pharmacist, who paid full market value, had no notice of the nephew's deed, and promptly recorded. The jurisdiction has a notice recording statute. Two years after that, the pharmacist sold the lot to a sculptor. Before closing, the sculptor learned all about the nephew's earlier unrecorded deed from a neighbor, but she bought anyway and recorded. The nephew has now sued the sculptor to establish his ownership of the lot. Who should prevail?",
+      "choices": [
+        "The sculptor, because a purchaser from a protected bona fide purchaser succeeds to the protection of her seller under the shelter rule.",
+        "The nephew, because the sculptor had actual knowledge of his deed before she purchased.",
+        "The nephew, because his deed was delivered before either of the competing conveyances.",
+        "The sculptor, but only if she can independently establish that she paid value and lacked notice."
+      ],
+      "correctIndex": 0,
+      "explanation": "Under the shelter rule, a person who takes from a bona fide purchaser acquires the same protected status as that purchaser, even if the transferee herself has notice of the earlier conveyance. The pharmacist qualified as a bona fide purchaser under the notice statute, since he paid value and lacked notice of the unrecorded gift deed, so he took free of the nephew's claim. When the pharmacist sold to the sculptor, she stepped into his protected shoes despite her actual knowledge. The rule exists so a bona fide purchaser can freely transfer marketable title. The sculptor's notice is therefore irrelevant, first-in-time delivery is displaced by the recording act, and the sculptor need not independently qualify as a bona fide purchaser because she is sheltered by her grantor's status."
+    },
+    {
+      "id": "realprop-026",
+      "subject": "realprop",
+      "subtopic": "titles",
+      "rule": "Deed delivery — oral conditions on a deed handed to the grantee",
+      "priority": "M",
+      "difficulty": 2,
+      "stem": "An elderly widow signed a deed that was complete and unconditional on its face, conveying her cottage to her nephew. She handed the deed directly to the nephew at a family dinner, telling him that the cottage was his but that he should not record the deed until after her death. The nephew took the deed home and kept it in a safe. A year later, the widow had a falling out with the nephew and demanded the deed back, stating that she had never intended to give up the cottage during her lifetime. The nephew refused, and the widow sued to cancel the deed and quiet title in herself. Who should prevail?",
+      "choices": [
+        "The widow, because a deed intended to take effect only at the grantor's death is testamentary and void unless executed with the formalities of a will.",
+        "The nephew, because the widow delivered an unconditional deed directly to him with intent to convey, and her accompanying oral condition is disregarded.",
+        "The widow, because the nephew gave no consideration for the conveyance.",
+        "The nephew, but only if he records the deed before the court enters judgment."
+      ],
+      "correctIndex": 1,
+      "explanation": "Delivery of a deed turns on the grantor's present intent to convey, and handing a facially unconditional deed directly to the grantee presumptively completes delivery. When a grantor delivers such a deed straight to the grantee while stating an oral condition, the condition is treated as void and the conveyance is effective immediately; oral conditions are honored only when the deed is given to a third party as an escrow arrangement. The widow's instruction not to record until her death therefore did not prevent the title from passing at the dinner. The testamentary argument fails because title passed presently, with only recording postponed. Consideration is unnecessary for a valid deed, which is why gift conveyances are routine. Recording affects priority against later purchasers, not validity between the original parties."
+    },
+    {
+      "id": "realprop-027",
+      "subject": "realprop",
+      "subtopic": "titles",
+      "rule": "General warranty deed — future covenants run to remote grantees",
+      "priority": "H",
+      "difficulty": 3,
+      "stem": "An orchard owner conveyed her land to a farmer by a general warranty deed containing all six standard covenants of title. Three years later, the farmer conveyed the orchard to a beekeeper by quitclaim deed. The following spring, a stranger appeared holding superior title to the entire orchard, traceable to a conveyance the orchard owner had made before she sold to the farmer. The stranger brought a successful ejectment action and lawfully removed the beekeeper from the land. The beekeeper then sued the original orchard owner for damages. The jurisdiction follows the majority approach to deed covenants. What is the beekeeper's best basis for recovery?",
+      "choices": [
+        "None; the beekeeper took by quitclaim deed and therefore cannot assert any covenant of title against anyone.",
+        "The covenant of seisin, because the orchard owner did not actually own the land when she conveyed it to the farmer.",
+        "The covenants of quiet enjoyment and warranty, because those future covenants run with the land and were breached when the stranger evicted the beekeeper.",
+        "The covenant against encumbrances, because the stranger's superior title encumbered the orchard at the time of the original conveyance."
+      ],
+      "correctIndex": 2,
+      "explanation": "A general warranty deed contains present covenants, which include seisin, the right to convey, and the covenant against encumbrances, and future covenants, which include quiet enjoyment, warranty, and further assurances. Under the majority view, present covenants are breached, if at all, at the moment of conveyance and do not run to remote grantees. Future covenants, by contrast, run with the land and are breached only when someone with paramount title actually disturbs possession. The stranger's successful ejectment was exactly such a disturbance, so the beekeeper may sue the original grantor on the quiet enjoyment and warranty covenants even though his own deed from the farmer was a quitclaim; the quitclaim limits claims against the farmer, not covenants running from the earlier warranty deed. The seisin and encumbrances theories fail because those present covenants do not extend to remote grantees in the majority of states."
+    },
+    {
+      "id": "realprop-028",
+      "subject": "realprop",
+      "subtopic": "titles",
+      "rule": "Adverse possession — tacking by successors in privity",
+      "priority": "H",
+      "difficulty": 2,
+      "stem": "The statutory period for adverse possession in the jurisdiction is ten years. Eleven years ago, a woman began living in an abandoned lakeside cabin on land she did not own. She lived there openly year round, kept everyone else out, treated the cabin as her own, and never had the true owner's permission. After six years, she sold whatever interest she had in the cabin to a fishing guide, signing and delivering a deed describing the property, and the guide immediately moved in and continued the same open, exclusive, year round possession for the next five years. The record owner has now sued to eject the fishing guide. Who should prevail?",
+      "choices": [
+        "The record owner, because neither the woman nor the guide individually possessed the cabin for the full ten-year period.",
+        "The record owner, because the woman's transfer to the guide interrupted the continuity of the adverse possession.",
+        "The fishing guide, but only if he can show that he paid the property taxes during his five years of possession.",
+        "The fishing guide, because successive adverse possessors in privity may add their periods of possession together to satisfy the statute."
+      ],
+      "correctIndex": 3,
+      "explanation": "Adverse possession requires possession that is actual, open and notorious, exclusive, hostile, and continuous for the statutory period. Successive possessors may tack their periods together when they are in privity, which exists when possession is transferred voluntarily, as by a deed or bequest. The woman's six years plus the guide's five years total eleven years of qualifying possession, exceeding the ten-year statute, and the deed she delivered supplies the required privity. The transfer therefore did not break continuity; an interruption occurs when possession is abandoned or the true owner retakes the land, not when one possessor voluntarily hands off to the next. Payment of property taxes is not an element of adverse possession in most jurisdictions, so the tax-based answer adds a requirement the law does not impose."
+    }
+  ]
+}

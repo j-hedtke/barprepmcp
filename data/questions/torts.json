@@ -1,0 +1,481 @@
+{
+  "subject": "torts",
+  "questions": [
+    {
+      "id": "torts-001",
+      "subject": "torts",
+      "subtopic": "intentional-torts",
+      "rule": "Battery — harmful or offensive contact with the plaintiff's person",
+      "priority": "H",
+      "difficulty": 1,
+      "stem": "At a charity dinner, a man became enraged when another guest criticized his business. As the guest stood in the buffet line holding a dinner plate, the man strode over and angrily slapped the plate out of the guest's hand, shouting that the guest did not deserve to eat with decent people. The man's hand never touched the guest's body, and the guest suffered no physical injury, though he was deeply humiliated in front of the other diners. The guest sued the man for battery. Will the guest prevail?",
+      "choices": [
+        "No, because the man never made physical contact with the guest's body.",
+        "No, because the guest suffered no physical injury and therefore cannot prove damages.",
+        "Yes, because the man intentionally caused an offensive contact with an object closely connected to the guest's person.",
+        "Yes, but only if the guest can prove the man specifically intended to injure him physically."
+      ],
+      "correctIndex": 2,
+      "explanation": "Battery requires an intentional, harmful or offensive contact with the plaintiff's person, and the plaintiff's person includes anything closely connected to the plaintiff, such as an item held in the hand. Knocking a plate from someone's grasp in a humiliating way is an offensive contact that offends a reasonable sense of personal dignity. Choice A is wrong because direct contact with the body is not required. Choice B is wrong because nominal damages alone are sufficient for battery; no physical injury is needed. Choice D is wrong because the intent required is the intent to bring about the contact (or knowledge it is substantially certain), not a specific intent to cause physical injury."
+    },
+    {
+      "id": "torts-002",
+      "subject": "torts",
+      "subtopic": "intentional-torts",
+      "rule": "False imprisonment — plaintiff must be aware of or harmed by the confinement",
+      "priority": "H",
+      "difficulty": 2,
+      "stem": "A hotel manager suspected that a guest had been stealing towels. While the guest napped in a windowless reading room off the lobby, the manager quietly locked the room's only door, intending to keep the guest inside until the police arrived. Twenty minutes later, the manager learned that another guest was the actual thief, so he unlocked the door and walked away. The napping guest slept through the entire episode, woke up an hour later, and left the room without difficulty. He learned about the locked door only weeks later from a hotel employee and then sued the manager for false imprisonment. Is the guest likely to prevail?",
+      "choices": [
+        "No, because the guest was neither aware of the confinement while it lasted nor harmed by it.",
+        "No, because twenty minutes is too brief a period to constitute confinement.",
+        "Yes, because the manager intentionally confined the guest to fixed boundaries with no reasonable means of escape.",
+        "Yes, because the manager lacked probable cause to believe the guest was the thief."
+      ],
+      "correctIndex": 0,
+      "explanation": "False imprisonment requires an intentional act restraining the plaintiff within fixed boundaries, and the plaintiff must either be aware of the confinement while it occurs or be harmed by it. Here the guest slept through the entire confinement and suffered no harm, so an essential element is missing. Choice B is wrong because even a very short confinement can qualify; duration goes to damages, not liability. Choice C correctly recites the confinement element but ignores the awareness-or-harm requirement, which is fatal here. Choice D is wrong because the absence of reasonable grounds matters to privilege defenses, not to the prima facie case, and in any event cannot supply the missing awareness element."
+    },
+    {
+      "id": "torts-003",
+      "subject": "torts",
+      "subtopic": "intentional-torts",
+      "rule": "Doctrine of transferred intent",
+      "priority": "M",
+      "difficulty": 1,
+      "stem": "During an argument outside a tavern, a patron picked up an empty bottle and hurled it at a rival, intending to strike him in the chest. The rival ducked, and the bottle sailed past him and struck a bystander who was waiting at a nearby bus stop, cutting her forehead. The patron had not seen the bystander and had no desire to harm anyone other than the rival. The bystander sued the patron for battery. The patron argues that he cannot be liable to the bystander because he never intended to touch her or even knew she was there. Will the bystander prevail on her battery claim?",
+      "choices": [
+        "No, because the patron did not desire to contact the bystander and was not substantially certain the bottle would hit her.",
+        "No, but the bystander can recover from the patron on a negligence theory only.",
+        "Yes, but only if the bystander proves the patron acted with reckless disregard for the safety of others in the area.",
+        "Yes, because the patron's intent to commit a battery against the rival transfers to the bystander who was actually struck."
+      ],
+      "correctIndex": 3,
+      "explanation": "Under the doctrine of transferred intent, when a defendant intends to commit a tort against one person but instead injures a different person by the same or a different tort, the intent transfers to the actual victim. The doctrine applies to battery, assault, false imprisonment, trespass to land, and trespass to chattels. The patron intended a battery against the rival, and the bottle struck the bystander, so his intent transfers and he is liable to her for battery. Choice A states the ordinary intent rule but ignores the transferred intent doctrine. Choice B is wrong because the bystander has a full intentional tort claim, not merely a negligence claim. Choice C is wrong because recklessness is not required once intent transfers."
+    },
+    {
+      "id": "torts-004",
+      "subject": "torts",
+      "subtopic": "intentional-torts",
+      "rule": "Consent — defendant cannot exceed the scope of consent given",
+      "priority": "H",
+      "difficulty": 2,
+      "stem": "A patient signed a written form consenting to surgery on her left knee to repair torn cartilage. While the patient was under general anesthesia, the surgeon completed the left knee repair without complication. Before closing, the surgeon examined the patient's right knee and noticed early signs of the same cartilage condition. Believing it would spare the patient a second operation and anesthesia later, the surgeon performed the identical repair on the right knee. There was no emergency, and the right knee condition posed no immediate threat to the patient's health. The right knee procedure was performed competently. The patient sued the surgeon for battery. What is the patient's best argument?",
+      "choices": [
+        "The surgeon was negligent in failing to obtain a second signed consent form before operating.",
+        "The surgeon's contact with the right knee exceeded the scope of the consent the patient gave, and no emergency justified proceeding without consent.",
+        "The surgeon is liable because any surgery performed under general anesthesia requires court approval when the patient cannot communicate.",
+        "The surgeon is liable because operating on the wrong body part is always negligence per se."
+      ],
+      "correctIndex": 1,
+      "explanation": "Consent is a defense to battery, but the defendant's conduct cannot exceed the bounds of the consent given. The patient consented only to surgery on her left knee, so the intentional contact with her right knee was unconsented and constitutes battery, even though it was performed skillfully and with good motives. Consent may be implied by law in a true medical emergency, but here there was no emergency. Choice A is wrong because the claim is an intentional tort based on lack of consent, not negligence in paperwork. Choice C invents a court-approval requirement that does not exist. Choice D is wrong because negligence per se involves breach of a statute, and the issue here is unconsented contact, not careless performance."
+    },
+    {
+      "id": "torts-005",
+      "subject": "torts",
+      "subtopic": "intentional-torts",
+      "rule": "Shopkeeper's privilege — detention for investigation",
+      "priority": "L",
+      "difficulty": 2,
+      "stem": "A security guard at an electronics store watched a shopper slip a pair of wireless earbuds into his jacket pocket and walk past the registers toward the exit without paying. The guard stopped the shopper just outside the front door, identified himself, and asked the shopper to return inside. When the shopper refused and tried to walk away, the guard took him firmly by the arm and escorted him to a small office adjacent to the sales floor, where he questioned the shopper for about fifteen minutes while reviewing the security footage. The footage revealed that the shopper had in fact paid for the earbuds at a self-checkout kiosk, and the guard immediately released him with an apology. The shopper sued the store for false imprisonment. Is the store likely to be liable?",
+      "choices": [
+        "No, because the guard reasonably suspected theft, detained the shopper in or near the store for a reasonable time, and used reasonable non-deadly force only after the shopper refused a request to remain.",
+        "No, because a detention can never constitute false imprisonment when the detainee is released with an apology.",
+        "Yes, because the shopper had actually paid for the earbuds, so the detention was unjustified regardless of the guard's reasonable belief.",
+        "Yes, because a shopkeeper may never use any physical force to detain a suspected shoplifter."
+      ],
+      "correctIndex": 0,
+      "explanation": "Under the shopkeeper's privilege, a merchant may temporarily detain a person reasonably suspected of theft, in or near the store, for the purpose of investigation. Once a request to remain has been made and refused, reasonable non-deadly force may be used to detain. The guard saw conduct giving reasonable suspicion, detained the shopper adjacent to the sales floor for roughly fifteen minutes to investigate, and used moderate force only after the shopper refused to stay. Choice B is wrong because release and an apology do not retroactively privilege an unlawful detention. Choice C is wrong because the privilege turns on reasonable suspicion, not on actual guilt. Choice D is wrong because reasonable non-deadly force is permitted after a refused request to remain."
+    },
+    {
+      "id": "torts-006",
+      "subject": "torts",
+      "subtopic": "negligence",
+      "rule": "Standard of care — mental disability does not lower the reasonable person standard",
+      "priority": "H",
+      "difficulty": 2,
+      "stem": "A driver with a long-diagnosed psychiatric condition experienced a sudden delusional episode while driving home from work, becoming convinced that the truck ahead of him was a threat that he needed to force off the road. Acting on the delusion, he accelerated and swerved into the truck, causing it to crash and injuring its driver. The injured driver sued for negligence. At trial, the defendant offered uncontested psychiatric testimony that during the episode he genuinely could not perceive reality or appreciate the danger his driving created, and he argued that the jury should evaluate his conduct in light of his mental condition. How should the court instruct the jury on the standard of care?",
+      "choices": [
+        "The defendant's conduct should be measured against a reasonable person experiencing the same delusion.",
+        "The defendant cannot be liable in negligence because he lacked the capacity to form an awareness of risk.",
+        "The defendant's conduct should be measured against a reasonable prudent person without his mental disability.",
+        "The defendant's conduct should be measured by a subjective good-faith standard because his condition was medically documented."
+      ],
+      "correctIndex": 2,
+      "explanation": "Every person owes a duty to act as a reasonable prudent person would under the circumstances. A defendant with a mental disability or below-average intelligence is held to the standard of a reasonable person without that disability; the standard is objective and is not adjusted downward for mental conditions. By contrast, a physical disability is taken into account, with the actor measured against a reasonable person with that physical disability. Choice A and Choice D both improperly subjectivize the standard for mental illness. Choice B is wrong because negligence liability does not require subjective awareness of risk; it asks whether the conduct fell below the objective reasonable person standard, which swerving into another vehicle plainly does."
+    },
+    {
+      "id": "torts-007",
+      "subject": "torts",
+      "subtopic": "negligence",
+      "rule": "Children — adult standard when engaging in an adult activity",
+      "priority": "H",
+      "difficulty": 1,
+      "stem": "A fifteen-year-old took his family's powerful motorboat out on a crowded lake on a summer afternoon. While weaving between swimmers at high speed, he misjudged a turn and the boat's wake capsized a canoe, seriously injuring its occupant. The injured canoeist sued the teenager for negligence. At trial, the teenager's lawyer asked the court to instruct the jury that his client's conduct should be judged against what a reasonable fifteen-year-old of similar experience and intelligence would have done in the same situation, noting that the teenager had operated boats only a handful of times. The canoeist's lawyer objected to the proposed instruction. How should the court rule on the standard of care?",
+      "choices": [
+        "The teenager is held to the standard of a child of similar age, experience, and intelligence because he is a minor.",
+        "The teenager is held to the standard of a reasonable adult because operating a motorboat is an adult activity.",
+        "The teenager is held to no standard of care because minors lack capacity to be sued in tort.",
+        "The teenager is held to a relaxed standard because his limited boating experience reduces what could reasonably be expected of him."
+      ],
+      "correctIndex": 1,
+      "explanation": "Children are ordinarily held to the standard of a hypothetical child of similar age, experience, and intelligence acting under similar circumstances. However, when a child engages in an adult activity, such as operating a motor vehicle or motorboat, the child must act as a reasonable adult. Operating a powerful motorboat among swimmers is a classic adult activity, so the adult standard applies. Choice A states the default child standard but ignores the adult-activity exception. Choice C is wrong because minors can be liable in tort. Choice D is wrong because inexperience does not lower the objective standard; if anything, undertaking an adult activity without adequate skill is itself evidence of unreasonable conduct."
+    },
+    {
+      "id": "torts-008",
+      "subject": "torts",
+      "subtopic": "negligence",
+      "rule": "Affirmative duty — voluntary undertaking and reliance exception to the no-duty-to-act rule",
+      "priority": "H",
+      "difficulty": 3,
+      "stem": "A cyclist was struck by a hit-and-run driver on a rural road and lay injured on the shoulder. A motorist stopped, knelt beside the cyclist, and called out to a gathering group of passersby that he was a trained first responder and would take care of everything. Relying on that announcement, the passersby left the scene. The motorist began moving the cyclist toward his car, but after receiving a text message about a business emergency, he set the cyclist down in tall grass farther from the roadway and drove off without calling for help. Because the cyclist was now hidden from view, more than an hour passed before anyone found him, and the delay significantly worsened his injuries. The cyclist sued the motorist for negligence. The motorist argues he had no duty to rescue a stranger. Is the motorist likely to be liable?",
+      "choices": [
+        "No, because a bystander never owes an affirmative duty to assist a stranger in peril.",
+        "No, because the motorist did not cause the original collision and acted as a volunteer.",
+        "Yes, because everyone who witnesses an accident owes a duty to render reasonable assistance.",
+        "Yes, because once the motorist undertook the rescue, he is liable for abandoning it in a way that increased the risk of harm and induced others to rely on him."
+      ],
+      "correctIndex": 3,
+      "explanation": "There is generally no duty to act affirmatively to help another, but exceptions exist, including when the defendant has voluntarily undertaken to rescue the plaintiff. A volunteer rescuer is liable if his undertaking increases the risk of harm or if harm is suffered because others relied on him to provide help. Here the motorist moved the cyclist into concealing grass, making discovery less likely, and his announcement caused other potential rescuers to leave. Choices A and B state the general no-duty rule but ignore the undertaking-and-reliance exception. Choice C overstates the law; mere presence at an accident creates no duty. The motorist's abandonment after worsening the cyclist's position makes him liable."
+    },
+    {
+      "id": "torts-009",
+      "subject": "torts",
+      "subtopic": "negligence",
+      "rule": "Negligence per se — statute's purpose must cover the type of harm and class of persons",
+      "priority": "H",
+      "difficulty": 2,
+      "stem": "A city ordinance requires every residential swimming pool to be enclosed by a locked fence at least five feet high. The legislative findings state that the ordinance was enacted to prevent unsupervised young children from wandering into pools and drowning. A homeowner never installed the required fence. One evening, an adult dinner guest left the homeowner's house, took a shortcut across the dark backyard, failed to see the unfenced pool, fell in, and badly injured his shoulder on the pool's edge. The guest sued the homeowner and asked the court to rule that the homeowner's violation of the fencing ordinance conclusively establishes duty and breach. Should the court apply negligence per se?",
+      "choices": [
+        "No, because the guest is not within the class of persons the ordinance was designed to protect.",
+        "No, because violation of a municipal ordinance, as opposed to a state statute, can never support negligence per se.",
+        "Yes, because the homeowner violated a safety law and an injury occurred at the pool.",
+        "Yes, because the ordinance sets a minimum standard of care owed to everyone who comes onto residential property."
+      ],
+      "correctIndex": 0,
+      "explanation": "Negligence per se establishes duty and breach when the defendant violates a statute, but only if the statute's purpose is to prevent the type of harm the plaintiff suffered and the plaintiff is in the class of persons the statute seeks to protect. This ordinance was enacted to keep unsupervised young children from drowning; an adult guest who tripped into the pool is outside the protected class, and a shoulder injury from a nighttime fall is not the targeted harm. The guest may still pursue ordinary negligence, but cannot use the statute to establish breach automatically. Choice B is wrong; ordinances can support negligence per se. Choices C and D ignore the class-of-persons and type-of-harm limitations that confine the doctrine."
+    },
+    {
+      "id": "torts-010",
+      "subject": "torts",
+      "subtopic": "negligence",
+      "rule": "Res ipsa loquitur",
+      "priority": "H",
+      "difficulty": 2,
+      "stem": "A pedestrian was walking on a sidewalk beside a highway when a wheel detached from a passing commercial delivery truck, bounced across the shoulder, and struck her, breaking her leg. The truck was owned, serviced, and maintained exclusively by the delivery company in its own garage, and company records show no one else had access to the vehicle. The pedestrian cannot identify any specific maintenance error, and the wheel assembly was too damaged after the accident for experts to pinpoint exactly what failed. The pedestrian sued the company for negligence, and at the close of her evidence the company moved for a directed verdict, arguing she failed to prove any specific negligent act. How should the court rule?",
+      "choices": [
+        "Grant the motion, because a plaintiff must always identify the specific negligent act or omission that caused her injury.",
+        "Grant the motion, because the destruction of the wheel assembly makes any finding of negligence speculative.",
+        "Deny the motion, because wheels do not ordinarily detach from properly maintained trucks, and the company's exclusive control sufficiently eliminates other responsible causes, permitting an inference of negligence.",
+        "Deny the motion, because commercial trucking companies are strictly liable for injuries caused by their vehicles."
+      ],
+      "correctIndex": 2,
+      "explanation": "Res ipsa loquitur lets a plaintiff reach the jury when the breach element is difficult to prove directly. Under the Restatement test, the plaintiff must show the injury is of a kind that typically does not occur absent negligence, that other responsible causes, including the plaintiff and third parties, are sufficiently eliminated, and that the negligence falls within the scope of the duty owed to the plaintiff. A wheel detaching from a truck exclusively maintained by the defendant fits all three requirements, so an inference of negligence is permitted and the case goes to the jury. Choices A and B ignore the doctrine's purpose of bridging proof gaps. Choice D is wrong because ordinary driving and vehicle maintenance are not subject to strict liability."
+    },
+    {
+      "id": "torts-011",
+      "subject": "torts",
+      "subtopic": "negligence",
+      "rule": "Actual cause — substantial factor test for multiple sufficient causes",
+      "priority": "H",
+      "difficulty": 2,
+      "stem": "A railroad negligently allowed sparks from a passing locomotive to ignite dry brush along its tracks, starting a fire that spread east. The same afternoon, a farmer negligently left a burn pile unattended, starting a second fire that spread west. The two fires merged into a single blaze a mile from a rancher's property and burned her barn to the ground. Fire investigators concluded that either fire, on its own, would have been sufficient to destroy the barn even if the other had never started. The rancher sued the railroad. The railroad argues that it cannot be the actual cause of the loss because the barn would have burned anyway from the farmer's fire, so the rancher cannot satisfy the but-for test. Is the railroad correct?",
+      "choices": [
+        "Yes, because the rancher cannot show the barn would have survived but for the railroad's negligence.",
+        "No, because when multiple negligent causes are each independently sufficient to produce the harm, a defendant is liable if its conduct was a substantial factor in bringing about the injury.",
+        "Yes, because where two negligent parties contribute to a single harm, the plaintiff must sue the party whose fire arrived first.",
+        "No, because the railroad and the farmer were engaged in a joint enterprise, making each liable for the other's negligence."
+      ],
+      "correctIndex": 1,
+      "explanation": "Actual cause is normally tested by the but-for standard, but when two or more forces combine and each alone would have been sufficient to cause the harm, the but-for test fails even though both actors were clearly negligent. In that situation courts apply the substantial factor test: a defendant's conduct is deemed an actual cause if it was a substantial factor in bringing about the injury, even where multiple causes exist. The railroad's fire was independently sufficient, so it was a substantial factor and the railroad is liable. Choice A applies the but-for test mechanically in the very situation the substantial factor test was designed to fix. Choice C invents a first-arrival rule. Choice D fails because a joint enterprise requires a common project and an agreement, neither of which exists here."
+    },
+    {
+      "id": "torts-012",
+      "subject": "torts",
+      "subtopic": "negligence",
+      "rule": "Proximate cause — foreseeability of intervening criminal acts",
+      "priority": "H",
+      "difficulty": 3,
+      "stem": "An apartment building sat in a neighborhood that had experienced a series of recent break-ins, several of which the landlord discussed with tenants at a building meeting. A tenant reported three times over two months that the deadbolt on the building's rear entrance was broken so that the door could be pushed open from outside. The landlord, who had agreed in each lease to maintain the building's exterior locks, never repaired it. One night an intruder entered through the unsecured rear door, broke into the tenant's apartment, and assaulted her. The tenant sued the landlord for negligence. The landlord concedes breach but argues that the intruder's deliberate criminal act is a superseding cause that cuts off his liability. Is the landlord's argument likely to succeed?",
+      "choices": [
+        "Yes, because an intentional criminal act by a third party always severs the chain of proximate causation.",
+        "Yes, because a landlord can never be liable for crimes committed by persons he does not control.",
+        "No, because the tenant assumed the risk by remaining in the building after learning of the break-ins.",
+        "No, because the criminal entry was foreseeable where the landlord knew of recent break-ins and his failure to repair the lock made such a crime more likely."
+      ],
+      "correctIndex": 3,
+      "explanation": "An intervening cause cuts off liability only when it is unforeseeable. Criminal acts of third parties are usually deemed unforeseeable, but not when the defendant should have anticipated the crime or the defendant's conduct made the criminal act more likely. Here the landlord knew of recent break-ins and left a rear door effectively unlocked despite repeated complaints and a lease obligation, so the intrusion was a foreseeable result of his breach, not a superseding cause. Choice A states an absolute rule the law rejects. Choice B is wrong because a landlord who undertakes by lease to maintain locks owes a duty, and the modern view requires reasonable precautions against foreseeable attacks. Choice C fails because continuing to live in one's own apartment is not a voluntary assumption of a known risk."
+    },
+    {
+      "id": "torts-013",
+      "subject": "torts",
+      "subtopic": "negligence",
+      "rule": "Eggshell plaintiff rule — take the plaintiff as you find her",
+      "priority": "H",
+      "difficulty": 1,
+      "stem": "A driver glanced at his phone and rear-ended the car ahead of him at low speed in stop-and-go traffic. The collision was minor; the other car's bumper showed only light scuffing, and an ordinary occupant would likely have suffered, at most, brief soreness. The other car's occupant, however, had a rare bone disorder that made her skeleton unusually fragile, and the modest jolt fractured three of her vertebrae, requiring surgery and months of rehabilitation. The driver concedes he was negligent but argues that his damages should be capped at the amount of harm a person of ordinary health would have suffered in such a minor collision, since he had no way of knowing about her condition. How should the court rule on damages?",
+      "choices": [
+        "The driver is liable for the full extent of the occupant's injuries, even though her pre-existing condition made the harm far worse than anyone could have anticipated.",
+        "The driver is liable only for the harm a person of ordinary fortitude would have suffered, because the extent of the injury was unforeseeable.",
+        "The driver is not liable at all, because the occupant's bone disorder was an unforeseeable superseding cause.",
+        "The driver is liable for the full injuries only if he knew or should have known of the occupant's fragile condition."
+      ],
+      "correctIndex": 0,
+      "explanation": "Under the eggshell plaintiff rule, the defendant takes the plaintiff as he finds her: a negligent defendant is liable for all harm the plaintiff suffers as a result of his conduct, even if a pre-existing physical or mental condition makes the harm far worse than a normal person would have experienced. Foreseeability limits the type of harm for proximate cause purposes, not its extent. Choice B confuses the foreseeability requirement with the extent of damages, which is not capped at ordinary-person levels. Choice C is wrong because a pre-existing condition is part of the plaintiff's state, not an intervening cause arising after the breach. Choice D is wrong because the rule applies regardless of the defendant's knowledge of the plaintiff's vulnerability."
+    },
+    {
+      "id": "torts-014",
+      "subject": "torts",
+      "subtopic": "negligence",
+      "rule": "Pure comparative negligence",
+      "priority": "H",
+      "difficulty": 1,
+      "stem": "A pedestrian, looking down at her phone, stepped into a crosswalk against a flashing do-not-walk signal. At the same moment, a delivery van approached the intersection traveling fifteen miles per hour over the speed limit, and the van struck the pedestrian, causing injuries. The pedestrian sued the van's driver for negligence. After trial, the jury found that the pedestrian's total damages were one hundred thousand dollars, that the driver was forty percent at fault for speeding, and that the pedestrian was sixty percent at fault for crossing against the signal while distracted. The jurisdiction follows a pure comparative negligence regime, and no other doctrine applies. How much, if anything, may the pedestrian recover from the driver?",
+      "choices": [
+        "Nothing, because her fault exceeded fifty percent.",
+        "Nothing, because any contributory fault by the plaintiff bars recovery.",
+        "Forty thousand dollars, because her recovery is reduced by the percentage of her own fault.",
+        "Sixty thousand dollars, because the driver must pay the share of damages corresponding to the plaintiff's percentage of fault."
+      ],
+      "correctIndex": 2,
+      "explanation": "Under pure comparative negligence, a plaintiff's own negligence does not bar recovery no matter how great her share of fault; it simply reduces her recoverable damages by the percentage of fault attributed to her. Sixty percent of one hundred thousand dollars is subtracted, leaving a recovery of forty thousand dollars. Choice A describes partial or modified comparative negligence, under which a plaintiff who is fifty percent or more at fault is barred, but that regime does not apply here. Choice B describes traditional contributory negligence, which bars any recovery for contributing fault and is not the rule in this jurisdiction. Choice D miscalculates by reducing damages by the defendant's share of fault rather than the plaintiff's."
+    },
+    {
+      "id": "torts-015",
+      "subject": "torts",
+      "subtopic": "negligence",
+      "rule": "Assumption of risk — voluntary encounter of a known risk",
+      "priority": "M",
+      "difficulty": 2,
+      "stem": "A man attended a minor league baseball game. The stadium offered seats behind a tall protective net stretching along the area behind home plate, but the man, a lifelong fan who had attended hundreds of games and often joked about dodging foul balls, deliberately chose an unscreened seat along the first-base line because he hoped to catch a souvenir. Signs at every entrance warned that batted balls may enter the stands. During the fourth inning, a sharply hit foul ball flew into the unscreened section and struck the man in the shoulder, injuring him. He sued the stadium operator for negligence in failing to extend netting along the baselines. The jurisdiction recognizes implied assumption of risk as a complete defense. What is the stadium's strongest defense?",
+      "choices": [
+        "The man cannot prove the stadium owed him any duty of care because he was a mere licensee.",
+        "The man impliedly assumed the risk by voluntarily choosing an unscreened seat with full appreciation of the well-known danger of foul balls.",
+        "The man's claim fails because spectators are statutorily barred from suing sports venues.",
+        "The man was contributorily negligent per se for sitting in an unscreened section."
+      ],
+      "correctIndex": 1,
+      "explanation": "Assumption of risk is a defense to negligence that applies when the plaintiff voluntarily assumed a known risk. It may be express, by agreement, or implied where an average person would appreciate the risk and the plaintiff freely encountered it. A veteran fan who deliberately bypassed screened seating, with posted warnings and personal knowledge that foul balls enter the stands, voluntarily encountered a known and appreciated risk, and in this jurisdiction that completely bars his claim. Choice A is wrong because a paying spectator is an invitee, owed reasonable care including inspections. Choice C invents a statutory immunity not given in the facts. Choice D misuses negligence per se, which concerns breach of a statute by a defendant, not a plaintiff's seating choice."
+    },
+    {
+      "id": "torts-016",
+      "subject": "torts",
+      "subtopic": "negligence",
+      "rule": "Landowner duty to invitees — reasonable inspection for non-obvious dangers",
+      "priority": "H",
+      "difficulty": 2,
+      "stem": "A shopper at a large supermarket slipped on a cluster of crushed grapes in the produce aisle and fractured her wrist. The grapes were partly dried and darkened, and trampled cart tracks ran through the residue, suggesting they had been on the floor for a considerable time. The store's written policy called for aisle inspections every thirty minutes, but the inspection log showed no one had checked the produce aisle for over three hours before the fall. The shopper sued the store. The store argues it cannot be liable because no employee actually knew the grapes were on the floor and no employee dropped them. The jurisdiction determines landowner duties by entrant status. Is the store likely to be liable?",
+      "choices": [
+        "No, because a possessor of land is liable to entrants only for dangers it actually knows about.",
+        "No, because the shopper should have watched where she was walking, which negates the store's duty.",
+        "Yes, because a store is strictly liable for any injury a customer suffers on the premises.",
+        "Yes, because the shopper was an invitee, and the store breached its duty to make reasonable inspections and discover and remedy non-obvious dangerous conditions."
+      ],
+      "correctIndex": 3,
+      "explanation": "A customer who enters a business for the owner's benefit is an invitee. A possessor owes invitees reasonable care in operations, a duty to warn of or make safe known dangers, and additionally a duty to make reasonable inspections to find and make safe non-obvious dangerous conditions. The dried, track-marked grapes and the three-hour inspection gap permit a finding that a reasonable inspection would have discovered the hazard, so constructive knowledge supports breach. Choice A states the lesser duty owed to licensees, who must be warned only of known dangers; invitees get the added inspection duty. Choice B at most raises comparative fault, which reduces rather than negates the duty. Choice C is wrong because landowners are not strict insurers of customer safety."
+    },
+    {
+      "id": "torts-017",
+      "subject": "torts",
+      "subtopic": "negligence",
+      "rule": "Attractive nuisance — landowner duty to child trespassers",
+      "priority": "L",
+      "difficulty": 2,
+      "stem": "A salvage yard owner kept a decommissioned industrial crusher in an unfenced corner of his lot, fifty feet from a public playground. The machine remained connected to power, and its starter switch was unguarded at ground level. The owner had repeatedly chased neighborhood children off the lot and had told a friend that the kids treated the old crusher like a jungle gym. Installing a fence or disconnecting the power would have cost only a few hundred dollars. One afternoon a seven-year-old climbed onto the machine, pressed the switch, and was seriously injured by the moving parts, the danger of which he did not understand. The child's parents sued the owner, who responds that he owed the boy nothing because the boy was a trespasser. Is the owner likely to be liable?",
+      "choices": [
+        "Yes, because under the attractive nuisance doctrine he knew of a dangerous artificial condition, knew children frequented the area, the child could not appreciate the risk, and the burden of fixing it was slight compared to the danger.",
+        "Yes, because a landowner owes every trespasser, adult or child, a duty of reasonable care in all circumstances.",
+        "No, because a landowner owes no duty to any trespasser other than to refrain from willful misconduct.",
+        "No, because the child committed a trespass and his parents' failure to supervise him is a superseding cause."
+      ],
+      "correctIndex": 0,
+      "explanation": "Under the attractive nuisance doctrine, a landowner owes child trespassers a duty to make the premises reasonably safe or warn of hidden dangers. Liability attaches when the owner knows or should know of a dangerous artificial condition likely to cause death or serious injury, knows children are likely to frequent the area, the children are unlikely to discover the condition or appreciate its risks, and the risk of harm outweighs the expense of making it safe. Every element is met: a powered crusher, known child visitors, a seven-year-old unable to appreciate the danger, and a trivial cost of prevention. Choice B overstates the duty owed to adult trespassers in status jurisdictions. Choice C ignores the child-trespasser exception. Choice D fails because parental inattention here is not an unforeseeable superseding cause."
+    },
+    {
+      "id": "torts-018",
+      "subject": "torts",
+      "subtopic": "negligence",
+      "rule": "Negligent infliction of emotional distress — bystander claim",
+      "priority": "H",
+      "difficulty": 2,
+      "stem": "A mother stood on her front porch watching her eight-year-old son ride his bicycle on the sidewalk directly in front of the house. A driver, speeding through the residential street while reaching for something in the back seat, jumped the curb and struck the boy, gravely injuring him as his mother watched from a few yards away. In the weeks that followed, the mother developed severe insomnia, recurring nausea, dramatic weight loss, and tremors, all documented by her physician as stemming from witnessing the collision. The mother, who was never herself in the vehicle's path, sued the driver for negligent infliction of emotional distress. The jurisdiction follows the majority approach to bystander recovery. Is the mother likely to recover?",
+      "choices": [
+        "No, because she was never in the zone of danger and faced no risk of physical impact herself.",
+        "No, because emotional distress damages are recoverable only when the plaintiff suffers a contemporaneous physical impact.",
+        "Yes, because she was a contemporaneous witness to negligently inflicted bodily injury to her close family member and manifested physical symptoms from the distress.",
+        "Yes, because any person who observes a serious accident may recover for resulting emotional distress without further showing."
+      ],
+      "correctIndex": 2,
+      "explanation": "A bystander may recover for negligent infliction of emotional distress when the defendant negligently inflicted bodily injury on a close family member such as a parent, child, or spouse, the plaintiff was a contemporaneous witness to the injury, and the plaintiff manifests physical symptoms of the distress. The mother personally watched her son being struck and developed documented physical manifestations, satisfying the majority bystander test. Choice A reflects the minority position requiring the bystander also to be in the zone of danger, and in any event the zone-of-danger theory is a separate near-miss avenue, not a limit on majority bystander claims. Choice B states an outdated impact requirement. Choice D sweeps too broadly because unrelated observers and those lacking physical symptoms cannot recover."
+    },
+    {
+      "id": "torts-019",
+      "subject": "torts",
+      "subtopic": "negligence",
+      "rule": "Respondeat superior — scope of employment and minor deviations",
+      "priority": "H",
+      "difficulty": 2,
+      "stem": "A courier company employed a driver to deliver packages along a fixed downtown route during business hours, using a company van and following dispatch instructions. Midway through his afternoon deliveries, the driver turned two blocks off his assigned route to buy a cup of coffee at a drive-through, intending to return immediately to his next scheduled stop. While pulling out of the coffee shop's driveway, he negligently failed to yield and struck a pedestrian, badly injuring her. The pedestrian sued the courier company on a respondeat superior theory. The company argues it cannot be liable because the driver was running a personal errand at the moment of the accident, in violation of a written policy forbidding personal stops. Is the company likely to be liable?",
+      "choices": [
+        "No, because the driver's personal coffee stop took him entirely outside the scope of his employment.",
+        "Yes, because the brief two-block detour was a minor deviation within the authorized time and space of his work, leaving him within the scope of employment.",
+        "No, because the driver violated an express company policy, which automatically severs the employment relationship for tort purposes.",
+        "Yes, because an employer is liable for every tort an employee commits while on the clock, regardless of what the employee was doing."
+      ],
+      "correctIndex": 1,
+      "explanation": "Under respondeat superior, an employer is liable for an employee's negligent acts committed within the scope of employment. Courts examine whether the conduct is of the kind the employee is employed to perform, occurs substantially within authorized time and space limits, and is motivated at least in part to serve the employer. A small detour of a couple of blocks during the workday, with intent to resume deliveries immediately, is a minor deviation that remains within the scope; only a substantial departure on purely personal business, a frolic, takes the employee outside it. Choice A treats every personal errand as a frolic. Choice C is wrong because violating an internal policy does not automatically defeat scope of employment. Choice D overstates the doctrine, which still requires scope-of-employment analysis."
+    },
+    {
+      "id": "torts-020",
+      "subject": "torts",
+      "subtopic": "strict-liability-products",
+      "rule": "Strict liability for wild animals",
+      "priority": "M",
+      "difficulty": 1,
+      "stem": "A collector of exotic animals kept a venomous cobra at his home in a custom-built enclosure that exceeded every industry guideline: reinforced double-locked glass, an alarm system, and weekly inspections by a professional herpetologist. Despite these elaborate precautions, the snake escaped through a ventilation seam that no inspection had ever flagged, slithered into the neighboring yard, and bit a neighbor who was gardening, causing serious injury. The neighbor sued the collector. The collector argues that he cannot be liable because he exercised extraordinary care, far beyond what any reasonable owner would do, and the escape was genuinely unforeseeable to him. Is the collector liable for the neighbor's injuries?",
+      "choices": [
+        "No, because the collector's extraordinary precautions satisfy any standard of reasonable care.",
+        "No, unless the neighbor proves the collector knew the enclosure had a defective ventilation seam.",
+        "No, because strict liability for animals applies only to commercial exhibitors, not private keepers.",
+        "Yes, because the keeper of a wild animal is strictly liable for harm it causes, regardless of the safety precautions taken."
+      ],
+      "correctIndex": 3,
+      "explanation": "An owner of a wild animal is subject to strict liability for harm the animal causes, regardless of any safety precautions taken. A cobra is a wild animal, so the collector's meticulous care is no defense; strict liability dispenses with proof of negligence entirely. Choices A and B both wrongly import negligence concepts, reasonable care and knowledge of a specific defect, into a strict liability claim. Choice C invents a commercial-keeper limitation that does not exist; private keepers of wild animals are equally subject to the rule. By contrast, owners of domestic animals such as dogs and cats are strictly liable only if they have knowledge of the particular animal's vicious propensities, a rule that does not help a keeper of an inherently dangerous wild species."
+    },
+    {
+      "id": "torts-021",
+      "subject": "torts",
+      "subtopic": "strict-liability-products",
+      "rule": "Abnormally dangerous activities",
+      "priority": "M",
+      "difficulty": 2,
+      "stem": "A demolition contractor was hired to level an old parking structure in the middle of a dense residential neighborhood using dynamite. The contractor obtained every required permit, hired the region's most experienced blasting engineer, used state-of-the-art charge calculations, and evacuated the immediate block before detonation. The blast nonetheless sent vibrations through the ground that cracked the foundation and shattered several windows of a house two streets away. The homeowner sued the contractor, who responded that he cannot be liable because he complied with all regulations and used the utmost possible care, and that the homeowner has no evidence of any negligent act. Under what theory, if any, is the homeowner most likely to recover?",
+      "choices": [
+        "Strict liability, because blasting in a residential area is not a matter of common usage and creates a highly significant risk of physical harm even when reasonable care is exercised.",
+        "Negligence, because the homeowner must prove the contractor miscalculated the charges.",
+        "No theory, because compliance with all permits and regulations is a complete defense.",
+        "Trespass to land, because the contractor intentionally propelled vibrations onto the homeowner's property."
+      ],
+      "correctIndex": 0,
+      "explanation": "An activity is abnormally dangerous if it is not of common usage in the community and creates a foreseeable and highly significant risk of physical harm even when reasonable care is exercised. A defendant who engages in such an activity is strictly liable for resulting harm. Dynamiting a structure in a dense residential neighborhood is the classic example: no amount of skill eliminates the serious risk, and blasting is not a common community activity. The homeowner therefore recovers without proving any negligence. Choice B wrongly forces the plaintiff into a negligence theory the facts cannot support. Choice C is wrong because regulatory compliance is evidence of care but does not defeat strict liability. Choice D fails because the contractor did not intend an entry onto the homeowner's land, and vibration damage is the province of strict liability here."
+    },
+    {
+      "id": "torts-022",
+      "subject": "torts",
+      "subtopic": "strict-liability-products",
+      "rule": "Strict products liability — manufacturing defect",
+      "priority": "H",
+      "difficulty": 2,
+      "stem": "A consumer bought a glass bottle of sparkling water from a neighborhood grocery store. The bottle had been manufactured by a bottling company, shipped to the grocer in sealed cases, and placed unaltered on the shelf. As the consumer carried the bottle to her car, it spontaneously shattered in her hand, severing a tendon. Testing of the fragments showed the glass in that bottle was substantially thinner than the manufacturer's own design specifications called for, a flaw introduced during production. The consumer sued the grocery store in strict products liability. The store proved that it stored and handled the bottle flawlessly, never opened the case until shelving, and had no way to detect the flaw. Is the grocery store liable?",
+      "choices": [
+        "No, because the store handled the product with all due care and could not have discovered the defect.",
+        "No, because only the manufacturer that introduced the defect can be strictly liable.",
+        "Yes, because the bottle deviated from its intended design when it left the chain of distribution, was not altered, injured a foreseeable user during foreseeable use, and the store is a commercial supplier of such goods.",
+        "Yes, but only if the consumer first sues the manufacturer and its assets prove insufficient."
+      ],
+      "correctIndex": 2,
+      "explanation": "A commercial supplier is strictly liable for harm caused by a product that was defective when it left the defendant's hands, was not altered before reaching the plaintiff, and injured the plaintiff during an intended or foreseeable use. A manufacturing defect exists when the product differs from its intended design and is more dangerous than if made properly, exactly what the thin-walled bottle shows. Strict liability runs against every commercial supplier in the distribution chain, including retailers, without regard to their care, and the retailer may seek indemnification upstream from the manufacturer. Choice A is a negligence defense irrelevant to strict liability. Choice B wrongly confines liability to the manufacturer. Choice D invents an exhaustion requirement; the plaintiff may sue any commercial supplier in the chain directly."
+    },
+    {
+      "id": "torts-023",
+      "subject": "torts",
+      "subtopic": "strict-liability-products",
+      "rule": "Strict products liability — failure to warn",
+      "priority": "H",
+      "difficulty": 2,
+      "stem": "A pharmaceutical company sold an over-the-counter sleep aid. The company's internal studies established that combining the product with a common blood pressure medication could cause dangerous heart rhythm irregularities, a risk no ordinary consumer would suspect. The product's packaging contained dosage instructions and a general statement to use the product responsibly, but said nothing about the interaction. A consumer who took her prescribed blood pressure medication used the sleep aid exactly as directed and suffered a serious cardiac event caused by the interaction. She sued the company in strict products liability. The company responds that the product was perfectly manufactured, matched its design specifications in every respect, and is safe when used alone. Is the company likely to be liable?",
+      "choices": [
+        "No, because a product that conforms to its design specifications cannot be deemed defective.",
+        "Yes, because the company failed to warn of a risk known to it that was not obvious to an ordinary user, making the product defective despite flawless manufacture.",
+        "No, because the general instruction to use the product responsibly satisfied any duty to warn.",
+        "Yes, but only if the consumer proves the company was negligent in conducting its safety studies."
+      ],
+      "correctIndex": 1,
+      "explanation": "A product may be defective in three ways: a manufacturing defect, a design defect, or a failure to warn. A failure-to-warn defect exists when the plaintiff was not warned of risks of the product that are not obvious to an ordinary user but were known to the manufacturer, and the warning given must be proportionate to the risk. The company knew of a serious, hidden interaction risk and provided no warning about it, so the product is defective even though perfectly made. Choice A addresses only manufacturing defects and ignores informational defects. Choice C fails because a vague admonition is not proportionate to a known cardiac risk. Choice D is wrong because strict liability does not require proof of negligence; the claim succeeds on the defect itself."
+    },
+    {
+      "id": "torts-024",
+      "subject": "torts",
+      "subtopic": "strict-liability-products",
+      "rule": "Strict products liability — commercial supplier requirement",
+      "priority": "H",
+      "difficulty": 2,
+      "stem": "A homeowner decided to upgrade his lawn equipment and posted his five-year-old gasoline riding mower for sale on a neighborhood classifieds website. A buyer purchased the mower for three hundred dollars and took it home. The first time the buyer used it, a corroded fuel line, which had deteriorated during the homeowner's ownership, sprayed gasoline onto the hot engine and ignited, burning the buyer's leg. The buyer sued the homeowner in strict products liability, arguing the mower was in a defective condition unreasonably dangerous when sold. The homeowner had never sold a mower before, works as a schoolteacher, and sold the machine only because he was replacing it. Is the buyer's strict products liability claim likely to succeed?",
+      "choices": [
+        "Yes, because anyone who sells a defective product is strictly liable for the harm it causes.",
+        "Yes, because the defect existed at the time the homeowner sold the mower.",
+        "No, because used goods can never support a products liability claim under any theory.",
+        "No, because the homeowner is a casual seller rather than a commercial supplier routinely engaged in selling goods of that type."
+      ],
+      "correctIndex": 3,
+      "explanation": "Strict products liability requires that the defendant be a commercial supplier, meaning a person or entity engaged in the business of selling goods of the type at issue. Casual or one-time sellers and service providers are not commercial suppliers and cannot be held strictly liable, even if the product was defective when sold. A schoolteacher making a single classified-ad sale of his own used mower is the paradigm casual seller, so the strict liability claim fails, although the buyer might explore an ordinary negligence theory if the homeowner knew of and concealed the danger. Choice A omits the commercial supplier element entirely. Choice B addresses timing of the defect, which cannot cure the missing supplier element. Choice C is overbroad because negligence and other theories can still apply to used goods."
+    },
+    {
+      "id": "torts-025",
+      "subject": "torts",
+      "subtopic": "other-torts",
+      "rule": "Defamation — slander per se (impugning business integrity or skill)",
+      "priority": "M",
+      "difficulty": 2,
+      "stem": "At a crowded chamber of commerce luncheon, a businessman stood up and announced to the table that a local accountant, a private individual, had been systematically skimming money from her clients' trust accounts for years. The statement was false; the businessman confused the accountant with someone else and made no effort to check. Several of the accountant's clients were present and heard the remark. The accountant sued the businessman for defamation. At trial she proved the statement was false, that it was about her, that third parties heard it, and that the businessman was at least negligent, but she offered no evidence of any specific lost clients, lost fees, or other economic loss. The businessman moved for judgment, arguing that a slander plaintiff must prove special damages. Should the motion be granted?",
+      "choices": [
+        "No, because a false spoken accusation that impugns a person's business integrity is slander per se, for which special damages need not be proven.",
+        "No, because special damages are never required in any defamation action.",
+        "Yes, because all slander claims require proof of specific economic loss.",
+        "Yes, because the accountant failed to prove the businessman acted with actual malice."
+      ],
+      "correctIndex": 0,
+      "explanation": "Defamation requires a false defamatory statement of and concerning the plaintiff, publication to a third party, and damages. Slander, an oral defamatory statement, ordinarily requires proof of special damages, but not when the statement falls within slander per se, which includes statements impugning business integrity or skill, imputing a loathsome disease, unchastity, or a crime of moral turpitude. Accusing an accountant of skimming client funds attacks her professional integrity, so damages are presumed. Choice B is wrong because ordinary slander outside the per se categories does require special damages. Choice C ignores the per se exception. Choice D is wrong because actual malice is required for public officials and public figures; a private-figure plaintiff need only show fault amounting to at least negligence, which she proved."
+    },
+    {
+      "id": "torts-026",
+      "subject": "torts",
+      "subtopic": "other-torts",
+      "rule": "Invasion of privacy — intrusion upon seclusion",
+      "priority": "M",
+      "difficulty": 2,
+      "stem": "A landlord, curious about his tenant's personal life, concealed a small video camera inside a smoke detector in the tenant's bedroom and watched the live feed on his phone for several weeks. He never recorded the footage, never showed it to anyone, and never mentioned what he saw to a single person. The tenant discovered the camera while replacing the smoke detector's battery and was horrified to learn how long it had been transmitting. She sued the landlord for invasion of privacy. The landlord argues that he cannot be liable for any privacy tort because he never published, disclosed, or disseminated anything he observed, and because the tenant suffered no reputational or economic harm. Which of the following best states the result?",
+      "choices": [
+        "The landlord is not liable, because every invasion of privacy tort requires some form of publication or public disclosure.",
+        "The landlord is not liable, because a property owner retains the right to monitor activity anywhere within his own building.",
+        "The landlord is liable for intrusion upon seclusion, because he intruded into the tenant's private affairs in a place where she had a reasonable expectation of privacy, in a manner highly objectionable to a reasonable person.",
+        "The landlord is liable for public disclosure of private facts, because the camera transmitted private information."
+      ],
+      "correctIndex": 2,
+      "explanation": "Intrusion upon seclusion occurs when the defendant intrudes into the private affairs of the plaintiff, the plaintiff has a reasonable expectation of privacy, and the intrusion is highly objectionable to a reasonable person; classic examples include reading private mail and illegal surveillance or wiretapping. Hidden bedroom video surveillance is a textbook intrusion, and the tort is complete upon the prying itself, with no publication element. Choice A is wrong because publication is required for the disclosure and false light branches of privacy, not for intrusion. Choice B fails because a landlord's ownership does not extinguish a tenant's reasonable expectation of privacy in her leased bedroom. Choice D names the wrong branch, since public disclosure requires widespread dissemination of private information to others, which never happened here."
+    },
+    {
+      "id": "torts-027",
+      "subject": "torts",
+      "subtopic": "other-torts",
+      "rule": "Private nuisance — substantial and unreasonable interference with use and enjoyment",
+      "priority": "M",
+      "difficulty": 2,
+      "stem": "A rendering plant began operating around the clock on a parcel adjacent to a long-established residential street. Several times a week, the plant emitted intense odors of decaying material that drifted over the neighboring homes, forcing one homeowner to keep her windows sealed in summer, abandon her backyard garden, and cancel outdoor gatherings. Nothing physical from the plant, no particles, liquids, or objects, ever crossed onto her land in any detectable way, and her house suffered no structural damage. Air-quality readings showed the emissions complied with the odor thresholds in the plant's state operating permit. The homeowner sued the plant for private nuisance. The plant argues it cannot be liable because nothing tangible entered her property and it complied with its permit. Is the homeowner likely to prevail?",
+      "choices": [
+        "No, because liability for interference with land requires a physical invasion of the property.",
+        "Yes, because the recurring odors are a substantial and unreasonable interference with her use and enjoyment of her property that would be offensive to a reasonable person.",
+        "No, because compliance with the state operating permit is an absolute bar to any nuisance claim.",
+        "Yes, but only if she proves the plant intended to drive her from her home."
+      ],
+      "correctIndex": 1,
+      "explanation": "A private nuisance is a substantial and unreasonable interference with a person's use or enjoyment of her property, and the interference must be offensive, inconvenient, or annoying to a reasonable person. Recurring stenches that force a homeowner to seal her windows and abandon her yard easily qualify, and unlike trespass to land, nuisance requires no physical entry onto the property. Choice A confuses nuisance with trespass, which does require a physical invasion. Choice C overstates the defense: statutory or permit compliance is a factor courts may weigh, but it is not an automatic bar to nuisance liability. Choice D is wrong because nuisance does not require a purpose to harm or expel the plaintiff; an unreasonable interference suffices regardless of motive."
+    },
+    {
+      "id": "torts-028",
+      "subject": "torts",
+      "subtopic": "other-torts",
+      "rule": "Intentional misrepresentation (fraud)",
+      "priority": "M",
+      "difficulty": 2,
+      "stem": "A man selling his vintage sports car told a prospective buyer that the engine had been completely rebuilt the previous year by a certified specialty mechanic and had logged fewer than one thousand miles since the rebuild. The seller knew this was false; the engine had never been rebuilt, and he invented the story to justify his asking price. The buyer, an enthusiast who specifically wanted a rebuilt engine for an upcoming rally season, asked to see the mechanic's invoice, and the seller produced a convincing forged receipt. Relying on these representations, the buyer paid a premium price. Two months later the original, worn engine failed, costing the buyer thousands of dollars. The buyer sued the seller for intentional misrepresentation. Which element, if any, will be the most difficult for the buyer to establish, and what is the likely outcome?",
+      "choices": [
+        "Reliance will be impossible to show because a buyer of a used car must always commission an independent inspection.",
+        "Scienter will defeat the claim because the seller's statements were merely optimistic sales talk.",
+        "The claim fails because misrepresentation requires a fiduciary relationship between the parties.",
+        "No element poses serious difficulty; the buyer can establish a knowingly false statement of material fact made to induce the purchase, justifiable reliance, and resulting damages."
+      ],
+      "correctIndex": 3,
+      "explanation": "Intentional misrepresentation, or fraud, requires a misrepresentation of a material fact by the defendant, the defendant's knowledge that the statement was false, intent to induce the plaintiff, actual and justifiable reliance by the plaintiff, and damages. Every element is comfortably satisfied: the rebuild claim was a specific factual assertion the seller knew was false, bolstered by a forged invoice to induce the sale, and the buyer paid a premium and suffered out-of-pocket loss when the engine failed. Choice A is wrong because reliance was reasonable, especially after the buyer sought and received documentary confirmation. Choice B fails because a concrete, fabricated claim about a rebuild is a statement of fact, not puffery, and the seller's actual knowledge of falsity is scienter. Choice C is wrong because a fiduciary relationship matters to nondisclosure duties, not to affirmative lies."
+    }
+  ]
+}

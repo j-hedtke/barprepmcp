@@ -1,0 +1,208 @@
+{
+  "subject": "mixed",
+  "sample": true,
+  "cards": [
+    {
+      "id": "fc-torts-0001",
+      "ruleId": "sample-rule-001",
+      "subject": "torts",
+      "subtopic": "negligence",
+      "rule": "Negligence elements",
+      "priority": "H",
+      "statement": "To recover for negligence, a plaintiff must prove duty, breach of that duty, actual causation, proximate causation, and damages.",
+      "clozeStart": 56,
+      "clozeLength": 19,
+      "answer": "breach of that duty",
+      "acceptable": [
+        "duty breach causation and damages"
+      ],
+      "distractors": [
+        "causes a harmful or offensive contact with the plaintiff's person",
+        "he cannot afford one",
+        "possession that is actual"
+      ]
+    },
+    {
+      "id": "fc-torts-0002",
+      "ruleId": "sample-rule-001",
+      "subject": "torts",
+      "subtopic": "negligence",
+      "rule": "Negligence elements",
+      "priority": "H",
+      "statement": "To recover for negligence, a plaintiff must prove duty, breach of that duty, actual causation, proximate causation, and damages.",
+      "clozeStart": 95,
+      "clozeLength": 19,
+      "answer": "proximate causation",
+      "acceptable": [],
+      "distractors": [
+        "causes a harmful or offensive contact with the plaintiff's person",
+        "he cannot afford one",
+        "possession that is actual"
+      ]
+    },
+    {
+      "id": "fc-torts-0003",
+      "ruleId": "sample-rule-002",
+      "subject": "torts",
+      "subtopic": "intentional-torts",
+      "rule": "Battery",
+      "priority": "H",
+      "statement": "Battery requires an intentional act by the defendant that causes a harmful or offensive contact with the plaintiff's person.",
+      "clozeStart": 58,
+      "clozeLength": 65,
+      "answer": "causes a harmful or offensive contact with the plaintiff's person",
+      "acceptable": [],
+      "distractors": [
+        "breach of that duty",
+        "proximate causation",
+        "out-of-court statement offered to prove the truth of the matter asserted"
+      ]
+    },
+    {
+      "id": "fc-contracts-0001",
+      "ruleId": "sample-rule-003",
+      "subject": "contracts",
+      "subtopic": "formation",
+      "rule": "Consideration",
+      "priority": "H",
+      "statement": "Consideration is defined as a bargained-for exchange in which each party incurs a legal detriment or confers a legal benefit.",
+      "clozeStart": 82,
+      "clozeLength": 42,
+      "answer": "legal detriment or confers a legal benefit",
+      "acceptable": [
+        "a bargained for exchange"
+      ],
+      "distractors": [
+        "continuous throughout the statutory period",
+        "inadmissible unless an exception applies",
+        "another human being committed with malice aforethought"
+      ]
+    },
+    {
+      "id": "fc-evidence-0001",
+      "ruleId": "sample-rule-004",
+      "subject": "evidence",
+      "subtopic": "hearsay",
+      "rule": "Hearsay definition",
+      "priority": "H",
+      "statement": "Hearsay is defined as an out-of-court statement offered to prove the truth of the matter asserted, and it is inadmissible unless an exception applies.",
+      "clozeStart": 25,
+      "clozeLength": 72,
+      "answer": "out-of-court statement offered to prove the truth of the matter asserted",
+      "acceptable": [],
+      "distractors": [
+        "causes a harmful or offensive contact with the plaintiff's person",
+        "another human being committed with malice aforethought",
+        "legal detriment or confers a legal benefit"
+      ]
+    },
+    {
+      "id": "fc-evidence-0002",
+      "ruleId": "sample-rule-004",
+      "subject": "evidence",
+      "subtopic": "hearsay",
+      "rule": "Hearsay definition",
+      "priority": "H",
+      "statement": "Hearsay is defined as an out-of-court statement offered to prove the truth of the matter asserted, and it is inadmissible unless an exception applies.",
+      "clozeStart": 109,
+      "clozeLength": 40,
+      "answer": "inadmissible unless an exception applies",
+      "acceptable": [],
+      "distractors": [
+        "legal detriment or confers a legal benefit",
+        "continuous throughout the statutory period",
+        "another human being committed with malice aforethought"
+      ]
+    },
+    {
+      "id": "fc-crim-0001",
+      "ruleId": "sample-rule-005",
+      "subject": "crim",
+      "subtopic": "constitutional-protection-of-accused",
+      "rule": "Miranda warnings",
+      "priority": "H",
+      "statement": "Before a custodial interrogation, officers must warn the suspect of the right to remain silent, that any statement may be used against him, the right to counsel, and the right to appointed counsel if he cannot afford one.",
+      "clozeStart": 200,
+      "clozeLength": 20,
+      "answer": "he cannot afford one",
+      "acceptable": [],
+      "distractors": [
+        "another human being committed with malice aforethought",
+        "breach of that duty",
+        "proximate causation"
+      ]
+    },
+    {
+      "id": "fc-crim-0002",
+      "ruleId": "sample-rule-006",
+      "subject": "crim",
+      "subtopic": "homicide",
+      "rule": "Common law murder",
+      "priority": "H",
+      "statement": "Common law murder is defined as the unlawful killing of another human being committed with malice aforethought.",
+      "clozeStart": 56,
+      "clozeLength": 54,
+      "answer": "another human being committed with malice aforethought",
+      "acceptable": [],
+      "distractors": [
+        "he cannot afford one",
+        "causes a harmful or offensive contact with the plaintiff's person",
+        "legal detriment or confers a legal benefit"
+      ]
+    },
+    {
+      "id": "fc-realprop-0001",
+      "ruleId": "sample-rule-007",
+      "subject": "realprop",
+      "subtopic": "ownership",
+      "rule": "Adverse possession",
+      "priority": "H",
+      "statement": "Title by adverse possession requires possession that is actual, open and notorious, hostile, exclusive, and continuous throughout the statutory period.",
+      "clozeStart": 108,
+      "clozeLength": 42,
+      "answer": "continuous throughout the statutory period",
+      "acceptable": [],
+      "distractors": [
+        "legal detriment or confers a legal benefit",
+        "inadmissible unless an exception applies",
+        "another human being committed with malice aforethought"
+      ]
+    },
+    {
+      "id": "fc-realprop-0002",
+      "ruleId": "sample-rule-007",
+      "subject": "realprop",
+      "subtopic": "ownership",
+      "rule": "Adverse possession",
+      "priority": "H",
+      "statement": "Title by adverse possession requires possession that is actual, open and notorious, hostile, exclusive, and continuous throughout the statutory period.",
+      "clozeStart": 37,
+      "clozeLength": 25,
+      "answer": "possession that is actual",
+      "acceptable": [],
+      "distractors": [
+        "he cannot afford one",
+        "breach of that duty",
+        "proximate causation"
+      ]
+    },
+    {
+      "id": "fc-conlaw-0001",
+      "ruleId": "sample-rule-008",
+      "subject": "conlaw",
+      "subtopic": "individual-rights",
+      "rule": "Strict scrutiny",
+      "priority": "M",
+      "statement": "Under strict scrutiny, a law is upheld only if it is necessary to serve a compelling government interest, is narrowly tailored, and uses the least restrictive means available.",
+      "clozeStart": 165,
+      "clozeLength": 9,
+      "answer": "available",
+      "acceptable": [],
+      "distractors": [
+        "breach of that duty",
+        "proximate causation",
+        "he cannot afford one"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "name": "aibarprep-proxy",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "main": "index.mjs",
+  "description": "AI Bar Prep proxy — remote MCP drill server plus TTS/STT/generation, keeping API keys off-device. Vercel entrypoint index.mjs.",
+  "scripts": {
+    "start": "node index.mjs",
+    "deploy:vercel": "vercel deploy --prod"
+  },
+  "engines": { "node": ">=18" }
+}

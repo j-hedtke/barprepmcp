@@ -1,0 +1,481 @@
+{
+  "subject": "conlaw",
+  "questions": [
+    {
+      "id": "conlaw-001",
+      "subject": "conlaw",
+      "subtopic": "judicial-review",
+      "rule": "State sovereign immunity (11th Amendment)",
+      "priority": "H",
+      "difficulty": 2,
+      "stem": "A commercial oyster farm sued a state's department of environmental quality in federal district court. The complaint alleged that the agency negligently operated a dam, releasing sediment that smothered the farm's oyster beds, and it sought five million dollars in compensatory damages under a federal water-quality statute that Congress enacted using its commerce power. The statute says nothing about enforcing the Fourteenth Amendment, and the state has never consented to being sued in federal court. The complaint names only the agency itself as a defendant and asks only for money damages. The agency has moved to dismiss the action. How should the court rule on the motion?",
+      "choices": [
+        "Deny the motion, because the claim arises under a federal statute, which gives the district court jurisdiction over the action.",
+        "Deny the motion, because sovereign immunity protects only the state itself, not the agencies through which the state operates.",
+        "Grant the motion, because a private party may not sue a state or its agency for money damages in federal court absent consent or a valid abrogation of immunity.",
+        "Grant the motion, because regulation of water quality is a power reserved exclusively to the states."
+      ],
+      "correctIndex": 2,
+      "explanation": "The Eleventh Amendment bars a private party from suing a state, including a state agency, in federal court unless an exception applies: the state consents, the suit enforces legislation passed under Section 5 of the Fourteenth Amendment, the plaintiff seeks only an injunction against a state official, or damages are sought from an official personally. Here the plaintiff seeks money damages from the agency itself, the statute rests on the commerce power rather than the Fourteenth Amendment, and the state has not consented, so the suit is barred. Choice A is wrong because federal question jurisdiction does not override sovereign immunity. Choice B is wrong because immunity extends to state agencies. Choice D states a fabricated exclusivity rule; the federal statute itself is a valid commerce-power enactment."
+    },
+    {
+      "id": "conlaw-002",
+      "subject": "conlaw",
+      "subtopic": "judicial-review",
+      "rule": "State sovereign immunity — injunctive relief against a state official",
+      "priority": "H",
+      "difficulty": 2,
+      "stem": "An inmate in a state prison filed suit in federal district court against the state's commissioner of corrections in the commissioner's official capacity. The complaint alleged that the prison's ongoing practice of housing inmates in cells without heat during winter violates a federal statute and the federal Constitution. The complaint did not request any money. Instead, it sought only an injunction ordering the commissioner to bring the prison's housing conditions into compliance with federal law going forward. The commissioner moved to dismiss, arguing that the suit is really one against the state and is therefore barred by state sovereign immunity. The state has not consented to suit. How should the court rule?",
+      "choices": [
+        "Deny the motion, because the Eleventh Amendment does not bar a suit seeking only prospective injunctive relief against a state official.",
+        "Grant the motion, because a suit against an official in an official capacity is treated as a suit against the state for all purposes.",
+        "Grant the motion, because the state has not consented to be sued in federal court.",
+        "Deny the motion, because the Eleventh Amendment applies only to suits brought by citizens of other states."
+      ],
+      "correctIndex": 0,
+      "explanation": "Although the Eleventh Amendment generally prohibits private suits against a state in federal court, a recognized exception allows suits that seek only injunctive relief against a state official to halt an ongoing violation of federal law. Because the inmate seeks no damages and asks only that the commissioner conform future conduct to federal law, the suit may proceed. Choice B overstates the rule; official-capacity suits for prospective relief fall outside the immunity bar. Choice C is wrong because consent is unnecessary when the injunctive-relief exception applies. Choice D misstates the doctrine; despite the amendment's text, immunity also bars suits by a state's own citizens, so that distinction is not the reason the suit survives."
+    },
+    {
+      "id": "conlaw-003",
+      "subject": "conlaw",
+      "subtopic": "judicial-review",
+      "rule": "Standing — taxpayer status and injury in fact",
+      "priority": "M",
+      "difficulty": 1,
+      "stem": "Congress appropriated two billion dollars in grants to a private aerospace company to develop a new rocket engine. A retired accountant who pays federal income taxes read about the program and became convinced that the appropriation exceeds Congress's spending power because, in her view, it serves purely private interests rather than the general welfare. She filed suit in federal district court seeking a declaration that the appropriation is unconstitutional and an order halting the payments. Her complaint alleges no connection to the program other than the fact that she pays federal taxes and objects to how the money is being used. The government has moved to dismiss for lack of standing. How should the court rule?",
+      "choices": [
+        "Deny the motion, because every taxpayer has a direct financial stake in ensuring that federal funds are spent lawfully.",
+        "Grant the motion, because a person's status as a taxpayer, standing alone, is not a concrete and particularized injury.",
+        "Deny the motion, because challenges to spending-power legislation are always justiciable when raised by a person who funds the treasury.",
+        "Grant the motion, because disputes over federal appropriations are nonjusticiable political questions committed to Congress."
+      ],
+      "correctIndex": 1,
+      "explanation": "To have standing, a plaintiff must show an injury in fact that is concrete and particularized, caused by the challenged conduct, and redressable by a court order. A plaintiff may litigate specific amounts owed on her own tax bill, but being a taxpayer who objects to government expenditures is not, by itself, an injury in fact; it is a generalized grievance shared with all taxpayers. The accountant alleges nothing beyond taxpayer status, so she lacks standing. Choices A and C describe exactly the kind of undifferentiated interest that standing doctrine rejects. Choice D reaches the right result for the wrong reason; spending challenges are not categorically political questions, and the defect here is the absence of a personal injury, not the subject matter."
+    },
+    {
+      "id": "conlaw-004",
+      "subject": "conlaw",
+      "subtopic": "judicial-review",
+      "rule": "Mootness — capable of repetition yet evading review",
+      "priority": "M",
+      "difficulty": 2,
+      "stem": "A candidate for state office sued state election officials in federal court, claiming that a statute requiring independent candidates to gather petition signatures eleven months before the general election violates the First Amendment. The district court upheld the statute, and the candidate appealed. While the appeal was pending, the election took place without the candidate on the ballot. The election officials then moved to dismiss the appeal, arguing that the case no longer presents a live controversy because the election is over. The candidate filed a sworn statement that he intends to run as an independent in the next election cycle and will face the same deadline. How should the appellate court rule on the motion to dismiss?",
+      "choices": [
+        "Grant the motion, because a federal court cannot grant any effective relief concerning an election that has already occurred.",
+        "Grant the motion, because the candidate's intent to run again is a hypothetical future dispute that courts may not address.",
+        "Deny the motion, because constitutional challenges to election laws are never moot.",
+        "Deny the motion, because the dispute is capable of repetition as to this candidate yet evades review due to the short election timeline."
+      ],
+      "correctIndex": 3,
+      "explanation": "A case is moot when the dispute has ended or been resolved before review, but an exception preserves jurisdiction where the controversy is capable of being repeated while consistently escaping review because of its inherently short duration. Election cycles are the classic example: litigation rarely concludes before voting occurs, and this candidate has sworn that he will face the identical deadline in the next cycle. Choice A describes ordinary mootness without accounting for the exception. Choice B mistakes the repetition exception for an advisory opinion problem; the candidate's concrete plan to run again is precisely what keeps the dispute live. Choice C is far too broad, as election cases can be moot when no repetition is likely."
+    },
+    {
+      "id": "conlaw-005",
+      "subject": "conlaw",
+      "subtopic": "judicial-review",
+      "rule": "Ripeness — actual harm or immediate threat of harm",
+      "priority": "M",
+      "difficulty": 2,
+      "stem": "Congress enacted a statute authorizing a federal agency to issue rules, at some point in the future, limiting the amount of a chemical additive in packaged foods. The statute itself imposes no duties on anyone; it merely empowers the agency to act after study and public comment. The agency has announced that it has not yet decided whether to regulate the additive at all and has issued no proposed rules. One week after the statute passed, a snack-food manufacturer that uses the additive sued in federal court, seeking a declaration that any future limit on the additive would be unconstitutional. The government moved to dismiss. What is the manufacturer's most serious obstacle?",
+      "choices": [
+        "The claim is not ripe, because the manufacturer faces no actual harm or immediate threat of harm from a rule that may never be issued.",
+        "The claim is moot, because the agency declined to regulate the additive.",
+        "The manufacturer lacks standing, because corporations cannot assert constitutional rights in federal court.",
+        "The claim presents a political question, because food-safety policy is committed to the legislative branch."
+      ],
+      "correctIndex": 0,
+      "explanation": "Article III limits federal courts to actual cases and controversies, and a case is ripe only when the plaintiff has suffered actual harm or faces an immediate threat of harm. Pre-enforcement review is possible where withholding review would impose hardship and the issues are fit for decision on the existing record, but here the agency has issued nothing, may never regulate, and imposes no current duty on the manufacturer. The dispute is purely hypothetical, so it is unripe. Choice B confuses mootness, which concerns disputes that have ended, with a dispute that has not yet begun. Choice C is wrong because corporations regularly assert constitutional claims. Choice D is wrong because constitutional limits on regulation are routinely adjudicated by courts."
+    },
+    {
+      "id": "conlaw-006",
+      "subject": "conlaw",
+      "subtopic": "separation-of-powers",
+      "rule": "Commerce Clause — aggregation of intrastate economic activity",
+      "priority": "H",
+      "difficulty": 2,
+      "stem": "Congress enacted a comprehensive statute prohibiting the cultivation, possession, and sale of a particular plant, finding that a substantial interstate black market in the plant exists and that locally grown supplies feed that market. A retiree grew six of the plants in her backyard solely for her own personal medicinal use. She never sold the plants, never crossed state lines with them, and obtained the seeds locally. After federal agents seized the plants, she sued, arguing that Congress lacks power under the Commerce Clause to reach purely local cultivation for personal consumption. Assuming Congress had a rational basis for its findings, is the statute constitutional as applied to the retiree?",
+      "choices": [
+        "No, because her conduct was wholly intrastate and she never participated in any market transaction.",
+        "Yes, because Congress may regulate intrastate economic activity, such as growing a commodity, when the class of activity in the aggregate substantially affects interstate commerce.",
+        "No, because applying the statute to noncommercial personal use exceeds the police power, which belongs to the states.",
+        "Yes, because Congress may regulate any activity that has even a remote connection to interstate commerce."
+      ],
+      "correctIndex": 1,
+      "explanation": "Under the Commerce Clause, Congress can regulate the channels of interstate commerce, the people and instrumentalities of commerce, and economic activity that substantially affects interstate commerce. A federal regulation reaching intrastate conduct will be upheld when Congress had a rational basis to conclude that the cumulative impact of the regulated class substantially affects interstate commerce. Cultivating a commodity is economic activity, so aggregation applies even though this grower never sold anything; home-grown supply rationally affects the interstate market. Choice A ignores the aggregation principle. Choice C mislabels the issue; Congress is exercising an enumerated power, not a general police power. Choice D overstates the doctrine, since a remote connection is not enough and noneconomic activity cannot be aggregated."
+    },
+    {
+      "id": "conlaw-007",
+      "subject": "conlaw",
+      "subtopic": "separation-of-powers",
+      "rule": "Commerce Clause — noneconomic activity cannot be aggregated",
+      "priority": "H",
+      "difficulty": 2,
+      "stem": "Concerned about violence near schools, Congress enacted a statute making it a federal crime for any person to possess a hunting knife within five hundred feet of any school building. The statute contains no requirement that the knife have moved in interstate commerce and no connection to any commercial transaction. In committee reports, Congress reasoned that violence near schools frightens families, depresses local property values, impairs learning, and thereby ultimately weakens the national economy. A high school senior was prosecuted under the statute for carrying his grandfather's hunting knife in his backpack on his walk to class. He moved to dismiss the indictment, arguing that the statute exceeds Congress's commerce power. How should the court rule?",
+      "choices": [
+        "Deny the motion, because Congress made express findings linking school violence to the national economy.",
+        "Deny the motion, because knives are articles of commerce that were originally bought and sold in interstate markets.",
+        "Grant the motion, because schools are instrumentalities of interstate commerce subject only to state regulation.",
+        "Grant the motion, because mere possession is noneconomic activity, and aggregation cannot be used to find a substantial effect on interstate commerce."
+      ],
+      "correctIndex": 3,
+      "explanation": "Congress may regulate intrastate activity under the substantial-effects category only when the activity is economic or commercial in nature; when the regulated conduct is noneconomic, courts will not aggregate its cumulative effects to find a substantial impact on interstate commerce. Simple possession of a knife near a school is not commercial activity, and the statute contains no interstate-commerce element that could tie individual prosecutions to commerce. Choice A fails because congressional findings built on attenuated chains of inference cannot convert noneconomic conduct into commerce. Choice B fails because the statute as written requires no nexus to interstate movement. Choice C is incoherent; schools are not instrumentalities of commerce, and that label would support rather than defeat federal power."
+    },
+    {
+      "id": "conlaw-008",
+      "subject": "conlaw",
+      "subtopic": "separation-of-powers",
+      "rule": "Spending Power — conditions on federal funds",
+      "priority": "M",
+      "difficulty": 2,
+      "stem": "Congress passed a statute directing the Secretary of Transportation to withhold five percent of a state's annual federal highway construction funds unless the state enacts a law prohibiting drivers from using handheld electronic devices while operating a vehicle. The statute states the condition in plain, explicit terms. A state that receives substantial highway funding declined to pass such a law, lost five percent of its grant, and sued, arguing that the condition unconstitutionally invades its reserved powers because licensing drivers and setting rules of the road are traditional state functions. Is the federal statute constitutional?",
+      "choices": [
+        "No, because Congress may not use federal money to regulate in areas traditionally governed by the states.",
+        "No, because conditions on federal grants must relate to how the granted funds themselves are spent.",
+        "Yes, because the condition is unambiguous, relates to the federal interest in safe highways, and withholding five percent is pressure rather than compulsion.",
+        "Yes, because Congress's power to spend for the general welfare is not subject to any judicially enforceable limits."
+      ],
+      "correctIndex": 2,
+      "explanation": "Congress may attach conditions to funds offered to states if the spending serves the general welfare, the condition is stated unambiguously, the condition relates to the federal interest in the national project or program, the condition does not induce unconstitutional conduct, and the financial pressure is not so coercive that it becomes compulsion. This condition is explicit, distracted-driving rules relate directly to the federal interest in highway safety, and the loss of only five percent of one grant leaves the state with a genuine choice. Choice A is wrong because Congress may use conditional spending to encourage action it could not directly command. Choice B invents a requirement; the condition need only relate to the federal program. Choice D is wrong because the spending power has the enumerated limits applied above."
+    },
+    {
+      "id": "conlaw-009",
+      "subject": "conlaw",
+      "subtopic": "separation-of-powers",
+      "rule": "Treaty and foreign affairs powers — executive agreements",
+      "priority": "M",
+      "difficulty": 2,
+      "stem": "After two years of negotiations, the President signed a written agreement with the head of state of a foreign nation resolving decades of disputed claims between the two countries' citizens. Under the agreement, pending lawsuits in each country would be suspended and the claims routed to a joint claims commission for resolution. The President never submitted the agreement to the Senate, and the Senate never voted on it. A group of senators sued, contending that the agreement is void because the Constitution requires that treaties receive the advice and consent of two thirds of the Senate. Assume the senators have standing and that the agreement's subject matter falls within the President's recognized foreign affairs authority. What is the strongest argument that the agreement is valid?",
+      "choices": [
+        "The President may enter into executive agreements with foreign heads of state without Senate ratification.",
+        "The Senate waived its ratification role by failing to object during the negotiations.",
+        "Agreements resolving private claims are judicial acts that require no legislative participation.",
+        "The agreement is valid because it was later published in the official compilation of federal regulations."
+      ],
+      "correctIndex": 0,
+      "explanation": "Although the treaty power is shared, with the President negotiating treaties and the Senate ratifying them, the President independently possesses the power to conclude executive agreements with foreign governments, and such agreements do not require Senate approval. Settling claims disputes with foreign nations is a recognized and long-accepted use of that authority, so the absence of a Senate vote does not invalidate the agreement. Choice B is wrong because Senate ratification is not a right that lapses through silence; it simply is not required for an executive agreement. Choice C mischaracterizes the agreement, which is an exercise of executive foreign affairs power, not a judicial act. Choice D is irrelevant, since publication has no bearing on the constitutional source of the agreement's validity."
+    },
+    {
+      "id": "conlaw-010",
+      "subject": "conlaw",
+      "subtopic": "separation-of-powers",
+      "rule": "Delegation of congressional powers — intelligible standards",
+      "priority": "M",
+      "difficulty": 2,
+      "stem": "Congress enacted a clean air statute directing a federal environmental agency to set national limits on certain pollutants. The statute instructs the agency to fix each limit at the level that is requisite to protect public health while allowing an adequate margin of safety, and it requires the agency to review the supporting science every five years. An electric utility subject to the resulting limits sued, arguing that the statute unconstitutionally transfers Congress's legislative power to an executive agency because the agency, not Congress, chooses the actual numerical limits. Is the utility's argument likely to succeed?",
+      "choices": [
+        "Yes, because only Congress may make rules that carry the force of law.",
+        "No, because Congress may delegate legislative power so long as the power is delegable under the Constitution and Congress supplies reasonably intelligible standards to guide the agency.",
+        "Yes, because health regulation is a power reserved to the states and cannot be delegated to a federal agency.",
+        "No, because the courts lack authority to review the internal arrangements between Congress and administrative agencies."
+      ],
+      "correctIndex": 1,
+      "explanation": "Congress may delegate its legislative powers to an agency if the delegated power is one the Constitution permits Congress to delegate and Congress provides reasonably intelligible standards to guide the agency's discretion; Congress simply cannot delegate powers it does not itself possess. Directing the agency to set limits requisite to protect public health with an adequate margin of safety supplies a guiding standard of the kind courts have consistently found sufficient. Choice A states the premise of the nondelegation doctrine too rigidly, ignoring that guided delegations are routinely upheld. Choice C is wrong because federal environmental regulation rests on Congress's enumerated powers, not a reserved state power. Choice D is wrong because delegation challenges are justiciable and courts do review them."
+    },
+    {
+      "id": "conlaw-011",
+      "subject": "conlaw",
+      "subtopic": "federalism",
+      "rule": "10th Amendment — anti-commandeering",
+      "priority": "H",
+      "difficulty": 2,
+      "stem": "To create a national registry of certain firearm sales, Congress enacted a statute requiring the chief law enforcement officer of every county in the nation to collect purchaser information from local gun dealers, verify the information against federal databases, and forward monthly reports to a federal agency. The statute offers no federal funding and gives state and local officers no choice about participating; officers who fail to perform the required duties are subject to civil fines. A county sheriff sued, arguing that the statute is unconstitutional. The federal government responds that firearm sales substantially affect interstate commerce and that the program is essential to a valid federal regulatory scheme. How should the court rule?",
+      "choices": [
+        "For the government, because the statute regulates sales that substantially affect interstate commerce.",
+        "For the government, because federal law is supreme and state officers must execute it under the Supremacy Clause.",
+        "For the sheriff, but only if the state legislature first passes a resolution objecting to the program.",
+        "For the sheriff, because Congress may not compel state or local officers to administer a federal regulatory program."
+      ],
+      "correctIndex": 3,
+      "explanation": "Under the Tenth Amendment, powers not granted to the federal government are reserved to the states, and Congress cannot compel a state government or its officers to implement or administer federal legislation. Even when Congress regulates a subject within its commerce power, it must regulate individuals directly or induce state cooperation through conditions on federal funding; it may not conscript state and local officials. This statute directly commands county officers to run a federal program under threat of fines, so it is invalid. Choice A fails because a valid regulatory end does not authorize commandeering as the means. Choice B fails because the Supremacy Clause makes valid federal law supreme but does not validate laws that violate the anti-commandeering principle. Choice C invents a procedural prerequisite that does not exist."
+    },
+    {
+      "id": "conlaw-012",
+      "subject": "conlaw",
+      "subtopic": "federalism",
+      "rule": "Negative Commerce Clause — discriminatory state regulation",
+      "priority": "H",
+      "difficulty": 2,
+      "stem": "A state with a large apple industry enacted a statute providing that no apples may be sold in the state unless they were packed and boxed at a facility located within the state. The legislative history shows that lawmakers wanted to protect in-state packing houses from competition by larger, cheaper packing operations in neighboring states. Out-of-state growers can still sell apples in the state, but only if they ship their fruit loose to an in-state packer first, which roughly doubles their costs. Congress has not legislated on apple packing. An out-of-state orchard challenged the statute under the dormant Commerce Clause. What result?",
+      "choices": [
+        "The statute is valid, because Congress has not enacted any law occupying the field of produce packing.",
+        "The statute is valid, because out-of-state apples may still be sold in the state after local packing.",
+        "The statute is invalid, because it discriminates against out-of-state commerce and is not narrowly tailored to a legitimate, nonprotectionist state objective.",
+        "The statute is invalid, because states may never regulate the sale of goods that travel in interstate commerce."
+      ],
+      "correctIndex": 2,
+      "explanation": "When Congress has not acted, a state may regulate commerce, but it cannot discriminate against out-of-state commerce or unduly burden interstate commerce. A law that is facially discriminatory or has a discriminatory impact is unconstitutional unless it is narrowly tailored to a legitimate, nonprotectionist objective with no less discriminatory alternatives, or the state is acting as a market participant. Requiring in-state packing exists purely to shield local packers, which is economic protectionism, and the state is regulating, not buying or selling. Choice A is backwards; congressional silence is what triggers dormant Commerce Clause scrutiny. Choice B ignores that forcing costly local processing is itself discrimination. Choice D is overbroad because nondiscriminatory state regulation of goods is often permissible."
+    },
+    {
+      "id": "conlaw-013",
+      "subject": "conlaw",
+      "subtopic": "federalism",
+      "rule": "Negative Commerce Clause — market participant exception",
+      "priority": "H",
+      "difficulty": 2,
+      "stem": "During a regional shortage of cement, a state-owned cement plant, built and operated entirely with state funds, announced that it would sell its output only to construction companies headquartered within the state. The plant is one of several cement suppliers in the region, and the state imposes no restrictions of any kind on private cement producers or on cement imported from elsewhere; it has simply chosen its own customers for its own product. An out-of-state construction company that had previously bought from the plant was turned away and sued, claiming the in-state-customer policy discriminates against interstate commerce in violation of the dormant Commerce Clause. Is the company likely to prevail?",
+      "choices": [
+        "No, because the state is acting as a market participant selling its own product rather than as a regulator of economic activity.",
+        "No, because cement is not an article of interstate commerce.",
+        "Yes, because any state preference for in-state buyers is per se invalid under the dormant Commerce Clause.",
+        "Yes, because the policy fails strict scrutiny, which applies to all facially discriminatory state action."
+      ],
+      "correctIndex": 0,
+      "explanation": "Discriminatory state laws ordinarily violate the dormant Commerce Clause, but an exception applies when the state acts as a market participant, buying or selling goods like a private business, rather than as a regulator of economic activity. Here the state owns the plant, sells its own cement, and imposes no rules on anyone else's transactions, so it may favor in-state customers just as a private seller could choose its clientele. Choice B is factually wrong, since cement plainly moves in interstate trade. Choice C ignores the market participant exception entirely. Choice D misapplies the framework; the heightened review reserved for discriminatory regulation never attaches because the threshold characterization is participation, not regulation."
+    },
+    {
+      "id": "conlaw-014",
+      "subject": "conlaw",
+      "subtopic": "federalism",
+      "rule": "Supremacy Clause — implied conflict preemption",
+      "priority": "M",
+      "difficulty": 2,
+      "stem": "A federal agency, acting under a validly enacted federal railroad safety statute, issued regulations specifying the exact braking system that freight locomotives must use, after concluding that a single uniform system is essential to safe operations when trains cross between rail networks. A state later passed a law requiring all freight locomotives operating within its borders to use a different, newer braking system that is mechanically incompatible with the federally specified system. A railroad cannot install both systems on the same locomotive. The state argues that its system is demonstrably safer and that protecting its residents is a core exercise of its police power. A railroad operating in the state seeks a declaration that the state law is unenforceable. What is the railroad's best argument?",
+      "choices": [
+        "The state law violates the dormant Commerce Clause because it burdens interstate railroads.",
+        "The state law is preempted because compliance with both the federal regulation and the state law is impossible, creating a direct conflict.",
+        "The state law is invalid because railroad safety is an area in which states have no legislative power.",
+        "The state law violates the Contracts Clause by interfering with railroads' equipment supply agreements."
+      ],
+      "correctIndex": 1,
+      "explanation": "Under the Supremacy Clause, validly enacted federal law preempts conflicting state law. Preemption may be express, where the federal law states it is exclusive, or implied, which arises from a direct conflict with state law, from federal occupation of the field, or when state law substantially interferes with federal objectives. Because a locomotive physically cannot carry both braking systems, compliance with both laws is impossible, the clearest form of implied conflict preemption, and the state's safety motive cannot save it. Choice A is weaker; the law applies evenhandedly, so a dormant Commerce Clause balancing claim is less certain than impossibility. Choice C is wrong because states retain police power over safety absent preemption. Choice D fails because the Contracts Clause targets laws impairing existing contracts, not equipment standards generally."
+    },
+    {
+      "id": "conlaw-015",
+      "subject": "conlaw",
+      "subtopic": "individual-rights",
+      "rule": "Equal protection — discriminatory purpose required for facially neutral laws",
+      "priority": "H",
+      "difficulty": 2,
+      "stem": "A city requires every applicant for a firefighter position to pass a written examination testing reading comprehension and basic mechanical reasoning. The examination is identical for all applicants and makes no reference to race. Statistics over five years show that applicants belonging to one racial minority group fail the examination at roughly twice the rate of other applicants. There is no evidence that the city adopted or maintained the test in order to exclude members of any racial group, and the city credibly explains that the test screens for skills firefighters use on the job. A rejected applicant who is a member of the minority group sued, claiming the examination requirement denies equal protection. Which standard of review applies, and what is the likely result?",
+      "choices": [
+        "Strict scrutiny applies because the test has a racially disparate impact, and the requirement is invalid.",
+        "Intermediate scrutiny applies because employment testing implicates a quasi-suspect classification, and the requirement is invalid.",
+        "Strict scrutiny applies, but the requirement survives because public safety is a compelling interest.",
+        "Rational basis review applies because the test is facially neutral and there is no proof of a discriminatory purpose, and the requirement is valid."
+      ],
+      "correctIndex": 3,
+      "explanation": "A discriminatory classification triggering heightened equal protection scrutiny exists when a law is discriminatory on its face, is neutral but applied in a discriminatory manner, or is neutral but was adopted with a discriminatory motive that produces disparate impact. Disparate impact standing alone does not establish a suspect classification. Because this examination is facially neutral, evenly administered, and unaccompanied by any evidence of discriminatory purpose, rational basis review applies, and screening firefighters for job-related skills is plainly a legitimate interest rationally served by the test. Choices A and C wrongly trigger strict scrutiny from impact alone. Choice B is doubly wrong: no quasi-suspect class such as gender is involved, and impact without purpose would not trigger intermediate scrutiny anyway."
+    },
+    {
+      "id": "conlaw-016",
+      "subject": "conlaw",
+      "subtopic": "individual-rights",
+      "rule": "Equal protection — intermediate scrutiny for gender classifications",
+      "priority": "H",
+      "difficulty": 2,
+      "stem": "A state university operates a well-regarded nursing program that, by statute, admits only women. A male licensed practical nurse who lives near the campus applied and was rejected solely because of his sex; the next closest nursing program is several hours away. The state defends the women-only policy on two grounds: that it compensates women for historical discrimination in the workforce generally, and that nursing has traditionally been a female profession. Men are otherwise fully qualified to complete the coursework, and the state concedes that women have never been underrepresented in nursing. The rejected applicant sued, alleging a violation of the Equal Protection Clause. What result?",
+      "choices": [
+        "The policy is valid, because the state needs only a conceivable rational basis for deciding whom to educate.",
+        "The policy is valid, because remedying historical discrimination against women is a compelling interest.",
+        "The policy is invalid, because the state cannot show that excluding men is substantially related to an important governmental objective.",
+        "The policy is invalid, because all single-sex public education is per se unconstitutional."
+      ],
+      "correctIndex": 2,
+      "explanation": "Gender is a quasi-suspect classification, so a law that classifies by sex must survive intermediate scrutiny: the government must show the classification is substantially related to an important governmental interest. A genuine remedial purpose can qualify, but not where the favored group was never disadvantaged in the relevant field; women have never been excluded from nursing, so the policy rests on stereotype rather than remediation, and it fails. Choice A applies the wrong standard, since rational basis governs only non-suspect classes. Choice B both misstates the test, which requires an important rather than compelling interest, and ignores that the asserted remedial rationale is unsupported here. Choice D goes too far, because a sex-based admission policy could survive if it actually satisfied intermediate scrutiny."
+    },
+    {
+      "id": "conlaw-017",
+      "subject": "conlaw",
+      "subtopic": "individual-rights",
+      "rule": "Equal protection — rational basis for economic classifications",
+      "priority": "H",
+      "difficulty": 1,
+      "stem": "A state statute makes it unlawful for anyone other than a licensed optometrist or ophthalmologist to fit or duplicate prescription eyeglass lenses, but the statute expressly exempts retailers who sell ready-made magnifying glasses off the rack. Opticians, who are trained to grind and fit lenses but are not licensed optometrists, can no longer duplicate a customer's existing lenses without a new prescription, while ready-made sellers face no restrictions at all. An optician sued, arguing that the line drawn between opticians and ready-made retailers is arbitrary and denies equal protection. There is no claim involving any suspect class or fundamental right. How should the court analyze the claim, and what is the likely outcome?",
+      "choices": [
+        "Apply rational basis review and uphold the statute, because the optician cannot show the classification lacks a rational relationship to any conceivable legitimate interest.",
+        "Apply rational basis review and strike the statute, because the exemption proves the legislature did not pursue its health rationale consistently.",
+        "Apply intermediate scrutiny, because the statute burdens the optician's important economic interest in earning a livelihood.",
+        "Apply strict scrutiny, because the right to pursue a chosen occupation is fundamental."
+      ],
+      "correctIndex": 0,
+      "explanation": "When a law classifies people into groups that are neither suspect nor quasi-suspect and burdens no fundamental right, rational basis review applies: the plaintiff bears the burden of showing the classification is not rationally related to a legitimate governmental interest, and any conceivable legitimate interest suffices. A legislature could rationally believe eye health is better protected by requiring prescriptions for fitted lenses, and it may address problems one step at a time without covering every related activity, so the ready-made exemption does not doom the law. Choice B misallocates the burden and demands a consistency the rational basis test does not require. Choices C and D apply heightened scrutiny that is reserved for quasi-suspect and suspect classifications or fundamental rights, and occupational freedom is not a fundamental right for this purpose."
+    },
+    {
+      "id": "conlaw-018",
+      "subject": "conlaw",
+      "subtopic": "individual-rights",
+      "rule": "Substantive due process — fundamental rights and strict scrutiny",
+      "priority": "M",
+      "difficulty": 2,
+      "stem": "A state statute provides that any resident who owes court-ordered child support may not receive a marriage license unless a judge first finds that the applicant is current on all payments and that the children covered by the order are not receiving public assistance. The legislature explained that the law motivates parents to pay support and protects children's welfare. A father who owes substantial arrears on support for children from a prior relationship applied for a license to marry his fiancée and was denied because of his unpaid support. He sued, claiming the statute violates the Due Process Clause of the Fourteenth Amendment. Which analysis should the court apply?",
+      "choices": [
+        "Rational basis review, because economic and family-welfare legislation is presumed valid.",
+        "Strict scrutiny, because the statute significantly interferes with the fundamental right to marry, and the state must show the law is necessary to serve a compelling interest.",
+        "Intermediate scrutiny, because the statute indirectly classifies on the basis of wealth.",
+        "No scrutiny is required, because issuing marriage licenses is a discretionary state function."
+      ],
+      "correctIndex": 1,
+      "explanation": "Substantive due process limits the government's power to regulate certain activities. When a law significantly interferes with a fundamental right, it must satisfy strict scrutiny, meaning the government must show the law is necessary to serve a compelling governmental interest. The right of privacy includes the right to marry, and this statute directly blocks marriage for an entire class of residents, so strict scrutiny applies; collecting support can be pursued through less drastic enforcement tools, and the statute will likely fail. Choice A would be correct only for laws regulating non-fundamental interests. Choice C is wrong because wealth is not a quasi-suspect classification and the controlling theory here is due process, not equal protection tiers. Choice D ignores that licensing schemes are fully subject to constitutional limits."
+    },
+    {
+      "id": "conlaw-019",
+      "subject": "conlaw",
+      "subtopic": "individual-rights",
+      "rule": "Procedural due process — property interests and required procedures",
+      "priority": "M",
+      "difficulty": 2,
+      "stem": "A state statute provides that public school custodians who complete a three-year probationary period may be dismissed only for cause, such as misconduct or repeated poor performance. A custodian who completed probation eight years ago arrived at work one morning to find a letter stating that he was terminated immediately for suspected theft of supplies. He was never told what evidence existed against him, was given no chance to respond before or after the termination, and the statute's administrative appeal office had been defunded years earlier. He sued the school district, alleging a violation of procedural due process. The district responds that government employers may staff their buildings however they see fit. Is the custodian likely to prevail?",
+      "choices": [
+        "No, because public employment is a privilege rather than a right protected by the Constitution.",
+        "No, because due process protections apply only to deprivations of liberty, not employment.",
+        "Yes, but only if he first proves the theft accusation was false.",
+        "Yes, because the for-cause statute gave him a property interest in his job, and the state deprived him of it without notice and an opportunity to be heard."
+      ],
+      "correctIndex": 3,
+      "explanation": "Procedural due process requires certain procedures when the government deprives a person of life, liberty, or property, and a statutory entitlement, such as a job terminable only for cause, is a protected property interest. Courts determine what process is due by balancing the importance of the private interest, the risk of error under current procedures against the value of additional safeguards, and the burden on the state of providing more. Due process ordinarily requires at least notice and a hearing before an unbiased decision-maker; the custodian received neither. Choice A relies on a discarded rights-privilege distinction. Choice B ignores that property deprivations are expressly covered. Choice C confuses the merits with procedure; the violation is the absence of process, regardless of whether the accusation was ultimately true."
+    },
+    {
+      "id": "conlaw-020",
+      "subject": "conlaw",
+      "subtopic": "individual-rights",
+      "rule": "State action — traditional public function exception",
+      "priority": "H",
+      "difficulty": 2,
+      "stem": "A mining corporation owns an entire town outright. The corporation built and maintains the town's residential streets, sidewalks, sewer system, business district, and the only post office branch, and the public passes freely through the town, which looks and functions like any ordinary municipality. A volunteer for a religious organization stood on the business-district sidewalk handing out pamphlets, and the corporation's private security officers ordered her to leave under a company rule banning all literature distribution. She was arrested for trespassing when she refused. She argues the ban violates her First Amendment rights; the corporation responds that it is a private landowner whose conduct the Constitution does not reach. How should a court rule on the state action question?",
+      "choices": [
+        "There is no state action, because the corporation received no government funding to operate the town.",
+        "There is no state action, because private property owners may always exclude speakers.",
+        "There is state action, because operating all the functions of a municipality is a public function traditionally and exclusively reserved to the government.",
+        "There is state action, because all large corporations are treated as government actors when they affect the public."
+      ],
+      "correctIndex": 2,
+      "explanation": "Constitutional rights protect against governmental action, and the conduct of private actors is ordinarily not covered. Courts will nonetheless find state action by a private party in two situations: when the party performs a traditional public function, meaning powers traditionally and exclusively reserved to the government, or when significant government involvement authorizes or facilitates the unconstitutional private conduct. Running an entire town, including its streets, utilities, and civic spaces, is the classic example of a traditional public function, so the corporation's speech ban is treated as governmental and the First Amendment applies. Choice A looks to funding, which is not the test for the public function category. Choice B states the general private-property rule that the exception displaces here. Choice D sweeps far too broadly, as size and public impact alone never create state action."
+    },
+    {
+      "id": "conlaw-021",
+      "subject": "conlaw",
+      "subtopic": "individual-rights",
+      "rule": "Takings — permanent physical occupation is a per se taking",
+      "priority": "H",
+      "difficulty": 2,
+      "stem": "To promote universal internet access, a city enacted an ordinance requiring the owner of every apartment building to permit a licensed broadband company to install a small relay box, about one cubic foot in size, permanently bolted to the building's roof, along with a thin cable running down an exterior wall. Owners receive a one-time fee of fifty dollars set by the ordinance. A landlord objected that the equipment occupies her roof without her consent and sued, alleging an unconstitutional taking. The city responds that the intrusion is trivial in size, serves an important public purpose, and barely affects the building's value or the landlord's use of her property. What result?",
+      "choices": [
+        "The ordinance effects a per se taking, because a government-authorized permanent physical occupation of private property requires just compensation no matter how small the occupied area.",
+        "There is no taking, because courts balance economic impact, investment-backed expectations, and the character of the regulation, and the intrusion here is minimal.",
+        "There is no taking, because expanding broadband access is a legitimate public purpose.",
+        "There is a taking only if the equipment reduces the building's fair market value by a substantial percentage."
+      ],
+      "correctIndex": 0,
+      "explanation": "The government may take private property for public use only if it pays just compensation, and a possessory or per se taking occurs whenever the government physically occupies the property, even if the occupation covers only a small portion. Because the ordinance compels landlords to suffer a permanent physical installation by a third party, it is a per se taking, and the question becomes whether fifty dollars equals just compensation, measured by fair market value at the time of the taking. Choice B applies the multi-factor balancing test for regulatory takings, which is irrelevant once a physical occupation is shown. Choice C confuses the public-use requirement, easily met here, with the separate compensation requirement. Choice D wrongly imports an economic-impact threshold that physical occupations never require."
+    },
+    {
+      "id": "conlaw-022",
+      "subject": "conlaw",
+      "subtopic": "individual-rights",
+      "rule": "Regulatory takings — deprivation of all economically viable use",
+      "priority": "H",
+      "difficulty": 3,
+      "stem": "A retiree paid four hundred thousand dollars for a vacant beachfront lot in a subdivision where dozens of similar lots already hold houses, intending to build a retirement home. Two years later, the state coastal council, citing erosion concerns, adopted a regulation prohibiting any permanent structure of any kind on undeveloped lots in the retiree's zone. Developed lots nearby are unaffected. The parties stipulate that the regulation leaves the lot with no economically viable use and essentially no market value, and the state concedes that nothing in its background principles of property or nuisance law would have prohibited building a house on the lot. The retiree sued for compensation under the Takings Clause. What result?",
+      "choices": [
+        "No taking occurred, because the regulation involves no physical invasion of the lot.",
+        "A taking occurred, because a regulation that deprives an owner of all economically viable use of the property is treated as a per se taking.",
+        "No taking occurred, because preventing coastal erosion is a conceivable public purpose.",
+        "A taking occurred, but only because neighboring developed lots were treated more favorably."
+      ],
+      "correctIndex": 1,
+      "explanation": "Regulatory takings fall into recognized categories: a regulation that strips the owner of all economically viable use of the property is a per se taking, while lesser restrictions are judged by balancing the regulation's economic impact, its interference with investment-backed expectations, and its character. The parties stipulated to total economic deprivation, and the state concedes that its background property and nuisance principles would not independently bar a house, so compensation is required. Choice A is wrong because physical invasion marks a different per se category and is not required for a regulatory taking. Choice C confuses the public-use inquiry with the compensation requirement; a valid purpose does not excuse payment. Choice D rests on an equal-treatment theory that is not an element of takings analysis."
+    },
+    {
+      "id": "conlaw-023",
+      "subject": "conlaw",
+      "subtopic": "individual-rights",
+      "rule": "Content-based speech restrictions — strict scrutiny",
+      "priority": "H",
+      "difficulty": 2,
+      "stem": "A city ordinance prohibits all picketing and demonstrating on public sidewalks within one hundred fifty feet of any school building while classes are in session, but it contains an express exemption for peaceful picketing related to a labor dispute at the school. A parent who wished to walk the sidewalk outside her child's elementary school carrying a sign protesting the district's new curriculum was cited under the ordinance, while union members picketing a wage dispute on the same sidewalk that afternoon were left alone. The city defends the ordinance as a reasonable measure to protect students from distraction and noise during the school day. The parent challenges her citation under the First Amendment. What is the most likely outcome?",
+      "choices": [
+        "The ordinance is valid, because protecting schoolchildren from disruption is a significant governmental interest.",
+        "The ordinance is valid, because sidewalks adjacent to schools are nonpublic forums where speech may be broadly limited.",
+        "The ordinance is invalid, because all restrictions on sidewalk picketing are unconstitutional.",
+        "The ordinance is invalid, because the labor exemption makes it a content-based restriction that cannot survive strict scrutiny."
+      ],
+      "correctIndex": 3,
+      "explanation": "Government regulation of speech based on its content, whether subject matter or viewpoint, must satisfy strict scrutiny: the regulation must be narrowly tailored to achieve a compelling governmental interest using the least restrictive means. By permitting labor picketing while banning identical picketing on other subjects, the ordinance draws a subject-matter line, and the city cannot show that nonlabor picketing is uniquely disruptive, so the law fails. Choice A invokes the intermediate standard reserved for content-neutral time, place, and manner rules, which this is not. Choice B mislabels the forum; public sidewalks are quintessential public forums even beside schools. Choice C overcorrects, because a genuinely content-neutral, narrowly tailored noise or timing rule leaving open alternative channels could be upheld."
+    },
+    {
+      "id": "conlaw-024",
+      "subject": "conlaw",
+      "subtopic": "individual-rights",
+      "rule": "Content-neutral time, place, and manner restrictions in a public forum",
+      "priority": "H",
+      "difficulty": 2,
+      "stem": "A city park contains a band shell that hosts concerts, rallies, and speeches throughout the year. After years of noise complaints from surrounding residential neighborhoods, the city adopted a rule requiring every event at the band shell, regardless of subject or sponsor, to use the city's own sound-amplification equipment operated by a city technician, who controls only volume and never the content of what is said or performed. The rule applies identically to every speaker and musical act, and performers remain free to hold unamplified events anywhere else in the park or to rent private venues. A concert promoter whose shows favor very high volume sued, claiming the rule violates the First Amendment. How should the court rule?",
+      "choices": [
+        "For the promoter, because any restriction on speech in a traditional public forum must satisfy strict scrutiny.",
+        "For the promoter, because requiring use of government equipment is an unconstitutional prior restraint.",
+        "For the city, because the rule is a content-neutral regulation narrowly tailored to the significant interest in controlling noise, and it leaves open ample alternative channels.",
+        "For the city, because music is conduct rather than speech and receives no First Amendment protection."
+      ],
+      "correctIndex": 2,
+      "explanation": "In a traditional public forum such as a park, the government may regulate the time, place, and manner of content-neutral speech if the regulation is narrowly tailored to serve a significant governmental interest and leaves open alternative channels of communication. The sound rule applies to every event without regard to message, directly serves the significant interest in limiting noise reaching nearby homes, and performers retain abundant other ways to reach audiences, so it stands. Choice A states the test for content-based restrictions, which this rule is not. Choice B mislabels the rule; a prior restraint prohibits speech before it occurs, while this rule merely manages volume. Choice D is wrong because music and other expressive activity are fully protected speech."
+    },
+    {
+      "id": "conlaw-025",
+      "subject": "conlaw",
+      "subtopic": "individual-rights",
+      "rule": "Speech in nonpublic forums — reasonable and viewpoint neutral",
+      "priority": "H",
+      "difficulty": 2,
+      "stem": "A city transit authority sells advertising space on the interior panels of its public buses. For decades it has accepted commercial advertisements for products, services, and local businesses, but its written policy prohibits all advertisements supporting or opposing any candidate, ballot measure, or political cause, whatever the position taken. The authority explains that it wants to maximize fare revenue without alienating its captive riders or appearing to endorse political messages. A mayoral candidate offered the standard rate for an interior panel ad and was refused under the policy, while a furniture store's ad was accepted the same week. The candidate sued under the First Amendment. What is the strongest analysis supporting the transit authority?",
+      "choices": [
+        "Bus advertising space is a nonpublic forum, so the ban is valid because it is reasonable and viewpoint neutral.",
+        "Bus advertising space is a traditional public forum, but the ban survives strict scrutiny.",
+        "Commercial speech may always be preferred over political speech because political speech receives less protection.",
+        "The authority is a market participant, so the First Amendment does not apply to its advertising decisions."
+      ],
+      "correctIndex": 0,
+      "explanation": "Forum analysis controls speech restrictions on government property. Public places that have traditionally been limited for speech purposes, including transit advertising space the government never opened to political discourse, are nonpublic forums, where the government may regulate speech if the restriction is reasonable and viewpoint neutral. The authority's ban covers every political message regardless of which side it takes, and excluding controversy from a captive-audience revenue program is reasonable, so the policy stands. Choice B misclassifies the forum, and a categorical political ban could not survive strict scrutiny anyway. Choice C inverts the hierarchy, since political speech sits at the core of the First Amendment and commercial speech receives less protection. Choice D imports a dormant Commerce Clause concept that has no role in First Amendment analysis."
+    },
+    {
+      "id": "conlaw-026",
+      "subject": "conlaw",
+      "subtopic": "individual-rights",
+      "rule": "Incitement of imminent lawless action",
+      "priority": "M",
+      "difficulty": 2,
+      "stem": "At a sparsely attended weekend rally in a rural field, the leader of a fringe political group gave a speech declaring that the tax system is tyranny and that if the legislature keeps ignoring the people, the day may come when citizens will have to take vengeance and shut the government down by force. No government office was nearby, the audience of a dozen sympathizers took no action of any kind, and the speaker proposed no specific act, time, or target. He was convicted under a state statute that criminalizes advocating the use of force to achieve political change. On appeal, he argues the conviction violates the First Amendment. How should the appellate court rule?",
+      "choices": [
+        "Affirm the conviction, because advocacy of force or illegality is categorically unprotected speech.",
+        "Reverse the conviction, because his speech was not directed to producing imminent lawless action and was not likely to produce such action.",
+        "Affirm the conviction, because speech threatening government institutions may be punished whenever it alarms listeners.",
+        "Reverse the conviction, because political speech can never be criminalized regardless of its consequences."
+      ],
+      "correctIndex": 1,
+      "explanation": "Speech advocating force or law violation may be punished only when it advocates illegality, is directed to inciting or producing imminent lawless action, and is likely to incite or produce that action, meaning a clear and present danger that listeners will act. This speaker described vengeance at some indefinite future day, identified no concrete act, and addressed a tiny passive audience, so both the intent-to-incite-imminence and likelihood elements are missing, and the conviction must fall. Choice A revives the discredited view that mere advocacy is unprotected. Choice C substitutes listener alarm for the required imminence and likelihood showing. Choice D overshoots in the other direction, because genuinely incitive political speech that meets the full test may indeed be punished."
+    },
+    {
+      "id": "conlaw-027",
+      "subject": "conlaw",
+      "subtopic": "individual-rights",
+      "rule": "Free Exercise Clause — neutral laws of general applicability",
+      "priority": "M",
+      "difficulty": 2,
+      "stem": "A state statute prohibits the possession or consumption of a specific hallucinogenic plant by anyone, for any purpose. The legislature enacted the ban as part of its general controlled-substances code after public health hearings about the plant's effects; the legislative record contains no mention of religion, and the statute applies identically to all residents with no exemptions of any kind. A small church has used a tea brewed from the plant as the centerpiece of its worship services for generations. Two church members were prosecuted after a traffic stop revealed the tea in their car on the way to a service. They argue that the Free Exercise Clause of the First Amendment requires the state to exempt their sacramental use. Under the Free Exercise Clause alone, what result?",
+      "choices": [
+        "The members win, because any law that burdens a sincere religious practice must satisfy strict scrutiny.",
+        "The members win, because sacramental use of substances is absolutely protected worship.",
+        "The members lose, because religious conduct, as opposed to belief, receives no constitutional protection.",
+        "The members lose, because a neutral law of general applicability that incidentally burdens religious practice does not violate the Free Exercise Clause."
+      ],
+      "correctIndex": 3,
+      "explanation": "The Free Exercise Clause forbids the government from interfering with religious exercise, and laws designed to target religion must survive strict scrutiny, requiring narrow tailoring to a compelling interest by the least restrictive means. But a law that is neutral toward religion and generally applicable, and that burdens religious practice only incidentally, is constitutional. This drug ban applies to everyone, contains no religion-based gerrymander, and was enacted for public health reasons, so the prosecution stands; illegal drug use is the textbook example. Choice A states the test that applies only to laws aimed at religion or laws lacking general applicability. Choice B asserts an absolute protection that has never existed for conduct. Choice C goes too far the other way, since religiously motivated conduct is protected against targeted laws."
+    },
+    {
+      "id": "conlaw-028",
+      "subject": "conlaw",
+      "subtopic": "individual-rights",
+      "rule": "Establishment Clause — coercion and historical practice",
+      "priority": "M",
+      "difficulty": 2,
+      "stem": "A public middle school principal organizes the school's annual graduation ceremony, which students are strongly expected to attend and which is, as a practical matter, the only way to participate in receiving their diplomas with their classmates. The principal personally selects a local member of the clergy each year, invites that person to deliver the official opening and closing prayers from the ceremony's podium, and provides written guidelines directing that the prayers be nonsectarian. Students stand silently during the prayers. The parent of a graduating student sued, alleging that the school-sponsored prayers violate the Establishment Clause. The school argues the prayers are constitutional because they are brief, nondenominational, and attendance at graduation is technically voluntary. What result?",
+      "choices": [
+        "The school prevails, because nonsectarian prayers do not establish any particular religion.",
+        "The school prevails, because no student is legally compelled to attend the graduation ceremony.",
+        "The parent prevails, because the school's sponsorship and direction of the prayers coerces students to participate in a religious exercise.",
+        "The parent prevails, because any mention of religion at a public school event is unconstitutional."
+      ],
+      "correctIndex": 2,
+      "explanation": "The Establishment Clause prohibits the government from establishing, endorsing, or supporting religion, and facially neutral practices are evaluated against the historical practices and understandings of the Clause, under which government coercion to support or participate in religious activity is a primary marker of a violation. Here a public school official orchestrates the prayer, scripts its parameters, and embeds it in a ceremony students realistically cannot skip, pressuring objecting students to join a religious exercise; that is coercion attributable to the state. Choice A fails because directing even nonsectarian prayer is itself state sponsorship of religion. Choice B ignores that practical and peer pressure at a milestone event is coercive despite formal voluntariness. Choice D is overbroad, since neutral, noncoercive references to religion can be permissible."
+    }
+  ]
+}

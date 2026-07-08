@@ -1,0 +1,391 @@
+{
+ "version": 1,
+ "examFormat": {
+  "totalQuestions": 200,
+  "scoredQuestions": 175,
+  "scoredPerSubject": 25,
+  "minutesPerQuestion": 1.8
+ },
+ "questionsPerSubjectInBank": 28,
+ "subjects": [
+  {
+   "key": "civpro",
+   "name": "Civil Procedure",
+   "subtopics": [
+    {
+     "key": "jurisdiction-and-venue",
+     "name": "Jurisdiction and Venue",
+     "ratio": 0.222,
+     "bankCount": 6
+    },
+    {
+     "key": "law-applied-by-federal-courts",
+     "name": "Law Applied by Federal Courts",
+     "ratio": 0.083,
+     "bankCount": 2
+    },
+    {
+     "key": "pretrial-procedures",
+     "name": "Pretrial Procedures",
+     "ratio": 0.222,
+     "bankCount": 6
+    },
+    {
+     "key": "jury-trials",
+     "name": "Jury Trials",
+     "ratio": 0.083,
+     "bankCount": 2
+    },
+    {
+     "key": "motions",
+     "name": "Motions",
+     "ratio": 0.222,
+     "bankCount": 6
+    },
+    {
+     "key": "verdicts-and-judgments",
+     "name": "Verdicts and Judgments",
+     "ratio": 0.083,
+     "bankCount": 3
+    },
+    {
+     "key": "appealability-and-review",
+     "name": "Appealability and Review",
+     "ratio": 0.083,
+     "bankCount": 3
+    }
+   ]
+  },
+  {
+   "key": "conlaw",
+   "name": "Constitutional Law",
+   "subtopics": [
+    {
+     "key": "judicial-review",
+     "name": "The Nature of Judicial Review",
+     "ratio": 0.167,
+     "bankCount": 5
+    },
+    {
+     "key": "separation-of-powers",
+     "name": "The Separation of Powers",
+     "ratio": 0.167,
+     "bankCount": 5
+    },
+    {
+     "key": "federalism",
+     "name": "Relation of Nation and States in a Federal System",
+     "ratio": 0.167,
+     "bankCount": 4
+    },
+    {
+     "key": "individual-rights",
+     "name": "Individual Rights",
+     "ratio": 0.5,
+     "bankCount": 14
+    }
+   ]
+  },
+  {
+   "key": "contracts",
+   "name": "Contracts",
+   "note": "About 1/4 of all Contracts questions should be governed by UCC Articles 1-2 (sale of goods).",
+   "subtopics": [
+    {
+     "key": "formation",
+     "name": "Formation of Contracts",
+     "ratio": 0.25,
+     "bankCount": 7
+    },
+    {
+     "key": "defenses-to-enforceability",
+     "name": "Defenses to Enforceability",
+     "ratio": 0.125,
+     "bankCount": 3
+    },
+    {
+     "key": "content-and-meaning",
+     "name": "Contract Content and Meaning",
+     "ratio": 0.125,
+     "bankCount": 4
+    },
+    {
+     "key": "performance-breach-discharge",
+     "name": "Performance, Breach, and Discharge",
+     "ratio": 0.25,
+     "bankCount": 7
+    },
+    {
+     "key": "remedies",
+     "name": "Remedies",
+     "ratio": 0.125,
+     "bankCount": 4
+    },
+    {
+     "key": "third-party-rights",
+     "name": "Third-Party Rights",
+     "ratio": 0.125,
+     "bankCount": 3
+    }
+   ]
+  },
+  {
+   "key": "crim",
+   "name": "Criminal Law & Procedure",
+   "subtopics": [
+    {
+     "key": "homicide",
+     "name": "Homicide",
+     "ratio": 0.125,
+     "bankCount": 4
+    },
+    {
+     "key": "other-crimes",
+     "name": "Other Crimes",
+     "ratio": 0.125,
+     "bankCount": 3
+    },
+    {
+     "key": "inchoate-crimes-parties",
+     "name": "Inchoate Crimes; Parties",
+     "ratio": 0.125,
+     "bankCount": 3
+    },
+    {
+     "key": "general-principles",
+     "name": "General Principles",
+     "ratio": 0.125,
+     "bankCount": 4
+    },
+    {
+     "key": "constitutional-protection-of-accused",
+     "name": "Constitutional Protection of Accused Persons",
+     "ratio": 0.5,
+     "bankCount": 14
+    }
+   ]
+  },
+  {
+   "key": "evidence",
+   "name": "Evidence",
+   "subtopics": [
+    {
+     "key": "presentation-of-evidence",
+     "name": "Presentation of Evidence",
+     "ratio": 0.25,
+     "bankCount": 7
+    },
+    {
+     "key": "relevancy-and-exclusion",
+     "name": "Relevancy and Reasons for Excluding Relevant Evidence",
+     "ratio": 0.333,
+     "bankCount": 9
+    },
+    {
+     "key": "privileges-and-policy-exclusions",
+     "name": "Privileges and Other Policy Exclusions",
+     "ratio": 0.083,
+     "bankCount": 2
+    },
+    {
+     "key": "writings-recordings-photographs",
+     "name": "Writings, Recordings, and Photographs",
+     "ratio": 0.083,
+     "bankCount": 3
+    },
+    {
+     "key": "hearsay",
+     "name": "Hearsay and Circumstances of its Admissibility",
+     "ratio": 0.25,
+     "bankCount": 7
+    }
+   ]
+  },
+  {
+   "key": "realprop",
+   "name": "Real Property",
+   "subtopics": [
+    {
+     "key": "ownership",
+     "name": "Ownership of Real Property",
+     "ratio": 0.2,
+     "bankCount": 6
+    },
+    {
+     "key": "rights-in-real-property",
+     "name": "Rights in Real Property",
+     "ratio": 0.2,
+     "bankCount": 6
+    },
+    {
+     "key": "real-estate-contracts",
+     "name": "Real Estate Contracts",
+     "ratio": 0.2,
+     "bankCount": 5
+    },
+    {
+     "key": "mortgages-security-devices",
+     "name": "Mortgages/Security Devices",
+     "ratio": 0.2,
+     "bankCount": 5
+    },
+    {
+     "key": "titles",
+     "name": "Titles",
+     "ratio": 0.2,
+     "bankCount": 6
+    }
+   ]
+  },
+  {
+   "key": "torts",
+   "name": "Torts",
+   "subtopics": [
+    {
+     "key": "intentional-torts",
+     "name": "Intentional Torts",
+     "ratio": 0.167,
+     "bankCount": 5
+    },
+    {
+     "key": "negligence",
+     "name": "Negligence",
+     "ratio": 0.5,
+     "bankCount": 14
+    },
+    {
+     "key": "strict-liability-products",
+     "name": "Strict Liability and Products Liability",
+     "ratio": 0.167,
+     "bankCount": 5
+    },
+    {
+     "key": "other-torts",
+     "name": "Other Torts",
+     "ratio": 0.167,
+     "bankCount": 4
+    }
+   ]
+  },
+  {
+   "key": "agency",
+   "name": "Agency",
+   "mee": true,
+   "flashcardsOnly": true,
+   "subtopics": [
+    {
+     "key": "agency-relationships",
+     "name": "Agency Relationships",
+     "ratio": 0.231,
+     "bankCount": 0
+    },
+    {
+     "key": "contractual-liability",
+     "name": "Contractual Liability of Principal and Agent",
+     "ratio": 0.385,
+     "bankCount": 0
+    },
+    {
+     "key": "vicarious-liability",
+     "name": "Vicarious Liability for Agent's Torts",
+     "ratio": 0.307,
+     "bankCount": 0
+    },
+    {
+     "key": "fiduciary-duties",
+     "name": "Fiduciary Duties Between Principal and Agent",
+     "ratio": 0.077,
+     "bankCount": 0
+    }
+   ]
+  },
+  {
+   "key": "partnerships",
+   "name": "Partnerships",
+   "mee": true,
+   "flashcardsOnly": true,
+   "subtopics": [
+    {
+     "key": "creation",
+     "name": "Creation of Partnership",
+     "ratio": 0.125,
+     "bankCount": 0
+    },
+    {
+     "key": "partner-authority",
+     "name": "Partner Authority",
+     "ratio": 0.083,
+     "bankCount": 0
+    },
+    {
+     "key": "partner-liability",
+     "name": "Partner Liability",
+     "ratio": 0.125,
+     "bankCount": 0
+    },
+    {
+     "key": "partner-rights",
+     "name": "Partner Rights",
+     "ratio": 0.333,
+     "bankCount": 0
+    },
+    {
+     "key": "fiduciary-duties",
+     "name": "Fiduciary Duties",
+     "ratio": 0.167,
+     "bankCount": 0
+    },
+    {
+     "key": "dissociation-dissolution",
+     "name": "Dissociation and Dissolution",
+     "ratio": 0.167,
+     "bankCount": 0
+    }
+   ]
+  },
+  {
+   "key": "corps",
+   "name": "Corporations & LLCs",
+   "mee": true,
+   "flashcardsOnly": true,
+   "subtopics": [
+    {
+     "key": "formation-and-liability",
+     "name": "Formation and Limited Liability",
+     "ratio": 0.189,
+     "bankCount": 0
+    },
+    {
+     "key": "corporate-finance",
+     "name": "Corporate Finance",
+     "ratio": 0.075,
+     "bankCount": 0
+    },
+    {
+     "key": "directors-officers-managers",
+     "name": "Directors, Officers, and Managers",
+     "ratio": 0.189,
+     "bankCount": 0
+    },
+    {
+     "key": "shareholders",
+     "name": "Shareholders",
+     "ratio": 0.188,
+     "bankCount": 0
+    },
+    {
+     "key": "fiduciary-duties-litigation",
+     "name": "Fiduciary Duties and Shareholder Litigation",
+     "ratio": 0.208,
+     "bankCount": 0
+    },
+    {
+     "key": "fundamental-changes-dissolution",
+     "name": "Fundamental Changes and Dissolution",
+     "ratio": 0.151,
+     "bankCount": 0
+    }
+   ]
+  }
+ ]
+}

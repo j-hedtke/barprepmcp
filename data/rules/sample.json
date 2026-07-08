@@ -1,0 +1,72 @@
+{
+  "subject": "mixed",
+  "sample": true,
+  "rules": [
+    {
+      "id": "sample-rule-001",
+      "subject": "torts",
+      "subtopic": "negligence",
+      "name": "Negligence elements",
+      "priority": "H",
+      "statement": "To recover for negligence, a plaintiff must prove duty, breach of that duty, actual causation, proximate causation, and damages.",
+      "acceptable": ["duty breach causation and damages"]
+    },
+    {
+      "id": "sample-rule-002",
+      "subject": "torts",
+      "subtopic": "intentional-torts",
+      "name": "Battery",
+      "priority": "H",
+      "statement": "Battery requires an intentional act by the defendant that causes a harmful or offensive contact with the plaintiff's person."
+    },
+    {
+      "id": "sample-rule-003",
+      "subject": "contracts",
+      "subtopic": "formation",
+      "name": "Consideration",
+      "priority": "H",
+      "statement": "Consideration is defined as a bargained-for exchange in which each party incurs a legal detriment or confers a legal benefit.",
+      "acceptable": ["a bargained for exchange"]
+    },
+    {
+      "id": "sample-rule-004",
+      "subject": "evidence",
+      "subtopic": "hearsay",
+      "name": "Hearsay definition",
+      "priority": "H",
+      "statement": "Hearsay is defined as an out-of-court statement offered to prove the truth of the matter asserted, and it is inadmissible unless an exception applies."
+    },
+    {
+      "id": "sample-rule-005",
+      "subject": "crim",
+      "subtopic": "constitutional-protection-of-accused",
+      "name": "Miranda warnings",
+      "priority": "H",
+      "statement": "Before a custodial interrogation, officers must warn the suspect of the right to remain silent, that any statement may be used against him, the right to counsel, and the right to appointed counsel if he cannot afford one."
+    },
+    {
+      "id": "sample-rule-006",
+      "subject": "crim",
+      "subtopic": "homicide",
+      "name": "Common law murder",
+      "priority": "H",
+      "statement": "Common law murder is defined as the unlawful killing of another human being committed with malice aforethought."
+    },
+    {
+      "id": "sample-rule-007",
+      "subject": "realprop",
+      "subtopic": "ownership",
+      "name": "Adverse possession",
+      "priority": "H",
+      "statement": "Title by adverse possession requires possession that is actual, open and notorious, hostile, exclusive, and continuous throughout the statutory period."
+    },
+    {
+      "id": "sample-rule-008",
+      "subject": "conlaw",
+      "subtopic": "individual-rights",
+      "name": "Strict scrutiny",
+      "priority": "M",
+      "statement": "Under strict scrutiny, a law is upheld only if it is necessary to serve a compelling government interest, is narrowly tailored, and uses the least restrictive means available."
+    }
+  ]
+}

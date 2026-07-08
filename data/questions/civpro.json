@@ -1,0 +1,481 @@
+{
+  "subject": "civpro",
+  "questions": [
+    {
+      "id": "civpro-001",
+      "subject": "civpro",
+      "subtopic": "jurisdiction-and-venue",
+      "rule": "Diversity of citizenship — corporate citizenship and complete diversity",
+      "priority": "H",
+      "difficulty": 2,
+      "stem": "A homeowner who has lived her entire life in Texas was injured when a water heater exploded in her house. She sued the manufacturer in federal district court, seeking two hundred thousand dollars in damages for her injuries. The manufacturer is incorporated in Delaware, but its corporate headquarters, where its executives direct and coordinate all company operations, is located in Houston, Texas. The manufacturer moved to dismiss the action for lack of subject matter jurisdiction. The homeowner argued that diversity jurisdiction exists because she and the manufacturer are citizens of different states, pointing to the Delaware incorporation. How should the court rule on the motion to dismiss?",
+      "choices": [
+        "Deny the motion, because the manufacturer is incorporated in Delaware and the homeowner is a citizen of Texas.",
+        "Deny the motion, because the amount in controversy exceeds seventy-five thousand dollars.",
+        "Grant the motion, because the manufacturer is a citizen of both Delaware and Texas, destroying complete diversity.",
+        "Grant the motion, because a corporation can only be sued in the state where it maintains its principal place of business."
+      ],
+      "correctIndex": 2,
+      "explanation": "Diversity jurisdiction requires complete diversity of citizenship plus an amount in controversy over seventy-five thousand dollars. A corporation has dual citizenship: it is a citizen of every state where it is incorporated and of the single state containing its principal place of business, meaning its nerve center where executives direct operations. Here the manufacturer is a citizen of Delaware and of Texas, and the plaintiff is also a Texas citizen, so complete diversity is destroyed and the court must dismiss. The first choice ignores the principal-place-of-business citizenship. The second choice is incomplete because a sufficient amount in controversy cannot cure a lack of diversity. The fourth choice misstates the law; corporate citizenship is a jurisdictional concept, not a limit on where a corporation may be sued."
+    },
+    {
+      "id": "civpro-002",
+      "subject": "civpro",
+      "subtopic": "jurisdiction-and-venue",
+      "rule": "Removal — forum defendant rule",
+      "priority": "H",
+      "difficulty": 2,
+      "stem": "A pedestrian, a citizen of Ohio, sued a delivery driver, a citizen of Michigan, in a Michigan state court, alleging negligence and seeking five hundred thousand dollars for serious injuries suffered when the driver's van struck her in a crosswalk. The claim arises entirely under state tort law. Ten days after being served with the summons and complaint, the driver filed a notice of removal, seeking to remove the case to the federal district court for the district embracing the state court. The pedestrian promptly moved to remand the case to state court. How should the federal court rule on the motion to remand?",
+      "choices": [
+        "Grant the motion, because the driver is a citizen of the state in which the action was filed and removal rests solely on diversity.",
+        "Grant the motion, because a state-law negligence claim can never be heard in federal court.",
+        "Deny the motion, because the parties are completely diverse and the amount in controversy exceeds seventy-five thousand dollars.",
+        "Deny the motion, because the driver removed within thirty days of service of the summons."
+      ],
+      "correctIndex": 0,
+      "explanation": "A defendant may remove a case to federal court only if the federal court would have subject matter jurisdiction, all defendants agree, removal occurs within thirty days of service or receipt of the initial pleading, and, when removal is based solely on diversity, no defendant is a citizen of the forum state. Here the only basis for jurisdiction is diversity, and the driver is a Michigan citizen sued in Michigan state court, so the forum defendant rule bars removal and the case must be remanded. The third and fourth choices identify requirements that are satisfied but overlook the in-state defendant bar. The second choice is wrong because federal courts routinely hear state-law claims under diversity jurisdiction when the requirements are met."
+    },
+    {
+      "id": "civpro-003",
+      "subject": "civpro",
+      "subtopic": "jurisdiction-and-venue",
+      "rule": "Supplemental jurisdiction — common nucleus of operative fact",
+      "priority": "H",
+      "difficulty": 2,
+      "stem": "An employee sued her former employer in federal district court, asserting a claim for unlawful termination under a federal civil rights statute. In the same complaint, she also asserted a state-law claim for unpaid wages, alleging that the employer withheld her final two paychecks as part of the same retaliatory campaign that ended with her firing. Both parties are citizens of the same state, and the wage claim seeks only twelve thousand dollars. The employer moved to dismiss the wage claim, arguing that the court lacks subject matter jurisdiction over it because the parties are not diverse and the claim does not arise under federal law. How should the court rule?",
+      "choices": [
+        "Grant the motion, because the wage claim independently fails both diversity and federal question requirements.",
+        "Grant the motion, because supplemental jurisdiction cannot be exercised over claims between non-diverse parties.",
+        "Deny the motion, because a plaintiff may always join any additional claim against a defendant already in the case.",
+        "Deny the motion, because the wage claim arises from a common nucleus of operative fact shared with the federal claim."
+      ],
+      "correctIndex": 3,
+      "explanation": "Supplemental jurisdiction allows a federal court to hear a state-law claim that lacks an independent basis for subject matter jurisdiction when it arises from a common nucleus of operative fact with a claim over which the court has jurisdiction, meaning the claims arise from the same transaction or occurrence. Here the wage claim stems from the same retaliatory course of conduct as the federal termination claim, so the court may hear it. The first choice states the problem supplemental jurisdiction is designed to solve, not a reason to dismiss. The second choice is wrong because the diversity limits on supplemental jurisdiction protect complete diversity in diversity-only cases; the anchor claim here is a federal question. The third choice overstates joinder rules, which never substitute for a jurisdictional basis."
+    },
+    {
+      "id": "civpro-004",
+      "subject": "civpro",
+      "subtopic": "jurisdiction-and-venue",
+      "rule": "Personal jurisdiction — specific jurisdiction and relatedness",
+      "priority": "H",
+      "difficulty": 3,
+      "stem": "A vacationer, a citizen of Arizona, slipped and fell at a hotel in Florida operated by a hotel chain incorporated and headquartered in Florida. After returning home, the vacationer sued the hotel chain in federal district court in Arizona, seeking damages well over the jurisdictional threshold. The hotel chain has no offices or employees in Arizona, but it regularly sells vacation packages to Arizona residents through a national website and runs advertising campaigns that target Arizona consumers. The vacationer, however, booked her stay in person after walking into the Florida hotel during a road trip; she never saw the advertisements or used the website. The hotel chain moved to dismiss for lack of personal jurisdiction. What is the vacationer's strongest obstacle?",
+      "choices": [
+        "The hotel chain did not consent to jurisdiction in Arizona.",
+        "Her claim does not arise out of or relate to the hotel chain's contacts with Arizona, and the chain is not at home there.",
+        "A corporation can never be subject to personal jurisdiction outside its state of incorporation.",
+        "Arizona's long-arm statute cannot constitutionally reach any out-of-state business."
+      ],
+      "correctIndex": 1,
+      "explanation": "Specific personal jurisdiction requires that the defendant have minimum contacts with the forum and that the lawsuit arise out of or relate to those contacts; regularly occurring sales in a state do not support jurisdiction over a claim unrelated to those sales. General jurisdiction exists only where the defendant is essentially at home, typically a corporation's state of incorporation or headquarters. Here the chain is at home in Florida, and the slip and fall has no connection to its Arizona marketing or sales, since the plaintiff booked in person in Florida. The first choice is true but not the core obstacle, since consent is just one basis among several. The third choice ignores principal place of business and specific jurisdiction. The fourth choice is wrong because long-arm statutes routinely reach nonresidents within due process limits."
+    },
+    {
+      "id": "civpro-005",
+      "subject": "civpro",
+      "subtopic": "jurisdiction-and-venue",
+      "rule": "Venue — transfer when venue is proper",
+      "priority": "H",
+      "difficulty": 2,
+      "stem": "A farmer sued a seed company in a federal district court in Iowa, the district where the company maintains its headquarters and resides. The suit alleges that defective seed destroyed the farmer's crop in Nebraska, where the farmer lives, where the seed was delivered and planted, and where every witness to the crop failure is located. Venue in Iowa is unquestionably proper. The seed company moved to transfer the case to the federal district court in Nebraska, arguing that the convenience of the witnesses and the interests of justice favor litigating there. The farmer opposes the transfer. Which of the following best describes the court's authority?",
+      "choices": [
+        "The court may transfer the case to the Nebraska district if the case could have been brought there and convenience and justice favor transfer.",
+        "The court must transfer the case, because a substantial part of the events occurred in Nebraska.",
+        "The court must deny the motion, because venue was proper in Iowa when the case was filed.",
+        "The court must dismiss the case so the farmer can refile it in Nebraska."
+      ],
+      "correctIndex": 0,
+      "explanation": "When venue is proper in the district where the case was filed, the court has discretion to transfer the action for the convenience of parties and witnesses or in the interests of justice, but only to a district where the case could originally have been brought, meaning the receiving court has subject matter jurisdiction, personal jurisdiction, and proper venue. Nebraska qualifies because a substantial part of the events occurred there and the defendant is subject to jurisdiction there. The second choice wrongly makes transfer mandatory; the decision is discretionary. The third choice confuses proper venue with a bar on transfer, when proper venue merely changes the analysis from mandatory to discretionary. The fourth choice describes the remedy for improper venue, which permits dismissal or transfer; it has no application when venue is proper."
+    },
+    {
+      "id": "civpro-006",
+      "subject": "civpro",
+      "subtopic": "jurisdiction-and-venue",
+      "rule": "Diversity jurisdiction of a large class action — minimal diversity",
+      "priority": "L",
+      "difficulty": 3,
+      "stem": "Three hundred consumers filed a class action in federal district court against an appliance manufacturer, alleging that a defective dishwasher model caused water damage in their homes. The aggregate amount in controversy for the class is alleged in good faith to be eight million dollars, although no individual class member claims more than forty thousand dollars. The named class representative is a citizen of Oregon. The manufacturer is incorporated and headquartered in Oregon, but several unnamed class members are citizens of Washington and California. The manufacturer moved to dismiss for lack of subject matter jurisdiction, arguing that the representative and the manufacturer share Oregon citizenship and that no individual claim exceeds seventy-five thousand dollars. How should the court rule?",
+      "choices": [
+        "Grant the motion, because complete diversity is lacking between the class representative and the defendant.",
+        "Grant the motion, because no single class member's claim exceeds seventy-five thousand dollars.",
+        "Deny the motion, because the aggregate amount exceeds five million dollars, the class has at least one hundred members, and at least one class member is diverse from the defendant.",
+        "Deny the motion, because class actions are exempt from all subject matter jurisdiction requirements."
+      ],
+      "correctIndex": 2,
+      "explanation": "Diversity jurisdiction over a large class action exists when the amount in controversy exceeds five million dollars in the aggregate, the class has at least one hundred members, and minimal diversity is present, meaning any member of the plaintiff class is a citizen of a state different from any defendant. Here the eight-million-dollar aggregate, three hundred members, and the Washington and California class members satisfy all three requirements. The first choice applies the traditional complete diversity rule, which this special class-action provision displaces. The second choice applies the traditional individual amount requirement, which is replaced by aggregation to the five-million-dollar threshold. The fourth choice is far too broad; class actions still require a statutory basis for jurisdiction, and courts may even decline jurisdiction depending on the proportion of non-diverse members."
+    },
+    {
+      "id": "civpro-007",
+      "subject": "civpro",
+      "subtopic": "law-applied-by-federal-courts",
+      "rule": "Erie doctrine — substance versus procedure",
+      "priority": "H",
+      "difficulty": 2,
+      "stem": "A cyclist, a citizen of Colorado, sued a trucking company, a citizen of Utah, in federal district court sitting in Colorado, asserting a state-law negligence claim and seeking damages well above the jurisdictional minimum. The collision occurred three and a half years before the complaint was filed. Colorado law provides a three-year statute of limitations for negligence claims, along with tolling rules that do not help the cyclist. No federal statute or rule supplies a limitations period for state-law negligence claims. The trucking company moved to dismiss the action as time barred. The cyclist argued that, because the case is in federal court, the state limitations period does not control. How should the court rule?",
+      "choices": [
+        "Deny the motion, because statutes of limitations are procedural housekeeping rules that federal courts are free to disregard.",
+        "Grant the motion, because in a diversity case the federal court must apply the forum state's statute of limitations as substantive law.",
+        "Deny the motion, because federal common law supplies a uniform limitations period for all diversity cases.",
+        "Grant the motion, but only if the trucking company shows the delay caused it actual prejudice."
+      ],
+      "correctIndex": 1,
+      "explanation": "Under the Erie doctrine, a federal court sitting in diversity applies federal procedural law but the substantive law of the state in which it sits. Statutes of limitations and their tolling rules are treated as substantive for Erie purposes, along with items such as elements of claims and defenses, burdens of proof on state-law issues, and preclusion law. Because Colorado's three-year period governs and the suit was filed after it expired, the claim is time barred and dismissal is proper. The first choice mislabels limitations periods as mere procedure. The third choice is wrong because there is no general federal common law supplying limitations periods for state-law claims. The fourth choice invents a prejudice requirement that has no role in applying a statute of limitations."
+    },
+    {
+      "id": "civpro-008",
+      "subject": "civpro",
+      "subtopic": "law-applied-by-federal-courts",
+      "rule": "Erie doctrine — federal procedural rules govern in federal court",
+      "priority": "H",
+      "difficulty": 2,
+      "stem": "An investor, a citizen of Georgia, sued a financial adviser, a citizen of Tennessee, in federal district court, asserting a state-law claim for breach of fiduciary duty and seeking three hundred thousand dollars. The forum state has a statute requiring that any complaint alleging breach of fiduciary duty against a licensed professional be verified under oath and plead every supporting fact with particularity, and state courts dismiss complaints that do not comply. The investor's federal complaint contains a short and plain statement of the claim showing entitlement to relief, but it is not verified and does not plead detailed facts. The adviser moved to dismiss for failure to satisfy the state pleading statute. How should the court rule?",
+      "choices": [
+        "Grant the motion, because state law supplies the rule of decision on all issues in a diversity case.",
+        "Grant the motion, because heightened pleading requirements are substantive rules of state law.",
+        "Deny the motion, but require the investor to amend the complaint to comply with the state statute.",
+        "Deny the motion, because pleading standards in federal court are governed by federal procedural law, and special state-law pleading rules do not apply."
+      ],
+      "correctIndex": 3,
+      "explanation": "Under the Erie doctrine, a federal court hearing a state-law claim in diversity applies state substantive law but federal procedural law. Pleading standards are quintessentially procedural, and special or heightened state-law pleading requirements do not apply in federal court; a complaint need only contain a short and plain statement showing the pleader is entitled to relief, along with grounds for jurisdiction and a demand for relief. The complaint here satisfies that standard, so dismissal is improper. The first choice overreads Erie, which leaves procedure to federal law. The second choice mischaracterizes pleading rules, which govern how a claim is presented rather than its elements. The third choice has no basis because there is nothing defective to cure under the governing federal standard."
+    },
+    {
+      "id": "civpro-009",
+      "subject": "civpro",
+      "subtopic": "pretrial-procedures",
+      "rule": "Service of process — qualifications of the process server",
+      "priority": "H",
+      "difficulty": 1,
+      "stem": "A landscaper filed a breach of contract action in federal district court against a property developer. Eager to save money and move the case along, the landscaper, who is forty years old, drove to the developer's office the day after filing and personally handed the developer a copy of the summons and complaint. The developer looked at the papers, confirmed his identity, and accepted them without objection. The developer later moved to dismiss the action for insufficient service of process. The landscaper responded that service was proper because the developer personally received the summons and complaint well within ninety days after the complaint was filed. How should the court rule on the motion?",
+      "choices": [
+        "Grant the motion, because service may not be made by a party to the action.",
+        "Grant the motion, because a summons and complaint may only be served by a United States marshal.",
+        "Deny the motion, because the developer actually received the papers and suffered no prejudice.",
+        "Deny the motion, because personal delivery is always a valid method of serving an individual."
+      ],
+      "correctIndex": 0,
+      "explanation": "Service of process may be made by any person who is at least eighteen years old and who is not a party to the action. The landscaper is the plaintiff, so his hand delivery was defective regardless of his age, the method used, or the defendant's actual receipt of the papers. The second choice is wrong because a marshal is not required; any qualifying non-party adult may serve. The third choice fails because actual notice does not cure service by a disqualified server, although the court would ordinarily allow the plaintiff to re-serve properly within the ninety-day window rather than dismiss with prejudice. The fourth choice correctly notes that personal delivery is an authorized method for serving an individual, but the method is irrelevant when the server is a party."
+    },
+    {
+      "id": "civpro-010",
+      "subject": "civpro",
+      "subtopic": "pretrial-procedures",
+      "rule": "Relation back of amendments — new claim",
+      "priority": "M",
+      "difficulty": 2,
+      "stem": "A tenant sued her landlord in federal district court for negligence after a staircase railing collapsed and injured her, filing the complaint one month before the applicable limitations period expired. Eight months into the litigation, and well after the limitations period had run, the tenant sought leave to amend her complaint to add a claim for breach of the implied warranty of habitability based on the same collapsed railing and the same fall. The landlord opposed the amendment, arguing that the new claim is time barred because it was first asserted after the limitations period expired. Assume the court would otherwise grant leave to amend. Is the new claim time barred?",
+      "choices": [
+        "Yes, because a claim first asserted after the limitations period expires is always barred.",
+        "Yes, because relation back applies only to amendments that correct clerical mistakes.",
+        "No, because the new claim arises out of the same transaction or occurrence as the original complaint and therefore relates back to the original filing date.",
+        "No, because the limitations clock stops for all potential claims the moment any complaint is filed."
+      ],
+      "correctIndex": 2,
+      "explanation": "Under the relation back doctrine, an amendment adding a new claim is treated as filed on the date of the original pleading so long as the new claim arises out of the same transaction or occurrence described in the original allegations. The habitability claim rests on the identical collapsed railing and fall as the timely negligence claim, so it relates back and is not time barred. The first choice ignores the relation back doctrine entirely. The second choice understates the doctrine, which reaches substantive new claims, not just clerical fixes. The fourth choice is far too broad; filing a complaint preserves only claims sharing the same transaction or occurrence, and an amendment adding an unrelated claim would be measured from the amendment date. Adding a new defendant would require additional showings, but none is needed here."
+    },
+    {
+      "id": "civpro-011",
+      "subject": "civpro",
+      "subtopic": "pretrial-procedures",
+      "rule": "Compulsory counterclaims — same transaction or occurrence",
+      "priority": "M",
+      "difficulty": 2,
+      "stem": "Two drivers collided at an intersection, and both were injured and both cars were damaged. The first driver sued the second driver in federal district court, properly invoking diversity jurisdiction and seeking damages for his injuries. The second driver filed an answer denying fault but asserted no claims of her own, even though she believed the first driver had run a red light and caused her own substantial injuries. The case proceeded to judgment in favor of the first driver. A year later, the second driver filed a new action against the first driver seeking damages for her injuries from the same collision. The first driver moved to dismiss the new action. How should the court rule?",
+      "choices": [
+        "Deny the motion, because every party is entitled to choose when and where to assert her own claims.",
+        "Grant the motion, because the second driver's claim arose from the same accident and was a compulsory counterclaim that she failed to assert in the first action.",
+        "Deny the motion, because counterclaims are always optional in federal court.",
+        "Grant the motion, but only because the second driver's new claim does not independently satisfy diversity jurisdiction."
+      ],
+      "correctIndex": 1,
+      "explanation": "A counterclaim is compulsory when it arises out of the same transaction or occurrence as the opposing party's claim and does not require adding a party over whom the court lacks jurisdiction. A compulsory counterclaim must be stated in the party's pleading or it is barred in future litigation. Courts assess the same transaction by asking whether the facts and law overlap, whether res judicata would bar a later suit, whether the same evidence applies, and whether a logical relationship exists. The second driver's injury claim arose from the very collision being litigated, so her silence forfeited it. The first and third choices describe permissive counterclaims, which involve unrelated claims a party may save for later. The fourth choice is irrelevant because the bar flows from her earlier failure to plead, not from the new suit's jurisdictional posture."
+    },
+    {
+      "id": "civpro-012",
+      "subject": "civpro",
+      "subtopic": "pretrial-procedures",
+      "rule": "Permissive joinder of parties — same transaction and common question",
+      "priority": "H",
+      "difficulty": 2,
+      "stem": "A charter bus crashed on an interstate highway, injuring many passengers. Four of the injured passengers, citizens of different states from the bus company, wish to join together as plaintiffs in a single federal diversity action against the bus company, with each passenger seeking more than one hundred thousand dollars for her own distinct injuries. The bus company objects to the passengers proceeding together, arguing that each passenger suffered different injuries, received different medical treatment, and will require different damages evidence, so each must file a separate lawsuit. Each passenger's claim independently satisfies the requirements for diversity jurisdiction. May the four passengers properly join as plaintiffs in one action?",
+      "choices": [
+        "No, because plaintiffs may join together only if they seek identical relief.",
+        "No, because differing damages evidence defeats joinder of plaintiffs.",
+        "Yes, but only if the bus company consents to the joinder.",
+        "Yes, because their claims arise out of the same occurrence and share a common question of law or fact, and jurisdiction exists over each claim."
+      ],
+      "correctIndex": 3,
+      "explanation": "Multiple plaintiffs may join in one action when they assert claims arising out of the same transaction or occurrence, or seek joint relief, when a common question of law or fact exists, and when subject matter jurisdiction is present for each claim. All logically related events arising from the bus crash fall within the same occurrence, and the bus company's negligence is a question common to every passenger, so joinder is proper. The first choice is wrong because identical relief is not required; each plaintiff may seek her own distinct damages. The second choice fails because individualized damages do not negate the shared liability questions that satisfy the common question requirement. The third choice is wrong because permissive joinder of plaintiffs turns on the rule's requirements, not on the defendant's consent."
+    },
+    {
+      "id": "civpro-013",
+      "subject": "civpro",
+      "subtopic": "pretrial-procedures",
+      "rule": "Depositions — ten-deposition limit and leave of court",
+      "priority": "M",
+      "difficulty": 2,
+      "stem": "In a complex commercial dispute pending in federal district court, the plaintiff corporation has already taken ten depositions of various witnesses with proper notice, all conducted within the rules. The parties have made no stipulations altering the default discovery limits, and the court's scheduling order is silent on the number of depositions. The plaintiff now serves a notice to depose an eleventh witness, a former employee of the defendant who the plaintiff believes has unique knowledge of key negotiations. The defendant objects to the deposition going forward. The plaintiff insists the deposition is plainly relevant and proportional to the needs of the case. What must the plaintiff do to take the eleventh deposition?",
+      "choices": [
+        "Obtain leave of court, because a party must have court permission to take more than ten depositions absent a stipulation.",
+        "Nothing more, because relevant and proportional discovery may always proceed on notice alone.",
+        "Serve a subpoena on the defendant, because subpoenas substitute for court permission.",
+        "Wait until trial, because a party who exhausts ten depositions may only examine additional witnesses live."
+      ],
+      "correctIndex": 0,
+      "explanation": "A party is permitted up to ten depositions as of right, so long as each is limited to one day of no more than seven hours and proper reasonable written notice is given. Unless the parties stipulate otherwise, a party must obtain leave of court to take more than ten depositions, to re-depose someone already deposed in the action, or to depose anyone before the discovery conference between the parties. Because the plaintiff has used its ten and there is no stipulation, court permission is required for number eleven. The second choice confuses the general scope of discovery, which requires relevance and proportionality, with the separate numerical limits on depositions. The third choice misunderstands subpoenas, which compel attendance of non-parties but do not waive the deposition cap. The fourth choice invents a rule that does not exist."
+    },
+    {
+      "id": "civpro-014",
+      "subject": "civpro",
+      "subtopic": "pretrial-procedures",
+      "rule": "Preliminary injunction — notice and security requirements",
+      "priority": "M",
+      "difficulty": 2,
+      "stem": "A software company sued a former executive in federal district court, alleging that he was about to disclose the company's trade secrets to a competitor. The company immediately applied for a preliminary injunction to bar the disclosure for the duration of the litigation. The company did not notify the executive of the application, reasoning that surprise was essential, and it declined to post any bond, arguing that its claim was so strong that security would be a pointless formality. The district court found that the company was likely to succeed on the merits, faced irreparable harm, and that the balance of harms and the public interest favored relief. May the court issue the preliminary injunction on this application?",
+      "choices": [
+        "Yes, because the company satisfied the four-factor test for preliminary relief.",
+        "No, because a preliminary injunction may issue only upon notice to the adverse party and only if the movant gives security.",
+        "Yes, because trade secret cases are exempt from the usual injunction requirements.",
+        "No, because preliminary injunctions are never available before a full trial on the merits."
+      ],
+      "correctIndex": 1,
+      "explanation": "A preliminary injunction maintains the status quo pending the outcome of the action, but it may be issued only upon notice to the adverse party and only if the moving party gives security, which protects the non-movant against injury from a wrongly issued injunction. The traditional four-prong test, covering likelihood of success, irreparable harm, the balance of harms, and the public interest, is necessary but not sufficient when notice and bond are missing. The first choice ignores those procedural prerequisites. The third choice invents an exemption that does not exist. The fourth choice confuses preliminary injunctions with permanent injunctions, which issue only after a full trial on the merits; a party seeking emergency relief without notice must instead pursue an ex parte temporary restraining order with its own strict requirements."
+    },
+    {
+      "id": "civpro-015",
+      "subject": "civpro",
+      "subtopic": "jury-trials",
+      "rule": "Jury trial demand — timing and waiver",
+      "priority": "H",
+      "difficulty": 2,
+      "stem": "A contractor sued a homeowner in federal district court for breach of contract, seeking two hundred thousand dollars in money damages, a claim that carries a constitutional right to trial by jury. The contractor's complaint contained no jury demand. The homeowner served her answer, the last pleading directed to the contract issues, and neither party served any further pleadings. Two months after the answer was served, while preparing the joint pretrial report, the contractor's lawyer realized that no jury demand had ever been made and immediately served and filed a written demand for a jury trial on all issues. The homeowner objected and asked that the case be tried to the bench. How should the court treat the contractor's demand?",
+      "choices": [
+        "The demand is effective, because a constitutional right to a jury can never be lost by inaction.",
+        "The demand is effective, because it was made before the pretrial conference concluded.",
+        "The demand is untimely, because a jury demand must be served within fourteen days after service of the last pleading directed to the issue, and the right was waived.",
+        "The demand is untimely, because a jury demand must be included in the complaint itself or it is forfeited forever."
+      ],
+      "correctIndex": 2,
+      "explanation": "A party preserves the right to a jury trial on a triable issue by serving a written demand within fourteen days after service of the last pleading directed to that issue, and failure to make a timely demand waives the jury right, although the court retains discretion to order a jury trial on motion. Here the answer was the last pleading on the contract issues, and the contractor waited two months, so the right was waived. The first choice is wrong because the constitutional right, while fundamental, is subject to procedural waiver. The second choice substitutes an imaginary pretrial deadline for the fourteen-day rule. The fourth choice is too strict; a demand need not appear in the complaint, since any party may serve it within the fourteen-day window after the relevant pleading."
+    },
+    {
+      "id": "civpro-016",
+      "subject": "civpro",
+      "subtopic": "jury-trials",
+      "rule": "Jury composition and verdict — size and unanimity",
+      "priority": "M",
+      "difficulty": 2,
+      "stem": "A products liability case was tried to a jury in federal district court. At the start of trial, the court seated eight jurors, and the parties made no stipulations of any kind regarding the jury or its verdict. During the two-week trial, two jurors were properly excused for serious illness, leaving six jurors to deliberate. After three days of deliberation, the jury reported that five of the six remaining jurors had agreed on a verdict for the plaintiff but one juror firmly disagreed. The plaintiff urged the court to accept the five-to-one verdict, noting that most of the jurors agreed and that requiring more would waste the parties' resources. May the court accept the verdict?",
+      "choices": [
+        "Yes, because a five-to-six majority satisfies the federal requirement for civil verdicts.",
+        "Yes, because once a jury falls to six members any majority verdict is automatically acceptable.",
+        "No, because a civil jury must always have twelve members to return any verdict.",
+        "No, because unless the parties stipulate otherwise, a federal civil verdict must be unanimous and returned by at least six jurors."
+      ],
+      "correctIndex": 3,
+      "explanation": "In federal civil cases, a jury must begin with at least six and no more than twelve members, and unless the parties stipulate otherwise, the verdict must be unanimous and must be returned by a jury of at least six members. Here six jurors remain, which satisfies the minimum size, but the verdict is five to one and the parties made no stipulation accepting a non-unanimous verdict, so the court cannot accept it. The first and second choices wrongly import majority-verdict practices that exist in some state courts but not in federal court absent stipulation. The third choice misstates the size requirement, since twelve is the ceiling rather than the floor; a properly reduced jury of six may return a verdict so long as it is unanimous."
+    },
+    {
+      "id": "civpro-017",
+      "subject": "civpro",
+      "subtopic": "motions",
+      "rule": "Motion to dismiss for failure to state a claim — standard of review",
+      "priority": "H",
+      "difficulty": 1,
+      "stem": "A franchisee sued a franchisor in federal district court, alleging that the franchisor fraudulently induced her to purchase a failing location by misrepresenting its sales history. The complaint pleads specific facts that, if true, establish every element of fraud under governing law. The franchisor moved to dismiss for failure to state a claim upon which relief can be granted. In support, the franchisor attached affidavits from three employees swearing that the sales figures provided to the franchisee were accurate, and it argued that the franchisee has no realistic chance of proving her allegations at trial. The court has not converted the motion or considered any materials outside the pleadings. How should the court approach the motion?",
+      "choices": [
+        "Accept the complaint's factual allegations as true, view them in the light most favorable to the franchisee, and deny the motion because relief could be granted on the facts alleged.",
+        "Weigh the affidavits against the complaint and grant the motion if the franchisor's evidence is more persuasive.",
+        "Grant the motion if the court doubts the franchisee will ultimately prevail at trial.",
+        "Deny the motion only if the franchisee submits counter-affidavits establishing a genuine factual dispute."
+      ],
+      "correctIndex": 0,
+      "explanation": "On a motion to dismiss for failure to state a claim, the court considers the facts alleged in the light most favorable to the non-moving party and asks only whether there is any basis on which relief can be granted; it does not evaluate the merits of the case. Because the complaint pleads facts establishing every element of fraud, dismissal is improper. The second and fourth choices describe summary judgment practice, which involves evidence and genuine disputes of material fact; if a court actually relied on matters outside the pleadings, it would treat the motion as one for summary judgment, but this court did not. The third choice is wrong because the plaintiff's likelihood of ultimate success is irrelevant at the pleading stage; the question is legal sufficiency of the allegations, not provability."
+    },
+    {
+      "id": "civpro-018",
+      "subject": "civpro",
+      "subtopic": "motions",
+      "rule": "Waiver of defenses omitted from first response",
+      "priority": "H",
+      "difficulty": 2,
+      "stem": "A supplier sued a retailer in federal district court for nonpayment under a series of purchase orders. The retailer's first response was a pre-answer motion to dismiss raising a single ground: improper venue. The court denied that motion. The retailer then filed an answer and litigated the case for several months. On the eve of trial, the retailer filed a second motion to dismiss, this time arguing that the court lacks personal jurisdiction over it because it has no contacts with the forum state, and also arguing that the court lacks subject matter jurisdiction because complete diversity is absent. Assume both arguments would have merit if properly presented. How should the court handle the two new defenses?",
+      "choices": [
+        "Consider both defenses, because jurisdictional defects may be raised at any time.",
+        "Reject the personal jurisdiction defense as waived, but consider the subject matter jurisdiction defense, which may be raised at any time.",
+        "Reject both defenses, because all defenses must be raised in the first response.",
+        "Consider the personal jurisdiction defense, but reject the subject matter jurisdiction defense as waived."
+      ],
+      "correctIndex": 1,
+      "explanation": "Four defenses are waived if not included in the defendant's first response, whether that is a pre-answer motion or the answer: lack of personal jurisdiction, improper venue, insufficient process, and insufficient service of process. The retailer's first response was a motion raising only venue, so the omitted personal jurisdiction defense was waived at that moment, and courts excuse such omissions only when a party promptly seeks to add the defense before the original motion is heard, which did not happen here. By contrast, lack of subject matter jurisdiction can never be waived and may be raised at any time, even on appeal, because federal courts are courts of limited jurisdiction and must dismiss when jurisdiction is absent. The other choices either treat both defenses alike or reverse the waivable and non-waivable categories."
+    },
+    {
+      "id": "civpro-019",
+      "subject": "civpro",
+      "subtopic": "motions",
+      "rule": "Summary judgment — genuine issue of material fact",
+      "priority": "H",
+      "difficulty": 2,
+      "stem": "A patient sued a hospital in federal district court, alleging that a nurse's medication error caused her permanent injury. After discovery closed, the hospital moved for summary judgment. The hospital supported its motion with the nurse's deposition testimony that she administered the correct dose, along with pharmacy logs consistent with her account. The patient responded with her own sworn deposition testimony that she watched the nurse draw medication from a vial bearing the wrong label, and with an expert declaration opining that her injuries are consistent with an overdose. The hospital argued that its documentary evidence is more credible than the patient's recollection. How should the court rule on the summary judgment motion?",
+      "choices": [
+        "Grant the motion, because pharmacy logs are objectively more reliable than a patient's memory.",
+        "Grant the motion, because the patient's evidence comes only from an interested witness and a paid expert.",
+        "Deny the motion, because summary judgment is never available in medical negligence actions.",
+        "Deny the motion, because viewing the evidence in the light most favorable to the patient, a genuine issue of material fact exists about the dose administered."
+      ],
+      "correctIndex": 3,
+      "explanation": "A court grants summary judgment only when there is no genuine issue of material fact and the movant is entitled to judgment as a matter of law, and the court must view the evidence in the light most favorable to the non-moving party. The patient's sworn testimony and expert declaration directly contradict the nurse's account on the central factual question of what dose was given, creating a genuine dispute that a jury must resolve. The first and second choices both invite the court to weigh credibility and choose between competing accounts, which is precisely what the summary judgment standard forbids. The third choice is wrong because no category of civil case is exempt from summary judgment; the motion may be sought on an entire case or on particular issues whenever the standard is met."
+    },
+    {
+      "id": "civpro-020",
+      "subject": "civpro",
+      "subtopic": "motions",
+      "rule": "Judgment as a matter of law — timing and standard",
+      "priority": "H",
+      "difficulty": 2,
+      "stem": "A warehouse worker sued his employer in federal district court for retaliatory discharge, and the case was tried to a jury. The worker presented his entire case in chief, including his own testimony and that of two coworkers. None of the testimony, even if fully credited, connected his firing to any protected activity; the only evidence on motive showed he was terminated as part of a documented, company-wide layoff planned months before his complaint to regulators. After the worker rested and before the defense began its case, the employer moved for judgment as a matter of law. The worker objected that the jury must be permitted to decide every case that reaches trial. How should the court rule on the employer's motion?",
+      "choices": [
+        "Deny the motion, because judgment as a matter of law is available only after the jury returns its verdict.",
+        "Deny the motion, because credibility determinations always require jury resolution.",
+        "Grant the motion, because the worker has been fully heard on the issue and a reasonable jury would not have a legally sufficient basis to find retaliation.",
+        "Grant the motion, but only if the employer first presents its own witnesses."
+      ],
+      "correctIndex": 2,
+      "explanation": "Judgment as a matter of law may be granted any time before the case is submitted to the jury when the non-moving party has been fully heard on an issue during a jury trial and the court finds that a reasonable jury would not have a legally sufficient evidentiary basis to find for that party on the issue, drawing all reasonable inferences in the non-movant's favor. The worker rested without producing evidence of retaliatory motive, so the standard is met. The first choice describes the renewed motion, which is filed within twenty-eight days after entry of judgment and requires a pre-submission motion as a prerequisite. The second choice fails because no credibility dispute exists when the plaintiff's own fully credited evidence is legally insufficient. The fourth choice invents a requirement that the movant present evidence first."
+    },
+    {
+      "id": "civpro-021",
+      "subject": "civpro",
+      "subtopic": "motions",
+      "rule": "Rule 11 sanctions — nature of sanctions and liability",
+      "priority": "M",
+      "difficulty": 3,
+      "stem": "An attorney filed a complaint on behalf of her client asserting a novel legal theory that, as every court in the circuit had already squarely held, is foreclosed by binding precedent; the attorney made no argument for extending or changing the law. The client, a small business owner with no legal training, signed nothing and relied entirely on the attorney's judgment about what legal theories to plead. After proper procedures, the district court found that the legal contention violated the certification requirements that attach to papers presented to the court and decided to impose a monetary sanction. Against whom may the court impose the monetary sanction for the frivolous legal contention?",
+      "choices": [
+        "The attorney or her law firm, but not the client, because monetary sanctions may not be imposed on a client for an unwarranted legal contention made by the attorney.",
+        "Only the client, because the case was filed for the client's benefit.",
+        "The client and the attorney equally, because sanctions must always be shared.",
+        "No one, because sanctions are unavailable for purely legal contentions."
+      ],
+      "correctIndex": 0,
+      "explanation": "When papers are presented to the court, the signer certifies that they are not presented for an improper purpose, that legal contentions are warranted and non-frivolous, that factual contentions have or will likely have evidentiary support, and that denials are warranted. Sanctions for violations are discretionary and may include non-monetary directives, penalties, or payment of reasonable fees and expenses, and a law firm is generally jointly responsible for a violation by its lawyers. However, monetary sanctions cannot be imposed against a client for an unwarranted claim, defense, or legal contention made by the client's attorney, because assessing the law is the lawyer's responsibility. The second and third choices ignore that protection. The fourth choice is wrong because frivolous legal contentions are a core basis for sanctions."
+    },
+    {
+      "id": "civpro-022",
+      "subject": "civpro",
+      "subtopic": "motions",
+      "rule": "Rule 11 sanctions motion — safe harbor procedure",
+      "priority": "L",
+      "difficulty": 2,
+      "stem": "In a federal trademark action, the defendant's lawyer concluded that a key factual allegation in the plaintiff's complaint was fabricated and had no possible evidentiary support. The lawyer drafted a motion for sanctions describing the violation in detail. The same afternoon, without first sending anything to the plaintiff's counsel, the lawyer filed the sanctions motion directly with the district court and served a copy on the plaintiff simultaneously with the filing. The plaintiff's counsel responded that the motion was procedurally improper and asked the court to deny it without reaching the merits, while also offering to investigate the challenged allegation. How should the court rule on the sanctions motion as filed?",
+      "choices": [
+        "Reach the merits, because the plaintiff received the motion at the same time the court did.",
+        "Reach the merits, because fabricated allegations excuse any procedural missteps by the movant.",
+        "Reach the merits, but stay any sanction for twenty-one days to allow a correction.",
+        "Deny the motion, because the movant was required to serve the motion on the offending party and give it twenty-one days to withdraw or correct the pleading before filing with the court."
+      ],
+      "correctIndex": 3,
+      "explanation": "A party may not file a sanctions motion with the court without first serving the motion on the offending party and giving that party twenty-one days to withdraw or correct the challenged paper. This safe harbor exists so that questionable filings can be fixed without judicial involvement, and a motion filed without honoring it is procedurally defective and should be denied. The first choice misses the point of the safe harbor, which requires service before filing, not merely simultaneous notice. The second choice is wrong because the seriousness of the alleged violation does not excuse the mandatory pre-filing procedure. The third choice rearranges the sequence; the twenty-one day period must run before the motion reaches the court, not after, although the court remains free to raise sanctions on its own initiative."
+    },
+    {
+      "id": "civpro-023",
+      "subject": "civpro",
+      "subtopic": "verdicts-and-judgments",
+      "rule": "Claim preclusion (res judicata) — elements",
+      "priority": "M",
+      "difficulty": 2,
+      "stem": "A motorcyclist was injured when his motorcycle struck a pothole on a poorly maintained private road owned by a logging company. He sued the logging company in federal district court, properly invoking diversity jurisdiction, asserting a negligence claim based on the company's failure to repair the road, and the case proceeded to a jury verdict and final judgment for the logging company. A year later, the motorcyclist sued the same logging company again in the same court over the same crash, this time asserting a premises liability theory based on the company's failure to warn of the dangerous condition. The logging company moved to dismiss the second action on preclusion grounds. How should the court rule?",
+      "choices": [
+        "Deny the motion, because the second action asserts a different legal theory than the first.",
+        "Grant the motion, because the same parties litigated to a final judgment on the merits and the second claim arises from the same transaction or occurrence as the first.",
+        "Deny the motion, because claim preclusion applies only when the first case settled.",
+        "Grant the motion, but only if the jury in the first case made a specific finding about the duty to warn."
+      ],
+      "correctIndex": 1,
+      "explanation": "Claim preclusion bars a party from relitigating any claim that was or could have been raised when four elements are met: the parties are identical or in privity, the prior judgment was rendered by a court of competent jurisdiction, the prior action ended in a final judgment on the merits, and the same claim, meaning one arising from the same transaction or occurrence, is involved in both actions. The failure-to-warn theory arises from the very crash and road condition litigated to judgment, so it could have been raised before and is barred now. The first choice confuses legal theories with claims; preclusion operates at the level of the transaction, not the label. The third choice is baseless, since litigated judgments are the classic trigger. The fourth choice describes issue preclusion, which requires an actually decided issue, not claim preclusion."
+    },
+    {
+      "id": "civpro-024",
+      "subject": "civpro",
+      "subtopic": "verdicts-and-judgments",
+      "rule": "Issue preclusion (collateral estoppel) — elements and non-party use",
+      "priority": "H",
+      "difficulty": 3,
+      "stem": "A chemical plant's storage tank ruptured, releasing fumes over a neighborhood. A homeowner sued the plant operator, and after a full trial the jury found, in a special verdict essential to its judgment, that the operator had negligently maintained the tank, and final judgment was entered against the operator. A second neighbor, who was not a party to the first case, later sued the same operator for her own injuries from the same release. She asks the court to preclude the operator from relitigating the finding that it negligently maintained the tank, so that trial may focus on causation and damages. The operator objects that the second neighbor was a stranger to the first case. May the court give the prior finding preclusive effect?",
+      "choices": [
+        "No, because issue preclusion may never be invoked by someone who was not a party to the first action.",
+        "No, because negligence findings can never be preclusive in later cases.",
+        "Yes, because the issue is identical, it was actually litigated and essential to a valid final judgment, and the operator had a full and fair opportunity to litigate it; a non-party may generally assert preclusion against a party to the first action.",
+        "Yes, because any finding in any prior lawsuit binds the same defendant in all future cases."
+      ],
+      "correctIndex": 2,
+      "explanation": "Issue preclusion bars a party from retrying an issue when a valid and final judgment was rendered in the first action, the issue is identical to the one previously decided, the issue was actually litigated, determined, and essential to the prior judgment, and the party against whom preclusion is asserted had a full and fair opportunity to litigate it in the first action. All elements are met here, since the negligent maintenance finding was a litigated special verdict essential to the judgment against the operator. Generally a non-party to the earlier action may assert issue preclusion against one who was a party, so the second neighbor may use the finding offensively. The first choice states the abandoned mutuality requirement. The second choice has no legal basis. The fourth choice ignores the requirements that the issue be identical, actually litigated, and essential."
+    },
+    {
+      "id": "civpro-025",
+      "subject": "civpro",
+      "subtopic": "verdicts-and-judgments",
+      "rule": "Default judgment — preclusive effect",
+      "priority": "L",
+      "difficulty": 3,
+      "stem": "A wholesaler sued a grocery chain in federal district court for breach of a supply contract, properly establishing both subject matter jurisdiction and personal jurisdiction over the grocery chain. The grocery chain was validly served but made a business decision not to respond, and the court entered a default judgment for the wholesaler. The grocery chain believed the wholesaler had actually breached the contract first by delivering spoiled goods, a claim arising out of the very same supply contract and deliveries. Two years later, the grocery chain sued the wholesaler over the spoiled deliveries. The wholesaler argued the new action is barred by the earlier default judgment. The grocery chain responded that a default judgment, entered without any litigation, can have no preclusive effect. Which statement is most accurate?",
+      "choices": [
+        "The default judgment has preclusive effect because the rendering court had jurisdiction, and it bars the grocery chain's claim because that claim was a compulsory counterclaim that could have been raised in the original action.",
+        "The default judgment has no preclusive effect because no issues were actually litigated, so the new action may proceed without limitation.",
+        "The default judgment is automatically void because the grocery chain never appeared.",
+        "The default judgment precludes only claims the wholesaler might bring, not claims by the grocery chain."
+      ],
+      "correctIndex": 0,
+      "explanation": "A default judgment has preclusive effect so long as the rendering court had both subject matter jurisdiction and personal jurisdiction over the defaulting party, and it bars a party from later asserting compulsory counterclaims that could have been raised in the original action. The spoiled-goods claim arose from the same contract and deliveries at issue in the first suit, making it compulsory, so the default judgment bars it now. The second choice confuses issue preclusion, which does require actual litigation of an issue, with the claim-preclusive force a default judgment carries. The third choice is wrong because a defendant's non-appearance does not void a judgment where jurisdiction and valid service existed. The fourth choice has no support; the preclusive bar runs against the defaulting party's omitted compulsory claims."
+    },
+    {
+      "id": "civpro-026",
+      "subject": "civpro",
+      "subtopic": "appealability-and-review",
+      "rule": "Final judgment rule — appealability of interlocutory orders",
+      "priority": "H",
+      "difficulty": 1,
+      "stem": "A distributor sued a beverage maker in federal district court for breach of an exclusive distribution agreement. After discovery, the beverage maker moved for summary judgment on all claims, arguing that the agreement had been validly terminated. The district court denied the motion in a written order, concluding that genuine disputes of material fact required a trial, and set the case for trial in four months. Convinced that the denial was legally erroneous and that a trial would be an expensive waste, the beverage maker immediately filed a notice of appeal from the order denying summary judgment. No certification of any kind was sought or entered, and no recognized exception applies. How should the court of appeals respond?",
+      "choices": [
+        "Hear the appeal, because the order resolved an important legal question.",
+        "Hear the appeal, because the notice was filed within thirty days of the order.",
+        "Hear the appeal, but limit review to pure questions of law.",
+        "Dismiss the appeal, because a denial of summary judgment is not a final judgment ending the litigation on the merits."
+      ],
+      "correctIndex": 3,
+      "explanation": "Under the final judgment rule, a federal appellate court may hear an appeal only from a final judgment on the merits, meaning a decision that ends the litigation on the merits by resolving all claims and leaves nothing for the trial court to do but execute the judgment, unless a recognized exception applies. An order denying summary judgment does the opposite of ending the case; it sends the case to trial, so it is interlocutory and unappealable absent an exception such as a certified appeal, and none was sought. The first choice is insufficient because importance alone does not create appellate jurisdiction. The second choice confuses the thirty-day deadline for appealing a final judgment with a license to appeal non-final orders. The third choice describes no recognized doctrine for ordinary summary judgment denials."
+    },
+    {
+      "id": "civpro-027",
+      "subject": "civpro",
+      "subtopic": "appealability-and-review",
+      "rule": "Collateral order doctrine",
+      "priority": "H",
+      "difficulty": 3,
+      "stem": "A journalist sued a county sheriff in federal district court, alleging the sheriff violated her federal constitutional rights by arresting her in retaliation for her reporting. The sheriff moved for dismissal based on qualified immunity, asserting an immunity from having to stand suit at all. The district court denied the immunity defense as a matter of law, and the case was set for full discovery and trial. The sheriff immediately appealed the denial, even though the litigation is far from over and no partial final judgment has been entered. The journalist moved to dismiss the appeal, arguing that the order is interlocutory and must await a final judgment. What is the sheriff's best argument that the court of appeals may hear the appeal now?",
+      "choices": [
+        "The order is appealable under the rule allowing immediate appeals of orders involving injunctions.",
+        "The order is appealable under the collateral order doctrine, because it conclusively determines an important issue separate from the merits that would be effectively unreviewable after final judgment.",
+        "The order is appealable because any order denying a dispositive motion may be appealed at once.",
+        "The order is appealable because the sheriff is a government official, and government parties may always take interlocutory appeals."
+      ],
+      "correctIndex": 1,
+      "explanation": "The collateral order doctrine permits an immediate appeal from an interlocutory order when the order conclusively determines the disputed question, resolves an important issue completely separate from the merits of the action, and is effectively unreviewable on appeal from a final judgment. A denial of an immunity from suit fits squarely, because the immunity protects against the burdens of litigation itself, a protection irretrievably lost if the official must first endure discovery and trial. The first choice fails because no injunction is involved; the statutory interlocutory appeal categories cover orders concerning injunctions, receiverships, admiralty liability, and certain property and patent matters. The third choice is far too broad, since denials of dispositive motions are ordinarily unappealable. The fourth choice invents a blanket privilege for government litigants that does not exist."
+    },
+    {
+      "id": "civpro-028",
+      "subject": "civpro",
+      "subtopic": "appealability-and-review",
+      "rule": "Rule 54(b) exception — partial final judgment in multi-claim cases",
+      "priority": "H",
+      "difficulty": 2,
+      "stem": "An inventor sued a manufacturer in federal district court, asserting two unrelated claims: one for unpaid royalties under a licensing agreement and one for defamation based on statements in a trade publication. The district court granted summary judgment for the manufacturer on the royalties claim, fully resolving it, while the defamation claim remains pending and is set for trial next year. The inventor wants to appeal the royalties ruling immediately rather than wait until the entire case concludes. The summary judgment order, as entered, says nothing beyond granting the motion. Under the applicable exception to the final judgment rule, what must happen before the inventor can take an immediate appeal of the royalties ruling?",
+      "choices": [
+        "Nothing further; the ruling is automatically appealable because it fully disposed of one claim.",
+        "The court of appeals must first grant a petition for permission filed within fourteen days.",
+        "The district court must direct entry of final judgment on the royalties claim and expressly determine that there is no just reason for delay.",
+        "The inventor must obtain a writ of mandamus from the court of appeals."
+      ],
+      "correctIndex": 2,
+      "explanation": "In an action with multiple claims or multiple parties, an immediate appeal of an order resolving fewer than all claims is allowed only when the district court directs entry of final judgment as to some of the claims or parties and expressly determines that there is no just reason for delaying the appeal. Without that direction and express determination, the royalties ruling remains interlocutory and merges into the eventual final judgment. The first choice is wrong because resolution of one claim is not automatically final while other claims remain pending. The second choice describes the procedure for appealing class certification orders, which requires a petition within fourteen days and the appellate court's agreement. The fourth choice misuses mandamus, an extraordinary remedy reserved for abuses of trial court authority, not a substitute for an ordinary appeal."
+    }
+  ]
+}

@@ -1,0 +1,481 @@
+{
+  "subject": "crim",
+  "questions": [
+    {
+      "id": "crim-001",
+      "subject": "crim",
+      "subtopic": "homicide",
+      "rule": "Murder — malice aforethought (depraved heart)",
+      "priority": "H",
+      "difficulty": 2,
+      "stem": "A man was angry that a commuter train repeatedly blocked traffic near his house. One evening, as a crowded train passed, he fired three shots from a rifle into the lighted passenger cars, later telling police he only wanted to scare the railroad into changing its schedule and hoped no one would be hit. One bullet struck and killed a passenger. The man is charged with murder in a common-law jurisdiction. He testifies, credibly, that he did not intend to kill or injure anyone. Which theory gives the prosecution its strongest path to a murder conviction?",
+      "choices": [
+        "Intent to kill, because firing a rifle always establishes a purpose to kill whoever is struck.",
+        "Felony murder, because discharging a firearm is itself an inherently dangerous felony that supplies malice.",
+        "Depraved-heart murder, because firing into an occupied train shows a reckless disregard of an extreme risk to human life.",
+        "No murder theory is available; the absence of intent to kill limits the charge to involuntary manslaughter."
+      ],
+      "correctIndex": 2,
+      "explanation": "Malice aforethought can be shown four ways: intent to kill, intent to inflict great bodily harm, reckless disregard of an extreme risk to human life (depraved heart), or intent to commit an inherently dangerous felony. Shooting into an occupied train car is the classic depraved-heart fact pattern: the conduct shows extreme indifference to human life even without purpose to kill. Choice A fails because the man credibly denies intent to kill, and firing a gun does not automatically prove such intent. Choice B fails because the felony-murder rule requires an independent dangerous felony such as robbery or arson; the act of shooting is not an independent felony here. Choice D understates the law — depraved-heart recklessness elevates the killing to murder, not merely involuntary manslaughter."
+    },
+    {
+      "id": "crim-002",
+      "subject": "crim",
+      "subtopic": "homicide",
+      "rule": "Felony murder rule",
+      "priority": "H",
+      "difficulty": 1,
+      "stem": "A defendant decided to rob a jewelry store at closing time. He entered with an unloaded pistol, pointed it at the elderly owner, and demanded the contents of the display cases. The terrified owner clutched his chest, collapsed from a heart attack, and died before paramedics arrived. The defendant fled with nothing. At his murder trial, the defendant argues that he never intended to hurt anyone, deliberately carried an unloaded weapon to avoid any chance of injury, and could not have foreseen that the owner had a weak heart. The jurisdiction follows the common-law felony murder rule. Should the defendant be convicted of murder?",
+      "choices": [
+        "Yes, because the death occurred during the commission of an inherently dangerous felony, and malice is implied from the robbery itself.",
+        "No, because the defendant took precautions showing he lacked any intent to kill or injure.",
+        "No, because the owner's heart condition was an unforeseeable intervening cause that breaks the causal chain.",
+        "Yes, but only of involuntary manslaughter, because the death was accidental."
+      ],
+      "correctIndex": 0,
+      "explanation": "Under the felony murder rule, a killing that occurs during the commission or attempted commission of an inherently dangerous felony — robbery, rape, arson, burglary, or kidnapping — is murder; the intent to commit the felony supplies the malice. The defendant was committing armed robbery, and a victim dying of fright during a robbery is a foreseeable, natural result of the felony, so causation is satisfied. Choice B is wrong because intent to kill is unnecessary; the felony itself implies malice. Choice C is wrong because a victim's frailty does not break causation — the death flowed directly from the terror the robbery created. Choice D is wrong because the felony murder rule elevates this accidental death to murder, not manslaughter."
+    },
+    {
+      "id": "crim-003",
+      "subject": "crim",
+      "subtopic": "homicide",
+      "rule": "Voluntary manslaughter — adequate provocation and cooling off",
+      "priority": "H",
+      "difficulty": 2,
+      "stem": "A woman came home early from a business trip and discovered her husband in bed with her best friend. Enraged, she screamed at them both, then stormed out of the house. She spent the next seven hours driving around the city, stopping twice for coffee and once to call her sister to describe what she had seen. That evening she returned home, retrieved a handgun from her nightstand, and shot her husband to death as he apologized. Charged with murder, she argues the killing should be reduced to voluntary manslaughter because she was provoked. How should the court rule on her request for a voluntary manslaughter instruction?",
+      "choices": [
+        "Grant it, because discovering a spouse's adultery is legally adequate provocation as a matter of law.",
+        "Deny it, because a reasonable person would have cooled off during the seven hours between the discovery and the killing.",
+        "Grant it, because whether she actually cooled off is always a question the jury must decide.",
+        "Deny it, because words and visual discoveries can never constitute adequate provocation."
+      ],
+      "correctIndex": 1,
+      "explanation": "Voluntary manslaughter requires that the defendant was provoked into a sudden and intense passion, that a reasonable person would have been provoked, that there was not enough time for a reasonable person to cool off, and that the defendant in fact did not cool off. Discovering a spouse in the act of adultery is classically adequate provocation, but here seven hours elapsed, during which the defendant drove around, stopped for coffee, and narrated the events by phone — far more time than a reasonable person needs to regain self-control. Choice A ignores the cooling-off elements. Choice C is wrong because where the lapse of time is clearly sufficient, the court may refuse the instruction. Choice D misstates the law — witnessing adultery firsthand is the textbook example of adequate provocation."
+    },
+    {
+      "id": "crim-004",
+      "subject": "crim",
+      "subtopic": "homicide",
+      "rule": "Involuntary manslaughter — criminal negligence",
+      "priority": "H",
+      "difficulty": 2,
+      "stem": "A home daycare operator strapped a two-year-old into a car seat for a short drive to the park. On the way, she decided to stop at a shopping mall. Believing she would be gone only a few minutes, she left the sleeping child in the locked car on a ninety-five degree afternoon with the windows up. Inside the mall she ran into a friend, lost track of time, and did not return for nearly three hours. The child died of heatstroke. The operator was devastated and told police she never imagined the child was in danger. She had no intent to harm the child. Of the following, which is the most serious homicide offense of which she can properly be convicted?",
+      "choices": [
+        "Depraved-heart murder, because leaving a child in a hot car always manifests extreme indifference to human life.",
+        "Voluntary manslaughter, because the killing resulted from an unreasonable but good-faith mistake.",
+        "No homicide offense, because she had no awareness that the child faced any risk of death.",
+        "Involuntary manslaughter, because her gross deviation from the standard of care amounts to criminal negligence."
+      ],
+      "correctIndex": 3,
+      "explanation": "Involuntary manslaughter covers unintentional killings committed recklessly or, in many states, with criminal negligence — where the defendant should have been aware of a substantial and unjustifiable risk and the failure to perceive it is a gross deviation from the ordinary standard of care. Leaving a toddler in a sealed car in extreme heat for hours is exactly such a gross deviation. Choice A overreaches: depraved-heart murder requires conscious disregard of an extreme risk, and the facts show she did not subjectively appreciate the danger. Choice B is wrong because voluntary manslaughter involves an intentional killing upon adequate provocation or imperfect self-defense; this killing was unintentional. Choice C is wrong because criminal negligence does not require subjective awareness — an objective failure to perceive an obvious risk suffices."
+    },
+    {
+      "id": "crim-005",
+      "subject": "crim",
+      "subtopic": "other-crimes",
+      "rule": "Theft crimes — false pretenses vs. larceny by trick",
+      "priority": "H",
+      "difficulty": 3,
+      "stem": "A dealer in rare coins showed a customer a coin he falsely claimed was a genuine 1893 mint piece worth at least ten thousand dollars. The dealer knew the coin was a modern replica worth about fifty dollars. Relying on the dealer's statement, the customer paid eight thousand dollars in cash, and the dealer handed over the coin, intending the customer to own it outright. The customer later learned the truth from an appraiser. In a jurisdiction retaining the common-law theft offenses as separate crimes, which crime has the dealer most clearly committed?",
+      "choices": [
+        "Larceny by trick, because he used deception to obtain the customer's money.",
+        "False pretenses, because he obtained title to the money through an intentional misrepresentation of a material fact made with intent to defraud.",
+        "Embezzlement, because he fraudulently converted money that came into his lawful possession.",
+        "No theft crime, because the customer voluntarily handed over the money in a completed sale."
+      ],
+      "correctIndex": 1,
+      "explanation": "False pretenses requires obtaining title to another's property through an intentional false statement of material fact, made with intent to defraud. The dealer's knowing lie about the coin's authenticity induced the customer to transfer ownership of the cash — title, not mere possession — so false pretenses is the proper charge. Choice A fails because larceny by trick applies when deception yields only possession of the property; here the customer intended the dealer to keep the money permanently as payment, passing title. Choice C fails because embezzlement involves conversion by someone already in lawful possession, such as a trustee or employee; the dealer acquired the money by fraud from the outset. Choice D fails because a sale induced by a knowing material lie is precisely what the false pretenses offense punishes."
+    },
+    {
+      "id": "crim-006",
+      "subject": "crim",
+      "subtopic": "other-crimes",
+      "rule": "Robbery — taking by force or threat from victim's presence",
+      "priority": "H",
+      "difficulty": 1,
+      "stem": "Late one night, a man watched a woman withdraw cash from an outdoor bank machine. As she turned to leave, he stepped in front of her, balled his fist, and said in a low voice, \"Hand over the money right now or I will break your jaw.\" Frightened, the woman gave him the two hundred dollars she had just withdrawn, and he ran off. He never touched her and carried no weapon. He was apprehended a block away with the cash and charged with robbery. His lawyer argues that because he never made physical contact with the woman and was unarmed, the most he committed was larceny. Is the man guilty of robbery?",
+      "choices": [
+        "Yes, because he took her property from her presence by a threat of immediate physical harm, with intent to permanently deprive her of it.",
+        "No, because robbery requires the actual application of physical force to the victim.",
+        "No, because an unarmed verbal threat cannot place a victim in reasonable fear.",
+        "Yes, but only because committing a theft at night near a bank machine is statutorily aggravated."
+      ],
+      "correctIndex": 0,
+      "explanation": "Robbery is a trespassory taking and carrying away of another's personal property, from the victim's person or presence, accomplished by force or by a threat of immediate physical harm, with intent to permanently deprive. A credible threat of imminent violence fully substitutes for actual force, so the absence of physical contact is irrelevant. The man's explicit threat to break the woman's jaw, made face to face, caused her to surrender the cash from her presence — every element is satisfied. Choice B misstates the rule by ignoring the threat alternative. Choice C is wrong because no weapon is needed; a fist and an explicit threat readily create reasonable fear of immediate harm. Choice D invents an aggravation rule that has nothing to do with the elements of common-law robbery."
+    },
+    {
+      "id": "crim-007",
+      "subject": "crim",
+      "subtopic": "other-crimes",
+      "rule": "Burglary — common-law elements (dwelling, nighttime)",
+      "priority": "H",
+      "difficulty": 2,
+      "stem": "At two o'clock on a sunny afternoon, a man walked up to a neighbor's house while the neighbor was at work. Intending to steal a coin collection he knew was kept inside, the man turned the knob of the closed but unlocked back door, pushed the door open, stepped into the kitchen, and began searching. He found nothing of value and left. The jurisdiction defines burglary exactly as it was defined at common law, without statutory modification. The man is charged with burglary. What is his best argument against conviction?",
+      "choices": [
+        "He committed no breaking, because the door was unlocked.",
+        "He committed no entry, because he took nothing from the house.",
+        "The house was not a dwelling, because the neighbor was away at work.",
+        "The entry occurred during the daytime rather than at night."
+      ],
+      "correctIndex": 3,
+      "explanation": "Common-law burglary is the breaking and entering of the dwelling of another, at night, with intent to commit a felony inside. The fatal gap here is the nighttime element: the entry occurred at two in the afternoon, so common-law burglary cannot be established, although many modern statutes have eliminated this requirement. Choice A fails because opening a closed door — even an unlocked one — is sufficient force to constitute a breaking; only entry through an already wide-open door avoids that element. Choice B fails because entry is complete the moment any part of the body crosses the threshold; an actual theft is unnecessary, since the crime requires only intent to commit a felony at the time of entry. Choice C fails because a residence remains a dwelling even when the occupant is temporarily absent."
+    },
+    {
+      "id": "crim-008",
+      "subject": "crim",
+      "subtopic": "inchoate-crimes-parties",
+      "rule": "Attempt — substantial step; abandonment not a defense (majority)",
+      "priority": "M",
+      "difficulty": 2,
+      "stem": "A man blamed a rival business owner for the failure of his restaurant and decided to burn down the rival's empty warehouse. He bought ten gallons of gasoline, drove to the warehouse after midnight, splashed the gasoline along the rear wall, and pulled a lighter from his pocket. Just then he thought of his children, felt a wave of remorse, put the lighter away, and drove home without striking a flame. A security camera captured everything, and he was charged with attempted arson. The jurisdiction follows the majority rule and the substantial-step test. Is he guilty of attempted arson?",
+      "choices": [
+        "No, because he voluntarily and completely renounced his plan before any fire started.",
+        "No, because pouring gasoline is mere preparation until a flame is actually produced.",
+        "Yes, because he took a substantial step toward the arson with the specific intent to commit it, and his later abandonment is no defense.",
+        "Yes, but only if the prosecution proves the warehouse would actually have burned."
+      ],
+      "correctIndex": 2,
+      "explanation": "Attempt requires the specific intent to commit the target crime plus an overt act that goes sufficiently beyond mere preparation — under the majority and Model Penal Code formulation, a substantial step strongly corroborating criminal purpose. Dousing the target building with gasoline at the scene, lighter in hand, is unmistakably a substantial step. Under the majority rule, once the defendant has crossed from preparation into a substantial step, abandonment — even a voluntary and complete one — is not a defense; only a minority of states and the MPC recognize renunciation at that stage. Choice A states the minority rule. Choice B is wrong because spreading the accelerant at the scene is far beyond preparation. Choice D is wrong because attempt punishes the intent and substantial step; no proof of likely success is required."
+    },
+    {
+      "id": "crim-009",
+      "subject": "crim",
+      "subtopic": "inchoate-crimes-parties",
+      "rule": "Conspiracy — liability for co-conspirators' foreseeable crimes",
+      "priority": "M",
+      "difficulty": 2,
+      "stem": "Two longtime friends agreed to rob a suburban bank the following Friday. They split the planning: the first friend would case the bank and obtain ski masks, while the second would secure a getaway vehicle. On Thursday night, without telling the first friend exactly how he would do it, the second friend stole a sedan from a parking garage to use as the getaway car. Both men were arrested Friday morning before reaching the bank. The first friend, who had no idea the car was stolen and never agreed to any car theft, is charged with the theft of the sedan in a jurisdiction following the common-law conspiracy liability rule. Is he guilty of the car theft?",
+      "choices": [
+        "Yes, because the theft was a foreseeable crime committed by his co-conspirator in furtherance of the robbery conspiracy.",
+        "No, because he never specifically agreed that a car would be stolen.",
+        "No, because the robbery itself was never attempted or completed.",
+        "Yes, but only if he personally benefited from the use of the stolen car."
+      ],
+      "correctIndex": 0,
+      "explanation": "A conspirator is liable for the conspiracy itself plus all foreseeable crimes committed by co-conspirators in furtherance of the conspiracy's unlawful objective. Obtaining a getaway vehicle was expressly part of the plan, and stealing one is a natural and foreseeable means of doing so, so the theft is attributable to both conspirators. Choice B is wrong because co-conspirator liability does not require a specific agreement to each crime — foreseeability and furtherance suffice. Choice C is wrong because liability for crimes in furtherance does not depend on completing the target offense; the conspiracy was formed and the theft furthered it. Choice D is wrong because personal benefit is not an element; participation in the conspiracy is what supports liability."
+    },
+    {
+      "id": "crim-010",
+      "subject": "crim",
+      "subtopic": "inchoate-crimes-parties",
+      "rule": "Accomplice liability — dual intent; mere presence insufficient",
+      "priority": "M",
+      "difficulty": 2,
+      "stem": "A college student learned from his roommate that the roommate planned to slash the tires of a professor's car that night in the faculty parking lot. Curious to see whether the roommate would go through with it, the student walked to the lot with him and stood silently on the sidewalk about thirty feet away, watching. He said nothing, kept no lookout, gave no signals, and had agreed to do nothing. The roommate slashed all four tires while the student watched, and the two walked back to the dormitory together. The student is charged as an accomplice to the property destruction. Should he be convicted?",
+      "choices": [
+        "Yes, because he knew of the crime in advance and his presence implicitly encouraged the roommate.",
+        "No, because mere presence at the scene, even with knowledge that a crime will occur, does not establish accomplice liability.",
+        "Yes, because walking to the scene with the perpetrator constitutes facilitation of the crime.",
+        "No, because accomplice liability requires that the accomplice share in the proceeds of the offense."
+      ],
+      "correctIndex": 1,
+      "explanation": "An accomplice is one who aids, abets, or facilitates a crime with dual intent: intent to assist the principal and intent that the crime actually be committed. Merely being present at the scene, or merely knowing a crime will occur, creates no liability without some act of assistance or encouragement coupled with that intent. The student rendered no aid — no lookout, no signal, no encouragement — and went along only out of curiosity. Choice A is wrong because presence alone is not implicit encouragement absent evidence the defendant intended his presence to embolden the principal. Choice C is wrong because accompanying someone is not facilitation of the offense itself. Choice D invents an element — sharing proceeds has never been required for accomplice liability."
+    },
+    {
+      "id": "crim-011",
+      "subject": "crim",
+      "subtopic": "general-principles",
+      "rule": "Acts and omissions — legal duty to act",
+      "priority": "M",
+      "difficulty": 2,
+      "stem": "On a summer afternoon, a man was reading on a public beach when he noticed a young boy struggling and calling for help in shallow water about twenty feet from shore. The man was a champion swimmer, the water was calm, and he could have reached the boy in seconds without any risk to himself. The man did not know the boy and was not the lifeguard on duty; the lifeguard chair was empty because the lifeguard had left early. The man watched for several minutes and did nothing. The boy drowned. The man is charged with involuntary manslaughter based on his failure to rescue. What is the most likely result?",
+      "choices": [
+        "Guilty, because the rescue posed no risk to him and he had a clear opportunity to act.",
+        "Guilty, because anyone who witnesses a life-threatening emergency assumes a duty of reasonable assistance.",
+        "Not guilty, because criminal negligence can never rest on a failure to act.",
+        "Not guilty, because he had no legal duty to rescue a stranger."
+      ],
+      "correctIndex": 3,
+      "explanation": "An omission is generally not criminal unless the defendant had a legal duty to act, knew the facts giving rise to the duty, and could reasonably have performed it. Legal duties arise from statute, contract, special relationships such as parent and child, voluntary assumption of care, or creation of the peril. The man was a stranger with no contractual or status relationship to the boy, did not begin a rescue, and did not create the danger, so however morally blameworthy, his inaction breaches no legal duty. Choice A and Choice B both convert a moral obligation into a legal one, which the common law refuses to do absent a recognized duty source. Choice C is wrong as a statement of law — omissions can support liability, but only when a legal duty exists, which is missing here."
+    },
+    {
+      "id": "crim-012",
+      "subject": "crim",
+      "subtopic": "general-principles",
+      "rule": "Mental states — specific vs. general intent; voluntary intoxication",
+      "priority": "H",
+      "difficulty": 2,
+      "stem": "After drinking heavily at a bar for several hours by his own choice, a patron became convinced that another customer had insulted him. He staggered across the room and punched the customer in the face, breaking the customer's nose. At his trial for battery — defined in the jurisdiction as the unlawful application of force to another resulting in bodily injury, a general intent crime — the patron testifies that he was so drunk he barely remembers the evening and could not have formed any intent to hurt anyone. He asks the court to instruct the jury that his intoxication may negate the intent element of battery. How should the court rule?",
+      "choices": [
+        "Give the instruction, because intoxication is relevant whenever any mental state is an element of the offense.",
+        "Give the instruction, because his memory loss shows he lacked consciousness of his actions.",
+        "Refuse the instruction, because voluntary intoxication is a defense only to specific intent crimes, and battery requires only general intent.",
+        "Refuse the instruction, because intoxication is never relevant to criminal liability under any circumstances."
+      ],
+      "correctIndex": 2,
+      "explanation": "Voluntary intoxication — ingesting an intoxicant by one's own free will — can serve as a defense only to specific intent crimes, where it may negate the required intent or desire to achieve a particular result. Battery is a general intent crime requiring only awareness of performing the unlawful act of applying force; courts do not allow self-induced intoxication to negate general intent. Choice A overstates the doctrine: intoxication does not reach general intent, malice, or strict liability offenses. Choice B fails because drunken memory gaps do not establish unconsciousness, and voluntary intoxication does not excuse a voluntary act of violence. Choice D goes too far the other way — voluntary intoxication remains relevant to specific intent crimes, and involuntary intoxication can be a defense to all crimes under insanity-style tests."
+    },
+    {
+      "id": "crim-013",
+      "subject": "crim",
+      "subtopic": "general-principles",
+      "rule": "Self-defense — imperfect self-defense mitigation",
+      "priority": "H",
+      "difficulty": 3,
+      "stem": "A shop owner who had been robbed twice in the past year kept a pistol under the counter. One evening, a customer in a heavy coat approached, reached briskly into his inside pocket, and said, \"I've got something here for you.\" The owner, genuinely terrified that the customer was drawing a gun, shot and killed him. The customer was actually reaching for a store coupon, was unarmed, and had a friendly demeanor that several witnesses described. The jury concludes that the owner honestly believed deadly force was necessary but that the belief was unreasonable under the circumstances. The jurisdiction recognizes the imperfect self-defense doctrine. Of what homicide offense should the owner be convicted?",
+      "choices": [
+        "Murder, because an unreasonable belief in the need for deadly force provides no mitigation at all.",
+        "Voluntary manslaughter, because his good-faith but unreasonable belief in the need for self-defense mitigates murder.",
+        "No offense, because an honest belief in imminent danger is a complete defense regardless of reasonableness.",
+        "Involuntary manslaughter, because the killing resulted from a negligent assessment of the danger."
+      ],
+      "correctIndex": 1,
+      "explanation": "Complete self-defense requires a reasonable belief that the defendant faced imminent death or great bodily harm and that deadly force was necessary. Where the defendant kills based on a genuine, good-faith belief in the need for self-defense, but that belief is unreasonable, the imperfect self-defense doctrine mitigates what would otherwise be murder down to voluntary manslaughter. The jury's findings — honest but unreasonable belief — fit that doctrine exactly. Choice A ignores the mitigation the jurisdiction expressly recognizes. Choice C states the rule backwards: honesty alone never makes the defense complete; reasonableness is also required for acquittal. Choice D mislabels the offense — imperfect self-defense produces voluntary manslaughter, an intentional killing with mitigation, not involuntary manslaughter, which addresses unintentional killings."
+    },
+    {
+      "id": "crim-014",
+      "subject": "crim",
+      "subtopic": "general-principles",
+      "rule": "Insanity — M'Naghten test",
+      "priority": "H",
+      "difficulty": 2,
+      "stem": "A defendant with a long-documented history of severe mental illness strangled his landlord during a dispute over rent. Immediately afterward, he dragged the body into a closet, mopped the floor, threw his gloves into a storm drain two blocks away, and told a neighbor the landlord had \"moved out suddenly.\" When arrested a week later, he told detectives, \"I knew the second I did it that it was against the law and that I'd be locked up if anyone found out — that's why I hid everything.\" Psychiatrists agree he suffers from a genuine psychotic disorder but also agree he understood that he was killing a human being. The jurisdiction applies only the M'Naghten test. Should his insanity defense succeed?",
+      "choices": [
+        "No, because despite his mental disease, he both understood the nature of his act and knew that it was wrong.",
+        "Yes, because any defendant with a diagnosed psychotic disorder satisfies M'Naghten as a matter of law.",
+        "Yes, because his mental illness made him unable to control his impulse to kill.",
+        "No, because insanity is never available as a defense to an intentional killing."
+      ],
+      "correctIndex": 0,
+      "explanation": "Under M'Naghten, a defendant is excused only if, because of a mental disease or defect, he either did not know the nature and quality of his act or did not know that the act was wrong. The defendant fails both prongs: he understood he was killing a person, and his elaborate concealment plus his own statement show he knew the act was wrongful and illegal. Choice B is wrong because a diagnosis alone never satisfies the test — the disease must produce the specific cognitive incapacity M'Naghten describes. Choice C describes the irresistible-impulse test, a volitional standard this jurisdiction does not apply; M'Naghten is purely cognitive. Choice D is simply false — insanity, where proved under the governing test, is a defense even to intentional homicide."
+    },
+    {
+      "id": "crim-015",
+      "subject": "crim",
+      "subtopic": "constitutional-protection-of-accused",
+      "rule": "4th Amendment — reasonable expectation of privacy (curbside garbage)",
+      "priority": "H",
+      "difficulty": 1,
+      "stem": "Acting on an anonymous tip that a homeowner was selling narcotics, police officers waited until the homeowner dragged his opaque trash bags to the curb in front of his house for the regular morning pickup, on the public strip beside the street. Before the garbage truck arrived, the officers took the bags, opened them at the station, and found plastic baggies with drug residue and ledgers recording sales. Using those items, they obtained a warrant, searched the house, and seized a large quantity of drugs. The homeowner moves to suppress everything, arguing that the warrantless seizure and search of his trash violated the Fourth Amendment. How should the court rule?",
+      "choices": [
+        "Grant the motion, because a person's household garbage reveals intimate details of life and is therefore protected.",
+        "Grant the motion, because the officers acted on nothing more than an anonymous tip.",
+        "Deny the motion, because the homeowner had no reasonable expectation of privacy in garbage left at the curb for collection.",
+        "Deny the motion, but only because the trash bags were opaque rather than transparent."
+      ],
+      "correctIndex": 2,
+      "explanation": "The Fourth Amendment protects only places and items in which a person has a reasonable expectation of privacy. The Supreme Court has held there is no such expectation in garbage left at the curb outside the home's curtilage: by placing trash out for a third-party collector in an area accessible to the public, the owner exposes it to animals, scavengers, and anyone else, forfeiting privacy protection. Because no search in the constitutional sense occurred, no warrant or probable cause was needed, and the warrant for the house built on the trash evidence stands. Choice A reflects the rejected argument. Choice B is irrelevant — since taking the trash was not a search, no justification was required. Choice D is wrong because the bags' opacity does not create protection once they are abandoned at the curb."
+    },
+    {
+      "id": "crim-016",
+      "subject": "crim",
+      "subtopic": "constitutional-protection-of-accused",
+      "rule": "4th Amendment — stop and frisk; plain feel doctrine",
+      "priority": "H",
+      "difficulty": 2,
+      "stem": "An officer patrolling a neighborhood known for armed robberies watched a man pace outside a closed pawnshop at midnight, repeatedly peer through the window, and adjust a heavy object in his waistband. Reasonably suspecting the man was casing the store and carrying a weapon, the officer stopped him and patted down the outside of his clothing. The waistband object was a flashlight. Continuing the pat-down, the officer felt a small, soft lump in the man's jacket pocket. Unsure what it was, the officer squeezed, rolled, and manipulated the lump between his fingers for several seconds until he concluded it was a bag of powdered drugs, then reached in and seized it. The man moves to suppress the drugs. How should the court rule?",
+      "choices": [
+        "Deny the motion, because the frisk was supported by reasonable suspicion that the man was armed.",
+        "Deny the motion, because contraband discovered during any lawful pat-down is admissible.",
+        "Grant the motion, because a frisk is never permitted without probable cause to arrest.",
+        "Grant the motion, because the incriminating character of the lump was not immediately apparent and the officer exceeded the scope of the frisk by manipulating it."
+      ],
+      "correctIndex": 3,
+      "explanation": "A stop and frisk requires reasonable articulable suspicion that criminal activity is afoot and that the person is armed; the frisk is limited to a pat-down for weapons. Under the plain feel doctrine, an officer may seize a non-weapon item only if its identity as contraband is immediately apparent from the lawful pat-down itself. Here the initial stop and frisk were valid, but once the officer knew the lump was not a weapon and could not identify it without squeezing and manipulating it, the continued exploration exceeded the frisk's permissible scope, making the seizure unlawful. Choice A and Choice B ignore that scope limit — a lawful frisk does not license a general evidence search. Choice C overstates the requirement; reasonable suspicion, not probable cause, supports a frisk."
+    },
+    {
+      "id": "crim-017",
+      "subject": "crim",
+      "subtopic": "constitutional-protection-of-accused",
+      "rule": "4th Amendment — exigent circumstances (hot pursuit) and plain view",
+      "priority": "H",
+      "difficulty": 2,
+      "stem": "Two officers responded to a silent alarm at a liquor store and saw a masked man run out the front door carrying a cash drawer and a handgun. They chased him on foot for three blocks and watched him run through the front door of a row house. The officers followed him inside within seconds, without stopping to seek a warrant. While moving through the living room searching for the suspect, one officer saw, sitting openly on the coffee table, a brick of what he immediately recognized as compressed cocaine. The officers arrested the suspect in the kitchen and seized the cocaine. Charged with drug possession, the suspect moves to suppress the cocaine as the fruit of a warrantless home entry. How should the court rule?",
+      "choices": [
+        "Deny the motion, because the officers entered in hot pursuit of a fleeing felon and the cocaine was in plain view from a place they were lawfully entitled to be.",
+        "Grant the motion, because a home may never be entered without a warrant absent the occupant's consent.",
+        "Grant the motion, because the cocaine was unrelated to the robbery the officers were investigating.",
+        "Deny the motion, but only if the prosecution shows the officers would inevitably have obtained a warrant."
+      ],
+      "correctIndex": 0,
+      "explanation": "A warrant is required for searches and seizures unless an exception applies. Hot pursuit of a fleeing felon is an established exigent circumstance permitting warrantless entry into a home the suspect flees into. Once lawfully inside, officers may seize items under the plain view doctrine if the item is observed in plain view from a place the officer is permitted to be and there is probable cause to believe it is contraband — all satisfied here, since recognizable cocaine sat openly on the table. Choice B ignores the exigency exceptions to the warrant requirement. Choice C is wrong because plain view does not require any connection between the seized contraband and the crime that justified the entry. Choice D is unnecessary — inevitable discovery is a fallback when a violation occurred, and here there was none."
+    },
+    {
+      "id": "crim-018",
+      "subject": "crim",
+      "subtopic": "constitutional-protection-of-accused",
+      "rule": "4th Amendment — automobile exception",
+      "priority": "M",
+      "difficulty": 2,
+      "stem": "An officer lawfully stopped a car for running a red light. As the driver lowered the window, the officer smelled a strong odor of raw marijuana and saw a partially burned hand-rolled cigarette in the open ashtray, giving him probable cause to believe the car contained illegal drugs. The officer ordered the driver and his passenger out, searched the passenger compartment, and then opened the trunk, where he unzipped a duffel bag belonging to the passenger and found two kilograms of cocaine inside. No warrant was ever obtained. The passenger moves to suppress the cocaine, arguing that even if the car could be searched, his personal bag in the trunk could not be opened without a warrant. How should the court rule?",
+      "choices": [
+        "Grant the motion, because a passenger's personal luggage always requires a separate warrant.",
+        "Deny the motion, because with probable cause to believe the vehicle contains contraband, police may search the entire car and any containers within it that could hold the contraband.",
+        "Grant the motion, because the automobile exception is limited to the passenger compartment and never reaches the trunk.",
+        "Deny the motion, because any lawful traffic stop automatically authorizes a full search of the vehicle."
+      ],
+      "correctIndex": 1,
+      "explanation": "Under the automobile exception, when police have probable cause to believe a vehicle contains contraband or evidence of a crime, they may search the whole vehicle without a warrant, including the trunk and any packages, luggage, or containers that could reasonably hold the object of the search — and this extends to containers belonging to passengers. The marijuana odor and visible cigarette supplied probable cause before the search, and a duffel bag can obviously hold drugs. Choice A is wrong because container ownership does not shrink the exception's scope. Choice C confuses the automobile exception with the narrower search-incident-to-arrest rule; with probable cause, the trunk is fair game. Choice D is wrong because a traffic stop alone authorizes no vehicle search — probable cause as to the vehicle's contents is what unlocked the search here."
+    },
+    {
+      "id": "crim-019",
+      "subject": "crim",
+      "subtopic": "constitutional-protection-of-accused",
+      "rule": "4th Amendment — search incident to arrest (vehicles)",
+      "priority": "M",
+      "difficulty": 3,
+      "stem": "An officer ran the plate of a parked car as its driver pulled away from a convenience store and learned the driver's license had been suspended. The officer stopped the car, confirmed the suspension, and arrested the driver for driving with a suspended license. He handcuffed the driver and locked him in the back of the patrol car. The officer then returned to the sedan and conducted a thorough search of its interior, finding an unregistered handgun beneath the driver's seat. The driver is charged with a firearms offense and moves to suppress the gun, arguing the warrantless vehicle search was invalid. The prosecution relies solely on the search-incident-to-arrest doctrine. How should the court rule?",
+      "choices": [
+        "Deny the motion, because police may always search a vehicle's passenger compartment after arresting its occupant.",
+        "Deny the motion, because handcuffing the driver made the search safer and therefore reasonable.",
+        "Grant the motion, because the driver was secured away from the car and there was no reason to believe the car held evidence of the suspended-license offense.",
+        "Grant the motion, because a search incident to arrest may never extend beyond the arrestee's clothing."
+      ],
+      "correctIndex": 2,
+      "explanation": "Search incident to arrest allows police to search the arrestee's person and the area within his immediate control. For automobiles, the compartment may be searched only if the arrestee is unsecured and could still reach into the vehicle, or if there is reason to believe the vehicle contains evidence of the offense of arrest. Neither branch applies: the driver was handcuffed in the patrol car, and driving on a suspended license is an offense for which no physical evidence would plausibly be found in the car. Choice A states the old automatic rule that has been rejected. Choice B inverts the logic — securing the arrestee eliminates, rather than supplies, the safety rationale. Choice D is too narrow, since the doctrine covers the wingspan area and, in proper circumstances, the passenger compartment."
+    },
+    {
+      "id": "crim-020",
+      "subject": "crim",
+      "subtopic": "constitutional-protection-of-accused",
+      "rule": "5th Amendment — Miranda requires custodial interrogation; spontaneous statements",
+      "priority": "H",
+      "difficulty": 2,
+      "stem": "Police arrested a suspect at his workplace on a warrant for arson, handcuffed him, and placed him in the back of a patrol car for the drive to the station. The officers did not read him any warnings and, following department policy, did not ask him any questions during the ride; they spoke only to each other about an unrelated traffic detour. Ten minutes into the silent ride, the suspect suddenly said, \"I only lit the fire because the owner stiffed me on three months of wages.\" At trial, the prosecution offers the statement, and the suspect moves to suppress it because he was in custody and had never received Miranda warnings. How should the court rule?",
+      "choices": [
+        "Grant the motion, because any statement made by an unwarned suspect in custody is inadmissible.",
+        "Grant the motion, because the officers' presence in the small space of a patrol car is inherently coercive interrogation.",
+        "Deny the motion, but only if the officers can show they intended to read the warnings upon arrival at the station.",
+        "Deny the motion, because Miranda applies only to custodial interrogation, and the suspect's spontaneous statement was not the product of any interrogation."
+      ],
+      "correctIndex": 3,
+      "explanation": "Miranda warnings are required only when a suspect faces custodial interrogation: custody means a reasonable person would not feel free to leave, and interrogation means express questioning or conduct the police know or should know is likely to elicit an incriminating response. The suspect was plainly in custody, but the officers asked nothing and their unrelated conversation was not reasonably likely to draw a confession. Miranda does not reach spontaneous, volunteered statements, so the confession is admissible. Choice A overstates the rule by ignoring the interrogation requirement. Choice B is wrong because mere presence of officers, without questioning or its functional equivalent, is not interrogation. Choice C invents a condition — the officers' future intentions are irrelevant to whether interrogation occurred during the ride."
+    },
+    {
+      "id": "crim-021",
+      "subject": "crim",
+      "subtopic": "constitutional-protection-of-accused",
+      "rule": "5th Amendment — Miranda public safety exception",
+      "priority": "H",
+      "difficulty": 2,
+      "stem": "Two officers chased an armed robbery suspect into a crowded grocery store after a witness reported he was carrying a revolver. They tackled and handcuffed him in the cereal aisle and immediately noticed he was wearing an empty shoulder holster. Without giving any warnings, one officer demanded, \"Where's the gun?\" The suspect nodded toward a shelf and said, \"Behind the oatmeal.\" The officer retrieved a loaded revolver from the shelf, then read the suspect his Miranda rights. At trial for armed robbery, the suspect moves to suppress both his statement about the gun's location and the revolver itself, arguing that he was questioned in custody without warnings. How should the court rule?",
+      "choices": [
+        "Deny the motion as to both, because the question was prompted by an objectively reasonable concern for public safety.",
+        "Grant the motion as to both, because custodial questioning without warnings always requires suppression of statements and their fruits.",
+        "Grant the motion as to the statement but admit the revolver, because physical evidence is never suppressible.",
+        "Deny the motion only if the officer subjectively feared for his own life when he asked the question."
+      ],
+      "correctIndex": 0,
+      "explanation": "Under the public safety exception, police may ask a limited, unwarned question of a suspect in custody when the question is reasonably prompted by a concern for public safety or officer safety — the classic example being locating a discarded weapon. An empty holster in a crowded store created exactly that danger: a loaded gun within reach of shoppers. Both the answer and the gun are therefore admissible despite the absence of warnings. Choice B is wrong because the exception exists precisely to avoid suppression in this situation. Choice C reaches the right result for the gun for the wrong reason and wrongly suppresses the statement. Choice D is wrong because the test is objective — whether the circumstances reasonably suggested a safety threat — not the officer's subjective state of mind."
+    },
+    {
+      "id": "crim-022",
+      "subject": "crim",
+      "subtopic": "constitutional-protection-of-accused",
+      "rule": "5th Amendment — invocation of Miranda rights must be unambiguous",
+      "priority": "H",
+      "difficulty": 2,
+      "stem": "A burglary suspect was arrested, taken to the station, and properly advised of his Miranda rights. He stated that he understood them and began answering the detectives' questions. Forty minutes into the interview, he leaned back, sighed, and said, \"You know, maybe I ought to talk to a lawyer at some point — I'm not sure.\" The detectives paused, then continued asking about the burglary without comment. Twenty minutes later, the suspect confessed in detail. Before trial, he moves to suppress the confession, arguing that the detectives were required to stop the interrogation the moment he mentioned a lawyer. How should the court rule on the motion?",
+      "choices": [
+        "Grant the motion, because any reference to an attorney during interrogation requires police to cease questioning immediately.",
+        "Deny the motion, because an invocation of the right to counsel must be clear and unambiguous, and his equivocal remark was neither.",
+        "Grant the motion, because once warnings are given, police may continue questioning only with counsel physically present.",
+        "Deny the motion, because the right to counsel cannot be invoked after a suspect has already answered some questions."
+      ],
+      "correctIndex": 1,
+      "explanation": "To cut off questioning, a suspect's invocation of the Miranda right to counsel or silence must be clear and unambiguous; once a clear invocation occurs, all questioning must stop. A statement like \"maybe I ought to talk to a lawyer at some point — I'm not sure\" is the textbook equivocal remark that a reasonable officer would not understand as an actual request for counsel, so the detectives could lawfully keep questioning. Choice A states the rejected rule that any passing reference triggers cutoff. Choice C is wrong because a suspect who has validly waived may be questioned without counsel present. Choice D is wrong because the right may be invoked at any point in the interrogation — the problem here is the ambiguity of the attempt, not its timing."
+    },
+    {
+      "id": "crim-023",
+      "subject": "crim",
+      "subtopic": "constitutional-protection-of-accused",
+      "rule": "Exclusionary rule — physical fruits of a voluntary unwarned statement",
+      "priority": "H",
+      "difficulty": 3,
+      "stem": "Detectives arrested a suspect for a stabbing and questioned him at the station without ever administering Miranda warnings. There were no threats, no promises, and no coercive tactics; the interview was calm and brief. The suspect said, \"The knife is in the storm drain at the corner of Fifth and Main.\" Officers recovered a knife from that drain bearing the victim's blood. At trial, the prosecution concedes the statement itself cannot be used in its case-in-chief but seeks to introduce the knife. The defense moves to suppress the knife as the fruit of the un-Mirandized statement. The interrogation is stipulated to have been voluntary in the due process sense. How should the court rule on the knife?",
+      "choices": [
+        "Suppress it, because all evidence derived from a Miranda violation is fruit of the poisonous tree.",
+        "Suppress it, because physical evidence is more prejudicial than a statement and deserves greater protection.",
+        "Admit it, because the exclusionary rule never applies to any violation of constitutional rights.",
+        "Admit it, because a mere failure to give Miranda warnings does not require suppression of physical evidence located through a voluntary statement."
+      ],
+      "correctIndex": 3,
+      "explanation": "Although statements taken in violation of Miranda are excluded from the prosecution's case-in-chief, the violation carries limited fruits consequences: physical evidence discovered as a result of a voluntary but unwarned statement is not suppressed. The full fruit-of-the-poisonous-tree doctrine applies to actual constitutional violations, such as coerced confessions or illegal searches, not to a bare failure to warn where the statement remained voluntary. Because the parties stipulate the statement was voluntary, the knife comes in. Choice A applies the derivative-evidence doctrine too broadly to Miranda violations. Choice B has the policy backwards and reflects no rule of law. Choice C is far too sweeping — the exclusionary rule plainly bars evidence obtained through Fourth, Fifth, and Sixth Amendment violations; this case simply falls within a recognized Miranda limitation."
+    },
+    {
+      "id": "crim-024",
+      "subject": "crim",
+      "subtopic": "constitutional-protection-of-accused",
+      "rule": "6th Amendment right to counsel — offense-specific attachment",
+      "priority": "M",
+      "difficulty": 3,
+      "stem": "A defendant was indicted for a warehouse burglary, was arraigned, and was appointed counsel, who instructed police not to speak with him. While the defendant sat in jail awaiting trial on the burglary, detectives investigating an unrelated, uncharged murder visited him. They read him his Miranda rights; he said he understood them, signed a written waiver, and agreed to talk without his burglary lawyer present. During the interview he made damaging admissions about the murder, for which he was later charged. The defendant moves to suppress the murder admissions, arguing that police violated his Sixth Amendment right to counsel by questioning him after counsel had been appointed and had told them not to. How should the court rule?",
+      "choices": [
+        "Grant the motion, because once counsel is appointed in any case, police may never question the defendant about anything.",
+        "Grant the motion, because counsel's explicit instruction barred all police contact with the client.",
+        "Deny the motion, because the Sixth Amendment right is offense-specific and had not attached to the uncharged murder, and he validly waived his Miranda rights.",
+        "Deny the motion, because the Sixth Amendment right to counsel applies only at trial itself, not during any pretrial questioning."
+      ],
+      "correctIndex": 2,
+      "explanation": "The Sixth Amendment right to counsel attaches once formal adversarial judicial proceedings begin — charge, arraignment, indictment, or preliminary hearing — but it is offense-specific: it protects the defendant only as to the charged offense. The murder was uncharged, so no Sixth Amendment right existed for that crime, and the questioning was governed by the Fifth Amendment, which the defendant satisfied by a knowing, intelligent, and voluntary Miranda waiver. Choice A and Choice B describe a blanket protection the offense-specific rule rejects; counsel's instructions in the burglary case do not immunize the client from questioning about different crimes. Choice D understates the right, which applies at all critical pretrial stages of the charged offense, including post-attachment interrogation about that offense."
+    },
+    {
+      "id": "crim-025",
+      "subject": "crim",
+      "subtopic": "constitutional-protection-of-accused",
+      "rule": "6th Amendment — right to counsel at post-charge lineup; independent source",
+      "priority": "M",
+      "difficulty": 2,
+      "stem": "A defendant was indicted for robbing a bank teller at close range during a three-minute encounter in a well-lit lobby. Two weeks after the indictment, while the defendant was in custody and represented by appointed counsel, police placed him in a live lineup viewed by the teller. Police never notified his lawyer, who was not present. The teller picked the defendant out of the lineup. Before trial, the defense moves to exclude any testimony about the lineup identification and also to bar the teller from identifying the defendant in the courtroom. How should the court rule on the two requests?",
+      "choices": [
+        "Exclude the lineup identification because counsel was absent from a post-charge lineup, but allow an in-court identification if it rests on the teller's independent recollection from the robbery itself.",
+        "Admit both identifications, because there is no right to counsel at identification procedures of any kind.",
+        "Exclude both identifications, because a constitutional violation at a lineup permanently disqualifies the witness from identifying the defendant.",
+        "Admit the lineup identification but exclude the in-court identification, because courtroom identifications are inherently suggestive."
+      ],
+      "correctIndex": 0,
+      "explanation": "The Sixth Amendment guarantees counsel's presence at a post-charge live lineup, a critical stage of the prosecution; conducting one without notifying counsel makes testimony about that lineup inadmissible. But the witness may still identify the defendant in court if the identification has an independent source — based on the witness's own knowledge from the crime, trustworthy, and rooted in the prior transaction. A three-minute, close-range, well-lit encounter readily supports an independent recollection. Choice B is wrong because the right plainly applies to post-charge lineups, though not to pre-charge lineups or photo arrays. Choice C is wrong because the independent source rule prevents permanent disqualification. Choice D reverses the analysis — it is the counsel-free lineup, not the courtroom identification, that the Constitution condemns here."
+    },
+    {
+      "id": "crim-026",
+      "subject": "crim",
+      "subtopic": "constitutional-protection-of-accused",
+      "rule": "6th Amendment — right to jury trial (serious offenses)",
+      "priority": "M",
+      "difficulty": 1,
+      "stem": "A defendant was charged in state court with misdemeanor disorderly conduct. Under the state statute, the maximum punishment authorized for the offense is six months in the county jail and a one-thousand-dollar fine; no enhancement provisions apply. At his first appearance, the defendant demanded a jury trial, telling the judge that a jury of his peers was his constitutional birthright in any criminal case where jail time was possible. The judge denied the demand and scheduled a bench trial, at which the defendant was convicted and sentenced to thirty days in jail. On appeal, the defendant argues that the denial of a jury violated his Sixth Amendment rights as applied to the states. How should the appellate court rule?",
+      "choices": [
+        "Reverse, because the Sixth Amendment guarantees a jury whenever any incarceration is authorized.",
+        "Affirm, because the constitutional jury right applies only to offenses for which authorized imprisonment exceeds six months, and this offense carries a maximum of exactly six months.",
+        "Reverse, because the defendant actually received a jail sentence, which retroactively triggered the jury right.",
+        "Affirm, because the jury trial right does not apply to the states at all."
+      ],
+      "correctIndex": 1,
+      "explanation": "The Sixth Amendment, applicable to the states, guarantees a jury trial only for serious offenses — those for which the legislature has authorized imprisonment of more than six months. The test looks to the maximum authorized penalty, not the sentence actually imposed. Because disorderly conduct here carries a six-month maximum, it is a petty offense and a bench trial was constitutionally permissible. Choice A overstates the right; petty offenses carrying short authorized terms get no constitutional jury. Choice C is wrong because the actual thirty-day sentence is irrelevant — the authorized maximum controls and is fixed before trial. Choice D is flatly wrong; the jury right is incorporated against the states, and related doctrine requires at least six jurors and a unanimous verdict where the right applies."
+    },
+    {
+      "id": "crim-027",
+      "subject": "crim",
+      "subtopic": "constitutional-protection-of-accused",
+      "rule": "Double jeopardy — same offense under the Blockburger test",
+      "priority": "H",
+      "difficulty": 3,
+      "stem": "A defendant was tried before a jury for robbery, based on allegations that he snatched a courier's cash bag after shoving the courier to the ground. The jury was impaneled and sworn, heard all the evidence, and acquitted him. Frustrated, the prosecutor filed a new charging document the following month accusing the same defendant of larceny of the very same cash bag, arising from the identical incident. In the jurisdiction, larceny is the trespassory taking and carrying away of another's personal property with intent to permanently deprive, and robbery is defined as larceny plus the use of force or threat of force from the victim's person or presence. The defendant moves to dismiss the larceny charge on double jeopardy grounds. How should the court rule?",
+      "choices": [
+        "Deny the motion, because an acquittal resolves only the exact crime charged, leaving all other theories available.",
+        "Deny the motion, because jeopardy never attached at the first trial since the defendant was acquitted rather than convicted.",
+        "Grant the motion, but only if the prosecutor acted with vindictive intent in refiling.",
+        "Grant the motion, because larceny requires proof of no fact beyond those required for robbery, making the two the same offense."
+      ],
+      "correctIndex": 3,
+      "explanation": "The Double Jeopardy Clause bars a second prosecution for the same offense. Under the Blockburger test, two crimes are different offenses only if each requires proof of a fact the other does not. Larceny is a lesser included offense of robbery here: every element of larceny is contained within robbery, and larceny adds nothing robbery lacks, so they are the same offense. Jeopardy attached when the jury was impaneled and sworn, and the acquittal ended the matter; prosecuting the lesser offense afterward is barred. Choice A ignores the same-offense analysis that protects against serial prosecutions on included charges. Choice B misstates attachment — jeopardy attaches at impanelment, and an acquittal is its strongest consummation. Choice C is wrong because the bar is automatic; prosecutorial motive is irrelevant."
+    },
+    {
+      "id": "crim-028",
+      "subject": "crim",
+      "subtopic": "constitutional-protection-of-accused",
+      "rule": "Double jeopardy — dual sovereignty doctrine",
+      "priority": "H",
+      "difficulty": 2,
+      "stem": "A defendant was tried in state court for robbing a federally insured bank located in that state, an act that violated both a state robbery statute and a separate federal bank robbery statute. After a full trial, the state jury acquitted him. Six months later, a federal grand jury indicted him for the same bank robbery under the federal statute, relying on essentially the same witnesses and evidence the state had used. The defendant moves to dismiss the federal indictment, arguing that the Double Jeopardy Clause forbids the federal government from prosecuting him for conduct of which a state jury has already acquitted him. How should the federal court rule on the motion to dismiss?",
+      "choices": [
+        "Grant the motion, because the federal prosecution relies on the same evidence already rejected by the state jury.",
+        "Grant the motion, because an acquittal by any American court bars every later prosecution for the same conduct.",
+        "Deny the motion, because the state and federal governments are separate sovereigns, each free to prosecute violations of its own laws.",
+        "Deny the motion, but only because bank robbery is a uniquely federal concern exempt from double jeopardy rules."
+      ],
+      "correctIndex": 2,
+      "explanation": "Under the dual sovereignty doctrine, the Double Jeopardy Clause does not bar successive prosecutions by separate sovereigns. A state and the federal government are distinct sovereigns, as are two different states, because each derives its power to punish from an independent source; by contrast, a state and its own municipalities are a single sovereign. The defendant's conduct violated two different sovereigns' laws, so the federal prosecution may proceed despite the state acquittal. Choice A is irrelevant — overlap in evidence does not merge the sovereigns. Choice B states the rule the dual sovereignty doctrine squarely rejects. Choice D is wrong because the result rests on the general separate-sovereigns principle, not on any special status for bank robbery; no such double jeopardy exemption category exists."
+    }
+  ]
+}

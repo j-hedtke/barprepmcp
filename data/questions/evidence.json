@@ -1,0 +1,481 @@
+{
+  "subject": "evidence",
+  "questions": [
+    {
+      "id": "evidence-001",
+      "subject": "evidence",
+      "subtopic": "presentation-of-evidence",
+      "rule": "Refreshing recollection",
+      "priority": "H",
+      "difficulty": 2,
+      "stem": "At a burglary trial, a prosecution witness testifies that she saw a van speed away from the victim's house and wrote down its license plate number that night. On the stand, she says she can no longer remember the number. The prosecutor hands her the handwritten note she made, she reviews it silently, returns it, and then testifies from memory to the plate number. The prosecutor does not offer the note into evidence. On cross-examination, defense counsel moves to admit the note itself into evidence so the jury can see exactly what the witness wrote that night. The prosecutor objects that the note is an out-of-court statement and that only a testifying witness's live testimony is evidence. How should the court rule on the defense motion?",
+      "choices": [
+        "Deny the motion, because a writing used to refresh recollection may never be received as an exhibit.",
+        "Deny the motion, because the note is hearsay not within any exception.",
+        "Grant the motion, because the adverse party is entitled to introduce a writing that was used to refresh a witness's memory.",
+        "Grant the motion, but only if the witness first adopts the note as an accurate record of what she once knew."
+      ],
+      "correctIndex": 2,
+      "explanation": "When a witness uses a writing to refresh memory while testifying, the adverse party may inspect the writing, cross-examine the witness about it, and introduce into evidence the portions that relate to the testimony. The proponent generally may not offer it, but the opposing party may. Choice A states the opposite of the rule. Choice B fails because the adverse party's right to introduce the refreshing document does not depend on a hearsay exception; the rule itself authorizes admission for the jury's evaluation of the testimony. Choice D confuses refreshing recollection with the recorded recollection hearsay exception, which requires adoption and accuracy; those foundations are unnecessary when the opponent offers a document merely used to refresh."
+    },
+    {
+      "id": "evidence-002",
+      "subject": "evidence",
+      "subtopic": "presentation-of-evidence",
+      "rule": "Lay witness opinion testimony",
+      "priority": "H",
+      "difficulty": 1,
+      "stem": "A pedestrian sues a driver for injuries from a collision in a crosswalk. The pedestrian calls a bystander who watched the driver stumble out of the car after the crash. The bystander, who has no medical or scientific training, proposes to testify that the driver smelled strongly of alcohol, was slurring his words, was unsteady on his feet, and, in the bystander's opinion, was obviously intoxicated. The driver objects that only a qualified expert, such as a toxicologist, may give an opinion that a person was intoxicated. Should the court admit the bystander's opinion that the driver was intoxicated?",
+      "choices": [
+        "Yes, because the opinion is rationally based on the bystander's own perceptions, is helpful to the jury, and does not rest on specialized knowledge.",
+        "Yes, because any witness may give an opinion on an ultimate issue in a civil case.",
+        "No, because intoxication is a scientific conclusion that requires expert qualification.",
+        "No, because a lay witness may describe what she observed but may never state a conclusion drawn from those observations."
+      ],
+      "correctIndex": 0,
+      "explanation": "A lay witness with personal knowledge may give an opinion if it is rationally based on the witness's perception, helpful to understanding the testimony or determining a fact, and not based on scientific, technical, or other specialized knowledge. Everyday intoxication is a classic lay opinion because ordinary people recognize its signs. Choice B is wrong because the ultimate-issue rule is not the basis of admissibility here, and the choice ignores the actual lay-opinion requirements. Choice C is wrong because intoxication, unlike blood-alcohol concentration, does not require expert training. Choice D misstates the law; lay witnesses may state shorthand conclusions like speed, emotion, or drunkenness when grounded in what they perceived."
+    },
+    {
+      "id": "evidence-003",
+      "subject": "evidence",
+      "subtopic": "presentation-of-evidence",
+      "rule": "Expert witness testimony — reliability",
+      "priority": "H",
+      "difficulty": 3,
+      "stem": "In a products liability trial over a collapsed ladder, the plaintiff offers a metallurgist with a doctorate and twenty years of experience. The metallurgist examined the ladder, applied a stress-analysis method she developed, and concluded the rails contained a manufacturing defect. The defendant moves to exclude her testimony, showing that her method has been tested and has a known low error rate and that she followed documented protocols, but that the method has not yet gained general acceptance among metallurgists and has been the subject of only one peer-reviewed article. The plaintiff responds that the remaining reliability indicators are strong. How should the court rule on the motion to exclude?",
+      "choices": [
+        "Exclude the testimony, because a novel scientific method must be generally accepted in the relevant field before an expert may rely on it.",
+        "Admit the testimony, because general acceptance and extensive publication are only factors, and the method's testability, error rate, and controlling standards support its reliability.",
+        "Admit the testimony, because a witness with sufficient qualifications may testify to any opinion within her field of expertise.",
+        "Exclude the testimony, because expert opinions about defects invade the province of the jury."
+      ],
+      "correctIndex": 1,
+      "explanation": "Expert testimony is admissible when the witness is qualified, the testimony will help the trier of fact, it rests on sufficient facts or data and reliable principles and methods, and the expert reliably applied those methods. Reliability is assessed through flexible factors: testability, peer review and publication, error rate, maintenance of standards, and general acceptance. No single factor is dispositive, so strong showings on testing, error rate, and standards can carry the day despite limited acceptance. Choice A states the abandoned general-acceptance test as an absolute requirement. Choice C ignores that even a qualified expert's methodology must be reliable and reliably applied. Choice D is wrong because helpful expert opinions, including opinions embracing ultimate factual issues, do not invade the jury's role."
+    },
+    {
+      "id": "evidence-004",
+      "subject": "evidence",
+      "subtopic": "presentation-of-evidence",
+      "rule": "Judicial notice",
+      "priority": "M",
+      "difficulty": 2,
+      "stem": "A defendant is on trial for federal bank robbery. An element of the prosecution's case is that the institution robbed was federally insured. The prosecutor asks the court to take judicial notice that the bank named in the indictment is located within the judicial district, a fact shown conclusively by undisputed public records and not subject to reasonable question. The court agrees and takes judicial notice of the bank's location. Defense counsel asks the court to explain to the jury what effect the noticed fact has. Which instruction should the court give the jury about the judicially noticed fact?",
+      "choices": [
+        "The jury must accept the noticed fact as conclusively established.",
+        "The jury must accept the noticed fact unless the defendant offers contrary evidence.",
+        "The jury should disregard the noticed fact unless the prosecution also introduces independent proof of it.",
+        "The jury may accept the noticed fact as proven, but it is not required to do so."
+      ],
+      "correctIndex": 3,
+      "explanation": "A court may take judicial notice of an adjudicative fact that is not subject to reasonable dispute because it is generally known in the community or readily verifiable from sources whose accuracy cannot reasonably be questioned. The instruction differs by case type: in a civil case the jury must accept the noticed fact as conclusive, but in a criminal case the jury must be told it may, but is not required to, accept the fact, preserving the defendant's jury-trial right on every element. Choice A states the civil-case instruction. Choice B invents a burden-shifting approach with no basis in the rule. Choice C is wrong because judicial notice substitutes for formal proof; no independent evidence is required."
+    },
+    {
+      "id": "evidence-005",
+      "subject": "evidence",
+      "subtopic": "presentation-of-evidence",
+      "rule": "Impeachment by prior conviction",
+      "priority": "H",
+      "difficulty": 2,
+      "stem": "In a civil fraud action, the plaintiff calls an accountant as a key witness. On cross-examination, the defendant seeks to ask the accountant about her conviction seven years earlier for perjury, a felony, for which she served one year in prison. The plaintiff objects, arguing that the conviction is unduly prejudicial, that the accountant has led a law-abiding life since her release, and that the court must weigh probative value against prejudice before allowing the question. The accountant is not a party to the case. How should the court rule on the use of the perjury conviction to impeach?",
+      "choices": [
+        "Allow the impeachment, because a conviction for a crime involving a dishonest act or false statement is admissible without balancing probative value against prejudice.",
+        "Allow the impeachment only if the court finds the conviction's probative value outweighs its prejudicial effect to the witness.",
+        "Exclude the conviction, because impeachment by conviction is limited to witnesses in criminal cases.",
+        "Exclude the conviction, because a conviction more than five years old is presumptively stale."
+      ],
+      "correctIndex": 0,
+      "explanation": "A conviction for any crime, felony or misdemeanor, that required proving a dishonest act or false statement must be admitted to impeach a witness; the court has no discretion to balance prejudice for such crimes within the ten-year window. Perjury is the paradigm crime of falsehood. Choice B describes the heightened balancing reserved for non-dishonesty felonies offered against a criminal defendant-witness, not for crimes of dishonesty. Choice C is wrong because impeachment by conviction applies in civil and criminal cases alike. Choice D is wrong because the special restriction applies only when more than ten years have passed since the conviction or release from confinement, whichever is later; a seven-year-old conviction is within the ordinary window."
+    },
+    {
+      "id": "evidence-006",
+      "subject": "evidence",
+      "subtopic": "presentation-of-evidence",
+      "rule": "Impeachment — specific instances of conduct",
+      "priority": "H",
+      "difficulty": 2,
+      "stem": "At a robbery trial, an alibi witness testifies that the defendant was with him bowling on the night of the crime. On cross-examination, the prosecutor asks, in good faith, whether the witness falsified his income on a mortgage application two years ago. The witness flatly denies it. The prosecutor then seeks to call the mortgage loan officer to testify that the witness did, in fact, submit falsified income figures. The witness was never charged with any crime in connection with the application. Defense counsel objects to the loan officer's testimony. How should the court rule?",
+      "choices": [
+        "Admit the loan officer's testimony, because the falsification is probative of the witness's character for untruthfulness.",
+        "Admit the loan officer's testimony, because the witness opened the door by denying the conduct.",
+        "Exclude the loan officer's testimony, because specific instances of a witness's conduct offered to attack credibility may not be proved by extrinsic evidence.",
+        "Exclude the loan officer's testimony, because conduct that did not result in a conviction can never be raised for impeachment."
+      ],
+      "correctIndex": 2,
+      "explanation": "A cross-examiner may, in the court's discretion, inquire into specific instances of a witness's conduct that are probative of truthfulness or untruthfulness, such as falsifying a loan application. But the examiner is stuck with the witness's answer: extrinsic evidence is not admissible to prove the bad act when it is offered solely to attack credibility. Choice A correctly identifies why the question itself was proper but wrongly extends that to extrinsic proof. Choice B is wrong because a denial does not unlock extrinsic evidence; that is precisely the situation the bar on extrinsic proof addresses. Choice D goes too far the other way; unconvicted bad acts probative of untruthfulness may be explored on cross-examination, just not proved by other witnesses."
+    },
+    {
+      "id": "evidence-007",
+      "subject": "evidence",
+      "subtopic": "presentation-of-evidence",
+      "rule": "Prior inconsistent statements — extrinsic evidence foundation",
+      "priority": "M",
+      "difficulty": 2,
+      "stem": "In a negligence trial arising from an intersection collision, an eyewitness testifies for the plaintiff that the defendant's light was red. Defense counsel knows that, two weeks after the accident, the eyewitness told an insurance investigator that he was not sure of the light's color. On cross-examination, defense counsel asks the eyewitness about the earlier remark without showing him any document, and the eyewitness denies ever saying it. Defense counsel later calls the investigator to testify to the eyewitness's earlier statement. Plaintiff's counsel objects, arguing that counsel was required to show the witness a transcript of the statement before questioning him and that the investigator's testimony is improper. How should the court rule on the investigator's testimony?",
+      "choices": [
+        "Exclude it, because the statement was not shown or disclosed to the eyewitness during cross-examination.",
+        "Admit it, because the eyewitness was given an opportunity to explain or deny the statement and the plaintiff may examine him about it.",
+        "Exclude it, because a prior inconsistent statement may be used only while the declarant is on the stand.",
+        "Admit it as substantive evidence that the eyewitness was unsure of the light's color."
+      ],
+      "correctIndex": 1,
+      "explanation": "A witness may be impeached with a prior inconsistent statement, and the examiner need not show or disclose the statement's contents to the witness during questioning, though it must be shown to opposing counsel on request. Extrinsic evidence of the statement is admissible if the witness has an opportunity to explain or deny it and the adverse party can examine the witness about it; here the witness was asked and denied it, satisfying the foundation. Choice A revives the abandoned common-law rule requiring the writing to be shown first. Choice C is wrong because extrinsic proof through another witness is expressly permitted once the foundation exists. Choice D overreaches: an unsworn statement to an investigator is hearsay if offered for its truth, so it comes in only to impeach, not substantively."
+    },
+    {
+      "id": "evidence-008",
+      "subject": "evidence",
+      "subtopic": "relevancy-and-exclusion",
+      "rule": "Relevance and Rule 403 balancing",
+      "priority": "H",
+      "difficulty": 2,
+      "stem": "A defendant is on trial for murdering a hiker on a remote trail. The defendant concedes that the hiker died from multiple stab wounds and offers to stipulate to the cause and manner of death, contesting only whether the defendant was the attacker. The prosecution nonetheless offers a small number of crime-scene photographs showing the location, angle, and pattern of the wounds, which the medical examiner will use to explain that the attacker was left-handed, like the defendant. The defense objects that the photographs are gruesome and that the stipulation makes them unnecessary. How should the court rule on the photographs?",
+      "choices": [
+        "Exclude them, because a party's offer to stipulate eliminates the relevance of evidence on the stipulated point.",
+        "Exclude them, because photographs of a victim's body are inherently more prejudicial than probative.",
+        "Admit them only if the prosecution first proves the defendant is left-handed.",
+        "Admit them, because their probative value on the attacker's identity is not substantially outweighed by the danger of unfair prejudice."
+      ],
+      "correctIndex": 3,
+      "explanation": "Relevant evidence is admissible unless a rule provides otherwise, and a court may exclude relevant evidence only when its probative value is substantially outweighed by dangers such as unfair prejudice, confusion, or needless cumulativeness. The balance tilts toward admission. Here the photographs do more than prove death; they support an identity inference about the attacker's handedness, a disputed issue the stipulation does not cover. Choice A is wrong because a party generally cannot strip the opponent's evidence of its force by stipulating; the prosecution may prove its case with evidence of its choosing where the evidence retains independent probative value. Choice B inverts the standard, which requires substantial imbalance, not mere gruesomeness. Choice C imposes a conditional-relevance hurdle the rules do not require for admissibility here."
+    },
+    {
+      "id": "evidence-009",
+      "subject": "evidence",
+      "subtopic": "relevancy-and-exclusion",
+      "rule": "Subsequent remedial measures",
+      "priority": "H",
+      "difficulty": 2,
+      "stem": "A shopper slipped on a poorly lit stairway connecting a department store to an adjacent parking garage and sued the store for negligence. The store's answer denies that it owns or maintains the stairway, asserting that the garage company is solely responsible for it. During discovery, the shopper learns that two weeks after the fall, the store's facilities crew installed brighter lighting and non-slip treads on the stairway. At trial, the shopper offers evidence of the store's repairs. The store objects that evidence of subsequent remedial measures is inadmissible. What is the shopper's best response, and how should the court rule?",
+      "choices": [
+        "The evidence is admissible to show the store's ownership or control of the stairway, which the store has disputed.",
+        "The evidence is admissible because remedial measures are excluded only in products liability cases, not premises cases.",
+        "The evidence is inadmissible for any purpose, because the repairs occurred after the injury.",
+        "The evidence is admissible to show the stairway was dangerous and the store was negligent in not fixing it sooner."
+      ],
+      "correctIndex": 0,
+      "explanation": "Evidence of measures taken after an injury that would have made the injury less likely is inadmissible to prove negligence, culpable conduct, a product defect, or the need for a warning. But such evidence is admissible for other purposes when disputed, including ownership, control, impeachment, or the feasibility of precautions. Because the store denies owning or controlling the stairway, its own crew's repairs are powerful proof of control and admissible for that limited purpose, typically with a limiting instruction. Choice B misstates the scope; the exclusion applies to negligence and premises cases as well as product cases. Choice C ignores the recognized other-purpose uses. Choice D offers the evidence for precisely the prohibited purpose, proving negligence."
+    },
+    {
+      "id": "evidence-010",
+      "subject": "evidence",
+      "subtopic": "relevancy-and-exclusion",
+      "rule": "Character evidence — criminal defendant opens the door",
+      "priority": "H",
+      "difficulty": 2,
+      "stem": "A defendant is on trial for assaulting a stranger outside a nightclub. In the defense case, the defendant calls his longtime neighbor, who testifies that the defendant has a reputation in the community as a peaceful, gentle person. On cross-examination, the prosecutor, with a good-faith basis, asks the neighbor: 'Have you heard that two years ago the defendant punched a referee at his son's soccer game?' Defense counsel objects that the question injects an unproven specific act and improper propensity evidence into the trial. How should the court rule on the prosecutor's question?",
+      "choices": [
+        "Sustain the objection, because the prosecution may never refer to a defendant's specific bad acts.",
+        "Sustain the objection, because specific acts may be raised only after a conviction for the underlying conduct.",
+        "Overrule the objection, because a character witness may be cross-examined about specific instances of conduct relevant to the trait she vouched for.",
+        "Overrule the objection, because the defendant's character became an essential element of the charge once he disputed the assault."
+      ],
+      "correctIndex": 2,
+      "explanation": "The prosecution cannot initiate character evidence against a defendant, but a defendant may offer evidence of his own pertinent trait through reputation or opinion testimony. Once the defendant opens the door, the prosecution may test the character witness on cross-examination with relevant specific instances of the defendant's conduct, provided there is a good-faith basis, because the questions probe the witness's familiarity with the defendant's actual reputation. Choice A states an overbroad prohibition that ignores the rebuttal right. Choice B is wrong because no conviction is required, only a good-faith basis for the inquiry. Choice D misapplies the character-in-issue doctrine; character is an essential element in claims like defamation or negligent entrustment, not in an ordinary assault prosecution where it is merely circumstantial."
+    },
+    {
+      "id": "evidence-011",
+      "subject": "evidence",
+      "subtopic": "relevancy-and-exclusion",
+      "rule": "Prior bad acts — non-propensity purposes (MIMIC)",
+      "priority": "H",
+      "difficulty": 3,
+      "stem": "A defendant is charged with robbing a downtown jewelry store. The robber wore a delivery uniform, presented a forged package-delivery manifest to get buzzed through the security door, and used a distinctive phrase to direct employees into a back room. The prosecution gives timely written notice that it intends to offer testimony that, eight months earlier, the defendant robbed a jewelry store in a neighboring city using the same uniform ruse, a forged manifest, and the identical phrase. The defendant was never convicted of the earlier robbery, and he objects that the testimony is inadmissible character evidence. Under what standard should the court admit the evidence of the earlier robbery?",
+      "choices": [
+        "It is inadmissible, because uncharged misconduct may not be used against a criminal defendant absent a conviction.",
+        "It is admissible to prove identity through a distinctive common scheme, if a jury could find by a preponderance that the defendant committed the earlier robbery and the probative value is not substantially outweighed by unfair prejudice.",
+        "It is admissible to show the defendant's propensity to commit robberies of this kind.",
+        "It is inadmissible, because evidence of other crimes is permitted only when the other crime occurred after the charged offense."
+      ],
+      "correctIndex": 1,
+      "explanation": "Evidence of other crimes, wrongs, or acts is inadmissible to show propensity, but it is admissible for non-propensity purposes such as motive, identity, absence of mistake, intent, common plan or scheme, opportunity, or preparation. The proponent must show sufficient evidence for a jury to find by a preponderance that the act occurred, must survive the Rule 403 balance, and in criminal cases must give the defendant reasonable pretrial notice. The shared, highly distinctive method here functions like a signature proving identity. Choice A is wrong because no conviction is required for other-acts evidence. Choice C names the one forbidden purpose. Choice D invents a timing limitation; prior and subsequent acts alike may qualify."
+    },
+    {
+      "id": "evidence-012",
+      "subject": "evidence",
+      "subtopic": "relevancy-and-exclusion",
+      "rule": "Habit and routine practice",
+      "priority": "H",
+      "difficulty": 1,
+      "stem": "A window washer fell from scaffolding and died, and his estate sued the building owner, alleging the scaffold's anchor point failed. The owner contends the washer never clipped his safety lanyard to the anchor at all. No one saw the moments before the fall. The estate calls the washer's work partner of nine years, who will testify that on every job, without exception, the washer clipped his lanyard to the anchor point the instant he stepped onto a scaffold, before touching any equipment, and that the partner watched him do this hundreds of times. The owner objects that this is inadmissible character evidence and that habit cannot be proved without an eyewitness to the event itself. How should the court rule?",
+      "choices": [
+        "Exclude the testimony, because evidence of a person's past behavior is propensity evidence in a civil case.",
+        "Exclude the testimony, because habit evidence requires corroboration by an eyewitness to the occasion in question.",
+        "Admit the testimony only if the estate first shows the washer had a general character for carefulness.",
+        "Admit the testimony, because a specific, repeated, semi-automatic response to a particular situation is admissible to show conduct in conformity on the occasion at issue."
+      ],
+      "correctIndex": 3,
+      "explanation": "Evidence of a person's habit or an organization's routine practice is admissible to prove that on a particular occasion the person or organization acted in accordance with the habit, and it may be admitted without corroboration and without an eyewitness to the specific event. A habit is a regular, specific, almost reflexive response to a repeated situation, and clipping a lanyard the instant one steps on a scaffold, observed hundreds of times, fits that definition. Choice A confuses habit with character; habit is more specific and regular than a general trait and is expressly admissible. Choice B states the opposite of the rule, which abolished corroboration and eyewitness requirements. Choice C is backwards because general carefulness is inadmissible character evidence, while the specific routine is what makes the testimony admissible."
+    },
+    {
+      "id": "evidence-013",
+      "subject": "evidence",
+      "subtopic": "relevancy-and-exclusion",
+      "rule": "Victim's character — homicide first-aggressor rebuttal",
+      "priority": "H",
+      "difficulty": 2,
+      "stem": "A defendant is on trial for murder after a fatal confrontation in an apartment parking lot. The defendant testifies that the victim lunged at him with a knife and that he fired only to save his own life, and defense counsel argues in opening and closing that the victim started the fight. The defendant offers no reputation or opinion witnesses about the victim's character. In rebuttal, the prosecution calls the victim's coworker to testify that the victim had a reputation in the community as a peaceful, non-confrontational person. The defense objects that the prosecution is offering character evidence even though the defense never called a character witness. How should the court rule on the coworker's testimony?",
+      "choices": [
+        "Admit it, because in a homicide case the prosecution may offer evidence of the victim's peacefulness once the defendant claims the victim was the first aggressor.",
+        "Exclude it, because the prosecution may respond with victim-character evidence only after the defense offers reputation or opinion testimony about the victim.",
+        "Exclude it, because character evidence about a crime victim is never admissible.",
+        "Admit it, but only in the form of specific instances of the victim's peaceful behavior."
+      ],
+      "correctIndex": 0,
+      "explanation": "In a homicide prosecution, when the defendant offers evidence that the victim was the first aggressor, the prosecution may rebut with evidence of the victim's trait of peacefulness, even if the defendant introduced no character witness. The defendant's first-aggressor claim itself, here made through his own testimony and argument, triggers the rebuttal right; this is a special homicide rule. Choice B describes the general rule for victim character in non-homicide cases, where prosecution rebuttal follows defense character evidence, but the homicide rule is broader. Choice C is wrong because victim character is admissible in several recognized situations, including self-defense disputes. Choice D is wrong on form: circumstantial character proof comes in through reputation or opinion testimony, with specific instances generally reserved for cross-examination."
+    },
+    {
+      "id": "evidence-014",
+      "subject": "evidence",
+      "subtopic": "relevancy-and-exclusion",
+      "rule": "Compromise offers and settlement negotiations",
+      "priority": "M",
+      "difficulty": 2,
+      "stem": "A homeowner sued a contractor for fifty thousand dollars, alleging defective foundation work. After the suit was filed, the parties held a settlement conference. During the negotiation, the contractor said: 'Look, my crew probably did pour the footings too shallow, so I'll pay you twenty thousand to make this go away.' The homeowner rejected the offer. At trial, the homeowner seeks to introduce the contractor's statement about the shallow footings, arguing that a factual admission of what the crew actually did is different from the offer to pay money. The contractor objects. How should the court rule on the statement about the footings?",
+      "choices": [
+        "Admit it, because factual admissions made during settlement talks are severable from the offer itself.",
+        "Admit it, because the exclusion for compromise negotiations applies only in criminal cases.",
+        "Exclude it, because statements and conduct during compromise negotiations over a disputed claim are inadmissible to prove the validity or amount of the claim.",
+        "Exclude it, because any statement made after a lawsuit is filed is automatically privileged."
+      ],
+      "correctIndex": 2,
+      "explanation": "Offers to compromise a claim that is disputed as to validity or amount, and statements or conduct made during the compromise negotiations, are inadmissible to prove or disprove the claim's validity or amount, or to impeach with a prior inconsistent statement or contradiction. Unlike the rule on medical-expense payments, this exclusion sweeps in accompanying factual admissions, so the footings remark is protected along with the dollar offer. Choice A revives the abandoned common-law severability approach. Choice B is wrong because the rule applies in civil litigation and protects negotiation statements generally. Choice D overstates the protection; the rule is a purpose-based exclusion, not a blanket privilege, and such statements remain admissible for other purposes like proving bias or negating a claim of undue delay."
+    },
+    {
+      "id": "evidence-015",
+      "subject": "evidence",
+      "subtopic": "relevancy-and-exclusion",
+      "rule": "Liability insurance",
+      "priority": "M",
+      "difficulty": 2,
+      "stem": "A cyclist sued a delivery company after one of its trucks struck her in a bike lane. At trial, the company calls an accident reconstructionist who testifies that the cyclist swerved into the truck's path. On cross-examination, the cyclist's lawyer seeks to ask the reconstructionist whether he is a salaried employee of the insurance company that issued the delivery company's liability policy and that will pay any judgment. The company objects that any mention of liability insurance is inadmissible and would poison the jury by suggesting deep pockets. How should the court rule on the question?",
+      "choices": [
+        "Sustain the objection, because evidence that a party carried liability insurance is inadmissible for all purposes.",
+        "Overrule the objection, because the insurance evidence is offered to show the witness's bias, not the company's culpability.",
+        "Overrule the objection, because liability insurance is admissible as an admission that the company expected to cause accidents.",
+        "Sustain the objection, because bias may be shown only through the witness's own prior statements."
+      ],
+      "correctIndex": 1,
+      "explanation": "Evidence that a person was or was not insured against liability is inadmissible to prove negligence or other culpable conduct, but it is admissible for other purposes, including proving a witness's bias or prejudice, or proving agency, ownership, or control. A witness employed by the insurer that must pay the judgment has an obvious financial stake, so the question is proper bias impeachment, often paired with a limiting instruction. Choice A states the exclusion too broadly by ignoring the other-purpose exceptions. Choice C offers the evidence for the forbidden culpability inference and rests on a nonsensical theory. Choice D is wrong because bias is always relevant and may be shown by extrinsic facts such as employment, financial interest, or relationships, not just prior statements."
+    },
+    {
+      "id": "evidence-016",
+      "subject": "evidence",
+      "subtopic": "relevancy-and-exclusion",
+      "rule": "Pleas and plea negotiations",
+      "priority": "M",
+      "difficulty": 2,
+      "stem": "A driver was criminally charged with reckless driving after a collision that injured a passenger in another car. The driver initially pleaded guilty, but before sentencing the court allowed him to withdraw the plea, and the charge was later dismissed. The injured passenger then sued the driver for negligence. At the civil trial, the passenger offers a certified record of the driver's withdrawn guilty plea, arguing that the plea is a party-opponent's admission that he drove recklessly. The driver objects. How should the court rule on the withdrawn guilty plea?",
+      "choices": [
+        "Admit it, because a guilty plea is a statement by a party opponent.",
+        "Admit it, because the exclusion of plea evidence applies only in subsequent criminal proceedings.",
+        "Exclude it under the rule against character evidence.",
+        "Exclude it, because a withdrawn guilty plea is inadmissible against the defendant in any later civil or criminal case."
+      ],
+      "correctIndex": 3,
+      "explanation": "Evidence of a withdrawn guilty plea, a no-contest plea, statements made during plea discussions with the prosecutor, and statements made in the plea proceedings for such a plea are not admissible against the defendant who made the plea, in either a later civil or a later criminal case. The policy is to allow free plea bargaining and to prevent a withdrawn plea, which the court itself permitted the defendant to retract, from haunting him. Choice A fails because the specific plea-evidence exclusion overrides the party-opponent route; otherwise the protection would be meaningless. Choice B misstates the rule's scope, which expressly reaches subsequent civil cases. Choice C identifies the wrong doctrine; a plea is an admission about a specific event, not character or propensity evidence."
+    },
+    {
+      "id": "evidence-017",
+      "subject": "evidence",
+      "subtopic": "privileges-and-policy-exclusions",
+      "rule": "Spousal privileges — confidential marital communications",
+      "priority": "M",
+      "difficulty": 3,
+      "stem": "While married, a husband privately told his wife in their kitchen, with no one else present, that he had been falsifying safety inspection reports at the chemical plant he managed. Three years later, the couple divorced on amicable terms. After a tank explosion at the plant, injured workers sued the husband civilly, and they subpoenaed the ex-wife to testify about the kitchen conversation. The ex-wife is willing to testify, but the husband objects, asserting privilege. The ex-wife's lawyer responds that any spousal privilege ended with the divorce and that, in any event, only the testifying spouse can assert a privilege. How should the court rule?",
+      "choices": [
+        "The husband may prevent the testimony, because the confidential marital communications privilege covers private statements made during the marriage and survives divorce, and either spouse may assert it.",
+        "The ex-wife must testify, because spousal privileges terminate upon divorce.",
+        "The ex-wife must testify, because spousal privileges apply only in criminal cases.",
+        "The ex-wife may choose whether to testify, because the witness-spouse alone holds the privilege."
+      ],
+      "correctIndex": 0,
+      "explanation": "Two distinct spousal privileges exist. Spousal immunity lets a witness-spouse refuse to testify against her spouse in a criminal case; only the witness holds it, and it ends with the marriage. The confidential marital communications privilege protects communications made in confidence during a valid marriage; it applies in both civil and criminal cases, survives divorce, and may be asserted by either spouse, so the husband can block testimony about the private kitchen conversation even though his ex-wife is willing. Choice B is true only of spousal immunity, not the communications privilege. Choice C likewise describes immunity; the communications privilege operates in civil cases. Choice D applies the immunity holder rule to the wrong privilege; for confidential communications, the communicating spouse may assert the privilege himself."
+    },
+    {
+      "id": "evidence-018",
+      "subject": "evidence",
+      "subtopic": "privileges-and-policy-exclusions",
+      "rule": "Physician-patient privilege in federal court",
+      "priority": "H",
+      "difficulty": 3,
+      "stem": "A patient sued an out-of-state trucking company in federal court, invoking diversity jurisdiction and asserting a state-law negligence claim for a back injury from a highway collision. During discovery, the trucking company subpoenas a cardiologist who treated the patient years before the crash for an unrelated heart condition, seeking the patient's confidential statements to the doctor. The patient moves to quash, asserting the physician-patient privilege, which the forum state recognizes by statute. The trucking company responds that federal courts do not recognize any physician-patient privilege, so the doctor must testify. How should the court rule on which privilege law governs and whether the statements are protected?",
+      "choices": [
+        "The statements are unprotected, because federal common law supplies the privilege rules in every federal case and recognizes no physician-patient privilege.",
+        "The statements are unprotected, because the patient waived all medical privileges by filing a personal-injury suit.",
+        "State privilege law governs, and the confidential statements to the cardiologist are protected, because state law supplies the rule of decision on the negligence claim.",
+        "Federal law governs but the court must create a physician-patient privilege to mirror the forum state's policy."
+      ],
+      "correctIndex": 2,
+      "explanation": "Federal common law generally governs privileges in federal court and does not recognize a physician-patient privilege. But in a civil case, when state law supplies the rule of decision for a claim or defense, as in a diversity negligence action, state privilege law governs. Most states protect confidential communications made to a physician for purposes of diagnosis or treatment, with the patient holding the privilege. Choice A ignores the carve-out for state-law claims. Choice B overstates waiver: placing a medical condition in issue waives the privilege only as to that condition, here the back injury, not an unrelated heart condition. Choice D is wrong because the court applies the state's existing privilege law directly rather than fashioning a parallel federal privilege."
+    },
+    {
+      "id": "evidence-019",
+      "subject": "evidence",
+      "subtopic": "writings-recordings-photographs",
+      "rule": "Authentication — chain of custody",
+      "priority": "H",
+      "difficulty": 2,
+      "stem": "At a drug-possession trial, the prosecution offers a sealed bag of white powder as the substance seized from the defendant's car. The arresting officer testifies that she placed the powder in an evidence bag, sealed and initialed it, and deposited it in the police evidence locker. A lab technician testifies that he received a sealed bag bearing the officer's initials, tested the contents, and resealed it, and that the bag now offered appears in the same condition. The defense objects that the evidence custodian who transported the bag between the locker and the lab has not testified, leaving a gap in the chain of custody. How should the court rule on admissibility of the powder?",
+      "choices": [
+        "Exclude it, because every person who handled the evidence must testify before a fungible substance is admitted.",
+        "Admit it, because the testimony shows a substantially unbroken chain of custody sufficient to support a finding that the item is what the prosecution claims, and any gap goes to weight.",
+        "Exclude it, because physical evidence may be authenticated only by a witness with personal knowledge of the defendant's possession.",
+        "Admit it, because seized contraband is self-authenticating."
+      ],
+      "correctIndex": 1,
+      "explanation": "All evidence must be authenticated before admission, which requires only evidence sufficient to support a finding that the item is what its proponent claims. Physical evidence may be authenticated through witness testimony or by showing it was held in a substantially unbroken chain of custody, a standard especially apt for fungible items like powders. The chain need not be perfect: the sealed, initialed bag arriving at the lab intact supports the required finding, and minor gaps affect the weight the jury gives the evidence, not admissibility. Choice A demands a flawless chain the law does not require. Choice C describes one authentication route as if it were exclusive. Choice D is wrong because contraband is not within the narrow self-authentication categories, which cover items like certified public records, official publications, and newspapers."
+    },
+    {
+      "id": "evidence-020",
+      "subject": "evidence",
+      "subtopic": "writings-recordings-photographs",
+      "rule": "Authentication — voice recordings",
+      "priority": "H",
+      "difficulty": 2,
+      "stem": "In a prosecution for making criminal threats, the government offers a voicemail left on the victim's phone in which a male voice says he will burn down the victim's house. To authenticate the recording, the prosecution calls the victim's coworker, who testifies that she has spoken with the defendant on the telephone dozens of times over five years of working with him, that she listened to the voicemail, and that the voice is the defendant's. The defense objects that voice identification requires either expert spectrographic analysis or testimony from someone who watched the defendant record the message. How should the court rule on the authentication of the voicemail?",
+      "choices": [
+        "Exclude the recording, because lay opinion cannot establish the identity of a recorded speaker.",
+        "Exclude the recording, because a voicemail cannot be authenticated without phone-company records tracing the call.",
+        "Admit the recording only if the defendant stipulates that the voice is his.",
+        "Admit the recording, because a voice may be identified by any person who has heard the speaker and recognizes the voice."
+      ],
+      "correctIndex": 3,
+      "explanation": "A voice recording may be authenticated by the opinion of anyone who has heard the person speak, whether firsthand or through electronic transmission, and who identifies the recorded voice as the speaker's. Five years of telephone conversations gives the coworker ample familiarity, and her identification is evidence sufficient to support a finding that the speaker is the defendant; the jury then decides how much weight it deserves. Choice A is wrong because lay voice identification is an expressly recognized authentication method, and no expert analysis is required. Choice B invents a requirement; corroborating records may help but are unnecessary. Choice C is wrong because authentication is a question of conditional relevance for the court and jury, not something that depends on the opponent's stipulation."
+    },
+    {
+      "id": "evidence-021",
+      "subject": "evidence",
+      "subtopic": "writings-recordings-photographs",
+      "rule": "Best evidence rule — lost or destroyed originals",
+      "priority": "M",
+      "difficulty": 2,
+      "stem": "A landscaper sued a restaurant owner for breach of a written one-year maintenance contract, claiming the contract promised monthly payments of four thousand dollars. The restaurant owner denies that the writing contained that payment term. The landscaper testifies that the only signed original and his photocopy were both destroyed when a burst pipe flooded his office, an event confirmed by his insurance claim and a plumber's invoice, and there is no suggestion that he destroyed the documents in bad faith. The landscaper then offers his own testimony about the contract's payment term. The restaurant owner objects under the best evidence rule, insisting that only the original document can prove its contents. How should the court rule?",
+      "choices": [
+        "Overrule the objection, because when all originals are lost or destroyed through no bad faith of the proponent, other evidence of the writing's contents is admissible.",
+        "Sustain the objection, because testimony about a writing's terms is never admissible to prove its contents.",
+        "Sustain the objection, because the landscaper must first obtain a certified reconstruction of the contract.",
+        "Overrule the objection, because the best evidence rule applies only to photographs and recordings, not contracts."
+      ],
+      "correctIndex": 0,
+      "explanation": "The best evidence rule requires the original writing, recording, or photograph, or a reliable duplicate, to prove the document's contents. But secondary evidence, including oral testimony, becomes admissible when all originals are lost or destroyed and the proponent did not destroy them in bad faith, when the original cannot be obtained by judicial process, when the opponent failed to produce it after notice, or when the writing is collateral. The accidental flood satisfies the lost-or-destroyed exception, so the landscaper may testify to the payment term, with the jury weighing his credibility. Choice B ignores the recognized excuses for nonproduction. Choice C invents a procedural prerequisite that does not exist. Choice D inverts the rule's scope, which expressly covers writings such as contracts."
+    },
+    {
+      "id": "evidence-022",
+      "subject": "evidence",
+      "subtopic": "hearsay",
+      "rule": "Non-hearsay — effect on the listener",
+      "priority": "H",
+      "difficulty": 2,
+      "stem": "A motorist's brakes failed on a steep hill, and his car struck a pedestrian, who sued the motorist for negligence. To prove the motorist knew his car was dangerous yet kept driving it, the pedestrian calls a mechanic who will testify that, one week before the accident, he inspected the motorist's car and told him: 'Your brake lines are corroded and could fail at any moment; do not drive this car until they are replaced.' The motorist objects that the mechanic's statement is inadmissible hearsay because it is an out-of-court statement about the condition of the brakes. How should the court rule on the mechanic's testimony about the warning?",
+      "choices": [
+        "Exclude it, because an out-of-court statement describing a dangerous condition is hearsay regardless of the purpose for which it is offered.",
+        "Admit it, but only if the mechanic qualifies as an expert in brake systems.",
+        "Admit it, because the warning is offered to show the motorist was on notice of the danger, not to prove the brakes were actually corroded.",
+        "Exclude it, because warnings are admissible only when contained in a business record."
+      ],
+      "correctIndex": 2,
+      "explanation": "Hearsay is an out-of-court statement offered to prove the truth of the matter asserted. A statement offered for another purpose, such as showing its effect on the listener, is not hearsay. Here the warning is offered to prove the motorist heard it and therefore knew of the risk, which makes his continued driving negligent; whether the brake lines were in fact corroded can be proved by other evidence, like post-accident inspection. Choice A ignores that the hearsay definition turns on the purpose of the offer, not the statement's subject matter. Choice B confuses admissibility of the fact that a warning was given with the foundation for opinion testimony; the mechanic is reporting what he said, not offering a trial opinion. Choice D invents a limitation with no basis in the rules."
+    },
+    {
+      "id": "evidence-023",
+      "subject": "evidence",
+      "subtopic": "hearsay",
+      "rule": "Statements by a party opponent — agent or employee",
+      "priority": "H",
+      "difficulty": 2,
+      "stem": "A pedestrian was struck in a crosswalk by a van owned by a flower-delivery company and driven by one of its delivery drivers, who was making scheduled deliveries at the time. Immediately after the collision, the driver climbed out and said to the pedestrian: 'I am so sorry. I was reading the delivery app on my phone and never saw you.' The pedestrian sued the delivery company on a respondeat superior theory and, at trial, testifies to the driver's statement. The driver no longer works for the company and does not testify. The company objects that the statement is hearsay and that the driver was never authorized to speak for the company. How should the court rule?",
+      "choices": [
+        "Exclude the statement, because the driver had no authority to make admissions on the company's behalf.",
+        "Admit the statement, because it was made by the company's employee on a matter within the scope of his employment while the employment relationship existed.",
+        "Exclude the statement, because the driver is no longer employed by the company and cannot be cross-examined.",
+        "Admit the statement only as an excited utterance, because the driver spoke moments after a startling collision."
+      ],
+      "correctIndex": 1,
+      "explanation": "A statement is not hearsay when it is offered against an opposing party and was made by the party's agent or employee on a matter within the scope of that relationship and while it existed. Driving the delivery route was squarely within the driver's job, and he made the statement while still employed, so it is admissible against the company; no speaking authority is required for this branch of the rule. Choice A describes the separate authorized-spokesperson branch, which is not the only path. Choice C is wrong because what matters is employment at the time of the statement, not at trial, and party-opponent statements require no cross-examination opportunity. Choice D is unnecessary and weaker; the statement qualifies as non-hearsay outright, without resort to the excited utterance exception."
+    },
+    {
+      "id": "evidence-024",
+      "subject": "evidence",
+      "subtopic": "hearsay",
+      "rule": "Co-conspirator statements",
+      "priority": "M",
+      "difficulty": 3,
+      "stem": "Two men are charged with conspiring to rob an armored truck. At the first defendant's trial, the prosecution calls an undercover officer who infiltrated the scheme. The officer will testify that, a week before the planned robbery, the second man told him: 'My partner is getting the police scanner and the getaway car; you just handle the guard.' The prosecution has also introduced surveillance footage and financial records, independent of the statement, showing the two men planning together. The defense objects that the second man's statement is hearsay and that admitting it violates the rules because the second man does not testify. Under what conditions is the statement admissible against the first defendant?",
+      "choices": [
+        "It is inadmissible, because a co-conspirator's statement may be used only against the person who made it.",
+        "It is admissible only if the second man is unavailable to testify.",
+        "It is inadmissible, because the conspiracy may not be proved by any evidence other than the statement itself.",
+        "It is admissible, because it was made by a co-conspirator during and in furtherance of the conspiracy, and independent evidence establishes the conspiracy's existence."
+      ],
+      "correctIndex": 3,
+      "explanation": "A co-conspirator's statement is treated as a statement of a party opponent and is admissible against another conspirator when a conspiracy existed between the declarant and the defendant, the statement was made during the conspiracy, and it was made in furtherance of it; the conspiracy must be shown at least in part by evidence independent of the statement itself. Assigning roles for the planned robbery is quintessential in-furtherance activity, and the surveillance and financial records supply the independent proof. Choice A defeats the entire purpose of the exclusion, which exists to bind conspirators to each other's statements. Choice B is wrong because no unavailability showing is required for party-opponent statements. Choice C inverts the independent-evidence requirement, which demands corroboration outside the statement, not exclusion of the statement."
+    },
+    {
+      "id": "evidence-025",
+      "subject": "evidence",
+      "subtopic": "hearsay",
+      "rule": "Excited utterance",
+      "priority": "H",
+      "difficulty": 1,
+      "stem": "A tanker truck sideswiped a sedan on a highway and kept driving. A bystander mowing his lawn nearby heard the crash, ran to the smoking sedan, and helped the dazed driver out. About three minutes after the collision, while pacing, shaking, and breathing rapidly, the bystander told a responding paramedic: 'That tanker drifted right into her lane and just kept going!' By the time of the civil trial against the trucking company, the bystander has died of unrelated causes. The sedan driver offers the paramedic's testimony recounting the bystander's statement. The trucking company objects that the statement is hearsay and that the three-minute delay defeats any exception. How should the court rule?",
+      "choices": [
+        "Admit the statement, because it related to a startling event and was made while the bystander was still under the stress of excitement that the event caused.",
+        "Exclude the statement, because an excited utterance must be made simultaneously with the event it describes.",
+        "Exclude the statement, because the declarant's death prevents cross-examination.",
+        "Admit the statement only if the paramedic recorded it in an official run report."
+      ],
+      "correctIndex": 0,
+      "explanation": "A statement relating to a startling event or condition, made while the declarant was still under the stress of excitement the event caused, is excepted from the hearsay rule. A violent crash is startling, and the bystander's pacing, shaking, and rapid breathing three minutes later show he remained under its stress; a short delay is acceptable as long as the excitement persists. Choice B describes the stricter timing of the present sense impression, which requires the statement during or immediately after the event, and even that allows a slight lapse; the excited utterance has no simultaneity requirement at all. Choice C is wrong because hearsay exceptions exist precisely to admit statements of declarants who cannot testify, and this exception does not even require unavailability. Choice D invents a documentation requirement found nowhere in the rule."
+    },
+    {
+      "id": "evidence-026",
+      "subject": "evidence",
+      "subtopic": "hearsay",
+      "rule": "Statements for medical diagnosis or treatment",
+      "priority": "H",
+      "difficulty": 3,
+      "stem": "A bicyclist was struck at an intersection and taken to an emergency room. While the physician examined her, the bicyclist said: 'A pickup truck hit me on my left side and threw me onto the pavement, and the truck ran the red light.' At her later trial against the pickup driver, the bicyclist is too ill to testify, and she offers the emergency physician's testimony recounting her entire statement under the hearsay exception for statements made for medical diagnosis or treatment. The driver objects to the portion of the statement asserting that the truck ran the red light. How should the court rule on the red-light portion of the statement?",
+      "choices": [
+        "Admit it, because all statements made to a treating physician fall within the exception.",
+        "Admit it, because the cause of an injury is always pertinent to treatment.",
+        "Exclude it, because an assertion of fault is not reasonably pertinent to medical diagnosis or treatment, even though the description of being struck by a truck is.",
+        "Exclude the entire statement, because statements about past events are outside the exception."
+      ],
+      "correctIndex": 2,
+      "explanation": "The hearsay exception covers statements made for, and reasonably pertinent to, medical diagnosis or treatment that describe medical history, symptoms past or present, or the general cause of the condition. Telling the doctor she was hit on the left side by a truck and thrown to the pavement helps the physician assess the mechanism of injury and is admissible. But who had the right of way is a statement of fault that does not assist diagnosis or treatment, so the red-light portion falls outside the exception. Choice A is too broad because pertinence to treatment is the touchstone, not merely the audience. Choice B confuses general causation, which is pertinent, with attribution of legal fault, which is not. Choice D is wrong because the exception expressly includes past symptoms and medical history."
+    },
+    {
+      "id": "evidence-027",
+      "subject": "evidence",
+      "subtopic": "hearsay",
+      "rule": "Business records exception",
+      "priority": "H",
+      "difficulty": 2,
+      "stem": "A warehouse worker sued a forklift manufacturer, alleging a hydraulic failure caused his injury. To prove the forklift had a documented history of hydraulic problems, the worker offers the warehouse's maintenance log for the forklift. The warehouse's records custodian testifies that mechanics are required to record every inspection and repair in the log on the same shift the work is performed, that the entries are made by the mechanic who did the work, and that keeping the log is a regular practice of the warehouse's maintenance operation. The manufacturer objects that the log is hearsay and that the mechanics who wrote the entries must testify in person. How should the court rule on the maintenance log?",
+      "choices": [
+        "Exclude it, because a document can never substitute for live testimony about repairs.",
+        "Admit it, because it records regularly conducted activity, was made at or near the time by persons with knowledge as a regular practice, and a qualified custodian has laid the foundation.",
+        "Admit it only if every mechanic who made an entry is shown to be unavailable.",
+        "Exclude it, because records are admissible only when prepared by a neutral third party rather than a litigant's own business."
+      ],
+      "correctIndex": 1,
+      "explanation": "A record of an act, event, condition, opinion, or diagnosis is excepted from the hearsay rule if it was made at or near the time by, or from information transmitted by, someone with knowledge; was kept in the course of a regularly conducted activity; making the record was a regular practice; the foundation is laid by the custodian or another qualified witness or by certification; and the opponent does not show the source or circumstances indicate a lack of trustworthiness. The custodian's testimony satisfies each element, and the entry-writing mechanics need not testify. Choice A ignores the exception entirely. Choice C is wrong because business records require no showing of unavailability. Choice D misstates the law; a party's own records qualify, and trustworthiness concerns arise mainly for records prepared in anticipation of litigation, not routine maintenance logs."
+    },
+    {
+      "id": "evidence-028",
+      "subject": "evidence",
+      "subtopic": "hearsay",
+      "rule": "Dying declaration",
+      "priority": "M",
+      "difficulty": 3,
+      "stem": "A night clerk at a motel was shot during a robbery. As paramedics worked on him, he was pale, bleeding heavily, and gasping, and he said: 'I'm not going to make it. Tell my wife I love her. It was the man from room twelve who shot me.' Surgeons saved his life, but a stroke during surgery left him without memory of the event, and he cannot testify. The clerk's family later brought a civil battery action against the guest from room twelve, and they offer the paramedic's testimony recounting the clerk's statement identifying the shooter. The guest objects that the dying declaration exception cannot apply because the clerk did not die. How should the court rule?",
+      "choices": [
+        "Exclude the statement, because a dying declaration requires that the declarant actually died from the injury.",
+        "Exclude the statement, because dying declarations are admissible only in criminal homicide prosecutions.",
+        "Admit the statement, because any statement made by a seriously injured person is presumed reliable.",
+        "Admit the statement, because the clerk spoke under a belief of imminent death about the cause of his condition, he is now unavailable, and the exception applies in civil cases."
+      ],
+      "correctIndex": 3,
+      "explanation": "The dying declaration exception admits a statement made by a declarant who believed death was imminent, concerning the cause or circumstances of what the declarant believed to be impending death, when the declarant is unavailable; it applies in civil cases and criminal homicide prosecutions. The clerk's words and condition show a settled belief in imminent death, his identification of the shooter concerns the cause of that condition, his memory loss renders him unavailable, and this is a civil action, so every element is met. Choice A is wrong because the declarant need not actually die, only be unavailable. Choice B omits civil cases, where the exception is fully available; it is attempted-murder and other non-homicide criminal prosecutions that are excluded. Choice C states no rule; reliability flows from the specific elements, not injury alone."
+    }
+  ]
+}
