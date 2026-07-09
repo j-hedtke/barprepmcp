@@ -111,9 +111,37 @@ async function findBlob(userId, name) {
   return blobs.find((b) => b.pathname === key) || null;
 }
 
-// GET the blob's url with the RW-token Authorization header — the store is
-// private, so unauthenticated fetches of url/downloadUrl return 403.
+// Direct blob URL: keys are deterministic (x-add-random-suffix: 0) and the
+// private store's hostname is derivable from the RW token
+// (vercel_blob_rw_<STOREID>_… → <storeid>.private.blob.vercel-storage.com),
+// so reads do NOT need a list call first. List operations are Vercel Blob
+// "advanced operations" with a tight free-tier quota — a list-per-read burned
+// through it and got the store suspended on 2026-07-09. Never reintroduce it.
+function directUrl(userId, name) {
+  const m = /^vercel_blob_rw_([A-Za-z0-9]+)_/.exec(token());
+  if (!m) return null;
+  return `https://${m[1].toLowerCase()}.private.blob.vercel-storage.com/${pathname(userId, name)}`;
+}
+
+// GET the blob with the RW-token Authorization header — the store is private,
+// so unauthenticated fetches return 403. Tries the direct URL first (cheap
+// simple operation); falls back to list-then-fetch only if that 404s AND the
+// direct URL could not be derived.
 export async function getFile(userId, name) {
+  const direct = directUrl(userId, name);
+  if (direct) {
+    const r = await fetch(direct, { headers: authHeaders() });
+    if (r.status === 404) return null;
+    if (r.ok) {
+      return {
+        body: Buffer.from(await r.arrayBuffer()),
+        contentType: r.headers.get("content-type") || "application/octet-stream",
+      };
+    }
+    if (r.status !== 403) throw await blobError("blob get failed", r);
+    // 403 could be suspension or auth drift — fall through to the list path
+    // so the error surfaces consistently.
+  }
   const blob = await findBlob(userId, name);
   if (!blob) return null;
   const r = await fetch(blob.url, { headers: authHeaders() });
@@ -137,13 +165,25 @@ export async function listFiles(userId) {
 
 // DELETE via POST https://blob.vercel-storage.com/delete with { urls: [...] }.
 export async function deleteFile(userId, name) {
-  const blob = await findBlob(userId, name);
-  if (!blob) return false;
+  const direct = directUrl(userId, name);
+  let url = direct;
+  let existed = true;
+  if (direct) {
+    // Cheap existence probe (simple operation) so we can keep returning
+    // false-for-missing without a list call.
+    const head = await fetch(direct, { method: "GET", headers: authHeaders() });
+    if (head.status === 404) return false;
+    if (!head.ok && head.status !== 403) throw await blobError("blob delete probe failed", head);
+  } else {
+    const blob = await findBlob(userId, name);
+    if (!blob) return false;
+    url = blob.url;
+  }
   const r = await fetch(`${BLOB_API}/delete`, {
     method: "POST",
     headers: authHeaders({ "Content-Type": "application/json" }),
-    body: JSON.stringify({ urls: [blob.url] }),
+    body: JSON.stringify({ urls: [url] }),
   });
   if (!r.ok) throw await blobError("blob delete failed", r);
-  return true;
+  return existed;
 }
