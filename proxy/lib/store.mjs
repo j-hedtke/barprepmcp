@@ -170,8 +170,10 @@ export async function deleteFile(userId, name) {
   let existed = true;
   if (direct) {
     // Cheap existence probe (simple operation) so we can keep returning
-    // false-for-missing without a list call.
-    const head = await fetch(direct, { method: "GET", headers: authHeaders() });
+    // false-for-missing without a list call. Cache-busting query param: the
+    // edge cache (≤60s) otherwise 404s probes for freshly written blobs and
+    // the delete gets skipped.
+    const head = await fetch(`${direct}?cb=${Date.now()}`, { method: "GET", headers: authHeaders() });
     if (head.status === 404) return false;
     if (!head.ok && head.status !== 403) throw await blobError("blob delete probe failed", head);
   } else {
