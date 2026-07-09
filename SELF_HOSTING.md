@@ -10,7 +10,7 @@ Requirements: [Node.js](https://nodejs.org) ≥ 18 (macOS/Linux; Windows via WSL
 Vercel account is created during login if you don't have one.
 
 ```sh
-git clone https://github.com/<you>/barprepmcp.git && cd barprepmcp
+git clone https://github.com/j-hedtke/barprepmcp.git && cd barprepmcp
 ./scripts/self-host.sh
 ```
 
