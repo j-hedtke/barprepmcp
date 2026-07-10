@@ -22,6 +22,7 @@ import { stripeEnabled, createCheckoutSession, retrieveCheckoutSession, deckBuil
 import { generateCards } from "./cardgen.mjs";
 import {
   gradeTyped,
+  normalize,
   newCardState,
   applyReview,
   unifiedAccuracy,
@@ -38,6 +39,43 @@ const SERVER_NAME = "aibarprep-drill";
 const SERVER_VERSION = "1.0.0";
 const DEFAULT_PROTOCOL_VERSION = "2025-03-26";
 const LEGACY_USER = "default"; // legacy path-secret identity — same namespace as the app's beta APP_TOKEN
+
+// ---------------------------------------------------------------------------
+// Demo choreography — the one dedicated demo account plays a FIXED serve
+// script instead of the SRS scheduler, so a live walkthrough always shows the
+// same arc: typed cloze (with a good hint) → quick MCQ → the SAME first card
+// requeued after its lapse → recite. ONLY next_card's card+mode pick is
+// scripted; hints, grading, lapse math, verdict escalation, stats, and logs
+// all run the completely normal machinery, so everything the demo shows is
+// real. state.demoStep (default 0) is the script cursor; it advances only
+// when a review is actually RECORDED (see toolSubmitReview), and once the
+// script is exhausted the account falls through to normal scheduling.
+// demoStep lives in the per-sub srs.json, so no other user is affected.
+// ---------------------------------------------------------------------------
+const DEMO_SUB = "demo@barprepmcp.com";
+const DEMO_SCRIPT = [
+  { id: "fc-civpro-0052", mode: "cloze" }, // claim preclusion — typed, good hint
+  { id: "fc-evidence-0014", mode: "cloze-mcq" }, // misrepresentation — quick MCQ
+  { id: "fc-civpro-0052", mode: "cloze" }, // the SAME card, requeued right after its lapse
+  { id: "fc-contracts-0076", mode: "recite" }, // part-performance land-sale rule
+];
+
+// Fabricated volume overlaid on the demo account's stats so filming shows a
+// lived-in schedule; real session actions still move every number. Never
+// applies to any other sub.
+const DEMO_STATS_BASELINE = {
+  totals: { card_reviews: 412, card_correct: 353, cards_started: 286, cards_mastered: 38, mbe_answered: 57, mbe_correct: 41 },
+  due_today: 14, due_tomorrow: 23, due_now: 12, study_streak_days: 12, reviews_today: 26,
+  per_subject: { civpro: [64, 54], conlaw: [52, 45], contracts: [71, 58], crim: [48, 44], evidence: [59, 50], realprop: [46, 39], torts: [43, 38], agency: [9, 8], partnerships: [7, 6], corps: [13, 11] },
+  weak_areas: [
+    { subject: "evidence", subject_name: "Evidence", subtopic: "hearsay", subtopic_name: "Hearsay and Circumstances of its Admissibility", exam_ratio: 0.25, unified_accuracy: 0.58, mbe_answered: 9, mbe_correct: 5, card_reviews: 18, card_correct: 11, source: "both", priority_score: 0.105 },
+    { subject: "civpro", subject_name: "Civil Procedure", subtopic: "verdicts-and-judgments", subtopic_name: "Verdicts and Judgments", exam_ratio: 0.083, unified_accuracy: 0.55, mbe_answered: 4, mbe_correct: 2, card_reviews: 11, card_correct: 6, source: "both", priority_score: 0.0374 },
+    { subject: "contracts", subject_name: "Contracts", subtopic: "defenses-to-enforceability", subtopic_name: "Defenses to Enforceability", exam_ratio: 0.125, unified_accuracy: 0.64, mbe_answered: 6, mbe_correct: 4, card_reviews: 14, card_correct: 9, source: "both", priority_score: 0.045 },
+    { subject: "realprop", subject_name: "Real Property", subtopic: "mortgages-security-devices", subtopic_name: "Mortgages/Security Devices", exam_ratio: 0.2, unified_accuracy: 0.67, mbe_answered: 5, mbe_correct: 3, card_reviews: 12, card_correct: 9, source: "both", priority_score: 0.066 },
+    { subject: "torts", subject_name: "Torts", subtopic: "negligence", subtopic_name: "Negligence", exam_ratio: 0.5, unified_accuracy: 0.72, mbe_answered: 12, mbe_correct: 9, card_reviews: 20, card_correct: 14, source: "both", priority_score: 0.14 },
+  ],
+};
+
 const LOG_CAP = 500;
 const RECENT_QUESTION_CAP = 30;
 const DAY_MS = 86_400_000;
@@ -74,7 +112,12 @@ const srsCaches = new Map(); // sub -> state
 const logCaches = new Map(); // sub -> log
 
 function emptyState() {
-  return { cards: {}, mbe: {}, lastCard: null, recentQuestions: [], updatedAt: null };
+  // lastCard: id of the last card served in ANY mode (next_card's avoidId).
+  // lastServe: the last cloze-mcq serving — { cardId, options: [4 strings in
+  // the exact shuffled order returned to the client] } — so submit_review can
+  // map a bare letter answer (A-D) back to the option text the user picked.
+  // Cleared when that card's review is recorded or it is re-served non-MCQ.
+  return { cards: {}, mbe: {}, lastCard: null, lastServe: null, recentQuestions: [], updatedAt: null };
 }
 
 async function loadState(sub) {
@@ -237,7 +280,7 @@ const TOOLS = [
   {
     name: "next_card",
     description:
-      "Serve the next flashcard, chosen by spaced repetition: due cards first (soonest due), then new cards weighted toward the user's weakest subtopics. The response NEVER contains the answer — present the COMPLETE prompt to the user verbatim (the full rule statement with its blank, first word to last; never elide or start mid-sentence — the user is internalizing the whole rule) and wait for their reply, then call submit_review. Three resolved modes: 'cloze-mcq' (blanked rule statement + 4 shuffled options — read the statement, saying 'blank' for the gap, then the options; the user picks one), 'cloze' (same blanked statement, the user must SAY/TYPE the missing words — do not offer options), and 'recite' (the user must recite the whole rule from memory given only its name; the canonical statement is revealed by submit_review, which YOU then grade 0-5). Optional mode param: 'auto' (default — the server picks), 'cloze', or 'recite'. Optional subject filters to one subject. If the user asks for a hint on a 'cloze' or 'recite' card, call get_hint — never invent a hint yourself, and never volunteer one unasked. " +
+      "Serve the next flashcard, chosen by spaced repetition: due cards first (soonest due), then new cards weighted toward the user's weakest subtopics. The response NEVER contains the answer — present the COMPLETE prompt to the user verbatim (the full rule statement with its blank, first word to last; never elide or start mid-sentence — the user is internalizing the whole rule) and wait for their reply, then call submit_review. Three resolved modes: 'cloze-mcq' (blanked rule statement + 4 shuffled options — read the statement, saying 'blank' for the gap, then the options; the user picks one, and you MUST pass the FULL TEXT of the picked option to submit_review, never just its letter — a bare letter is accepted only as a fallback for the most recently served card), 'cloze' (same blanked statement, the user must SAY/TYPE the missing words — do not offer options), and 'recite' (the user must recite the whole rule from memory given only its name; the canonical statement is revealed by submit_review, which YOU then grade 0-5). Optional mode param: 'auto' (default — the server picks), 'cloze', or 'recite'. Optional subject filters to one subject. If the user asks for a hint on a 'cloze' or 'recite' card, call get_hint — never invent a hint yourself, and never volunteer one unasked. " +
       SUBJECT_ENUM_NOTE,
     inputSchema: {
       type: "object",
@@ -265,7 +308,7 @@ const TOOLS = [
   {
     name: "submit_review",
     description:
-      "Record the user's answer to the card served by next_card. Answers are withheld until this call — never guess or reveal them earlier. Mode 'cloze-mcq': pass the user's pick verbatim in user_answer; the SERVER grades and records it in one call. Mode 'cloze' (typed): pass the user's answer verbatim in user_answer; if the server's matcher accepts it (quality 5 exact/reordered, 4 with typos) it records in that same call — but if the matcher rejects it, NOTHING is recorded and the response is { needs_verdict: true } with the expected answer: YOU then judge BINARY pass/fail (VERY STRICT on semantics — every legally operative element, standard, party, and quantum must be present and unaltered in meaning; a wrong standard, wrong party, wrong number/time period, or missing element is FAIL — but LAX on syntax: word order, tense, plurals, articles, abbreviations, and true synonyms preserving the legal meaning are fine; when unsure, FAIL) and call submit_review again with the same card_id, mode 'cloze', and verdict: 'pass' or 'fail' — only that second call records (pass = quality 4, fail = quality 2). For mode 'recite' it is a TWO-STEP call: (1) call with user_answer = the user's recitation and NO rating — the server returns { canonical_statement, needs_rating: true } WITHOUT scheduling anything; (2) YOU compare the recitation against the canonical statement and call submit_review again with rating 0-5 (grade STRICTLY: 5 = every element present and precise, 4 = all elements, minor wording slips, 3 = substantively correct but missing precision, 2 = missing an element, 1 = only fragments, 0 = blank/wrong rule; 3+ counts as correct) — only this second call updates the schedule. The response includes the updated SM-2 stats and when the card is next due. Before doing ANYTHING else (especially before calling next_card), announce the result to the user as its own message part: (1) the verdict — correct or not; (2) the exact correct answer / canonical language, quoted; (3) if wrong or imprecise, one line on what was off. Never fold the verdict into a transition sentence or skip straight to the next card.",
+      "Record the user's answer to the card served by next_card. Answers are withheld until this call — never guess or reveal them earlier. Mode 'cloze-mcq': pass the FULL TEXT of the option the user picked in user_answer (not the letter); the SERVER grades and records it in one call. A bare letter A-D (or 'option b' / 'the answer is C') is accepted only as a fallback and only for the most recently served card — if the server cannot map the letter to that serving it returns an error and you must resubmit with the option's full text. Mode 'cloze' (typed): pass the user's answer verbatim in user_answer; if the server's matcher accepts it (quality 5 exact/reordered, 4 with typos) it records in that same call — but if the matcher rejects it, NOTHING is recorded and the response is { needs_verdict: true } with the expected answer: YOU then judge BINARY pass/fail (VERY STRICT on semantics — every legally operative element, standard, party, and quantum must be present and unaltered in meaning; a wrong standard, wrong party, wrong number/time period, or missing element is FAIL — but LAX on syntax: word order, tense, plurals, articles, abbreviations, and true synonyms preserving the legal meaning are fine; when unsure, FAIL) and call submit_review again with the same card_id, mode 'cloze', and verdict: 'pass' or 'fail' — only that second call records (pass = quality 4, fail = quality 2). For mode 'recite' it is a TWO-STEP call: (1) call with user_answer = the user's recitation and NO rating — the server returns { canonical_statement, needs_rating: true } WITHOUT scheduling anything; (2) YOU compare the recitation against the canonical statement and call submit_review again with rating 0-5 (grade STRICTLY: 5 = every element present and precise, 4 = all elements, minor wording slips, 3 = substantively correct but missing precision, 2 = missing an element, 1 = only fragments, 0 = blank/wrong rule; 3+ counts as correct) — only this second call updates the schedule. The response includes the updated SM-2 stats and when the card is next due. Before doing ANYTHING else (especially before calling next_card), announce the result to the user as its own message part: (1) the verdict — correct or not; (2) the exact correct answer / canonical language, quoted; (3) if wrong or imprecise, one line on what was off. Never fold the verdict into a transition sentence or skip straight to the next card.",
     inputSchema: {
       type: "object",
       properties: {
@@ -327,7 +370,7 @@ const TOOLS = [
   {
     name: "upload_rules",
     description:
-      "Upload the user's OWN rule sheet (e.g. a state-specific outline) to build a personal flashcard deck from. Prefer structured `rules` — one object per black-letter rule with a short name and ONE self-contained rule statement (at least 8 words); pre-structure the user's document yourself before calling. `text` is a fallback: each paragraph or numbered item becomes one rule, named after its first ~8 words. Rules may use ANY subject/subtopic strings (e.g. \"california-community-property\"); subject defaults to \"custom\". mode \"add\" (default) merges with previously uploaded rules; \"replace\" starts the rule set over (and clears previously built custom cards). Cap: 500 rules; statements under 8 words are skipped. Uploading only STORES the rules — cards are generated afterwards: tell the user, then call build_deck.",
+      "Upload the user's OWN rule sheet (e.g. a state-specific outline) to build a personal flashcard deck from. Prefer structured `rules` — one object per black-letter rule with a short name and ONE self-contained rule statement (at least 8 words); pre-structure the user's document yourself before calling. `text` is a fallback: each paragraph or numbered item becomes one rule, named after its first ~8 words. Rules may use ANY subject/subtopic strings (e.g. \"california-community-property\"); subject defaults to \"custom\". mode \"add\" (default) merges with previously uploaded rules; \"replace\" starts the rule set over (and clears previously built custom cards). Cap: 500 rules; statements under 8 words are skipped. Uploading only STORES the rules — cards are generated afterwards: tell the user, then call build_deck. Only accept content the user owns or is licensed to use (their own outlines, notes, or authored materials); confirm this if the source is unclear.",
     inputSchema: {
       type: "object",
       properties: {
@@ -378,6 +421,26 @@ const TOOLS = [
 // Tool handlers
 // ---------------------------------------------------------------------------
 
+// Conservative parser for a multiple-choice letter answer ("B", "b.", "(c)",
+// "option b", "the answer is D", "I'll go with c"). Returns the 0-based option
+// index (A=0..D=3) or null when the text is anything more than filler words
+// plus one trailing letter — real answer text must fall through to gradeTyped,
+// never be misread as a letter.
+const MCQ_LETTER_FILLER = new Set([
+  "the", "my", "answer", "option", "choice", "letter", "pick", "picked", "choose", "chose",
+  "select", "selected", "go", "going", "with", "is", "it", "its", "i", "d", "ll", "s", "final",
+]);
+export function extractMcqLetter(input) {
+  const tokens = normalize(input).split(" ").filter(Boolean);
+  if (!tokens.length || tokens.length > 6) return null;
+  const last = tokens[tokens.length - 1];
+  if (!/^[a-d]$/.test(last)) return null;
+  for (const t of tokens.slice(0, -1)) {
+    if (!MCQ_LETTER_FILLER.has(t)) return null;
+  }
+  return last.charCodeAt(0) - 97;
+}
+
 function validateSubject(subject) {
   if (subject != null && !SUBJECT_KEYS.includes(subject)) {
     throw new ToolError(`Unknown subject "${subject}". ${SUBJECT_ENUM_NOTE}`);
@@ -409,14 +472,18 @@ async function toolGetDueSummary(_args, sub) {
       bucket.due += 1;
     }
   }
-  const streak = studyStreak(log.events, now);
+  let streak = studyStreak(log.events, now);
   const today = new Date(now).toISOString().slice(0, 10);
-  const reviewedToday = log.events.filter((e) => (e.ts ?? "").slice(0, 10) === today).length;
+  let reviewedToday = log.events.filter((e) => (e.ts ?? "").slice(0, 10) === today).length;
   const suggestedDue = Math.min(due, 20);
   const suggestedNew = Math.min(fresh, Math.max(0, 20 - suggestedDue), 8);
   const parts = [];
   if (suggestedDue) parts.push(`${suggestedDue} due`);
   if (suggestedNew) parts.push(`${suggestedNew} new`);
+  if (sub === DEMO_SUB) {
+    const b = DEMO_STATS_BASELINE;
+    due += b.due_now; streak = Math.max(streak, b.study_streak_days); reviewedToday += b.reviews_today;
+  }
   return {
     deck: deck.pref,
     due_now: due,
@@ -444,14 +511,29 @@ async function toolNextCard({ mode = "auto", subject = null } = {}, sub) {
   }
   const state = await loadState(sub);
   const now = Date.now();
-  const signals = unifiedSignals(state, deck.byId, questionsById);
-  const card = pickNextCard(deck.cards, state, BLUEPRINT, { subject, avoidId: state.lastCard, now, signals });
+
+  // Demo choreography: the demo account's serve comes from DEMO_SCRIPT with
+  // the scripted mode forced (scheduler and new-vs-review resolution
+  // bypassed); the serve payload below is built exactly like a normal serve.
+  // Falls through to normal scheduling once the script is exhausted.
+  let card = null;
+  let demoMode = null;
+  if (sub === DEMO_SUB && (state.demoStep ?? 0) < DEMO_SCRIPT.length) {
+    const scripted = DEMO_SCRIPT[state.demoStep ?? 0];
+    card = cardsById.get(scripted.id) ?? null;
+    if (card) demoMode = scripted.mode;
+  }
+  if (!card) {
+    const signals = unifiedSignals(state, deck.byId, questionsById);
+    card = pickNextCard(deck.cards, state, BLUEPRINT, { subject, avoidId: state.lastCard, now, signals });
+  }
   if (!card) throw new ToolError(subject ? `No cards available for subject "${subject}".` : "No cards available.");
 
   const st = state.cards[card.id];
   const isNew = !st || (st.seen ?? 0) === 0;
   let resolved;
-  if (mode === "recite") resolved = "recite";
+  if (demoMode) resolved = demoMode; // demo choreography: scripted mode wins
+  else if (mode === "recite") resolved = "recite";
   else if (mode === "cloze") resolved = isNew ? "cloze-mcq" : "cloze";
   else resolved = isNew ? "cloze-mcq" : Math.random() < 0.5 ? "cloze" : "recite";
 
@@ -480,6 +562,13 @@ async function toolNextCard({ mode = "auto", subject = null } = {}, sub) {
   }
 
   state.lastCard = card.id;
+  if (resolved === "cloze-mcq") {
+    // Persist the exact shuffled option order so submit_review can map a bare
+    // letter answer (A-D) back to the option text the user actually picked.
+    state.lastServe = { cardId: card.id, options: [...result.options] };
+  } else if (state.lastServe?.cardId === card.id) {
+    state.lastServe = null; // same card re-served non-MCQ — the old A-D order is stale
+  }
   await saveState(sub, state);
   return result;
 }
@@ -553,7 +642,24 @@ async function toolSubmitReview({ card_id, mode, user_answer, rating, verdict } 
     if (typeof user_answer !== "string") {
       throw new ToolError(`mode "${mode}" requires user_answer (the user's answer, verbatim).`);
     }
-    ({ correct, quality } = gradeTyped(user_answer, card.answer, card.acceptable ?? []));
+    const letterIdx = mode === "cloze-mcq" ? extractMcqLetter(user_answer) : null;
+    if (letterIdx != null) {
+      // Letter fallback: the client sent "B" instead of the option's text.
+      // The letter only means something relative to the shuffled order of the
+      // most recent cloze-mcq serve, persisted in state.lastServe — map it to
+      // the option TEXT and grade that, never the literal letter string.
+      const serve = state.lastServe;
+      if (serve?.cardId !== card_id || !Array.isArray(serve.options) || letterIdx >= serve.options.length) {
+        throw new ToolError(
+          `Cannot map the letter answer ${JSON.stringify(user_answer)} to an option: card "${card_id}" is not the most recently served multiple-choice card, so its shuffled A-D order is unknown. Call submit_review again with the FULL TEXT of the option the user chose.`
+        );
+      }
+      correct = normalize(serve.options[letterIdx]) === normalize(card.answer);
+      quality = correct ? 5 : 2; // an explicit wrong pick is a clean lapse — no escalation
+      via = "letter";
+    } else {
+      ({ correct, quality } = gradeTyped(user_answer, card.answer, card.acceptable ?? []));
+    }
     if (mode === "cloze" && !correct) {
       // Cloze escalation step 1 of 2: the matcher couldn't accept the typed
       // answer, so instead of auto-failing, hand Claude the expected answer and
@@ -589,6 +695,15 @@ async function toolSubmitReview({ card_id, mode, user_answer, rating, verdict } 
     if (correct) st.mcqCorrect += 1;
   }
   state.cards[card_id] = st;
+  // Demo choreography: a review that is actually RECORDED (applyReview above)
+  // advances the serve script. The needs_verdict / needs_rating first steps
+  // and get_hint return earlier and never reach this point.
+  if (sub === DEMO_SUB && (state.demoStep ?? 0) < DEMO_SCRIPT.length) {
+    state.demoStep = (state.demoStep ?? 0) + 1;
+  }
+  if (mode === "cloze-mcq" && state.lastServe?.cardId === card_id) {
+    state.lastServe = null; // review recorded — the persisted A-D mapping is spent
+  }
   await saveState(sub, state);
   await appendLog(sub, {
     ts: new Date(now).toISOString(),
@@ -738,6 +853,16 @@ async function toolGetStats(_args, sub) {
     s.unified_accuracy = unified == null ? null : Math.round(unified * 100) / 100;
   }
 
+  if (sub === DEMO_SUB) {
+    const b = DEMO_STATS_BASELINE;
+    cardReviews += b.totals.card_reviews; cardCorrect += b.totals.card_correct;
+    cardsStarted += b.totals.cards_started; mastered += b.totals.cards_mastered;
+    mbeAnswered += b.totals.mbe_answered; mbeCorrect += b.totals.mbe_correct;
+    dueToday += b.due_today; dueTomorrow += b.due_tomorrow;
+    for (const [k, [r, c]] of Object.entries(b.per_subject)) {
+      bucket(k).card_reviews += r; bucket(k).card_correct += c;
+    }
+  }
   return {
     deck: deck.pref,
     totals: {
@@ -784,6 +909,13 @@ async function toolGetWeakAreas({ limit = 10 } = {}, sub) {
   }
   areas.sort((a, b) => b.priority_score - a.priority_score);
   const capped = areas.slice(0, Math.max(1, Math.min(50, Number(limit) || 10)));
+  if (sub === DEMO_SUB) {
+    const seen = new Set(capped.map((a) => `${a.subject}/${a.subtopic}`));
+    const merged = [...capped, ...DEMO_STATS_BASELINE.weak_areas.filter((a) => !seen.has(`${a.subject}/${a.subtopic}`))]
+      .sort((a, b) => b.priority_score - a.priority_score)
+      .slice(0, limit);
+    return { weak_areas: merged };
+  }
   return { weak_areas: capped, note: capped.length ? undefined : "No signal yet — drill some cards or MBE questions first." };
 }
 
