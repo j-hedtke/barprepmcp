@@ -9,7 +9,7 @@
 //   ANTHROPIC_API_BASE  API origin (default https://api.anthropic.com;
 //                       overridable so tests can point at a local stub)
 // The API key is supplied per call by lib/mcp.mjs (always the server's
-// ANTHROPIC_API_KEY, after a paid Stripe build credit).
+// ANTHROPIC_API_KEY; builds are enabled via SELF_HOST_FREE_BUILDS=1).
 
 const anthropicBase = () => process.env.ANTHROPIC_API_BASE || "https://api.anthropic.com";
 const cardgenModel = () => process.env.CARDGEN_MODEL || "claude-fable-5";

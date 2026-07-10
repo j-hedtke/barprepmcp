@@ -112,24 +112,12 @@ const server = http.createServer(async (req, res) => {
       const user = verifyBearerToken(authHeader);
       if (!user) return sendResult(res, unauthorized(requestOrigin(req), Boolean(authHeader)), CORS_HEADERS);
       if (req.method !== "POST") return sendJson(res, 405, { error: "method_not_allowed" });
-      return sendResult(res, await handleMcpRpc(await readRaw(req), user.sub, requestOrigin(req)), CORS_HEADERS);
+      return sendResult(res, await handleMcpRpc(await readRaw(req), user.sub), CORS_HEADERS);
     }
     // Legacy path-secret MCP route (active only when MCP_SECRET is set; curl testing).
     if (path.startsWith("/mcp/")) {
       const raw = req.method === "POST" ? await readRaw(req) : Buffer.alloc(0);
-      return sendResult(res, await handleMcp(req.method, path, raw, requestOrigin(req)));
-    }
-
-    // Stripe Checkout landing page for custom deck builds (lib/billing.mjs).
-    if (req.method === "GET" && path === "/billing/success") {
-      res.writeHead(200, { "Content-Type": "text/html; charset=utf-8" });
-      return res.end(
-        "<!doctype html><html><head><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"><title>AI Bar Prep</title></head>" +
-          "<body style=\"font-family:-apple-system,system-ui,sans-serif;max-width:34rem;margin:15vh auto;padding:0 1.5rem;text-align:center\">" +
-          "<h1 style=\"font-size:1.5rem\">Payment received &#10003;</h1>" +
-          "<p>Go back to Claude and say <strong>&ldquo;continue building my deck&rdquo;</strong>.</p>" +
-          "</body></html>"
-      );
+      return sendResult(res, await handleMcp(req.method, path, raw));
     }
 
     // Per-user content store: PUT/GET/DELETE /content/<name>, GET /content (list).

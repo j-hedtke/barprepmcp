@@ -19,8 +19,8 @@ export const MAX_CONTENT_BYTES = 256 * 1024; // 256 KB per file
 // registry (lib/registry.mjs) stored under the reserved "_system" userId —
 // harmless under a real user's namespace, but /content refuses the "_system"
 // namespace itself (see lib/content.mjs). custom-rules.json / custom-cards.json
-// / prefs.json / billing.json / build-state.json hold per-user custom decks and
-// the paid deck-build state (see lib/mcp.mjs).
+// / prefs.json / build-state.json hold per-user custom decks and the resumable
+// deck-build state (see lib/mcp.mjs).
 const FIXED_NAMES = new Set([
   "progress.json",
   "focus.json",
@@ -31,7 +31,6 @@ const FIXED_NAMES = new Set([
   "custom-rules.json",
   "custom-cards.json",
   "prefs.json",
-  "billing.json",
   "build-state.json",
 ]);
 const CONTENT_NAME_RE = /^content-[A-Za-z0-9_-]{1,64}\.(md|json)$/;

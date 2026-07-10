@@ -9,10 +9,9 @@ follows you across devices.
 ## Quick start
 
 1. **Add the connector.** Go to [claude.ai](https://claude.ai) → **Settings** →
-   **Connectors** → **Add custom connector** and enter your deployment's URL
-   (`scripts/self-host.sh` prints it):
+   **Connectors** → **Add custom connector** and enter:
    ```
-   https://<your-deployment>.vercel.app/mcp
+   https://aibarprep-proxy.vercel.app/mcp
    ```
 2. **Create your account.** Claude opens the AI Bar Prep sign-in page. Switch to the
    **Create account** tab — sign-ups are invite-only, so you'll need an invite code
@@ -26,10 +25,9 @@ follows you across devices.
    [`PROJECT_INSTRUCTIONS.md`](./PROJECT_INSTRUCTIONS.md).
 5. **Drill.** Start a chat in the Project, confirm the connector is toggled on, and
    say **"drill me"**. Claude pulls what's due and starts a session against the
-   bundled deck (a small black-letter-law sample plus a 196-question MBE bank —
-   build a full deck from your own rule sheet, see below). New cards start as
-   multiple choice; reviews graduate to typed fill-in-the-blank and full
-   recitation graded 0–5.
+   default deck — 575 cards across 10 subjects of black-letter law, plus a
+   196-question MBE bank. New cards start as multiple choice; reviews graduate to
+   typed fill-in-the-blank and full recitation graded 0–5.
 
 Connectors are account-level: add it once and it's available on mobile too.
 
@@ -51,6 +49,13 @@ with no changes — the coach instructions already cover it.
 
 ## Optional: bring your own rule sheet
 
+**Heads-up before you paste anything: on the hosted service, custom deck builds are
+currently in preview.** Trying a build registers your interest (so the operator knows
+you want it) and your uploaded rules are kept safe for the moment builds go live —
+but no cards are generated yet. If you want to build a custom deck *today*, self-host
+with your own Anthropic API key and builds are free — see
+[`SELF_HOSTING.md`](../SELF_HOSTING.md).
+
 The default deck covers the standard subjects, but if you have your own outline — a
 state-specific rule sheet, a bar-course handout, your class notes — you can build a
 custom deck from it, right inside Claude.
@@ -62,14 +67,12 @@ custom deck from it, right inside Claude.
    content you own or are licensed to use.
 2. **Build the deck.** Ask Claude to build your deck; it calls `build_deck`, which
    generates high-quality cloze cards, distractors, and hints from your rules using
-   the Anthropic API. **When self-hosting, builds are free** on your own
-   `ANTHROPIC_API_KEY` with `SELF_HOST_FREE_BUILDS=1` set (the deploy script offers
-   both) — you pay Anthropic directly for what you generate. (On a hosted instance
-   without free builds, the first `build_deck` call returns a Stripe Checkout link;
-   pay, then say **"continue building"**.) Building is **chunked**: each call
-   processes a batch, and Claude keeps calling `build_deck` until the server reports
-   `done: true`. If a session gets cut off, just say **"continue building"** — it
-   resumes where it stopped.
+   the Anthropic API. Building is **chunked**: each call processes a batch, so keep
+   saying **"continue building"** until the server reports `done: true`. If a session
+   gets cut off, just say **"continue building"** — it resumes where it stopped.
+   **On the hosted service** builds are in preview: trying registers your interest
+   and your uploaded rules are kept, ready for when builds switch on. **Self-hosters**
+   build free with their own key (see [`SELF_HOSTING.md`](../SELF_HOSTING.md)).
 3. **Choose what you drill.** Ask Claude to call `set_deck` with `default`, `custom`,
    or `both`. The bundled deck is the default; `both` interleaves your custom cards
    with it.
@@ -80,8 +83,8 @@ one.
 ## Troubleshooting
 
 **Connector won't add / sign-in page never appears**
-- Check the URL: exactly `https://<your-deployment>.vercel.app/mcp` — no trailing path.
-- Confirm the server is up: `curl -s https://<your-deployment>.vercel.app/.well-known/oauth-authorization-server`
+- Check the URL: exactly `https://aibarprep-proxy.vercel.app/mcp` — no trailing path.
+- Confirm the server is up: `curl -s https://aibarprep-proxy.vercel.app/.well-known/oauth-authorization-server`
   should return JSON metadata, not a 404 page.
 
 **Sign-in rejects your email/password**
@@ -99,11 +102,11 @@ one.
 - If it persists, contact support (see the server operator's contact info).
 
 **Custom deck build stalls**
-- Say **"continue building"** — builds are chunked and resumable; nothing is lost,
-  and your payment covers the whole build.
-- If you got a payment link, complete checkout in the browser first, then continue.
-- If `build_deck` says custom deck builds are not available, the server operator
-  hasn't configured payments — nothing you can do client-side.
+- Say **"continue building"** — builds are chunked and resumable; nothing is lost.
+- If `build_deck` says custom deck builds aren't switched on yet, that's the hosted
+  service's preview mode: your interest is recorded and your uploaded rules are kept.
+  To build today, self-host with your own Anthropic key
+  ([`SELF_HOSTING.md`](../SELF_HOSTING.md)).
 
 ## Admin notes (server operators only)
 
@@ -126,16 +129,14 @@ Everything below is configuration on the Vercel project
   password). Still honored alongside self-serve signup; not invite-gated.
 - `MCP_SECRET` — optional legacy path secret: `POST /mcp/<MCP_SECRET>` maps to the
   shared `default` user, handy for curl testing. Unset to disable.
-- `STRIPE_SECRET_KEY` — **required for custom deck builds**: all `build_deck` runs
-  are paid via Stripe Checkout. Unset, `build_deck` returns a clear "not available"
-  error.
-- `DECK_BUILD_PRICE_CENTS` — price of one deck build, in cents.
+- `SELF_HOST_FREE_BUILDS` — set to `1` (together with `ANTHROPIC_API_KEY`) to
+  enable custom deck builds, free on the operator's own key. With either unset,
+  `build_deck` answers with the friendly preview message and records the user's
+  interest (`users/_system/interest.json`); uploaded rules are kept.
 - `CARDGEN_MODEL` — optional override of the Anthropic model used for card
   generation.
-- `ANTHROPIC_API_KEY` — the service key used for all deck builds (and `/generate`).
-  If it's missing while Stripe is configured, `build_deck` fails with
-  `server_misconfigured` *before* creating a Checkout session — users are never
-  asked to pay for a build the server can't run.
+- `ANTHROPIC_API_KEY` — the service key used for deck builds (and `/generate`).
+  Generation spend lands on this key, so watch usage if you enable builds.
 
 Debugging: without a token, `POST /mcp` should return HTTP 401 with a
 `WWW-Authenticate: Bearer resource_metadata=…` header. Check function logs via the

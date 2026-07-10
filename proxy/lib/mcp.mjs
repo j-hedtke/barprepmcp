@@ -18,7 +18,6 @@ import path from "node:path";
 import { timingSafeEqual } from "node:crypto";
 import { fileURLToPath } from "node:url";
 import { getFile, putFile } from "./store.mjs";
-import { stripeEnabled, createCheckoutSession, retrieveCheckoutSession, deckBuildPriceCents } from "./billing.mjs";
 import { generateCards } from "./cardgen.mjs";
 import {
   gradeTyped,
@@ -176,9 +175,10 @@ async function appendLog(sub, event) {
 // ---------------------------------------------------------------------------
 // Per-user custom decks: rules uploaded via upload_rules live in
 // users/<sub>/custom-rules.json; build_deck turns them into flashcards in
-// users/<sub>/custom-cards.json (chunked + resumable via build-state.json,
-// paid via billing.json — one-time Stripe Checkout build credit; generation
-// always runs on the server's ANTHROPIC_API_KEY); set_deck stores the deck
+// users/<sub>/custom-cards.json (chunked + resumable via build-state.json).
+// Generation runs only when the operator enables it (SELF_HOST_FREE_BUILDS=1
+// plus the server's ANTHROPIC_API_KEY); otherwise build_deck answers with the
+// preview easter egg and records interest. set_deck stores the deck
 // preference in prefs.json. Same module-level per-sub cache pattern as
 // srs.json above.
 // ---------------------------------------------------------------------------
@@ -211,7 +211,6 @@ async function saveUserJson(sub, name, doc) {
 
 const loadRules = (sub) => loadUserJson(sub, "custom-rules.json", () => ({ rules: [] }));
 const loadPrefs = (sub) => loadUserJson(sub, "prefs.json", () => ({ deck: "default" }));
-const loadBilling = (sub) => loadUserJson(sub, "billing.json", () => ({ credits: 0, pendingSession: null }));
 const loadBuildState = (sub) => loadUserJson(sub, "build-state.json", () => ({}));
 
 async function loadCustomDeck(sub) {
@@ -370,7 +369,7 @@ const TOOLS = [
   {
     name: "upload_rules",
     description:
-      "Upload the user's OWN rule sheet (e.g. a state-specific outline) to build a personal flashcard deck from. Prefer structured `rules` — one object per black-letter rule with a short name and ONE self-contained rule statement (at least 8 words); pre-structure the user's document yourself before calling. `text` is a fallback: each paragraph or numbered item becomes one rule, named after its first ~8 words. Rules may use ANY subject/subtopic strings (e.g. \"california-community-property\"); subject defaults to \"custom\". mode \"add\" (default) merges with previously uploaded rules; \"replace\" starts the rule set over (and clears previously built custom cards). Cap: 500 rules; statements under 8 words are skipped. Uploading only STORES the rules — cards are generated afterwards: tell the user, then call build_deck. Only accept content the user owns or is licensed to use (their own outlines, notes, or authored materials); confirm this if the source is unclear.",
+      "Upload the user's OWN rule sheet (e.g. a state-specific outline) to build a personal flashcard deck from. Prefer structured `rules` — one object per black-letter rule with a short name and ONE self-contained rule statement (at least 8 words); pre-structure the user's document yourself before calling. `text` is a fallback: each paragraph or numbered item becomes one rule, named after its first ~8 words. Rules may use ANY subject/subtopic strings (e.g. \"california-community-property\"); subject defaults to \"custom\". mode \"add\" (default) merges with previously uploaded rules; \"replace\" starts the rule set over (and clears previously built custom cards). Cap: 500 rules; statements under 8 words are skipped. Uploading only STORES the rules — cards are generated afterwards: tell the user, then call build_deck. If custom deck builds are not enabled on this server (build_deck answers with a not-enabled preview message), tell the user BEFORE they paste any material that uploading stages their rules for later and records their interest, and get their go-ahead first. Only accept content the user owns or is licensed to use (their own outlines, notes, or authored materials); confirm this if the source is unclear.",
     inputSchema: {
       type: "object",
       properties: {
@@ -399,7 +398,7 @@ const TOOLS = [
   {
     name: "build_deck",
     description:
-      "Generate flashcards from the rules stored by upload_rules. Each call processes ~8 rules (serverless time limit), so YOU MUST KEEP CALLING build_deck until the response has done: true — after each call, report progress briefly and immediately call it again. Card generation is paid for with a one-time Stripe Checkout credit per deck build: if the response contains payment_required with a checkout_url, give the user the link, and once they say they've paid, call build_deck again to verify the payment and continue the build. Invalid model-generated cards are dropped and counted in cards_dropped_invalid. When done: true, suggest set_deck to start drilling the custom cards. (Preview note: if builds are not yet enabled on this server, the tool returns a friendly message and records the user's interest — relay it warmly and continue with the default deck.)",
+      "Generate flashcards from the rules stored by upload_rules. Each call processes ~8 rules (serverless time limit), so YOU MUST KEEP CALLING build_deck until the response has done: true — after each call, report progress briefly and immediately call it again. Builds are resumable: if a session is cut off, calling build_deck again picks up where it stopped. Invalid model-generated cards are dropped and counted in cards_dropped_invalid. When done: true, suggest set_deck to start drilling the custom cards. (Preview note: if builds are not enabled on this server, the tool returns a friendly not-enabled message and records the user's interest — relay it warmly, reassure them their uploaded rules are saved, and continue with the default deck.)",
     inputSchema: { type: "object", properties: {}, additionalProperties: false },
   },
   {
@@ -920,7 +919,7 @@ async function toolGetWeakAreas({ limit = 10 } = {}, sub) {
 }
 
 // ---------------------------------------------------------------------------
-// Custom deck tools: upload_rules → build_deck (chunked/resumable/paid) →
+// Custom deck tools: upload_rules → build_deck (chunked/resumable) →
 // set_deck.
 // ---------------------------------------------------------------------------
 
@@ -965,16 +964,12 @@ async function toolUploadRules({ rules, text, mode = "add" } = {}, sub) {
   await saveUserJson(sub, "custom-rules.json", { rules: all, updatedAt: new Date().toISOString() });
   if (mode === "replace") await saveCustomDeck(sub, []);
 
-  // Reset the resumable build to cover the full rule set. A paid-but-unfinished
-  // build keeps its credit when the user merely adds more rules.
-  const priorState = await loadBuildState(sub);
-  const keepPaid = mode === "add" && priorState.paid === true && (priorState.nextIndex ?? 0) < (priorState.totalRules ?? 0);
+  // Reset the resumable build to cover the full rule set.
   await saveUserJson(sub, "build-state.json", {
     totalRules: all.length,
     nextIndex: 0,
     cardsBuilt: 0,
     startedAt: new Date().toISOString(),
-    paid: keepPaid,
   });
 
   return {
@@ -986,7 +981,7 @@ async function toolUploadRules({ rules, text, mode = "add" } = {}, sub) {
   };
 }
 
-// Interest counter for the not-yet-enabled paid build feature: appends per-sub
+// Interest counter for the not-yet-enabled build feature: appends per-sub
 // counts to users/_system/interest.json so demand is measurable. Best-effort.
 async function recordBuildInterest(sub) {
   try {
@@ -1003,7 +998,7 @@ async function recordBuildInterest(sub) {
   }
 }
 
-async function toolBuildDeck(_args, sub, ctx = {}) {
+async function toolBuildDeck(_args, sub) {
   const rulesDoc = await loadRules(sub);
   const rules = Array.isArray(rulesDoc.rules) ? rulesDoc.rules : [];
   if (!rules.length) throw new ToolError("No custom rules uploaded — call upload_rules first.");
@@ -1015,7 +1010,6 @@ async function toolBuildDeck(_args, sub, ctx = {}) {
       nextIndex: 0,
       cardsBuilt: 0,
       startedAt: new Date().toISOString(),
-      paid: false,
     };
   }
   if (state.nextIndex >= state.totalRules) {
@@ -1029,18 +1023,13 @@ async function toolBuildDeck(_args, sub, ctx = {}) {
     };
   }
 
-  // --- payment gate ------------------------------------------------------
-  // Builds always run on the server's ANTHROPIC_API_KEY, paid for with a
-  // one-time Stripe Checkout build credit. Check order matters: the
-  // missing-env-key case must fail BEFORE any Stripe call so we never take
-  // (or even request) a payment for a build the server cannot run.
+  // --- build gate ----------------------------------------------------------
+  // Builds run only when the operator has switched them on: self-host mode
+  // (SELF_HOST_FREE_BUILDS=1) with the server's own ANTHROPIC_API_KEY — the
+  // operator pays Anthropic directly for what they generate. In every other
+  // configuration the feature is a preview easter egg.
   const apiKey = process.env.ANTHROPIC_API_KEY;
-  // Self-host mode: the operator pays Anthropic directly on their own key, so
-  // builds are free — no Stripe, no easter egg. Never set on the hosted service.
-  if (!state.paid && process.env.SELF_HOST_FREE_BUILDS === "1" && apiKey) {
-    state.paid = true;
-  }
-  if (!state.paid && !stripeEnabled()) {
+  if (process.env.SELF_HOST_FREE_BUILDS !== "1" || !apiKey) {
     // Preview easter egg: the feature is advertised but not switched on.
     // Record the request as an interest signal (best-effort) and respond
     // warmly as a NORMAL result so the client relays it, not as an error.
@@ -1054,54 +1043,6 @@ async function toolBuildDeck(_args, sub, ctx = {}) {
         "uploaded rules are safely stored, so the moment builds go live you're first in line. " +
         "If enough people ask, it ships. Tell the operator you want it!",
     };
-  }
-  if (!apiKey) {
-    throw new ToolError(
-      "server_misconfigured: card generation is unavailable — the server has no ANTHROPIC_API_KEY configured. No payment was requested; ask the server operator to fix this."
-    );
-  }
-  if (!state.paid) {
-    const billing = await loadBilling(sub);
-    billing.credits = Number.isInteger(billing.credits) ? billing.credits : 0;
-    if (billing.pendingSession) {
-      let session = null;
-      try {
-        session = await retrieveCheckoutSession(billing.pendingSession);
-      } catch {
-        session = null;
-      }
-      if (session?.payment_status === "paid") {
-        billing.credits += 1;
-        billing.pendingSession = null;
-        await saveUserJson(sub, "billing.json", billing);
-      } else if (session?.url && billing.credits < 1) {
-        return {
-          payment_required: true,
-          checkout_url: session.url,
-          price_usd: deckBuildPriceCents() / 100,
-          message: "Payment not yet received. Pay here, then ask me to continue the build: " + session.url,
-        };
-      } else {
-        billing.pendingSession = null; // dead/expired session — recreate below
-        await saveUserJson(sub, "billing.json", billing);
-      }
-    }
-    if (billing.credits >= 1) {
-      billing.credits -= 1; // consume one credit for this whole build
-      await saveUserJson(sub, "billing.json", billing);
-      state.paid = true;
-      await saveUserJson(sub, "build-state.json", state);
-    } else {
-      const session = await createCheckoutSession(sub, ctx.origin);
-      billing.pendingSession = session.id;
-      await saveUserJson(sub, "billing.json", billing);
-      return {
-        payment_required: true,
-        checkout_url: session.url,
-        price_usd: deckBuildPriceCents() / 100,
-        message: "Pay here, then ask me to continue the build: " + session.url,
-      };
-    }
   }
 
   // --- one chunk: one Anthropic call, validate, persist ----------------------
@@ -1194,7 +1135,7 @@ function secretMatches(given, expected) {
  * MCP_SECRET env var is set (404 otherwise); identity is the shared
  * "default" user. The OAuth-protected /mcp route calls handleMcpRpc directly.
  */
-export async function handleMcp(method, urlPath, rawBody, origin = "") {
+export async function handleMcp(method, urlPath, rawBody) {
   const secret = process.env.MCP_SECRET;
   const given = urlPath.slice("/mcp".length).replace(/^\//, "");
   if (!secret || !given || !secretMatches(given, secret)) return json(404, { error: "not_found" });
@@ -1203,15 +1144,14 @@ export async function handleMcp(method, urlPath, rawBody, origin = "") {
     // No SSE stream (GET) and no session teardown (DELETE) — stateless server.
     return json(405, { error: "method_not_allowed" });
   }
-  return handleMcpRpc(rawBody, LEGACY_USER, origin);
+  return handleMcpRpc(rawBody, LEGACY_USER);
 }
 
 /**
  * Processes one JSON-RPC message for the given user (`sub` — the per-user Blob
  * namespace). Stateless: every POST is a self-contained JSON-RPC message.
- * `origin` is the deployment's external origin (for Stripe redirect URLs).
  */
-export async function handleMcpRpc(rawBody, sub, origin = "") {
+export async function handleMcpRpc(rawBody, sub) {
   let msg;
   try {
     msg = JSON.parse(rawBody.toString("utf8") || "");
@@ -1245,7 +1185,7 @@ export async function handleMcpRpc(rawBody, sub, origin = "") {
         const handler = TOOL_HANDLERS[name];
         if (!handler) return rpcError(id, -32602, `Unknown tool: ${name}`);
         try {
-          const payload = await handler(params?.arguments ?? {}, sub, { origin });
+          const payload = await handler(params?.arguments ?? {}, sub);
           return rpcResult(id, { content: [{ type: "text", text: JSON.stringify(payload) }] });
         } catch (e) {
           const message = e instanceof ToolError ? e.message : `Tool failed: ${e?.message ?? e}`;

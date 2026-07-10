@@ -3,11 +3,11 @@
 A zero-dependency Node server (single Vercel entrypoint, `index.mjs`) that exposes a
 spaced-repetition bar-exam drill as a **remote MCP connector** for Claude, with OAuth
 2.1 sign-in, per-user state in Vercel Blob, and optional custom-deck generation.
-Deploy it with `../scripts/self-host.sh`; this document is the reference.
+The hosted instance runs at https://www.barprepmcp.com; self-hosters deploy with `../scripts/self-host.sh`. This document is the reference.
 
 ## The MCP connector — `POST /mcp`
 
-Add `https://<your-deployment>.vercel.app/mcp` to claude.ai as a custom connector.
+Add `https://www.barprepmcp.com/mcp` (hosted) — or `https://<your-deployment>.vercel.app/mcp` for self-hosters — to claude.ai as a custom connector.
 claude.ai discovers the authorization server, sends the user through the hosted
 sign-in page, and caches a per-user token. Claude becomes the drill UI; all state
 lives server-side under `users/<sub>/` — every signed-in user gets their own schedule.
@@ -56,7 +56,7 @@ keyed by `AUTH_SECRET`. No token database.
 | `next_mbe_question` / `submit_mbe_answer` | 196-question MBE bank; answers withheld until submit |
 | `get_stats` / `get_weak_areas` | Totals, per-subject accuracy, mastered counts; weakest subtopics ranked |
 | `upload_rules` | Store the user's own rule sheet (structured entries or raw text) |
-| `build_deck` | Chunked card generation from uploaded rules (~8 rules/call; client loops until `done: true`). Payment: Stripe Checkout credit per build, **or** free on your own key with `SELF_HOST_FREE_BUILDS=1`; with neither configured it returns a friendly not-enabled message and records interest |
+| `build_deck` | Chunked card generation from uploaded rules (~8 rules/call; client loops until `done: true`; resumable). Runs only with `SELF_HOST_FREE_BUILDS=1` + the server's own `ANTHROPIC_API_KEY` (self-host mode, free on the operator's key); otherwise it returns a friendly not-enabled preview message and records interest |
 | `set_deck` | Drill `default`, `custom`, or `both` |
 
 ### Content and state
@@ -72,15 +72,15 @@ keyed by `AUTH_SECRET`. No token database.
     option order), `recentQuestions`. SM-2-lite: correct → 1d → 3d → ×ease
     (ease +0.1 max 3.0); wrong → lapse (ease −0.2 min 1.3, due again in 10 min)
   - `drill-log.json` — append-capped review log (last 500 events)
-  - `custom-rules.json`, `custom-cards.json`, `prefs.json`, `billing.json`,
-    `build-state.json` — custom-deck pipeline state
+  - `custom-rules.json`, `custom-cards.json`, `prefs.json`, `build-state.json` —
+    custom-deck pipeline state
 
 ### `/content` — authenticated per-user file routes
 
 `PUT/GET/DELETE /content/<name>` and `GET /content` (list), Bearer-authed with the
 same tokens. Allowed names: `progress.json`, `focus.json`, `weakness.json`,
 `srs.json`, `drill-log.json`, `custom-rules.json`, `custom-cards.json`, `prefs.json`,
-`billing.json`, `build-state.json`, and `content-*.md|json` (≤256 KB). The reserved
+`build-state.json`, and `content-*.md|json` (≤256 KB). The reserved
 `_system` namespace (signup registry) is refused outright. Tests use these routes to
 inspect and clean state.
 
@@ -90,7 +90,6 @@ inspect and clean state.
   `ANTHROPIC_API_KEY`, else OpenAI; `GEN_MODEL` overrides). Accepts explicit
   weak-area `targets` and/or `use_server_context: true` to fold the user's stored
   progress/focus/weakness files into the prompt.
-- `GET /billing/success` — Stripe Checkout landing page.
 - `POST /auth/apple`, `POST /tts` (ElevenLabs), `POST /stt` (OpenAI) — legacy
   helpers from a retired iOS client; not used by the MCP connector. Safe to ignore
   (they no-op to `server_misconfigured` without their env keys).
@@ -107,11 +106,10 @@ AUTH_SECRET           # REQUIRED — signs all tokens; any long random string
 BLOB_READ_WRITE_TOKEN # auto-injected by the connected Blob store
 INVITE_CODES          # comma-separated signup invite codes (empty = signups closed)
 ANTHROPIC_API_KEY     # for /generate and custom deck builds
-SELF_HOST_FREE_BUILDS # "1" = build_deck runs free on your own key (no Stripe)
+SELF_HOST_FREE_BUILDS # "1" = build_deck runs free on your own ANTHROPIC_API_KEY;
+                      # unset = builds answer with the preview message + record interest
 CARDGEN_MODEL         # optional — card-generation model (default claude-fable-5)
 GEN_MODEL             # optional — /generate model override
-STRIPE_SECRET_KEY     # optional — paid deck builds (hosted-service mode)
-DECK_BUILD_PRICE_CENTS# optional — paid build price (default 999)
 DRILL_USERS           # optional — operator-provisioned accounts "email:password,…"
 MCP_SECRET            # optional — legacy /mcp/<secret> curl-testing path
 ELEVENLABS_API_KEY    # optional — legacy /tts only
@@ -120,8 +118,8 @@ OPENAI_API_KEY        # optional — legacy /stt (and /generate fallback)
 
 ## Tests
 
-Four end-to-end suites in `test/` (each spins a local server against a real Blob
-store): `oauth-e2e`, `signup-e2e`, `mcp-e2e`, `deck-e2e`.
+Five end-to-end suites in `test/` (each spins a local server against a real Blob
+store): `oauth-e2e`, `signup-e2e`, `mcp-e2e`, `deck-e2e`, `demo-e2e`.
 
 ```sh
 AUTH_SECRET=testsecret MCP_SECRET=test DRILL_USERS='you@test.com:code123' \

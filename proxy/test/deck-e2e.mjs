@@ -1,28 +1,28 @@
 // End-to-end local test of per-user custom decks (upload_rules / build_deck /
-// set_deck in proxy/lib/mcp.mjs, Stripe billing in proxy/lib/billing.mjs,
-// card generation in proxy/lib/cardgen.mjs). Builds are Stripe-paid ONLY —
-// there is no bring-your-own-Anthropic-key path.
+// set_deck in proxy/lib/mcp.mjs, card generation in proxy/lib/cardgen.mjs).
+// There is no paid path: builds run ONLY in self-host mode
+// (SELF_HOST_FREE_BUILDS=1 + the server's own ANTHROPIC_API_KEY); every other
+// configuration gets the preview easter egg (interest recorded, rules kept).
 //
 // Run from proxy/:  node test/deck-e2e.mjs
 //
-// Spawns the proxy on :8792 (legacy /mcp/test path secret → user "default"),
-// a LOCAL STUB Anthropic server on :8793 (2 valid + 1 invalid card per chunk;
-// ANTHROPIC_API_BASE points at it), and a LOCAL STUB Stripe on :8794
-// (create → url, retrieve → paid; STRIPE_API_BASE points at it).
+// Spawns the proxy on :8792 (legacy /mcp/test path secret → user "default")
+// and a LOCAL STUB Anthropic server on :8793 (2 valid + 1 invalid card per
+// chunk; ANTHROPIC_API_BASE points at it).
 // Needs a real BLOB_READ_WRITE_TOKEN — from the environment, or read at
 // runtime from proxy/.env.local (never committed).
 //
-// Phase 1 (no ANTHROPIC_API_KEY, no STRIPE_SECRET_KEY): upload (text +
-// structured); build_deck fails with the "not available" error and never
-// calls Anthropic or Stripe — even when an anthropic_api_key argument is
-// smuggled in.
-// Phase 2 (STRIPE_SECRET_KEY set, ANTHROPIC_API_KEY unset): build_deck fails
-// server_misconfigured BEFORE creating any Checkout session (never charge
-// for a build the server can't run).
-// Phase 3 (server key + Stripe): pay-then-continue chunked build with resume,
-// offset computation, invalid-card drop, a smuggled anthropic_api_key being
-// ignored (server key still used), drilling a custom card through next_card /
-// get_hint / submit_review, stats/weak areas, credit consumption.
+// Phase 1 (no SELF_HOST_FREE_BUILDS, no ANTHROPIC_API_KEY — hosted preview
+// mode): upload (text + structured) works; build_deck answers with the
+// friendly preview easter egg (non-error, interest recorded) and never calls
+// Anthropic — even when an anthropic_api_key argument is smuggled in.
+// Phase 2 (SELF_HOST_FREE_BUILDS=1 but NO ANTHROPIC_API_KEY): still the
+// preview easter egg — the flag alone must not enable builds.
+// Phase 3 (SELF_HOST_FREE_BUILDS=1 + server ANTHROPIC_API_KEY): the free
+// chunked build with resume, offset computation, invalid-card drop, a
+// smuggled anthropic_api_key being ignored (server key still used), drilling
+// a custom card through next_card / get_hint / submit_review, stats/weak
+// areas, set_deck default/custom/both.
 //
 // Uses (and then deletes) users/default/* test blobs — don't run against a
 // store holding drill state you care about. NOTE the same ≤60s Blob edge-cache
@@ -48,7 +48,6 @@ if (!BLOB) throw new Error("set BLOB_READ_WRITE_TOKEN (env or proxy/.env.local)"
 
 const PORT = Number(process.env.TEST_PORT) || 8792;
 const ANTHROPIC_PORT = PORT + 1;
-const STRIPE_PORT = PORT + 2;
 const BASE = `http://127.0.0.1:${PORT}`;
 const MCP = `${BASE}/mcp/test`;
 const APP = { Authorization: "Bearer localtest" };
@@ -114,42 +113,7 @@ const anthropicStub = http.createServer(async (req, res) => {
   );
 });
 
-// ---------------------------------------------------------------------------
-// Stub Stripe server: POST /v1/checkout/sessions → session with url;
-// GET /v1/checkout/sessions/:id → payment_status "paid" for known sessions,
-// 404 for unknown ids (so a stale pendingSession from an old run is discarded).
-// ---------------------------------------------------------------------------
-
-const stripeSessions = new Map(); // id -> parsed create form
-const stripeCalls = { create: [], retrieve: [] };
-const stripeStub = http.createServer(async (req, res) => {
-  if (req.method === "POST" && req.url === "/v1/checkout/sessions") {
-    let body = "";
-    for await (const c of req) body += c;
-    const form = Object.fromEntries(new URLSearchParams(body));
-    const id = `cs_test_${stripeSessions.size + 1}`;
-    stripeSessions.set(id, form);
-    stripeCalls.create.push({ id, form, auth: req.headers.authorization });
-    res.writeHead(200, { "Content-Type": "application/json" });
-    return res.end(JSON.stringify({ id, url: `https://stripe.test/pay/${id}`, payment_status: "unpaid" }));
-  }
-  const m = req.url.match(/^\/v1\/checkout\/sessions\/([^/?]+)$/);
-  if (req.method === "GET" && m) {
-    const id = decodeURIComponent(m[1]);
-    stripeCalls.retrieve.push(id);
-    if (!stripeSessions.has(id)) {
-      res.writeHead(404, { "Content-Type": "application/json" });
-      return res.end(JSON.stringify({ error: { message: "no such session" } }));
-    }
-    res.writeHead(200, { "Content-Type": "application/json" });
-    return res.end(JSON.stringify({ id, url: `https://stripe.test/pay/${id}`, payment_status: "paid" }));
-  }
-  res.writeHead(404);
-  res.end();
-});
-
 await new Promise((r) => anthropicStub.listen(ANTHROPIC_PORT, r));
-await new Promise((r) => stripeStub.listen(STRIPE_PORT, r));
 
 // ---------------------------------------------------------------------------
 // Proxy lifecycle + RPC helpers
@@ -159,8 +123,7 @@ let server = null;
 async function startProxy(extraEnv = {}) {
   const env = { ...process.env };
   delete env.ANTHROPIC_API_KEY;
-  delete env.STRIPE_SECRET_KEY;
-  delete env.DECK_BUILD_PRICE_CENTS;
+  delete env.SELF_HOST_FREE_BUILDS;
   delete env.CARDGEN_MODEL;
   Object.assign(env, {
     BLOB_READ_WRITE_TOKEN: BLOB,
@@ -168,7 +131,6 @@ async function startProxy(extraEnv = {}) {
     APP_TOKEN: "localtest",
     PORT: String(PORT),
     ANTHROPIC_API_BASE: `http://127.0.0.1:${ANTHROPIC_PORT}`,
-    STRIPE_API_BASE: `http://127.0.0.1:${STRIPE_PORT}`,
   }, extraEnv);
   server = spawn("node", ["index.mjs"], { cwd: WT, env, stdio: ["ignore", "pipe", "pipe"] });
   server.stderr.on("data", (d) => process.stderr.write(`[server] ${d}`));
@@ -191,7 +153,7 @@ async function call(tool, args = {}) {
   return JSON.parse(res.content[0].text);
 }
 
-const TEST_BLOBS = ["custom-rules.json", "custom-cards.json", "prefs.json", "billing.json", "build-state.json", "srs.json", "drill-log.json"];
+const TEST_BLOBS = ["custom-rules.json", "custom-cards.json", "prefs.json", "build-state.json", "srs.json", "drill-log.json"];
 async function deleteTestBlobs() {
   for (const name of TEST_BLOBS) {
     await fetch(`${BASE}/content/${name}`, { method: "DELETE", headers: APP }).catch(() => {});
@@ -218,7 +180,8 @@ const structuredRules = [
 const ruleStatementById = new Map(Array.from({ length: 11 }, (_, k) => [`custom-rule-${String(k + 1).padStart(3, "0")}`, mkStatement(k + 1)]));
 
 // ===========================================================================
-// PHASE 1 — no server key, no Stripe: uploads work; builds are unavailable.
+// PHASE 1 — hosted preview mode (no SELF_HOST_FREE_BUILDS, no server key):
+// uploads work; build_deck is the preview easter egg.
 // ===========================================================================
 
 await startProxy();
@@ -248,50 +211,46 @@ step("upload_rules — structured, mode replace, 500-cap field defaults");
   check("no rules/text -> helpful error", bad.isError === true && /rules|text/.test(bad.text));
 }
 
-step("build_deck — Stripe unconfigured -> 'not available' error, no side effects");
+step("build_deck — builds not enabled -> preview easter egg, no side effects");
 {
   const r = await call("build_deck", {});
   show(r);
   check("preview easter egg (non-error, interest noted)", r.isError !== true && r.available === false && r.interest_noted === true && /switched on/.test(r.message) && /first in line/.test(r.message));
+  check("rules stay safely stored (message says so)", /rules are safely stored/.test(r.message));
   check("no user-key escape hatch offered", !/anthropic_api_key/.test(r.message));
   const smuggled = await call("build_deck", { anthropic_api_key: SMUGGLED_KEY });
   check("smuggled anthropic_api_key argument changes nothing (same preview response)", smuggled.available === false && smuggled.interest_noted === true);
   check("Anthropic stub never called", anthropicCalls.length === 0);
-  check("Stripe stub never called", stripeCalls.create.length === 0 && stripeCalls.retrieve.length === 0);
 }
 
 // ===========================================================================
-// PHASE 2 — Stripe configured but ANTHROPIC_API_KEY unset: fail loudly
-// BEFORE creating any Checkout session (never charge when we can't build).
+// PHASE 2 — SELF_HOST_FREE_BUILDS=1 but NO ANTHROPIC_API_KEY: the flag alone
+// must not enable builds — still the preview easter egg, still no Anthropic.
 // ===========================================================================
 
-step("phase 2: restart proxy with Stripe configured but NO server Anthropic key");
+step("phase 2: restart proxy with SELF_HOST_FREE_BUILDS=1 but NO server Anthropic key");
 stopProxy();
-await startProxy({ STRIPE_SECRET_KEY: "sk_test_stub_secret" });
+await startProxy({ SELF_HOST_FREE_BUILDS: "1" });
 
 {
   const up = await call("upload_rules", { rules: structuredRules.slice(0, 3), mode: "replace" });
-  check("3 rules stored for the misconfigured-server attempt", up.rules_total === 3);
+  check("3 rules stored for the flag-only attempt", up.rules_total === 3);
   const r = await call("build_deck", {});
   show(r);
-  check("server_misconfigured error", r.isError === true && /server_misconfigured/.test(r.text) && /ANTHROPIC_API_KEY/.test(r.text));
-  check("says no payment was requested", /[Nn]o payment was requested/.test(r.text));
-  check("NO checkout session was created", stripeCalls.create.length === 0);
-  check("no Stripe call of any kind", stripeCalls.retrieve.length === 0);
+  check("flag without key -> still the preview easter egg (non-error)", r.isError !== true && r.available === false && r.interest_noted === true);
   check("Anthropic stub still never called", anthropicCalls.length === 0);
 }
 
 // ===========================================================================
-// PHASE 3 — server key + Stripe: the pay-then-continue chunked build, then
-// drilling the custom cards.
+// PHASE 3 — SELF_HOST_FREE_BUILDS=1 + server key: the free chunked build,
+// then drilling the custom cards.
 // ===========================================================================
 
-step("phase 3: restart proxy with server key + Stripe configured");
+step("phase 3: restart proxy with SELF_HOST_FREE_BUILDS=1 + server Anthropic key");
 stopProxy();
 await startProxy({
+  SELF_HOST_FREE_BUILDS: "1",
   ANTHROPIC_API_KEY: SERVER_KEY,
-  STRIPE_SECRET_KEY: "sk_test_stub_secret",
-  DECK_BUILD_PRICE_CENTS: "1234",
 });
 
 {
@@ -300,33 +259,11 @@ await startProxy({
   check("11 fresh rules stored (build state + custom cards reset)", r.rules_total === 11);
 }
 
-step("build_deck without a credit -> Stripe Checkout session");
+step("build_deck — chunk 1 of 2 (8 rules, 2 valid + 1 invalid card), no payment anywhere");
 {
   const r = await call("build_deck", {});
   show(r);
-  check("payment required with checkout url", r.payment_required === true && /^https:\/\/stripe\.test\/pay\/cs_test_/.test(r.checkout_url));
-  check("price from DECK_BUILD_PRICE_CENTS", r.price_usd === 12.34);
-  check("'pay here, then continue' message", /pay here/i.test(r.message) && /continue/i.test(r.message));
-  const created = stripeCalls.create.at(-1);
-  check("session: mode=payment, client_reference_id=default", created.form.mode === "payment" && created.form.client_reference_id === "default");
-  check("inline price_data: usd, 1234 cents, 'Custom deck build'", created.form["line_items[0][price_data][currency]"] === "usd" && created.form["line_items[0][price_data][unit_amount]"] === "1234" && created.form["line_items[0][price_data][product_data][name]"] === "Custom deck build");
-  check("success/cancel land on <origin>/billing/success", created.form.success_url === `${BASE}/billing/success` && created.form.cancel_url === `${BASE}/billing/success`);
-  check("authorized with STRIPE_SECRET_KEY", created.auth === "Bearer sk_test_stub_secret");
-  check("no generation before payment", anthropicCalls.length === 0);
-}
-
-step("GET /billing/success serves the landing page");
-{
-  const r = await fetch(`${BASE}/billing/success`);
-  const html = await r.text();
-  check("200 html telling the user to continue in Claude", r.status === 200 && /Payment received/.test(html) && /continue building my deck/.test(html));
-}
-
-step("build_deck after payment -> credit granted + consumed, chunk 1 of 2 (8 rules, 2 valid + 1 invalid card)");
-{
-  const r = await call("build_deck", {});
-  show(r);
-  check("stripe session retrieved and found paid", stripeCalls.retrieve.at(-1) === stripeCalls.create.at(-1).id);
+  check("build starts immediately (no gate fields in the response)", !("payment_required" in r) && !("checkout_url" in r) && !("available" in r));
   check("not done, nextIndex 8, remaining 3", r.done === false && r.nextIndex === 8 && r.totalRules === 11 && r.remaining === 3);
   check("2 cards added, 1 invalid dropped", r.cards_added === 2 && r.cards_dropped_invalid === 1 && r.cardsBuilt === 2);
   check("tells the client to call build_deck again", /call build_deck again/i.test(r.note));
@@ -425,17 +362,18 @@ step("get_stats / get_weak_areas honor the deck preference");
   check("weak areas include the custom subject (uniform fallback ratio)", w.weak_areas.some((a) => a.subject === SUBJECT && a.card_reviews >= 1));
 }
 
-step("credit was consumed — a NEW build requires a NEW payment");
+step("upload_rules replace resets the build — a new build just runs (still free)");
 {
   await call("upload_rules", { rules: structuredRules.slice(0, 2), mode: "replace" });
   const r = await call("build_deck", {});
   show(r);
-  check("payment required again with a fresh session", r.payment_required === true && stripeCalls.create.length === 2 && r.checkout_url.endsWith(stripeCalls.create.at(-1).id));
+  check("new build runs immediately to done", r.done === true && r.nextIndex === 2 && !("payment_required" in r) && !("available" in r));
+  check("one more Anthropic call (3 total)", anthropicCalls.length === 3);
 }
 
 step("no user-supplied key ever reached the Anthropic API");
 {
-  check("every Anthropic call used the server env key", anthropicCalls.length === 2 && anthropicCalls.every((c) => c.apiKey === SERVER_KEY));
+  check("every Anthropic call used the server env key", anthropicCalls.length === 3 && anthropicCalls.every((c) => c.apiKey === SERVER_KEY));
   check("the smuggled key never appeared in any call", anthropicCalls.every((c) => c.apiKey !== SMUGGLED_KEY && !JSON.stringify(c.body).includes(SMUGGLED_KEY)));
 }
 
@@ -453,5 +391,4 @@ step("cleanup: delete test blobs");
 console.log(`\n================ RESULT: ${pass} passed, ${fail} failed ================`);
 stopProxy();
 anthropicStub.close();
-stripeStub.close();
 process.exit(fail ? 1 : 0);

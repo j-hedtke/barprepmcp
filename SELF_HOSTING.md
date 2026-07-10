@@ -10,7 +10,7 @@ Requirements: [Node.js](https://nodejs.org) ≥ 18 (macOS/Linux; Windows via WSL
 Vercel account is created during login if you don't have one.
 
 ```sh
-git clone https://github.com/j-hedtke/barprepmcp.git && cd barprepmcp
+git clone <this repo> && cd aibarprep
 ./scripts/self-host.sh
 ```
 
@@ -22,10 +22,11 @@ account, paste the instructions into a Project).
 
 ## Custom deck builds when self-hosting
 
-On the hosted service, deck builds are paid via Stripe (server-side generation costs
-real tokens). Self-hosters skip all of that: provide your own `ANTHROPIC_API_KEY` and
-set `SELF_HOST_FREE_BUILDS=1` (the script offers both), and `build_deck` runs free on
-your key — you pay Anthropic directly for exactly what you generate.
+On the hosted service, custom deck builds are currently a preview — trying one just
+registers your interest. Self-hosters don't wait: provide your own
+`ANTHROPIC_API_KEY` and set `SELF_HOST_FREE_BUILDS=1` (the script offers both), and
+`build_deck` runs free on your key — you pay Anthropic directly for exactly what you
+generate; there is no other billing anywhere.
 
 ## Operating notes
 

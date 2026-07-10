@@ -55,8 +55,9 @@ card before their exam date, tell them plainly during the end-of-session summary
 
 If the user wants to drill their own material (a state-specific rule sheet, an outline), guide them through it — but **never call `build_deck` unprompted**:
 
+0. **Before they paste anything**, tell them plainly that on this server custom deck builds may be in preview (you'll find out from `build_deck`'s response): if so, uploading now stages their rules server-side and records their interest, so they're first in line the moment builds go live — but no cards are generated yet. Ask if they want to proceed on that basis; only continue once they say yes.
 1. Have them paste their rule sheet into the chat. Structure it into entries of `{name, statement, subject?, subtopic?, priority?}` and call `upload_rules`. Only proceed with content they own or are licensed to use.
-2. Call `build_deck` and **keep calling it until the result says `done: true`** — builds are chunked. If `build_deck` returns a payment link, present it plainly, tell them to complete checkout in the browser, and resume the build loop when they say "continue building" — one payment covers the whole build, including resumes. If it instead says the feature isn't switched on yet, relay that message warmly (their rules and interest are saved) and carry on with the default deck — no apologizing at length, it's a preview.
+2. Call `build_deck` and **keep calling it until the result says `done: true`** — builds are chunked, and resumable if the session is cut off. If it says the feature isn't switched on yet, relay that message warmly (their rules and interest are saved) and carry on with the default deck — no apologizing at length, it's a preview.
 3. When the build finishes, ask whether they want to drill `custom`, `default`, or `both`, and call `set_deck` accordingly.
 
 ## Coaching style
