@@ -11,7 +11,7 @@ follows you across devices.
 1. **Add the connector.** Go to [claude.ai](https://claude.ai) → **Settings** →
    **Connectors** → **Add custom connector** and enter:
    ```
-   https://aibarprep-proxy.vercel.app/mcp
+   https://www.barprepmcp.com/mcp
    ```
 2. **Create your account.** Claude opens the AI Bar Prep sign-in page. Switch to the
    **Create account** tab — sign-ups are invite-only, so you'll need an invite code
@@ -83,8 +83,8 @@ one.
 ## Troubleshooting
 
 **Connector won't add / sign-in page never appears**
-- Check the URL: exactly `https://aibarprep-proxy.vercel.app/mcp` — no trailing path.
-- Confirm the server is up: `curl -s https://aibarprep-proxy.vercel.app/.well-known/oauth-authorization-server`
+- Check the URL: exactly `https://www.barprepmcp.com/mcp` — no trailing path.
+- Confirm the server is up: `curl -s https://www.barprepmcp.com/.well-known/oauth-authorization-server`
   should return JSON metadata, not a 404 page.
 
 **Sign-in rejects your email/password**
@@ -111,7 +111,7 @@ one.
 ## Admin notes (server operators only)
 
 Everything below is configuration on the Vercel project
-(dashboard → aibarprep-proxy → Settings → Environment Variables, **Production**).
+(dashboard → barprepmcp → Settings → Environment Variables, **Production**).
 **Redeploy after changing env vars** — changes don't apply to existing deployments.
 
 - `AUTH_SECRET` — signs all OAuth artifacts (client ids, codes, tokens). Required.
@@ -140,4 +140,4 @@ Everything below is configuration on the Vercel project
 
 Debugging: without a token, `POST /mcp` should return HTTP 401 with a
 `WWW-Authenticate: Bearer resource_metadata=…` header. Check function logs via the
-Vercel dashboard (Deployments → latest → Logs) or `vercel logs aibarprep-proxy`.
+Vercel dashboard (Deployments → latest → Logs) or `vercel logs barprepmcp`.

@@ -4,7 +4,7 @@ This directory makes AI Bar Prep a **Claude-native app**: a remote MCP connector
 
 ## Architecture
 
-Claude talks MCP over HTTPS to `https://aibarprep-proxy.vercel.app/mcp`, authorized per user with OAuth 2.1 (hosted sign-in page with a create-account tab; self-validating HMAC tokens, no database). The server owns everything Claude shouldn't be trusted with: SM-2 scheduling, cloze grading, hint delivery (`get_hint`; a hinted review caps at quality 4), the 196-question MBE bank, and chunked custom-deck builds (`upload_rules` → `build_deck` until `done: true` → `set_deck`). Per-user state — SRS schedule, review log, uploaded rules, custom cards — lives in Vercel Blob under `users/<email>/`, so progress follows the user across every device.
+Claude talks MCP over HTTPS to `https://www.barprepmcp.com/mcp`, authorized per user with OAuth 2.1 (hosted sign-in page with a create-account tab; self-validating HMAC tokens, no database). The server owns everything Claude shouldn't be trusted with: SM-2 scheduling, cloze grading, hint delivery (`get_hint`; a hinted review caps at quality 4), the 196-question MBE bank, and chunked custom-deck builds (`upload_rules` → `build_deck` until `done: true` → `set_deck`). Per-user state — SRS schedule, review log, uploaded rules, custom cards — lives in Vercel Blob under `users/<email>/`, so progress follows the user across every device.
 
 ## Files
 

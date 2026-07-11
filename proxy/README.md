@@ -111,6 +111,9 @@ SELF_HOST_FREE_BUILDS # "1" = build_deck runs free on your own ANTHROPIC_API_KEY
 CARDGEN_MODEL         # optional — card-generation model (default claude-fable-5)
 GEN_MODEL             # optional — /generate model override
 DRILL_USERS           # optional — operator-provisioned accounts "email:password,…"
+DECK_OWNERS           # optional — comma-separated emails that get the FULL bundled
+                      # deck; everyone else's "default" deck is only the cards from
+                      # files marked "sample": true. Unset = whole bundle for all.
 MCP_SECRET            # optional — legacy /mcp/<secret> curl-testing path
 ELEVENLABS_API_KEY    # optional — legacy /tts only
 OPENAI_API_KEY        # optional — legacy /stt (and /generate fallback)
@@ -118,8 +121,8 @@ OPENAI_API_KEY        # optional — legacy /stt (and /generate fallback)
 
 ## Tests
 
-Five end-to-end suites in `test/` (each spins a local server against a real Blob
-store): `oauth-e2e`, `signup-e2e`, `mcp-e2e`, `deck-e2e`, `demo-e2e`.
+Six end-to-end suites in `test/` (each spins a local server against a real Blob
+store): `oauth-e2e`, `signup-e2e`, `mcp-e2e`, `deck-e2e`, `demo-e2e`, `owner-gate-e2e`.
 
 ```sh
 AUTH_SECRET=testsecret MCP_SECRET=test DRILL_USERS='you@test.com:code123' \

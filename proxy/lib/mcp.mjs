@@ -99,6 +99,29 @@ const questionsById = new Map(QUESTIONS.map((q) => [q.id, q]));
 const { ratio: ratioMap, subjectName, subtopicName } = blueprintMaps(BLUEPRINT);
 const SUBJECT_KEYS = BLUEPRINT.subjects.map((s) => s.key);
 
+// --- Owner-gated bundled deck ----------------------------------------------
+// DECK_OWNERS (comma-separated emails) restricts the full bundled deck to the
+// listed accounts; every other user's "default" deck is the sample-flagged
+// cards (bundle-content.mjs marks cards from files with `"sample": true`).
+// Unset/empty (the self-host default) serves the whole bundle to everyone.
+const OWNER_SET = new Set(
+  String(process.env.DECK_OWNERS || "")
+    .split(",")
+    .map((s) => s.trim().toLowerCase())
+    .filter(Boolean)
+);
+const byIdOf = (cards) => new Map(cards.map((c) => [c.id, c]));
+const SAMPLE_CARDS = CARDS.filter((c) => c.sample === true);
+const DECK_ALL = { cards: CARDS, byId: cardsById };
+// Owners drill the real deck without the demo sample mixed in.
+const NONSAMPLE_CARDS = CARDS.filter((c) => c.sample !== true);
+const DECK_OWNED = OWNER_SET.size ? { cards: NONSAMPLE_CARDS, byId: byIdOf(NONSAMPLE_CARDS) } : DECK_ALL;
+const DECK_SAMPLE = { cards: SAMPLE_CARDS, byId: byIdOf(SAMPLE_CARDS) };
+function bundledDeckFor(sub) {
+  if (!OWNER_SET.size || OWNER_SET.has(String(sub).toLowerCase())) return DECK_OWNED;
+  return DECK_SAMPLE;
+}
+
 // ---------------------------------------------------------------------------
 // Server-side state: srs.json + drill-log.json in Blob (lib/store.mjs), keyed
 // per user (users/<sub>/…). Loaded once per tool call, saved after mutations.
@@ -227,22 +250,30 @@ async function saveCustomDeck(sub, cards) {
   await saveUserJson(sub, "custom-cards.json", { cards, updatedAt: new Date().toISOString() });
 }
 
-/** Card pool honoring the user's set_deck preference. */
+/** Card pool honoring the user's set_deck preference (bundled side owner-gated). */
 async function activeDeck(sub) {
   const pref = ["default", "custom", "both"].includes((await loadPrefs(sub)).deck)
     ? (await loadPrefs(sub)).deck
     : "default";
   const custom = await loadCustomDeck(sub);
+  const bundled = bundledDeckFor(sub);
   if (pref === "custom") return { pref, cards: custom.cards, byId: custom.byId };
   if (pref === "both") {
-    return { pref, cards: [...CARDS, ...custom.cards], byId: new Map([...cardsById, ...custom.byId]) };
+    return { pref, cards: [...bundled.cards, ...custom.cards], byId: new Map([...bundled.byId, ...custom.byId]) };
   }
-  return { pref, cards: CARDS, byId: cardsById };
+  return { pref, cards: bundled.cards, byId: bundled.byId };
 }
 
-/** Look a card up in the bundled deck or the user's custom deck. */
+/** Look a card up in the user's bundled deck or their custom deck. The demo
+ * account additionally resolves its scripted card ids so the choreographed
+ * serves can be reviewed, without opening the rest of the full deck to it. */
+const DEMO_IDS = new Set(DEMO_SCRIPT.map((s) => s.id));
 async function findCard(sub, cardId) {
-  return cardsById.get(cardId) ?? (await loadCustomDeck(sub)).byId.get(cardId) ?? null;
+  if (sub === DEMO_SUB && DEMO_IDS.has(cardId)) {
+    const scripted = cardsById.get(cardId);
+    if (scripted) return scripted;
+  }
+  return bundledDeckFor(sub).byId.get(cardId) ?? (await loadCustomDeck(sub)).byId.get(cardId) ?? null;
 }
 
 // Text fallback for upload_rules: each paragraph / numbered item is one rule.
