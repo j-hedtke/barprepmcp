@@ -12,6 +12,33 @@ const DAY_MS = 86_400_000;
 const LAPSE_DELAY_MS = 10 * 60_000; // lapse → due again in 10 minutes
 
 // ---------------------------------------------------------------------------
+// Card importance — per-user scheduling overrides + deck priority weighting
+// ---------------------------------------------------------------------------
+
+export const IMPORTANCE_LEVELS = ["high", "normal", "low", "off"];
+// Selection-weight multiplier for new-card picks; "off" is excluded entirely.
+const IMPORTANCE_MULT = { high: 2, normal: 1, low: 0.25, off: 0 };
+// The deck's own priority tags weight new-card picks even without an override.
+const PRIORITY_WEIGHT = { H: 1.5, M: 1, L: 0.6 };
+
+/** The user's override for a card: srsState.importance[cardId], else "normal". */
+export function importanceOf(srsState, cardId) {
+  const v = srsState?.importance?.[cardId];
+  return IMPORTANCE_LEVELS.includes(v) ? v : "normal";
+}
+
+/** Interval multiplier applied to correct reviews ("low" cards come back half as often). */
+export function intervalScaleFor(importance) {
+  if (importance === "low" || importance === "off") return 2;
+  if (importance === "high") return 0.75;
+  return 1;
+}
+
+function cardWeight(card, importance) {
+  return (PRIORITY_WEIGHT[card.priority] ?? 1) * (IMPORTANCE_MULT[importance] ?? 1);
+}
+
+// ---------------------------------------------------------------------------
 // Grading (typed cloze) — port of FlashcardGrader
 // ---------------------------------------------------------------------------
 
@@ -159,17 +186,19 @@ export function newCardState(now = Date.now()) {
 }
 
 /**
- * Correct: interval grows 1d → 3d → ×ease, ease drifts up +0.1 (max 3.0).
+ * Correct: interval grows 1d → 3d → ×ease, ease drifts up +0.1 (max 3.0),
+ * then the whole interval is scaled by `intervalScale` (importance override).
  * Wrong: lapse — ease −0.2 (min 1.3), reps reset, due again in 10 minutes.
  * Mutates and returns `state`.
  */
-export function applyReview(state, wasCorrect, now = Date.now()) {
+export function applyReview(state, wasCorrect, now = Date.now(), { intervalScale = 1 } = {}) {
   if (wasCorrect) {
     state.reps += 1;
     if (state.reps === 1) state.intervalDays = 1;
     else if (state.reps === 2) state.intervalDays = 3;
     else state.intervalDays = Math.max(state.intervalDays, 3) * state.ease;
     state.ease = Math.min(state.ease + 0.1, 3.0);
+    if (intervalScale !== 1) state.intervalDays *= intervalScale;
     state.due = new Date(now + state.intervalDays * DAY_MS).toISOString();
   } else {
     state.lapses += 1;
@@ -262,25 +291,31 @@ export function weightedRandom(entries, rng = Math.random) {
 // ---------------------------------------------------------------------------
 
 /**
- * Order of preference: 1) DUE cards (soonest first), 2) NEW cards weighted by
- * unified weakness per subtopic, 3) not-yet-due review cards (soonest due).
- * Avoids `avoidId` (the last-served card) unless it's the only candidate.
+ * Order of preference: 1) DUE cards (soonest first; "low"-importance dues sort
+ * after the rest), 2) NEW cards weighted by unified weakness per subtopic and,
+ * within it, by deck priority (H/M/L) × the user's importance override,
+ * 3) not-yet-due review cards (soonest due). Cards set to "off" are never
+ * served. Avoids `avoidId` (the last-served card) unless it's the only candidate.
  */
 export function pickNextCard(cards, srsState, blueprint, { subject = null, avoidId = null, now = Date.now(), signals = null, rng = Math.random } = {}) {
   const { ratio } = blueprintMaps(blueprint);
+  const imp = (c) => importanceOf(srsState, c.id);
   let pool = subject ? cards.filter((c) => c.subject === subject) : cards;
+  pool = pool.filter((c) => imp(c) !== "off");
   if (!pool.length) return null;
   let fresh = pool.filter((c) => c.id !== avoidId);
   if (!fresh.length) fresh = pool;
 
-  // 1. Due cards, soonest due first.
+  // 1. Due cards, soonest due first; low-importance dues wait their turn.
+  const dueRank = (c) => (imp(c) === "low" ? 1 : 0);
   const due = fresh
     .map((c) => ({ c, st: srsState.cards?.[c.id] }))
     .filter(({ st }) => st && Date.parse(st.due) <= now)
-    .sort((a, b) => Date.parse(a.st.due) - Date.parse(b.st.due));
+    .sort((a, b) => dueRank(a.c) - dueRank(b.c) || Date.parse(a.st.due) - Date.parse(b.st.due));
   if (due.length) return due[0].c;
 
-  // 2. New cards, weakness-weighted by subtopic.
+  // 2. New cards: subtopic weakness × mean card weight picks the group, then
+  //    priority × importance picks within it.
   const newCards = fresh.filter((c) => !srsState.cards?.[c.id]);
   if (newCards.length) {
     const groups = new Map();
@@ -289,17 +324,21 @@ export function pickNextCard(cards, srsState, blueprint, { subject = null, avoid
       if (!groups.has(key)) groups.set(key, []);
       groups.get(key).push(c);
     }
-    const entries = [...groups.keys()].map((key) => ({ key, weight: weaknessWeight(key, signals ?? new Map(), ratio) }));
+    const entries = [...groups.entries()].map(([key, group]) => {
+      const mean = group.reduce((a, c) => a + cardWeight(c, imp(c)), 0) / group.length;
+      return { key, weight: weaknessWeight(key, signals ?? new Map(), ratio) * Math.max(mean, 0.0001) };
+    });
     const chosen = weightedRandom(entries, rng);
     const group = groups.get(chosen) ?? newCards;
-    return group[Math.floor(rng() * group.length)];
+    const idx = weightedRandom(group.map((c, i) => ({ key: i, weight: Math.max(cardWeight(c, imp(c)), 0.0001) })), rng);
+    return group[idx ?? 0];
   }
 
-  // 3. Review cards not yet due, soonest due first.
+  // 3. Review cards not yet due, soonest due first (low-importance last).
   const upcoming = fresh
     .map((c) => ({ c, st: srsState.cards?.[c.id] }))
     .filter(({ st }) => st)
-    .sort((a, b) => Date.parse(a.st.due) - Date.parse(b.st.due));
+    .sort((a, b) => dueRank(a.c) - dueRank(b.c) || Date.parse(a.st.due) - Date.parse(b.st.due));
   return upcoming.length ? upcoming[0].c : null;
 }
 

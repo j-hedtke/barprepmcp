@@ -10,6 +10,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { gradeTyped, stemToken, levenshtein } from "../lib/srs.mjs";
+import { extractMcqLetter } from "../lib/mcp.mjs";
 
 const WT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 let BLOB = process.env.BLOB_READ_WRITE_TOKEN;
@@ -99,7 +100,7 @@ step("tools/list");
   const res = await rpc("tools/list");
   const names = res.result.tools.map((t) => t.name);
   console.log("  tools:", names.join(", "));
-  check("11 tools", names.length === 11);
+  check("12 tools", names.length === 12);
   check("every tool has description + inputSchema", res.result.tools.every((t) => t.description.length > 40 && t.inputSchema.type === "object"));
 }
 
@@ -253,6 +254,63 @@ step("recite two-step");
   check("rating clamped to 0-5", s3.quality === 5);
 }
 
+step("extractMcqLetter unit — conservative letter parsing");
+{
+  check('"b" -> 1', extractMcqLetter("b") === 1);
+  check('"B." -> 1', extractMcqLetter("B.") === 1);
+  check('"(a)" -> 0', extractMcqLetter("(a)") === 0);
+  check('"option b" -> 1', extractMcqLetter("option b") === 1);
+  check('"answer is c" -> 2', extractMcqLetter("answer is c") === 2);
+  check('"The answer is D" -> 3', extractMcqLetter("The answer is D") === 3);
+  check('"I\'ll go with c" -> 2', extractMcqLetter("I'll go with c") === 2);
+  check("real answer text -> null", extractMcqLetter("financial benefits improperly received") === null);
+  check('"a duty of care" -> null (letter not trailing)', extractMcqLetter("a duty of care") === null);
+  check('"b and c" -> null (ambiguous)', extractMcqLetter("b and c") === null);
+  check('"e" -> null (not A-D)', extractMcqLetter("e") === null);
+  check("empty -> null", extractMcqLetter("") === null);
+}
+
+step("cloze-mcq letter answer — correct letter maps via the persisted serve");
+let mcq1;
+{
+  const c = await call("next_card", { mode: "cloze" }); // fresh card -> resolves cloze-mcq
+  show(c);
+  mcq1 = c;
+  check("fresh card resolves to cloze-mcq with 4 options", c.mode === "cloze-mcq" && c.options.length === 4);
+  const card = cards.find((x) => x.id === c.card_id);
+  const letter = "ABCD"[c.options.findIndex((o) => o === card.answer)];
+  const r = await call("submit_review", { card_id: c.card_id, mode: "cloze-mcq", user_answer: `${letter}.` });
+  show({ letter, correct: r.correct, quality: r.quality });
+  check(`correct letter "${letter}." -> correct, quality 5 (the real-session bug)`, r.correct === true && r.quality === 5);
+  const again = await call("submit_review", { card_id: c.card_id, mode: "cloze-mcq", user_answer: letter.toLowerCase() });
+  check("letter after serve consumed -> error asking for FULL TEXT (nothing recorded)", again.isError === true && /FULL TEXT/.test(again.text));
+}
+
+step("cloze-mcq letter answer — wrong letter is a clean lapse (quality 2)");
+{
+  const c = await call("next_card", { mode: "cloze" });
+  check("second fresh mcq serve", c.mode === "cloze-mcq" && c.options.length === 4);
+  const card = cards.find((x) => x.id === c.card_id);
+  const wrongIdx = (c.options.findIndex((o) => o === card.answer) + 1) % 4;
+  const r = await call("submit_review", { card_id: c.card_id, mode: "cloze-mcq", user_answer: `option ${"abcd"[wrongIdx]}` });
+  show({ pick: `option ${"abcd"[wrongIdx]}`, correct: r.correct, quality: r.quality });
+  check('"option <x>" wrong pick -> wrong, quality 2', r.correct === false && r.quality === 2);
+  check("clean lapse, no escalation: reps 0, lapses 1", r.card_stats.reps === 0 && r.card_stats.lapses === 1 && !("needs_verdict" in r));
+}
+
+step("cloze-mcq letter answer — mismatched card_id errors; full text still works");
+let mcq3Id;
+{
+  const c = await call("next_card", { mode: "cloze" });
+  check("third fresh mcq serve", c.mode === "cloze-mcq");
+  mcq3Id = c.card_id;
+  const card = cards.find((x) => x.id === c.card_id);
+  const stale = await call("submit_review", { card_id: mcq1.card_id, mode: "cloze-mcq", user_answer: "answer is a" });
+  check("letter for a card that is not the last serve -> error asking for FULL TEXT", stale.isError === true && /FULL TEXT/.test(stale.text));
+  const r = await call("submit_review", { card_id: c.card_id, mode: "cloze-mcq", user_answer: card.answer });
+  check("full-text option answer still grades correct in one call", r.correct === true && r.quality === 5 && !("needs_verdict" in r));
+}
+
 step("next_mbe_question (no answer leak)");
 let qId, qCorrect;
 {
@@ -280,11 +338,11 @@ step("get_stats");
 {
   const s = await call("get_stats");
   show(s.totals);
-  check("+7 card reviews (5 typed/mcq incl. 3 verdicts + 2 recite), +6 correct", s.totals.card_reviews === base.card_reviews + 7 && s.totals.card_correct === base.card_correct + 6);
+  check("+10 card reviews (5 typed/mcq incl. 3 verdicts + 2 recite + 3 mcq-letter section), +8 correct", s.totals.card_reviews === base.card_reviews + 10 && s.totals.card_correct === base.card_correct + 8);
   check("+2 MBE answered, +1 correct", s.totals.mbe_answered === base.mbe_answered + 2 && s.totals.mbe_correct === base.mbe_correct + 1);
   check("per-subject unified accuracy present for torts", s.per_subject.torts.unified_accuracy !== null);
   const d = await call("get_due_summary");
-  check("+9 reviews today (streak/log signal)", d.reviews_today === base.reviews_today + 9);
+  check("+12 reviews today (streak/log signal)", d.reviews_today === base.reviews_today + 12);
 }
 
 step("get_weak_areas");
@@ -309,16 +367,18 @@ step("persistence: SM-2 state actually in Blob (users/default/srs.json via /cont
     }
     return null;
   };
-  const srs = await fetchFresh("srs.json", (d) => d.cards?.[cardId]?.seen === 5);
+  const srs = await fetchFresh("srs.json", (d) => d.cards?.[cardId]?.seen === 5 && (d.cards?.[mcq3Id]?.seen ?? 0) >= 1);
   if (srs) console.log(`  cards tracked: ${Object.keys(srs.cards).length}, mbe tracked: ${Object.keys(srs.mbe).length}, updatedAt: ${srs.updatedAt}`);
   const st = srs?.cards?.[cardId];
   check("card SM-2 state persisted (seen/ease/due/interval)", !!st && st.seen === 5 && typeof st.ease === "number" && typeof st.due === "string" && "intervalDays" in st);
   check("mbe stats persisted", srs?.mbe?.[qId]?.answered === 2 && srs?.mbe?.[qId]?.correct === 1);
-  const log = await fetchFresh("drill-log.json", (d) => (d.events ?? []).filter((e) => e.ts >= runStart).length === 9);
+  check("lastServe cleared after the recorded mcq reviews", srs?.lastServe == null);
+  const log = await fetchFresh("drill-log.json", (d) => (d.events ?? []).filter((e) => e.ts >= runStart).length === 12);
   if (log) console.log(`  drill-log events: ${log.events.length}`);
   const mine = (log?.events ?? []).filter((e) => e.ts >= runStart);
-  check("drill-log persisted 9 events this run (7 card incl. clamp + 2 mbe)", mine.length === 9 && mine.every((e) => e.ts && e.type && e.subject));
+  check("drill-log persisted 12 events this run (10 card incl. clamp + 2 mbe)", mine.length === 12 && mine.every((e) => e.ts && e.type && e.subject));
   check('verdict-recorded reviews logged with via: "verdict" (1 fail + 2 pass)', mine.filter((e) => e.via === "verdict").length === 3 && mine.filter((e) => e.via === "verdict" && e.correct).length === 2);
+  check('letter-mapped reviews logged with via: "letter" (1 correct + 1 wrong)', mine.filter((e) => e.via === "letter").length === 2 && mine.filter((e) => e.via === "letter" && e.correct).length === 1);
 }
 
 step("legacy routes intact");

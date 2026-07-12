@@ -32,6 +32,9 @@ import {
   clozeParts,
   studyStreak,
   MASTERED_INTERVAL_DAYS,
+  IMPORTANCE_LEVELS,
+  importanceOf,
+  intervalScaleFor,
 } from "./srs.mjs";
 
 const SERVER_NAME = "aibarprep-drill";
@@ -157,6 +160,7 @@ async function loadState(sub) {
   state.cards ??= {};
   state.mbe ??= {};
   state.recentQuestions ??= [];
+  state.importance ??= {}; // cardId -> "high" | "low" | "off" (set_card_importance)
   srsCaches.set(sub, state);
   return state;
 }
@@ -445,6 +449,21 @@ const TOOLS = [
       additionalProperties: false,
     },
   },
+  {
+    name: "set_card_importance",
+    description:
+      "Adjust how much a flashcard matters to scheduling. \"low\" = serve far less often (rarely picked as new, sorted after other due cards, double intervals when correct); \"off\" = never serve again (suspend); \"high\" = serve more often at shorter intervals; \"normal\" = clear the override. scope \"rule\" applies it to EVERY card drilling the same rule — use that when the user means the whole rule, not one blank. Call this the moment the user says a card or rule is low-yield, not worth their time, or should be skipped/suspended — confirm in half a sentence and serve the next card; never debate a card's worth or make them re-attempt it first.",
+    inputSchema: {
+      type: "object",
+      properties: {
+        card_id: { type: "string", description: "A card id — typically the one just served." },
+        importance: { type: "string", enum: ["high", "normal", "low", "off"], description: "New importance level." },
+        scope: { type: "string", enum: ["card", "rule"], description: "\"rule\" = all cards of this card's rule (default \"card\")." },
+      },
+      required: ["card_id", "importance"],
+      additionalProperties: false,
+    },
+  },
 ];
 
 // ---------------------------------------------------------------------------
@@ -487,11 +506,16 @@ async function toolGetDueSummary(_args, sub) {
 
   let due = 0;
   let fresh = 0;
+  let suspended = 0;
   const bySubject = {};
   if (deck.pref !== "custom") {
     for (const key of SUBJECT_KEYS) bySubject[key] = { subject: subjectName.get(key) ?? key, due: 0, new: 0 };
   }
   for (const card of deck.cards) {
+    if (importanceOf(state, card.id) === "off") {
+      suspended += 1;
+      continue;
+    }
     const st = state.cards[card.id];
     const bucket = bySubject[card.subject] ?? (bySubject[card.subject] = { subject: card.subject, due: 0, new: 0 });
     if (!st) {
@@ -518,7 +542,8 @@ async function toolGetDueSummary(_args, sub) {
     deck: deck.pref,
     due_now: due,
     new_never_seen: fresh,
-    total_cards: deck.cards.length,
+    total_cards: deck.cards.length - suspended,
+    ...(suspended ? { suspended_cards: suspended } : {}),
     total_mbe_questions: QUESTIONS.length,
     by_subject: bySubject,
     study_streak_days: streak,
@@ -579,6 +604,7 @@ async function toolNextCard({ mode = "auto", subject = null } = {}, sub) {
     is_custom_card: !cardsById.has(card.id),
     is_new_card: isNew,
     due_status: st ? (Date.parse(st.due) <= now ? "due" : "early-review") : "new",
+    ...(importanceOf(state, card.id) !== "normal" ? { importance: importanceOf(state, card.id) } : {}),
   };
   if (resolved === "recite") {
     result.prompt = `Recite the rule: ${card.rule} (${subjectName.get(card.subject) ?? card.subject})`;
@@ -714,7 +740,7 @@ async function toolSubmitReview({ card_id, mode, user_answer, rating, verdict } 
     quality = Math.min(quality, 4);
     delete st.hintPending;
   }
-  applyReview(st, correct, now);
+  applyReview(st, correct, now, { intervalScale: intervalScaleFor(importanceOf(state, card_id)) });
   st.seen += 1;
   if (correct) st.correct += 1;
   if (mode === "cloze") {
@@ -1126,6 +1152,43 @@ async function toolSetDeck({ deck } = {}, sub) {
   return { deck, total_cards: active.cards.length, note: "Deck preference saved — next_card, get_due_summary, get_stats, and get_weak_areas now use this pool." };
 }
 
+// Adjust a card's (or its whole rule's) scheduling weight for this user.
+async function toolSetCardImportance({ card_id, importance, scope = "card" } = {}, sub) {
+  if (!IMPORTANCE_LEVELS.includes(importance)) {
+    throw new ToolError(`importance must be one of ${IMPORTANCE_LEVELS.join(", ")}.`);
+  }
+  const card = await findCard(sub, card_id);
+  if (!card) throw new ToolError(`Unknown card_id "${card_id}".`);
+  let targets = [card];
+  if (scope === "rule" && card.ruleId) {
+    const pool = [...bundledDeckFor(sub).cards, ...(await loadCustomDeck(sub)).cards];
+    const siblings = pool.filter((c) => c.ruleId === card.ruleId);
+    if (siblings.length) targets = siblings;
+  }
+  const state = await loadState(sub);
+  state.importance ??= {};
+  for (const t of targets) {
+    if (importance === "normal") delete state.importance[t.id];
+    else state.importance[t.id] = importance;
+  }
+  await saveState(sub, state);
+  const effect =
+    importance === "off"
+      ? "Suspended — these cards will not be served again until importance is raised."
+      : importance === "low"
+        ? "Deprioritized — rarely served as new, queued after other due cards, and rescheduled at double intervals."
+        : importance === "high"
+          ? "Boosted — served more often and rescheduled at shorter intervals."
+          : "Override cleared — back to normal scheduling.";
+  return {
+    importance,
+    scope: targets.length > 1 ? "rule" : "card",
+    rule_name: card.rule,
+    updated_card_ids: targets.map((t) => t.id),
+    effect,
+  };
+}
+
 const TOOL_HANDLERS = {
   get_due_summary: toolGetDueSummary,
   next_card: toolNextCard,
@@ -1138,6 +1201,7 @@ const TOOL_HANDLERS = {
   upload_rules: toolUploadRules,
   build_deck: toolBuildDeck,
   set_deck: toolSetDeck,
+  set_card_importance: toolSetCardImportance,
 };
 
 // ---------------------------------------------------------------------------
