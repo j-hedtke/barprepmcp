@@ -102,6 +102,17 @@ try {
   check("low: correct review records", !rev.isError && rev.data.correct === true);
   check("low: first correct interval is doubled (2d)", rev.data.next_due_days === 2);
 
+  const lapseCard = cards.find(
+    (c) => c.id !== soloCard.id && c.id !== lowCard.id && !multiRule.some((m) => m.id === c.id)
+  );
+  const miss = await call("submit_review", { card_id: lapseCard.id, mode: "cloze-mcq", user_answer: lapseCard.distractors[0] });
+  check("miss: wrong MCQ answer records a lapse", !miss.isError && miss.data.correct === false);
+  const demote = await call("set_card_importance", { card_id: lapseCard.id, importance: "low" });
+  check(
+    "low on a due/imminent card defers it out of the queue",
+    !demote.isError && (demote.data.deferred_card_ids ?? []).includes(lapseCard.id)
+  );
+
   const unknown = await call("set_card_importance", { card_id: "fc-nope-9999", importance: "low" });
   check("unknown card id errors", unknown.isError === true);
 } finally {

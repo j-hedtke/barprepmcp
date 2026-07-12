@@ -1167,16 +1167,29 @@ async function toolSetCardImportance({ card_id, importance, scope = "card" } = {
   }
   const state = await loadState(sub);
   state.importance ??= {};
+  const now = Date.now();
+  const deferred = [];
   for (const t of targets) {
     if (importance === "normal") delete state.importance[t.id];
     else state.importance[t.id] = importance;
+    // Demoting must take effect NOW: a "low" card that is due (or about to
+    // be — lapses come back in 10 min) gets its due date pushed out ~2× its
+    // interval instead of surfacing one more time. Nothing is recorded.
+    if (importance === "low") {
+      const st = state.cards[t.id];
+      if (st && Date.parse(st.due) <= now + 60 * 60_000) {
+        st.due = new Date(now + Math.max(st.intervalDays || 0, 1) * 2 * DAY_MS).toISOString();
+        deferred.push(t.id);
+      }
+    }
   }
   await saveState(sub, state);
   const effect =
     importance === "off"
       ? "Suspended — these cards will not be served again until importance is raised."
       : importance === "low"
-        ? "Deprioritized — rarely served as new, queued after other due cards, and rescheduled at double intervals."
+        ? "Deprioritized — rarely served as new, queued after other due cards, and rescheduled at double intervals." +
+          (deferred.length ? " Cards that were due now were pushed out — they will NOT surface again this session." : "")
         : importance === "high"
           ? "Boosted — served more often and rescheduled at shorter intervals."
           : "Override cleared — back to normal scheduling.";
@@ -1185,6 +1198,7 @@ async function toolSetCardImportance({ card_id, importance, scope = "card" } = {
     scope: targets.length > 1 ? "rule" : "card",
     rule_name: card.rule,
     updated_card_ids: targets.map((t) => t.id),
+    ...(deferred.length ? { deferred_card_ids: deferred } : {}),
     effect,
   };
 }
