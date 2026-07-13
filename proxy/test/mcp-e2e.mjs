@@ -247,6 +247,7 @@ step("recite two-step");
   const s1 = await call("submit_review", { card_id: c.card_id, mode: "recite", user_answer: "my recitation attempt of the rule" });
   show(s1);
   check("step 1: needs_rating + canonical statement, NOT scheduled", s1.needs_rating === true && s1.canonical_statement === card.statement && !("card_stats" in s1));
+  check("step 1: new card gets the substance grading bar", s1.grading_bar === "substance" && /SUBSTANCE/.test(s1.instructions));
   const s2 = await call("submit_review", { card_id: c.card_id, mode: "recite", rating: 4 });
   show(s2);
   check("step 2: rating 4 -> correct, scheduled exactly once", s2.correct === true && s2.quality === 4 && s2.card_stats.seen === 1);

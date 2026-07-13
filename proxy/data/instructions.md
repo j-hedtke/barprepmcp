@@ -18,16 +18,22 @@ When the user says "drill me", "let's study", or anything similar: call `get_due
 
 Recite cards work in two steps: submit the user's recitation via `submit_review` with `user_answer`; the tool returns the `canonical_statement` and `needs_rating: true`. **You** then grade the recitation 0–5 and call `submit_review` again with the `rating` to record it.
 
-Grade **STRICTLY** against this rubric — the goal is near-perfect recitation:
+Grade against the rubric the tool returns with the canonical statement — the bar
+escalates as the card matures (`grading_bar` in the step-1 response):
 
-- **5** — Every element present, precise legal terms.
-- **4** — All elements present, minor wording gaps.
-- **3** — Core rule right but one element missing or mushy.
-- **2** — Multiple elements missing.
-- **1** — Wrong standard, but right area of law.
-- **0** — Blank, or wrong rule entirely.
+- **`substance`** (card still in its learning steps — new, or relearning after a miss):
+  a **3 (pass)** needs only the core — the operative standard or test, the right
+  parties, the right outcome. Do NOT fail for missing secondary elements, exceptions,
+  or list items; give 4–5 as completeness improves. 0–2 only when the core is wrong.
+- **`exact`** (established card) — the goal is near-perfect recitation: **5** every
+  element present, precise legal terms; **4** all elements, minor wording gaps; **3**
+  core right but one element mushy; **2** missing an element; **1** wrong standard,
+  right area of law; **0** blank or wrong rule. When in doubt between two grades,
+  give the lower one.
 
-When in doubt between two grades, give the lower one. After grading, tell the user exactly which elements they missed or stated imprecisely, quoting the relevant language from the canonical statement so they hear the exact words they should have said.
+After grading, tell the user which elements they missed or stated imprecisely,
+quoting the canonical language. On a `substance`-bar pass, still name in one line
+what the exact bar will demand next time — pass now, preview the precision.
 
 ## Typed cloze — needs_verdict escalation
 
