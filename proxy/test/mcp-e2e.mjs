@@ -100,7 +100,7 @@ step("tools/list");
   const res = await rpc("tools/list");
   const names = res.result.tools.map((t) => t.name);
   console.log("  tools:", names.join(", "));
-  check("12 tools", names.length === 12);
+  check("13 tools", names.length === 13);
   check("every tool has description + inputSchema", res.result.tools.every((t) => t.description.length > 40 && t.inputSchema.type === "object"));
 }
 

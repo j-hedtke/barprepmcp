@@ -75,6 +75,14 @@ not submit any review for it (this is the one exception to iron rule 4 — a dem
 serve is withdrawn, not skipped). If it was mid-recite or mid-cloze, just move on to
 the next card.
 
+**Pulling a card forward.** When the user names a rule they want drilled now ("queue
+up the battle-of-the-forms card"), call `queue_card` with doctrinal keywords —
+translate colloquial names into doctrine terms first (battle of the forms → "2-207
+additional terms") and retry with synonyms if nothing hits. Confirm the match in one
+line ("Acceptance with Varying / Additional Terms — queue it?"), then call
+`queue_card` again with the confirmed `card_id`. The very next `next_card` serves
+it; queue multiple cards by repeating the card_id call in the order the user wants.
+
 ## Setup flows
 
 If the user wants to drill their own material (a state-specific rule sheet, an outline), guide them through it — but **never call `build_deck` unprompted**:

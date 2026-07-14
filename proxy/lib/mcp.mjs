@@ -464,6 +464,19 @@ const TOOLS = [
       additionalProperties: false,
     },
   },
+  {
+    name: "queue_card",
+    description:
+      "Pull a specific card to the FRONT of the drill queue. Two-step: (1) call with `query` — distinctive doctrinal keywords (rule names, key phrases, statute numbers); translate colloquial names into doctrine first (\"battle of the forms\" → \"2-207 additional terms\", \"felony murder\" stays as is) and retry with synonyms if nothing hits — the response lists candidate cards with their cloze answers and scheduling status; (2) confirm the intended card with the user in one line, then call again with its `card_id` to queue it — the very next next_card call will serve it. Queueing un-suspends an \"off\" card. To queue several cards of one rule, call again with each card_id. Use whenever the user says \"queue up X\", \"put X in rotation\", or wants to drill a specific rule right now.",
+    inputSchema: {
+      type: "object",
+      properties: {
+        query: { type: "string", description: "Doctrinal keyword search across rule names, cloze answers, and statements of the user's active deck." },
+        card_id: { type: "string", description: "Queue this exact card (skips the search step)." },
+      },
+      additionalProperties: false,
+    },
+  },
 ];
 
 // ---------------------------------------------------------------------------
@@ -1210,6 +1223,77 @@ async function toolSetCardImportance({ card_id, importance, scope = "card" } = {
   };
 }
 
+// Search the user's active deck / bubble a card to the front of the queue.
+function scoreCardMatch(c, tokens, phrase) {
+  const name = String(c.rule || "").toLowerCase();
+  const ans = String(c.answer || "").toLowerCase();
+  const st = String(c.statement || "").toLowerCase();
+  let score = 0;
+  if (phrase.length >= 4) {
+    if (name.includes(phrase)) score += 6;
+    else if (ans.includes(phrase) || st.includes(phrase)) score += 3;
+  }
+  for (const t of tokens) {
+    if (name.includes(t)) score += 3;
+    if (ans.includes(t)) score += 2;
+    else if (st.includes(t)) score += 1;
+  }
+  return score;
+}
+
+async function toolQueueCard({ query, card_id } = {}, sub) {
+  const state = await loadState(sub);
+  const now = Date.now();
+  if (card_id) {
+    const card = await findCard(sub, card_id);
+    if (!card) throw new ToolError(`Unknown card_id "${card_id}".`);
+    const st = state.cards[card_id] ?? (state.cards[card_id] = newCardState(now));
+    const was = (st.seen ?? 0) === 0 ? "new" : Date.parse(st.due) <= now ? "due" : "scheduled";
+    let unsuspended = false;
+    if (state.importance?.[card_id] === "off") {
+      delete state.importance[card_id];
+      unsuspended = true;
+    }
+    // Back-date the due timestamp: dues serve soonest-first, so a year-old due
+    // wins the queue; queueSeq keeps multiple queued cards in request order.
+    state.queueSeq = (state.queueSeq ?? 0) + 1;
+    st.due = new Date(now - 365 * DAY_MS + state.queueSeq * 1000).toISOString();
+    await saveState(sub, state);
+    return {
+      queued: true,
+      card_id,
+      rule_name: card.rule,
+      subject: card.subject,
+      was,
+      ...(unsuspended ? { importance_cleared: true } : {}),
+      note: "This card is now first in line — the next next_card call serves it.",
+    };
+  }
+  if (typeof query !== "string" || !query.trim()) {
+    throw new ToolError("Pass query (doctrinal keywords) to search, or card_id to queue.");
+  }
+  const deck = await activeDeck(sub);
+  const phrase = query.trim().toLowerCase();
+  const tokens = phrase.split(/[^a-z0-9()-]+/).filter((t) => t.length >= 3);
+  const scored = deck.cards
+    .map((c) => ({ c, s: scoreCardMatch(c, tokens, phrase) }))
+    .filter((x) => x.s > 0)
+    .sort((a, b) => b.s - a.s)
+    .slice(0, 5);
+  if (!scored.length) {
+    return { matches: [], note: "No matches — retry with distinctive doctrinal terms (rule names, key phrases, statute numbers like 2-207)." };
+  }
+  return {
+    matches: scored.map(({ c }) => {
+      const st = state.cards[c.id];
+      const status =
+        importanceOf(state, c.id) === "off" ? "suspended" : !st || (st.seen ?? 0) === 0 ? "new" : Date.parse(st.due) <= now ? "due" : "scheduled";
+      return { card_id: c.id, rule_name: c.rule, subject: c.subject, answer: c.answer, status };
+    }),
+    note: "Confirm the intended card with the user, then call queue_card again with its card_id.",
+  };
+}
+
 const TOOL_HANDLERS = {
   get_due_summary: toolGetDueSummary,
   next_card: toolNextCard,
@@ -1223,6 +1307,7 @@ const TOOL_HANDLERS = {
   build_deck: toolBuildDeck,
   set_deck: toolSetDeck,
   set_card_importance: toolSetCardImportance,
+  queue_card: toolQueueCard,
 };
 
 // ---------------------------------------------------------------------------

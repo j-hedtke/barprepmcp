@@ -115,6 +115,19 @@ try {
 
   const unknown = await call("set_card_importance", { card_id: "fc-nope-9999", importance: "low" });
   check("unknown card id errors", unknown.isError === true);
+
+  // queue_card: search -> queue -> next serve is the queued card.
+  const target = cards.find(
+    (c) => c.id !== soloCard.id && c.id !== lowCard.id && c.id !== lapseCard.id && !multiRule.some((m) => m.id === c.id)
+  );
+  const found = await call("queue_card", { query: target.rule });
+  check("queue_card search returns matches with status", !found.isError && (found.data.matches ?? []).some((m) => m.card_id === target.id && m.status === "new"));
+  const q = await call("queue_card", { card_id: target.id });
+  check("queue_card queues by id", !q.isError && q.data.queued === true && q.data.was === "new");
+  const serve = await call("next_card", {});
+  check("queued card is the very next serve", serve.data.card_id === target.id);
+  const offQ = await call("queue_card", { card_id: soloCard.id });
+  check("queueing a suspended card un-suspends it", !offQ.isError && offQ.data.importance_cleared === true);
 } finally {
   await fetch(`${BASE}/content/srs.json`, { method: "DELETE", headers: APP }).catch(() => {});
   await fetch(`${BASE}/content/drill-log.json`, { method: "DELETE", headers: APP }).catch(() => {});

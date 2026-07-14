@@ -59,6 +59,7 @@ keyed by `AUTH_SECRET`. No token database.
 | `build_deck` | Chunked card generation from uploaded rules (~8 rules/call; client loops until `done: true`; resumable). Runs only with `SELF_HOST_FREE_BUILDS=1` + the server's own `ANTHROPIC_API_KEY` (self-host mode, free on the operator's key); otherwise it returns a friendly not-enabled preview message and records interest |
 | `set_deck` | Drill `default`, `custom`, or `both` |
 | `set_card_importance` | Per-user scheduling override for a card or its whole rule: `high` / `normal` / `low` (rare + double intervals) / `off` (suspend). New-card picks also weight the deck's own H/M/L priority |
+| `queue_card` | Search the active deck by doctrinal keywords, then bubble a confirmed card to the front of the queue (next serve) |
 
 ### Content and state
 
